@@ -10,32 +10,18 @@ use Workflow;
 class BlogPostController extends Controller
 {
     function index() {
-        $post = BlogPost::find(1);
-        $workflow = Workflow::get($post);
+        $post = BlogPost::find(2);
 // or get it directly from the trait
         $workflow = $post->workflow_get();
-
-        $workflow->can($post, 'publish'); // False
-        $workflow->can($post, 'to_review'); // True
-        $transitions = $workflow->getEnabledTransitions($post);
-
-// Apply a transition
-        $workflow->apply($post, 'to_review');
-        $post->save(); // Don't forget to persist the state
-
-// Get the workflow directly
-
-// Using the WorkflowTrait
-        $post->workflow_can('publish'); // True
-        $post->workflow_can('to_review'); // False
-
-// Get the post transitions
-        foreach ($post->workflow_transitions() as $transition) {
-            echo $transition->getName();
-        }
-
-// Apply a transition
-        $post->workflow_apply('publish');
+        $workflow->apply($post, 't3');
         $post->save();
+//dd($workflow->getEnabledTransitions($post));
+        //dd($workflow->can($post, 'a')); // False
+        /*foreach ($post->workflow_transitions() as $transition) {
+            dd($post->workflow_transitions());
+        }
+        dd($post->workflow_can('t2')); // True*/
+
+
     }
 }

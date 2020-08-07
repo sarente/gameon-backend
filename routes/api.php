@@ -16,6 +16,9 @@ use Illuminate\Http\Request;
 
 Route::resource('version', 'VersionController', ['only' => ['index']]);
 
+Route::resource('workflow', 'Api\WorkflowController');
+Route::post('workflow/{workflow}/add-state', 'Api\WorkflowController@addState');
+
 Route::group(['prefix' => 'auth'], function ($router) {
     Route::post('register', ['as' => 'auth.register', 'uses' => 'Api\AuthController@register']);
     Route::post('login', ['as' => 'auth.login', 'uses' => 'Api\AuthController@login']);

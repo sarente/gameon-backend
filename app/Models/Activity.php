@@ -4,13 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
+use ZeroDaHero\LaravelWorkflow\Traits\WorkflowTrait;
 
 class Activity extends Model
 {
-    use LogsActivity;
+    use LogsActivity, WorkflowTrait;
 
     protected $fillable = [
         'name',
+        'marking',
         'category_id',
         'experience',
         'point'
