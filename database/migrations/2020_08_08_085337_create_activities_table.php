@@ -16,22 +16,12 @@ class CreateActivitiesTable extends Migration
         Schema::create('activities', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('marking')->nullable();
-            $table->Integer('experience')->nullable();
-            $table->Integer('point')->nullable();
             $table->timestamps();
 
-            $table->bigInteger('category_id')->unsigned();
-            $table->foreign('category_id')
+            $table->bigInteger('workflow_id')->unsigned();
+            $table->foreign('workflow_id')
                 ->references('id')
-                ->on('categories')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
-            $table->bigInteger('user_id')->unsigned();
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
+                ->on('workflows')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
         });

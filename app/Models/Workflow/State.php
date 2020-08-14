@@ -2,6 +2,7 @@
 
 namespace App\Models\Workflow;
 
+use App\Models\Activity;
 use Illuminate\Database\Eloquent\Model;
 
 class State extends Model
@@ -12,9 +13,13 @@ class State extends Model
 
     protected $hidden = [
         'created_at',
-        'updates_at',
-        'workflow_id'
+        'updated_at',
     ];
+
+    public function activities()
+    {
+        return $this->hasMany(Activity::class);
+    }
 
     public function workflow()
     {

@@ -2,27 +2,32 @@
 
 namespace App\Models\Workflow;
 
+use App\Models\Activity;
 use Illuminate\Database\Eloquent\Model;
 
 class Workflow extends Model
 {
     protected $fillable = [
-        'name',
-        'type'
+        'name'
     ];
 
     protected $hidden = [
         'created_at',
-        'updates_at',
+        'updated_at',
     ];
 
-    public function places()
+    public function activities()
     {
-        return $this->hasMany(State::class);
+        return $this->hasMany(Activity::class);
     }
 
     public function transitions()
     {
         return $this->hasMany(Transition::class);
+    }
+
+    public function type()
+    {
+        return $this->belongsTo(WorkflowType::class, 'workflow_type_id');
     }
 }

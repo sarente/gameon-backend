@@ -16,6 +16,8 @@ use Illuminate\Http\Request;
 
 Route::resource('version', 'VersionController', ['only' => ['index']]);
 
+Route::resource('category', 'Api\CategoryController');
+
 Route::resource('workflow', 'Api\WorkflowController');
 Route::post('workflow/{workflow}/add-state', 'Api\WorkflowController@addState');
 

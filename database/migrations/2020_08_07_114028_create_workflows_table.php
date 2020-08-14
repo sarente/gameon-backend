@@ -16,8 +16,14 @@ class CreateWorkflowsTable extends Migration
         Schema::create('workflows', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('type')->default('state_machine');
             $table->timestamps();
+
+            $table->bigInteger('workflow_type_id')->unsigned();
+            $table->foreign('workflow_type_id')
+                ->references('id')
+                ->on('workflow_types')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 

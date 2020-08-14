@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Workflow\State;
+use App\Models\Workflow\Workflow;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
 use ZeroDaHero\LaravelWorkflow\Traits\WorkflowTrait;
@@ -11,11 +13,7 @@ class Activity extends Model
     use LogsActivity, WorkflowTrait;
 
     protected $fillable = [
-        'name',
-        'marking',
-        'category_id',
-        'experience',
-        'point'
+        'name'
     ];
 
     public $hidden=[
@@ -26,11 +24,6 @@ class Activity extends Model
     public function creator()
     {
         return $this->belongsTo(User::class, 'user_id');
-    }
-
-    public function category()
-    {
-        return $this->belongsTo(Category::class);
     }
 
     public function image()
@@ -51,5 +44,10 @@ class Activity extends Model
     public function rewards()
     {
         return $this->belongsToMany(Reward::class, 'activity_reward');
+    }
+
+    public function workflow()
+    {
+        return $this->belongsTo(Workflow::class);
     }
 }
