@@ -2,6 +2,7 @@
 
 namespace App\Models\Workflow;
 
+use App\Models\Activity;
 use Illuminate\Database\Eloquent\Model;
 
 class Transition extends Model
@@ -42,11 +43,11 @@ class Transition extends Model
 
     public function from_state()
     {
-        return $this->hasOne(State::class,'id', 'from_state_id');
+        return $this->hasOne(Activity::class,'id', 'from_state_id');
     }
 
     public function to_state()
     {
-        return $this->hasOne(State::class,'id', 'to_state_id');
+        return $this->hasOne(Activity::class,'id', 'to_state_id');
     }
 }

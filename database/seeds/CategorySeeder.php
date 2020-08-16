@@ -16,20 +16,18 @@ class CategorySeeder extends Seeder
     public function run()
     {
         $category = new \App\Models\Category([
-            'name' => "İnsan Kaynakları"
+            'name' => "Yetkinlikler"
         ]);
         $category->save();
+        $category->users()->attach([1,2,3]);
 
-        $workflow_type = new WorkflowType(['name' => 'İşe Alım']);
-        $workflow_type->category()->associate($category);
-        $workflow_type->save();
-
-        $workflow = new Workflow(['name' => 'Backend Pozisyonu İçin Eleman Alımı']);
-        $workflow->type()->associate($workflow_type);
+        $workflow = new Workflow(['name' => 'Yetkinlik 1']);
+        $workflow->category()->associate($category);
         $workflow->save();
+        $workflow->users()->attach([1, 2, 3]);
 
-        $from_state = null;
-        $to_state = null;
+        $from_activity = null;
+        $to_activity = null;
         $activities = ['Giriş', 'Gelişme', 'Sonuç'];
 
         foreach ($activities as $key => $activity) {
@@ -38,20 +36,47 @@ class CategorySeeder extends Seeder
             $activity->workflow()->associate($workflow);
             $activity->save();
 
-            $to_state = $activity->id;
+            $to_activity = $activity->id;
 
-            if ($from_state && $to_state) {
-                $transition = new Transition(['name' => $workflow->name . ' transition' . $key, 'from_state_id' => $from_state, 'to_state_id' => $to_state]);
+            if ($from_activity && $to_activity) {
+                $transition = new Transition(['name' => $workflow->name . ' transition' . $key, 'from_activity_id' => $from_activity, 'to_activity_id' => $to_activity]);
                 $transition->workflow()->associate($workflow);
                 $transition->save();
             }
 
-            $from_state = $activity->id;
+            $from_activity = $activity->id;
         }
 
-        /*$category = new \App\Models\Category([
-            'name' => "Satış"
+        $category = new \App\Models\Category([
+            'name' => "Değerler Eğitimi"
         ]);
-        $category->save();*/
+        $category->save();
+        $category->users()->attach([1,2,3]);
+
+        $workflow = new Workflow(['name' => 'Dürüstlük']);
+        $workflow->category()->associate($category);
+        $workflow->save();
+        $workflow->users()->attach([1, 2, 3]);
+
+        $from_activity = null;
+        $to_activity = null;
+        $activities = ['Videoyu İzle', 'Bulmacayı Çöz', 'Soruyu Cevapla'];
+
+        foreach ($activities as $key => $activity) {
+
+            $activity = new Activity(['name' => $activity]);
+            $activity->workflow()->associate($workflow);
+            $activity->save();
+
+            $to_activity = $activity->id;
+
+            if ($from_activity && $to_activity) {
+                $transition = new Transition(['name' => $workflow->name . ' transition' . $key, 'from_activity_id' => $from_activity, 'to_activity_id' => $to_activity]);
+                $transition->workflow()->associate($workflow);
+                $transition->save();
+            }
+
+            $from_activity = $activity->id;
+        }
     }
 }

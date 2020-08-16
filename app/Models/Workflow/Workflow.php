@@ -3,6 +3,8 @@
 namespace App\Models\Workflow;
 
 use App\Models\Activity;
+use App\Models\Category;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Workflow extends Model
@@ -26,8 +28,13 @@ class Workflow extends Model
         return $this->hasMany(Transition::class);
     }
 
-    public function type()
+    public function category()
     {
-        return $this->belongsTo(WorkflowType::class, 'workflow_type_id');
+        return $this->belongsTo(Category::class);
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'user_workflow')->withPivot('marking');
     }
 }

@@ -12,14 +12,6 @@ class StatusSeeder extends Seeder
     public function run()
     {
         \App\Models\Status::create([
-            'name' => "Claim",
-        ]);
-
-        \App\Models\Status::create([
-            'name' => "Member",
-        ]);
-
-        \App\Models\Status::create([
             'name' => "Started",
         ]);
 

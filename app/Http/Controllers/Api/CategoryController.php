@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Category;
+use App\Models\User;
+use App\Models\Workflow\UserWorkflow;
+use App\Models\Workflow\Workflow;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Response;
@@ -11,12 +14,14 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::all();
+        //FIXME: change here to auth()->user()
+        $user_id = 1;
+        $categories = User::find($user_id)->categories;
 
         if (!$categories) {
             return response()->error('error.not-found');
         }
-        return response()->success($categories);
+        return Response::json($categories);
     }
 
     public function store(Request $request)
@@ -35,10 +40,18 @@ class CategoryController extends Controller
     }
 
     public function show($id){
-        $category = Category::with('types.workflows.states.activities')->find($id);
-        if (!$category) {
-            return response()->error('medal.not-found');
+        //FIXME: change here to auth()->user()
+        $user_id = 1;
+        $category = Category::find($id);
+        $workflows = User::find($user_id)->workflows()->where('category_id', $id)->get();
+
+        foreach ($workflows as $workflow) {
+            $activities = $workflow->activities;
+            $workflow->activities = $activities;
         }
+
+        $category->workflows = $workflows;
+
         return Response::json($category);
     }
 }

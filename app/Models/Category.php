@@ -17,19 +17,18 @@ class Category extends Model
     ];
 
     protected $hidden = [
-        'pivot',
         'created_at',
         'updated_at',
         'translations',
     ];
 
-    public function types()
+    public function workflows()
     {
-        return $this->hasMany(WorkflowType::class);
+        return $this->hasMany(Workflow::class);
     }
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'user_category');
+        return $this->belongsToMany(User::class, 'user_category')->withPivot('level_no');
     }
 }

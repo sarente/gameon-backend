@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Avatar\Avatar;
+use App\Models\Workflow\Workflow;
 use Illuminate\Contracts\Translation\HasLocalePreference;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -175,7 +176,12 @@ class User extends Authenticatable implements HasLocalePreference
 
     public function categories()
     {
-        return $this->belongsToMany(Category::class, 'user_category')->withPivot('experience');
+        return $this->belongsToMany(Category::class, 'user_category')->withPivot('level_no');
+    }
+
+    public function workflows()
+    {
+        return $this->belongsToMany(Workflow::class, 'user_workflow')->withPivot('marking');
     }
 
     public function rewards():MorphToMany

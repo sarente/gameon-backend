@@ -2,198 +2,290 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/Workflow/WorkflowType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_06_083523_create_workflow_types_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/006ca0e3-ebf4-4e88-a7f6-338617909426.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/018e3666-92b3-48dc-b780-d36781c25371.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/03c75039-69a4-4c60-bb2f-4c9d57ea3cb1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/06ac4bd4-0490-4105-827a-dacf13012006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/06b58f59-95bc-4ed4-81fb-e6b59c95fafd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/0ec94619-302b-425c-a43a-2529bb03aeb1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/0fc5ffc0-c819-44d6-8f25-db518360e289.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/10baf77c-dec5-44fb-a718-b98b67a885a3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/11400f64-ebb2-44c2-9730-9add26d2840a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/116121b4-328d-4168-9a92-c391044d385e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/155026d3-3d59-4736-af04-7c11ffb984de.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/167bf1a1-2e12-4818-b803-ab0474bff1e9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/172fa2ab-e25b-443d-abba-ebfb11023e7b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/198603a1-8cab-413e-af81-ab938c84699e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1ae056d8-15c7-4588-8ce5-489ad00988e7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1b782000-e31b-4bb7-8ec7-82f7f173c795.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1cc4c045-2ed0-4b49-9f28-1f79cc30d804.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1def849f-1139-4ae5-992f-481921158d4f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1e8a54e2-1ce6-43ed-9fee-b2186e6363c7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/20670fbb-b1b4-4f22-893c-26ecb4902a97.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/20f76ef4-94c2-4947-b7b5-58494aa7a728.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/220493f9-ca20-4664-a54a-1502e997199a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/23857149-b82b-4dff-b8f2-1e325c1fd438.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/240484da-7917-4906-a8ca-a40b81ad4a95.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/25ce9438-3a48-442d-94ce-d7857f7f122f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/25f2ddd4-0a13-41e3-99ad-a4c6b4cc881e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/28561a7f-fb93-4ddf-95f7-15b79f7fead6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/28723dc2-4e4b-4578-ba7c-183d990f5dc5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/29067d0b-4c31-4136-a4be-8273aa7154b9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/2a183b89-8689-42f6-b282-1e1d1585f1b8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/2b89049a-4779-4091-a896-038844ea6d08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/2dc07310-e64a-45cc-8319-9bd6233b839f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/2e7a0554-1526-4dbf-ace3-5378ffb7f8e4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/2fb97eba-5c09-43c7-ab48-e77d81fff8bc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/2fd32155-1d42-4f56-afc4-0a600b393b47.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/321d9e32-bd1b-4f59-9b47-25c895916f51.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/3445d9a7-495e-441e-b88c-98f97a84cd07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/346efc3a-c6f5-41fd-9ce5-5fdd259e3831.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/37c6bc61-7fde-4620-a175-43a37afda303.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/37ed89b6-bb69-475b-b12a-6e6c91cc9749.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/38c1f262-f858-40be-9f27-a92ccaf03c2f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/39a45f71-573f-4662-9cd3-8840652b978e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/39ccc1f6-901c-4f8d-a09b-fa46bc5fda06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/40996e64-a45a-4a66-8955-9fba2c01c9c3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/42aba52d-c277-4646-b728-1cee5e00bbd7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/435f901e-2c09-4162-94de-4c94c920a76e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/464b7fc6-2969-4685-90b3-6993a3af0c93.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/48e28276-64d4-48be-8815-e6669e7c25f8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/492c4ebd-2456-43e6-a179-64a5146ebe4e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/4a802480-9289-4f9a-8a30-04ed07e7827a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/4cf3d62e-bb5d-49c1-8d4e-595641538cbc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/4fa25bff-d2d6-49a3-a9f9-731d7a7b77e6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/507f2b34-3968-4f43-81e0-dd416bd1f38b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/51d633f0-afc3-4706-b3c6-fc866f1ba0f6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/53886ae0-a5cf-4624-b173-8f3d0a831e04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/5456d78c-b353-4ab7-9222-7880443e5719.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/546ebdfa-e697-40c5-96a9-440c404e5886.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/547358f7-44e1-48c7-abeb-6b73e32e61bc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/549e2d7e-be6d-4cd5-8016-c335e8cb907f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/5820c5a4-fac3-4ef2-a06b-61adc66c2084.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/5973a3e3-2f9a-485b-8f1b-d75e85d42226.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/5cbea5fe-63c1-49aa-8e1f-228c0654a82d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/5e9fd947-2a63-41be-af27-af9b6a0ccbfb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/5fa896d2-7617-44e0-a103-faf532905a76.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/60d6100c-3352-409e-b8ae-430cc73a52f2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/65834526-b1f2-4b39-9c28-747e1092ad9a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/68ab0d64-c88e-4864-b46d-f2022fd0fd52.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/6fe9cbc4-05dd-4f3e-bf0d-ebe656e943ee.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/716a2785-f412-4601-9c4d-50c70a7a3fde.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/75e6f7ca-8055-46ed-bf80-5eae71606047.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/792d0748-376b-4e08-9447-0b1a2af56944.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/7a083dc5-d1e8-472d-a646-a1928637ca34.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/7bb4d4a3-1820-4bac-9c32-2205580afac9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/7e3891b8-e19c-4fdf-941b-8438ae67cf49.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/7f9aa572-08eb-4964-bcfc-ee6162c27686.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/80f2612d-3e88-44fd-80e3-054d9a80c2aa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/82cc2863-2b67-4829-8ecb-348b18f4a827.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/83227e3e-1a9c-4100-a3fc-e2bc99d0bee1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/849977ac-cfa6-4d27-8da3-5d93641e5ed8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/855a3e1c-89f5-4d8b-83d6-ee16515ac45c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/868a3057-7f89-458f-9f80-f1c976ec2ab4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/86b887fb-8c7a-44e5-bbfa-c306b2dc5b29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/88f9c095-19bb-4e47-adbb-b60580872ef0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/8990ac16-3b27-47b7-97c4-5b3b0740934e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/8ae331c5-cf3c-4d8b-9d90-b66c4025e74d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/8c103437-7886-446b-a720-3122bd1530dd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/8dc87968-82ef-4752-8c94-450854342592.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/8e4b9839-934c-45d0-8b9c-27d2bf3c6658.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/8e758ffb-d4f9-4260-b391-224d20016b31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/91ff3ec7-c7d4-4fa1-9f5a-b9ed1d0c241b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/92c08692-1dc5-4d2a-93d4-50bb4d541586.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/934d3a92-363f-475d-a699-8085afda0c4b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/9351b5bd-6827-4dd4-b330-7eb11418a2f7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/937816a0-fad4-4d57-b4b2-ac1235e900b4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/9450d137-d454-4126-b26f-192245b867be.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/94b0bc89-f230-4ce1-8248-39a771db3891.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/94c43c7f-593d-4481-9f39-66eedda42f96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/960f6bb5-b60a-4d55-8925-e18df5c4b925.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/9643ca95-5209-447f-9578-ad4623a5f5a3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/964cd4fd-b244-41ce-9527-2336d484ab21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/97231763-0d6b-440b-a805-4bc9104a35dc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/980c8f29-1da9-4c79-8233-096f3862a010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/98d10183-5b2f-4cc8-a048-eb081c2001e1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/9a8d077c-5599-4098-834a-d7d54d8adccc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/9b0ad5e5-7ca3-45be-af49-c8d4c845892c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/9e111f97-bccd-46d4-b767-3d5a01a519dd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/9ee49c95-dceb-480c-a354-a74324c23a06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/9f0c59d4-dc2c-45a2-ae38-b430f7e2069e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/9f8102e9-d3bf-4055-af63-08e4d9072499.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/9ff575d9-0342-4c83-b129-643ea8fb2698.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/a2541fbc-ecda-4b6b-aba2-72f851ef64bc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/a2999dc3-5659-455c-ac40-59c7f2028cc4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/a3425f2b-c0f2-4db0-bebc-c14702fc2e80.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/a436a580-9fb4-4560-9399-d75726616ba9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/a5f515be-7349-4a12-b782-10d4b348d237.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/a9979e5f-7942-4648-ae1d-f863facd8628.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/a9bc0b3e-4cdb-4dfb-b14a-0f567222ab1e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/aabb90aa-6622-450f-8703-607535946300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/ab8e5523-4068-441e-8949-8ef044eecca4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/acfe5567-3426-4228-813b-54693b8f7d72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/ad3c2ad5-e108-4c2c-8277-1b61686879fa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/b03cd6a4-244d-4ce1-bb17-106c2cb8177e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/b2ff7eca-3499-454d-9165-9c8277595b43.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/b5d8ebed-121f-43bc-bff6-a16efa1a216c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/b5dd5c32-c211-46c2-b89f-a5621f812464.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/b6048aa9-f5af-4698-83c3-8f83d7a64d96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/b77b853d-e1af-4bdf-aaf1-c6e7c7bd911d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/bae85e59-ba67-4698-b403-ea283e254d29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/bcffc2b9-a63e-46d5-8306-17fe6890be03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/beb941f5-d6b1-40ec-bb5a-47f33d46b799.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/c140b1c2-56d8-44be-9b4e-7b0f1d6320ff.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/c2e332bc-fa78-4ea2-ae51-193b3525554b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/c4628a80-b8ee-4ae5-80af-8c5f922efde9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/c5304118-aa09-41b8-83b8-fc9e7e4837f9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/c54acb20-793e-45dd-b529-b07bba84e2df.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/c6da9cf2-272b-4f15-8bbf-2bfb4ee9a730.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/c8e1640e-74ef-4abb-8da5-e966f3498058.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/c8edf599-866b-46b2-8a6f-16ea2e0a1557.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/c96de4db-7fc0-47e6-a70c-d760ffb2a165.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/cabe36f2-db34-46d3-8344-41bb0b9c5902.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/cb9c50a8-7122-4fc4-aa22-e1e9f6ffbe31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/cbc4e1a1-a79d-4051-863b-f5d72147dcd2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/cc7bd059-ce06-4f46-b0bd-da042da16155.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/cd183348-d0fd-46e7-8eda-1d17c484de45.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/d0b8332a-f9e1-4994-9e8a-a675ac7e1812.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/d0c28446-7152-4b4d-9350-4c1491fea138.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/d12a5cdf-8e91-4e12-be5e-f6974a2f32ce.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/d1ab28c6-a2c7-4d61-9cfb-5b8da2eb7e4e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/d381aa47-04ae-4a4a-beb3-acf806a60e10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/d61c7dd8-40d4-460a-9516-a09178fa5f5f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/d78d695c-e4c7-42f8-8e8a-c0a155fea4b3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/d7bacfa6-7c8f-4067-9650-b019661f83d8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/d8f61f2e-0a91-4341-85e5-2994c79ca894.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/db29461d-9789-4d02-8b38-afe27a419b61.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/dd219088-ad80-4f9c-a0fe-ae2efb92ebcb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/ddb39d0c-2aca-4e4d-9eb1-4686bde78a9b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/df70aabe-5b1d-4aed-a18e-d20264ad90e4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/dfcbf46a-a7c9-400a-b048-d41cccfee8f6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/e00630ac-ff93-480a-bd8e-9a3243f952d8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/e257de2c-1507-4ff3-8b51-a3ca54f03b98.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/e385d8b0-7bf3-4244-ac7d-e396f774e102.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/e387b83f-f992-4a31-ac99-7837e1cdab2c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/e6673bc8-4bb4-4532-b235-69a308da1199.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/e88a07e1-69b0-435a-b8a8-8b8a56c40bdc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/eab17942-07ba-4428-aa2c-19c1095d0873.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/eb9919c0-8186-410e-94f1-e33ad21d900d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/ee4ae9db-9be2-4fbf-80b6-7a05c3e1b266.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/ee5396a2-c734-47f9-a374-19fd1a6641ff.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/ef309380-7b40-437c-99af-be6574bb329f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/f01da5fb-962d-496b-9534-a1fa86736f4c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/f4f258de-9aa9-4323-8c44-206d7d010331.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/f541fb4d-a7d1-4a20-a73b-932eed7c5b85.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/f6e4fedd-2b69-4b79-9ce3-d817ecacace1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/f90be93e-d2e6-4b31-8e62-d94e651a747b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/fe567d24-59a3-422e-8bb9-289defaa2a6b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/ff1d6d10-52e3-4ed6-9115-4bbee200b04e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Workflow/UserWorkflow.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/00258884-e39f-44a9-8194-c3b62d67a919.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/01356020-53ff-4f91-8f39-fac55e63e9eb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/02433f81-f0bc-4e9a-a2b6-f9adf2cef75e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/02465db2-e769-488b-96ce-8ef75979d707.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/0277dbbb-cccf-4b80-9a6b-59b9dd649b71.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/02a4a203-b01d-4341-b523-588932d87179.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/02e70b45-7ec7-4d56-ba43-8490660c4208.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/0589f825-fba4-4879-a6b7-cd1a276e627a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/074acaf8-733f-401d-a7e4-fc94fe94f0c5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/07fb621f-bad4-49ed-a83b-15b56ded6c1d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/0806f40f-9b9a-4867-b521-51e4ff96e68b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/0839ecca-e56c-4679-b9ab-713466cc55d4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/0a5b8933-46f4-4d0a-8ec3-0b0c27431c4d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/0ba0f704-e2ce-4457-84b5-92f9a16e60b4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/0d52f1eb-f407-4cb6-a398-d6e62d8a0a26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/0dc84370-ec9d-4489-8511-74e1c37b404d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/0dff2fe0-4951-4d6f-a7fb-3d1ecd6ba83c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/0e7a1113-fd5e-4676-a513-ec72a7f2741f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/10d4ef42-0152-4495-844d-cfbf641f9f6b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/114bb42c-333a-4c98-88d8-4749169b7fb2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1271862a-62f9-4c02-8f22-9b5a6f718fd1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/12c81bb1-86bf-4d7b-9458-06b0c4ac4e6f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/13d46372-abd9-4078-a47b-0acc04a434b8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/13fa4da1-2231-4216-bf41-c545dab9b803.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/160134fa-749d-4fcb-b407-2c402874bcfc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/174e4575-7355-448c-8bc8-532fa8e14448.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1a3e5b7d-f24b-43d3-bead-83e615dba5e1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1a47b8b0-abbc-41fe-a25f-3e7d6b3be9b7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1a6f4894-ea4e-4f50-a899-35b27326e91f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1ab08e6f-f352-49e5-a23f-b916d4bf33db.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1b9d951a-89b1-464d-981f-ac90245369ca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1bb85434-5289-4b5d-8be9-0261babe5f1e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1c8dc9df-4a34-4c0e-9d9d-1b27f789aef1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1f99a846-585b-4abf-932e-2a56189f7058.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/21046b0d-b3a5-46cd-8f02-5f5ca1195f5e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/221647e4-1abc-4f06-808b-50ba19e8485b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/236c1f34-0589-4db2-ae44-534ffc932ac8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/263a4315-1a8e-48c5-ae2c-42ff06a7f77c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/2785892f-df3c-45e8-b9b4-5a1fd21fcebf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/2a2a4113-02c8-4445-bcaa-d67a4332afeb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/2d713dc2-910e-405b-b9bd-4713450324c5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/2defe8fd-f4b3-46be-9ae6-07c7faffb878.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/2efd0777-c573-4b56-8f1d-9ad771a82f32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/2f520c97-7c9b-4e5b-9850-6d3ae4147ef9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/30886675-e23f-41fa-afe0-1748687d4658.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/30e77dd7-8762-4a9d-98db-ebce271dd12c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/31823268-ef10-4120-8ec0-c1da2b039aa0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/31b60ac1-e2f3-4ff7-b3ed-db93c2bd4006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/3263f1f4-6acc-4a56-a28b-ef15650f9ba2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/32c73a80-2237-421e-aa63-44c04d2ea903.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/34501937-cf42-4873-abe3-832fa77b38b1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/34af7dcc-20f9-4ce0-97f7-3fc9359d7cfe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/3609960b-2128-42b0-8cb6-b808727eacd8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/36daad84-c468-425c-80c0-a24abe596fe6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/38166583-62d9-4631-85d8-263f2d561cdd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/384f3377-066b-4a80-91a8-679d10dc2c3f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/39a0e133-fc1d-4091-a8d7-ec8215708d54.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/39d40aa8-6e06-46ff-960e-77e9e0102225.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/3a6c5e9c-ed9a-4474-9052-6aaef2ae6c2b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/3a897686-ea6c-4018-a21b-e423f23f0dc4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/3e40ef14-c538-4c25-b1f3-58a114deaf40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/40a56e22-a304-4ea8-968f-14da5e9c9871.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/43558188-2881-4c69-bd32-22bcaf28a13a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/438af045-e9b1-4535-98b5-2c2d53947c42.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/43eee4f2-bcd9-43a7-b95a-e51190d34065.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/44d05256-ba6f-4da6-b735-4d02cd1a5cda.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/46297990-5c3b-45a2-b8f5-9fe92bb0777f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/471bf694-0365-42b0-aab7-ec212f58ec71.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/47fb0e37-a5c1-4dfc-8f6c-9d5a3deff6e4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/488a4061-3c1d-459f-8454-0b9621b99cb2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/4933970d-b5c4-4681-8594-49762f413659.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/4aba96dd-f799-43f2-8563-c79f4b9acf8f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/4b52ceaa-bbe5-4de1-bd08-c522fad02ad4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/4ccc2fce-891e-4e9b-9295-c58258c64270.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/4d67295c-05f5-4688-a612-2f60c10aa901.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/4d9129d3-e9ff-4848-b3fd-dd982d0683e3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/4e9c062e-8a53-4434-a589-ee1d1bd09732.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/509a9436-9121-4bea-97e5-2cbfc618f5d4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/5136131a-e4be-4fbf-a3c2-d973981634a1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/51a9cc86-8038-4d79-bc84-6b3f04abcf2c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/5338d346-3058-4ca5-9961-002bc30044d1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/539a4f7d-7976-4898-beee-ebdbda6b68ca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/55568c63-7fab-4c32-a448-a6fa68979b88.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/55a38542-d461-4295-af14-103b72e9ac06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/56b62ce4-61f2-435f-a9c9-22079601d641.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/56fae970-be63-4d73-a43a-7e8666627db6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/575e9a70-488d-4f48-b746-ca65a5427c7f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/576e0661-e74a-49d4-9a6f-36fb16143fba.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/578b99df-033f-47c1-ab17-3ed4f62fb6b5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/58186a53-235e-43a3-a1fa-8a3fd6fad808.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/599b5059-2e86-4c62-9295-1d03136b28dc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/5cec123d-2dfe-427c-94dc-a0a6bb8b22ee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/5d333fc7-ddfb-4d3d-82e1-0570d98e6b54.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/5de55a79-9fe1-4eb5-abc9-86fe3c4fb240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/6137929d-a210-410c-b1ab-471ab535611d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/64d448df-37a3-4f57-94fd-f6d7f9b47e5a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/6540d440-d49b-4859-9050-8db73b2f95d2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/66ba749d-09d5-475d-8c58-6ca487c87ef9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/67a65ea5-d812-4ff5-8ec5-c6a9a90d312a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/68151d6a-9792-42ef-959a-c46e98436ae1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/6c16786a-7d04-4251-86c9-89751241a82e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/6c7dd0a4-dc71-416f-b2a4-f1a4cbb6a828.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/6d764471-4bdf-4880-9691-6d1b42a00ceb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/6e2f4587-d49d-4d95-9e65-a1ec06e8f43b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/6faa2cdd-029a-4b9c-929f-837160dd4033.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/7012bc8a-b480-446e-991d-5b66643d54d6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/7055be2f-8fc2-445a-bf5f-37e7ce25e6c0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/70d469fc-d90d-4178-aa98-df9099006c39.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/718fa95e-8bb4-43c2-8954-21189544723d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/7195b58c-48cd-4847-addd-c6a499ca5e8b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/726b03d1-aa0c-4ed0-b97b-472e379ea0f8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/733c2af4-cfef-4467-aae7-91052b7f3593.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/74957bba-ebb6-4fd5-915e-4764bae64ab4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/771e0aad-74e9-4a5c-a1fc-fba853b76c4e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/775a3561-0a98-4565-91fd-b637aec3b02a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/78471aee-a952-4f19-87b1-7a9bdcf6c2e8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/78c83f40-3b87-49e5-ac8d-c454da744935.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/7a362c3c-a656-4e3b-9a59-e3d443189e71.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/7c83d577-67f4-4e1c-ba03-26b56fb57d05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/7c9bc937-3ae0-4d08-9c2f-64c6c21d80e9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/7d113e14-2902-4cb7-ac40-2c525beddb8c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/7d7e2f7e-01de-4a9f-85e3-24aa28b220c0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/7e1fea1a-0318-490c-acea-f70fddd75451.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/7e638028-9135-47aa-a450-e181989375b4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/7f26229e-5ecc-46ce-99ba-e7e7b8472f28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/8140fbcb-7253-4c65-9888-9c3403339f20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/8242c3fb-5997-4a37-84e0-5ad2a8d0b946.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/83f3e61d-13a7-4456-8e6e-a5af51ded634.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/84d41c4e-12a9-426e-ab63-48d61f80a6dc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/84ea58c3-cbdb-48a2-8114-11a4fe1719ac.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/88d5a7b5-7a7b-4b4d-912e-3c10037f273b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/8a6d5b87-f0a6-401e-9759-d9e88f1ddc53.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/8ad0ac5e-7ebe-49f2-a4db-813a45f82cf6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/8ce40e3d-3c2a-40eb-be4b-60904bb6c6c1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/8e5e388c-eda3-4963-a305-1bfb3e90daff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/904d4b15-46af-4432-b621-ab7ae57525ac.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/909f187d-07f9-41b8-be93-fa381302d4d3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/93ab240e-4380-4a1a-a913-f4b28574f598.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/94b40716-7403-4165-9495-e34a68c90ede.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/94b927bb-983a-44df-9811-d4455a0bb42d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/95491e18-27e2-4bfc-b8bb-8c98af7867a3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/95668b82-780e-49de-9eb5-240bbf0299dd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/958d656f-fdc1-4a26-ac13-1a696c56e438.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/9682af8a-53f1-41ea-b963-38baf56c277d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/97649656-6e11-418f-9381-b6db26e89731.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/979f102a-f9bb-4096-9730-caf6a50c5e1b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/988356fd-7484-4a2c-a025-dea8cc3bb58b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/99e9b2cb-e3e5-4168-9d80-a97db64385cc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/9bf940df-86e3-4ced-a2b3-13a16a93f374.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/9bfae033-3b0d-498e-a694-bc4c32a7ad85.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/9c0fe5b3-77bf-4dac-8a54-fee1959c7d80.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/9d280206-aa32-45c2-9827-4913a057f92e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/9e321118-04c2-406d-b9a2-9be774cf0f4e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/a02dfa5c-8cc9-4e66-b177-ea8a99996423.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/a1561ef8-8730-4e72-af2d-711a56df3082.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/a2c3ab2c-b438-4553-ac2d-542fcea75db4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/a2ce8699-a9c3-4055-ba72-03be22d5a54a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/a41b42c1-fbb4-4913-8d95-89941588f75d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/a46623e2-437a-4ab7-933f-b15cbedfddb0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/a4807355-f43d-48d6-83e9-c71e4c6ecfee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/a73666e6-7264-4e67-8adc-cb42a4815f6b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/a7aa6560-a503-4b9f-82fa-17d2ca97bfb5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/a7e8bba9-503a-4f3b-b7d1-6019be4d7071.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/a87fd58e-e7f4-4779-8eb1-c67247e1a8e6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/a8f83c82-3ffc-4a60-a0e6-01df1991fe6b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/a974cdd2-9040-4d1d-8550-b83704b1cdab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ab745a10-64b2-4608-b836-3166aaa76132.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ac65e7e9-0870-4bce-90c1-8b8360b23718.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ad8470d3-8043-4d27-aaa2-cc1d5da871e0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ad8fe162-3836-4912-ac68-ba60f46408e0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ada6a68e-e621-4533-8ffa-7f05ca4bd848.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/af7a4961-21c0-4ce1-856a-b429777a2a5c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/af83c66c-380b-4b46-a858-d01495d66588.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/b1a86bf2-8660-4561-a971-225d3a610f9c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/b26a4dcc-5565-47b1-8826-1a9c3135ee89.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/b3499ae3-6f23-4bf1-bfee-aea39a4a8413.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/b3ad21f4-5425-47b1-a2f7-dc12f5afa57f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/b3be9c41-3597-42c8-b94a-78248cdbfaf6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/b407496c-bea4-4ff1-85a4-0b2ae94bf523.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/b4e94957-2154-4927-a078-5880e585fabf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/b85deda4-00c7-4778-906e-ff7d234b05d0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/b8713f9c-86c8-40ad-b817-8832e8cfb3f0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ba3de94e-f0ab-49bf-b638-3efba7f02edf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/baedf5b7-61d0-4992-b14b-a22808a5dd6d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/bc285bed-b83c-4ff8-9625-ccd08db2679e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/bc71cc8a-bf8e-4a08-b360-1c1d8981d6aa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/bcfff77e-10f0-4a10-86fa-3dd26e6d9ece.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/bd5f30c1-27bf-430b-b16d-e1fe46cc17b5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/beb6d54a-bd2e-4bfe-8ece-86aef302abe4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/c0430f15-5279-4aba-ae64-b21d08e6e609.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/c0987fc6-1ece-4643-b69f-b4a0c4cd630c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/c0bde997-e30b-4b9c-b599-149cc3d17973.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/c4a54d5f-143a-43e6-a739-c897f4782cdc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/c5e92b30-e5fb-402b-9e14-3c18ae3f9577.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/c955ef94-8a03-4517-98b4-92a5cdd59660.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/c9774e7d-c2ba-4d03-b07f-0110150b5a85.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ca3b89cb-5acb-4bad-96a6-8eaa830e8466.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/caf947be-7474-4d89-a90a-aced0a7b40c6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cd04359b-3de8-41f1-a66b-ebd717e2a3d5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ce128c28-fabf-4ba4-bd49-f92d006933c0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ce6c66a9-dbf4-4889-abb5-fe0823728124.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ce75d66a-935f-4512-a643-b652fd4b8449.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cebe9d69-6ef8-4cff-b1cb-3ea9b1f79f0a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cfc6f1f5-b479-4532-bcd0-6d063af13c22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d00171e1-d55f-4fbe-901d-e1958d06aa93.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d1089c8b-7bf1-45d1-9686-7924c3ee734e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d12bfcd0-faf0-412f-b910-e111b2433649.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d267105e-e952-456d-b059-6646441f1aba.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d330ccda-7190-4507-a71c-3d0166cb5cd5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d33aa61c-6cb4-481f-b6ac-9b3070555810.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d37b3f5e-dddd-4037-8c91-8aacaef04bc1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d3f6442b-5b1e-42e8-8fdd-3f04e97a93d6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d46a72de-50d8-4537-a6c9-1af964908441.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d4f2b720-1778-4b5a-8271-774943302026.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d502e870-0f1b-4233-baca-15ad643bc09a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d60e91d4-5334-4e3b-85c6-d908f0b457b1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d61acfad-8510-471b-9d69-d07c53b5fa26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d643f7bd-7782-48be-a1a8-c80d7d2e2105.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d810a965-52cf-4988-9d5a-d81e4fcb43ab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/d97ce7a0-0117-4394-b4d0-be9d0bfe5668.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/dc0fbd9a-c04b-404f-8be1-c9f74e3cb0bc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/dd8da269-2735-4943-9b27-9495fcca79da.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ddb93580-3be6-4138-95a8-c80be2e2e9f7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/dde7f7a0-dfa2-4227-953e-153449ce3801.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ddfb7b29-46ce-4b70-a3db-6355b54ab47a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/df1d4a25-8678-4cc0-b09c-14576098aaa0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e1482fdb-9ed9-4cb9-8166-5615009564cc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e25f5f2f-6dba-43dd-848d-2a3e9bc227c0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e4187cae-a3a8-40bb-8949-56e4ba49143d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e526d0c2-51c3-406b-9635-2c6e87b181cd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e52c22b5-0f77-4dbf-90c7-24223aba839a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e5ac6698-0380-454b-97bf-d3e82883e728.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e5b5fa1e-98f5-46ae-be90-13d6bdb90838.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e645c1f3-a523-421b-bb72-225c24712e87.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e78cfd3d-8800-4fa9-a844-60855a4ff373.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e7cc1251-d7b8-46c8-ae0f-8cced91d95df.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e7ea7b7a-c3c4-4889-9b98-72e010e640d7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e8246619-5ee2-4d57-bf1a-5fb3fd21d7af.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e8bb17d0-9d2b-4da1-90f0-6dc8af3c55e3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e92bc57f-9bb1-42fc-87a2-d54c0ee14417.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/e99c7ac5-603f-40b9-a425-be3d61396e1a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ec52f84f-dbd9-4d61-a6a1-b70576195ae8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/edcc315d-08d9-42ab-a590-db5e0997b6d5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/edd62c29-4eee-4fe0-a777-9eb5900a6629.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ef3a0c4e-96f0-42ce-be82-78ce5fc9d1e8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/f13eb4c5-9d35-49d1-b6ed-1e12368904e8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/f1e73f21-0bd3-4163-aa2b-e0eb29eebf6f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/f23b9d97-d2d3-4364-a547-99b30973abf1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/f332f80a-5fb0-45ca-8fe7-c5034ab2f3c5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/f42cd335-781f-42a8-94dc-f64333772065.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/f442bc64-c458-48c5-b07a-0df7da622798.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/f764f6c5-c53f-4335-99bf-68b8aec656fb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/f774efe2-1a42-401f-a9bd-79664138f965.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/f84cc401-a2bf-4764-9c70-d94d1231a614.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/f99d71b2-61ce-46fa-b460-9cc9f9506d6f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/f9a819ba-8aff-4582-9aa3-8cc3474c5f98.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/fa406207-14e8-4153-a3da-a7ac4907d3c7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/fa65c958-2098-4da6-b133-3b26681c4dfc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/fab51d95-94e8-4778-9c10-dc1e6d24bf76.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/fc22086d-585f-4fbc-850a-af2071e001c8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/fd1fc58b-320c-46b4-850d-55846f3d6f55.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/fd81368f-df93-4208-9a02-5d7075f873b9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/fe6dfb51-87ce-4473-a460-efc917ee427e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ffe093d4-285a-4e0f-abb0-682a89a67be2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gameon-workflow.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gameon-workflow.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Activity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/WorkflowController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/WorkflowController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Workflow/State.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Workflow/State.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Workflow/Transition.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Workflow/Transition.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Workflow/Workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Workflow/Workflow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_05_084718_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_05_084718_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_05_085337_create_activities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_085337_create_activities_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_05_090339_create_user_activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_090339_create_user_activity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Workflow/WorkflowType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_05_090354_create_user_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_05_090354_create_user_category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_06_083523_create_workflow_types_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_07_114028_create_workflows_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_07_114028_create_workflows_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ActivitySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/WorkflowSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_07_114218_create_transitions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_088218_create_transitions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_090339_create_user_activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_090339_create_user_workflow.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/StatusSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/StatusSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,6 +300,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -330,6 +423,8 @@
       <path value="$PROJECT_DIR$/vendor/zerodahero/laravel-workflow" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/cweagans/composer-patches" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fj6TbRRpDVOWn15FjpCbs8KNTp" />
@@ -378,6 +473,8 @@
       <workItem from="1596800340367" duration="10687000" />
       <workItem from="1597039774070" duration="7678000" />
       <workItem from="1597383906547" duration="924000" />
+      <workItem from="1597519392007" duration="4814000" />
+      <workItem from="1597587404662" duration="4289000" />
     </task>
     <task id="LOCAL-00001" summary="Fetch config data of workflow from database">
       <created>1596810894159</created>
@@ -398,22 +495,33 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fetch config data of workflow from database" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597051037214">
+    <state x="734" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597520694083">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="734" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1597520694083" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597590129767">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1596810892901">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597590129767" />
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1597593505595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596810892901" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1597593505595" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596810895632">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596810895632" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1597383915232">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1597587415373">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597383915232" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597587415373" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597593489371">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597593489371" />
     <state x="656" y="252" width="607" height="625" key="find.popup" timestamp="1597048766109">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -422,10 +530,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="601" y="246" width="700" height="530" key="recent.locations.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596724786179" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597046949412">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597521580700">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597046949412" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597521580700" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
