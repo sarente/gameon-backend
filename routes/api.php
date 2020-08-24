@@ -21,6 +21,9 @@ Route::resource('category', 'Api\CategoryController');
 Route::resource('workflow', 'Api\WorkflowController');
 Route::post('workflow/{workflow}/add-state', 'Api\WorkflowController@addState');
 
+Route::get('user/avatar', 'Api\UserController@getAvatar');
+Route::post('user/avatar', 'Api\UserController@saveAvatarConfiguration');
+
 Route::group(['prefix' => 'auth'], function ($router) {
     Route::post('register', ['as' => 'auth.register', 'uses' => 'Api\AuthController@register']);
     Route::post('login', ['as' => 'auth.login', 'uses' => 'Api\AuthController@login']);

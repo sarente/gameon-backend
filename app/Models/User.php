@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Avatar\Avatar;
+use App\Models\Avatar;
 use App\Models\Workflow\Workflow;
 use Illuminate\Contracts\Translation\HasLocalePreference;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
@@ -174,6 +174,11 @@ class User extends Authenticatable implements HasLocalePreference
 
     //Get user last level current Experience
 
+    public function avatar()
+    {
+        return $this->hasOne(Avatar::class);
+    }
+
     public function categories()
     {
         return $this->belongsToMany(Category::class, 'user_category')->withPivot('level_no');
@@ -301,5 +306,18 @@ class User extends Authenticatable implements HasLocalePreference
         };
         // update
         return $this->levels()->updateExistingPivot($level->id, ['current_xp' => $current_xp]);
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::created(function (self $model) {
+
+            //create user avatar, one to one relation, each user has one avatar in avatars table
+            $avatar = new Avatar();
+            $avatar->user()->associate($model);
+            $avatar->save();
+        });
     }
 }

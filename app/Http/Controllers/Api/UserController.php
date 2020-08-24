@@ -15,6 +15,7 @@ use App\Models\Status;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Response;
 use Maatwebsite\Excel\Facades\Excel;
 
 class UserController extends Controller
@@ -199,6 +200,26 @@ class UserController extends Controller
         //event(new UserUpdate($request));
 
         return response()->success('common.success');
+    }
+
+    public function getAvatar()
+    {
+        //FIXME: change here to auth()->user()
+        $user = User::find(1);
+        $avatar = $user->avatar;
+        $avatar->gender = $user->gender;
+
+        return Response::json($avatar);
+    }
+
+    public function saveAvatarConfiguration(Request $request)
+    {
+        //FIXME: change here to auth()->user()
+        $user = User::find(1);
+        $avatar = $user->avatar;
+        $avatar->update($request->input());
+
+        return Response::json($avatar);
     }
 
     // For User
