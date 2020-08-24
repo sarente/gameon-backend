@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        App\Providers\ResponseServiceProvider::class,
 
         /*
          * Package Service Providers...

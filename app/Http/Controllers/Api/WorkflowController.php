@@ -18,7 +18,7 @@ class WorkflowController extends Controller
         if (!$workflows) {
             return response()->error('error.not-found');
         }
-        return Response::json($workflows);
+        return response()->success($workflows);
     }
 
     public function store(Request $request)
@@ -33,7 +33,7 @@ class WorkflowController extends Controller
         $workflow = new Workflow($request->input());
         $workflow->save();
 
-        return Response::json($workflow);
+        return response()->success($workflow);
     }
 
     public function addState(Request $request, $id)
@@ -67,7 +67,7 @@ class WorkflowController extends Controller
             $from_state = $state->id;
         }
 
-        return Response::json($workflow);
+        return response()->success($workflow);
     }
 
     public function show($id){
@@ -75,6 +75,6 @@ class WorkflowController extends Controller
         if (!$workflow) {
             return response()->error('workflow.not-found');
         }
-        return Response::json($workflow);
+        return response()->success($workflow);
     }
 }

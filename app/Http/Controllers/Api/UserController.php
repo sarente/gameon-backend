@@ -100,30 +100,6 @@ class UserController extends Controller
         return response()->success($models);
     }
 
-    public function getProjects($id)
-    {
-        $user = User::findOrFail($id);
-        $projects = $user->projects->load('image');
-
-        return response()->success($projects);
-    }
-
-    public function getClubs($id)
-    {
-        $user = User::findOrFail($id);
-        $clubs = $user->clubs->load('image');
-
-        return response()->success($clubs);
-    }
-
-    public function getTasks($id)
-    {
-        $user = User::findOrFail($id);
-        $tasks = $user->tasks->load('image');
-
-        return response()->success($tasks);
-    }
-
     public function getClassrooms($id)
     {
         $user = User::findOrFail($id);
@@ -209,7 +185,8 @@ class UserController extends Controller
         $avatar = $user->avatar;
         $avatar->gender = $user->gender;
 
-        return Response::json($avatar);
+
+        return response()->success($avatar);
     }
 
     public function saveAvatarConfiguration(Request $request)
@@ -219,7 +196,7 @@ class UserController extends Controller
         $avatar = $user->avatar;
         $avatar->update($request->input());
 
-        return Response::json($avatar);
+        return response()->success($avatar);
     }
 
     // For User

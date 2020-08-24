@@ -21,7 +21,7 @@ class CategoryController extends Controller
         if (!$categories) {
             return response()->error('error.not-found');
         }
-        return Response::json($categories);
+        return response()->success($categories);
     }
 
     public function store(Request $request)
@@ -52,6 +52,6 @@ class CategoryController extends Controller
 
         $category->workflows = $workflows;
 
-        return Response::json($category);
+        return response()->success($category);
     }
 }
