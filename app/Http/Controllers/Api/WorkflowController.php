@@ -67,7 +67,7 @@ class WorkflowController extends Controller
     }
 
     public function show($id){
-        $workflow = Workflow::with('category', 'users', 'activities', 'transitions')->find($id);
+        $workflow = Workflow::with('category', 'users', 'activities.rewards', 'transitions')->find($id);
         if (!$workflow) {
             return response()->error('workflow.not-found');
         }
