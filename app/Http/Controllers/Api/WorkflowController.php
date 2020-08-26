@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Activity;
+use App\Models\Category;
 use App\Models\Reward;
 use App\Models\User;
 use App\Models\Workflow\State;
@@ -21,7 +22,7 @@ class WorkflowController extends Controller
         if (!$workflows) {
             return response()->error('error.not-found');
         }
-        return response()->success($workflows);
+        return response()->success($workflows->load('category'));
     }
 
     public function store(Request $request)
@@ -33,7 +34,10 @@ class WorkflowController extends Controller
             return response()->error('workflow.name-valid');
         }
 
+        $category = Category::find($request->category_id);
+
         $workflow = new Workflow($request->input());
+        $workflow->category()->associate($category);
         $workflow->save();
 
         return response()->success($workflow);
