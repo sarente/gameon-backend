@@ -29,6 +29,7 @@ class CreateUserCategory extends Migration
                 ->onDelete('cascade');
 
             $table->integer('level_no')->default(0);
+            $table->integer('current_point')->default(0);
 
             $table->softDeletes();
             $table->timestamps();

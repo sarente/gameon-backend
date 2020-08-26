@@ -2,20 +2,8 @@
 
 namespace App\Providers;
 
-use App\Models\Club;
 use App\Models\Permission;
-use App\Models\Profile;
-use App\Models\Project;
-use App\Models\Question;
 use App\Models\Setting;
-use App\Models\Step;
-use App\Models\Task;
-use App\Policies\ClubPolicy;
-use App\Policies\ProfilePolicy;
-use App\Policies\ProjectPolicy;
-use App\Policies\QuestionAnswerPolicy;
-use App\Policies\StepPolicy;
-use App\Policies\TaskPolicy;
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -26,14 +14,7 @@ class AuthServiceProvider extends ServiceProvider
      * The policy mappings for the application.
      * @var array
      */
-    protected $policies = [
-        Club::class => ClubPolicy::class,
-        Project::class => ProjectPolicy::class,
-        Task::class => TaskPolicy::class,
-        Question::class => QuestionAnswerPolicy::class,
-        Step::class => StepPolicy::class,
-        Profile::class => ProfilePolicy::class,
-    ];
+    protected $policies = [];
 
     /**
      * Register any application authentication / authorization services.

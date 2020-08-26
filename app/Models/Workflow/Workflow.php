@@ -3,6 +3,7 @@
 namespace App\Models\Workflow;
 
 use App\Models\Activity;
+use App\Models\Avatar;
 use App\Models\Category;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
@@ -36,5 +37,18 @@ class Workflow extends Model
     public function users()
     {
         return $this->belongsToMany(User::class, 'user_workflow')->withPivot('marking');
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::created(function (self $model) {
+
+            //create last activity as finishing state of workflow
+            $activity = new Activity(['name' => "Final"]);
+            $activity->workflow()->associate($model);
+            $activity->save();
+        });
     }
 }

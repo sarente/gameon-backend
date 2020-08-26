@@ -17,8 +17,6 @@ class Category extends Model
     ];
 
     protected $hidden = [
-        'created_at',
-        'updated_at',
         'translations',
     ];
 
@@ -29,6 +27,6 @@ class Category extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'user_category')->withPivot('level_no');
+        return $this->belongsToMany(User::class, 'user_category')->withPivot('level_no', 'current_point');
     }
 }

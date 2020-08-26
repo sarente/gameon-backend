@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Activity;
+use App\Models\Reward;
+use App\Models\User;
 use App\Models\Workflow\State;
 use App\Models\Workflow\Transition;
 use App\Models\Workflow\Workflow;
@@ -36,36 +39,25 @@ class WorkflowController extends Controller
         return response()->success($workflow);
     }
 
-    public function addState(Request $request, $id)
+    public function addActivity(Request $request, $id)
     {
         $workflow = Workflow::find($id);
         if (!$workflow) {
             return response()->error('workflow.name-valid');
         }
 
-        $workflow->places()->delete();
+        $activity = new Activity(['name' => $request->activity_name, 'point' => $request->point]);
+        $activity->workflow()->associate($workflow);
+        $activity->save();
 
-        $states = $request->states;
+        $rewards = Reward::find($request->rewards);
+        $activity->rewards()->sync($rewards,false);
 
-        $from_state = null;
-        $to_state = null;
+        $final_activity = $workflow->activities->first();
 
-        foreach ($states as $key => $state) {
-
-            $state = new State(['name' => $state]);
-            $state->workflow()->associate($workflow);
-            $state->save();
-
-            $to_state = $state->id;
-
-            if ($from_state && $to_state) {
-                $transition = new Transition(['name' => $workflow->name . ' transition' . $key, 'from_state_id' => $from_state, 'to_state_id' => $to_state]);
-                $transition->workflow()->associate($workflow);
-                $transition->save();
-            }
-
-            $from_state = $state->id;
-        }
+        $transition = new Transition(['name' => $workflow->name . ' from ' . $activity->name . ' to ' . $final_activity->name, 'from_activity_id' => $activity->id, 'to_activity_id' => $final_activity->id]);
+        $transition->workflow()->associate($workflow);
+        $transition->save();
 
         return response()->success($workflow);
     }
@@ -76,5 +68,16 @@ class WorkflowController extends Controller
             return response()->error('workflow.not-found');
         }
         return response()->success($workflow);
+    }
+
+    public function addUser(Request $request, $id)
+    {
+        $workflow = Workflow::find($id);
+        if (!$workflow) {
+            return response()->error('workflow.not-found');
+        }
+
+        $users = User::find($request->user_ids);
+        $workflow->users()->sync($users);
     }
 }

@@ -16,6 +16,7 @@ class CreateActivitiesTable extends Migration
         Schema::create('activities', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->integer('point')->default(0);
             $table->timestamps();
 
             $table->bigInteger('workflow_id')->unsigned();

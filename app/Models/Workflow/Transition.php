@@ -9,16 +9,16 @@ class Transition extends Model
 {
     protected $fillable = [
         'name',
-        'from_state_id',
-        'to_state_id'
+        'from_activity_id',
+        'to_activity_id'
     ];
 
     protected $hidden = [
         'created_at',
         'updates_at',
         'workflow_id',
-        'from_state_id',
-        'to_state_id'
+        'from_activity_id',
+        'to_activity_id'
     ];
 
     protected $appends = [

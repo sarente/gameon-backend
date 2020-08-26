@@ -11,7 +11,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\DB;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Permission\Traits\HasRoles;
-//use Tymon\JWTAuth\Contracts\JWTSubject;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
 /**
  * App\Models\User
@@ -115,12 +115,6 @@ class User extends Authenticatable implements HasLocalePreference
         'email_verified_at' => 'datetime',
     ];
 
-    protected $appends = [
-        'experience',
-        'point',
-        'level',
-    ];
-
     // Rest omitted for brevity
 
     public static function getUrl($roleName = null, $is_intro_completed)
@@ -170,10 +164,6 @@ class User extends Authenticatable implements HasLocalePreference
         return [];
     }
 
-    //Get user last level current Point
-
-    //Get user last level current Experience
-
     public function avatar()
     {
         return $this->hasOne(Avatar::class);
@@ -181,7 +171,7 @@ class User extends Authenticatable implements HasLocalePreference
 
     public function categories()
     {
-        return $this->belongsToMany(Category::class, 'user_category')->withPivot('level_no');
+        return $this->belongsToMany(Category::class, 'user_category')->withPivot('level_no', 'current_point');
     }
 
     public function workflows()
@@ -198,114 +188,6 @@ class User extends Authenticatable implements HasLocalePreference
             'model_id',
             'reward_id'
         );
-    }
-
-    public function posts()
-    {
-        return $this->morphMany(Post::class, 'postable');
-    }
-
-    public function likes()
-    {
-        return $this->hasMany(Like::class, 'user_id', 'user_id');
-    }
-
-    public function friends()
-    {
-        //FIXME: change it to laravel standards
-        $first = DB::table('friend_user')
-            ->where('friend_id', '=', $this->user->id)
-            ->where('is_friend','=', true)
-            ->leftJoin('users', 'users.id', '=', 'friend_user.user_id')
-            ->select('id');
-
-        $friend_ids = DB::table('friend_user')
-            ->where('user_id', '=', $this->user->id)
-            ->where('is_friend','=', true)
-            ->rightJoin('users','users.id', '=', 'friend_user.friend_id')
-            ->select('id')
-            ->union($first)
-            ->pluck('id')
-            ->toArray();
-
-        return User::with('image')->find($friend_ids);
-    }
-
-    public function getScoreAttribute($value)
-    {
-        return $this->getLastCurrentScore();
-    }
-
-    public function getPointAttribute($value)
-    {
-        return $this->getLastCurrentPoint();
-    }
-
-    public function levels()
-    {
-        return $this->belongsToMany(Level::class, 'user_level', 'user_id', 'level_id')
-            ->withTimestamps()
-            ->withPivot('current_xp', 'artifact_name');
-    }
-
-    public function getLevelNumber($artifact_name)
-    {
-        return $this->whereHas('levels', function ($q) use ($artifact_name) {
-            $q->where('artifact_name', $artifact_name);
-        })->firstOrFail()->artifact_status;
-    }
-
-    //Get user last level current Point
-
-    public function getCurrentXp($level_id)
-    {
-        $query = $this->levels()->getQuery()->where('level_id', $level_id);
-        if ($query->exists()) {
-            return $query->first()->current_xp;
-        }
-        return null;
-    }
-
-    //Get user last level current Experience
-
-    public function getUserCurrentPoint($level_id)
-    {
-        if ($this->rightJoin('user_level', 'user_id', 'level_id')->where('level_id', $level_id)->exists()) {
-            return $this->rightJoin('user_level', 'user_id', 'level_id')->where('level_id', $level_id)->firstOrFail()->current_point;
-        }
-        return null;
-    }
-
-    public function getLastCurrentPoint()
-    {
-        $point = Point::getPoints(Setting::ARTIFACT_GENERAL)->where('user_id', $this->id);
-        if ($point->count() > 0) {
-            return $point->first()->point;
-        }
-        return 0;
-    }
-
-    //manually level up
-
-    public function getLastCurrentXP()
-    {
-        $level_id = Level::getLevelbyStatus(setting::ARTIFACT_GENERAL, Setting::getByKey(Setting::LAST_LEVEL))->id;
-        if ($this->rightJoin('user_level', 'user_id', 'level_id')->where('level_id', $level_id)->exists()) {
-            return $this->rightJoin('user_level', 'user_id', 'level_id')->where('level_id', $level_id)->firstOrFail()->current_xp;
-        }
-        return null;
-    }
-
-    public function setCurrentXp($artifact, ?int $artifact_status, ?int $current_xp)
-    {
-        $level = Level::getLevelbyStatus($artifact, $artifact_status);
-        $current_xp = $current_xp ?? $level->max_xp;
-        if (is_null($this->getCurrentXp($level->id))) {
-            // first time
-            return $this->levels()->attach($level->id, ['current_xp' => $current_xp]);
-        };
-        // update
-        return $this->levels()->updateExistingPivot($level->id, ['current_xp' => $current_xp]);
     }
 
     public static function boot()

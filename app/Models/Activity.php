@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Workflow\State;
 use App\Models\Workflow\Workflow;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Spatie\Activitylog\Traits\LogsActivity;
 use ZeroDaHero\LaravelWorkflow\Traits\WorkflowTrait;
 
@@ -13,7 +14,8 @@ class Activity extends Model
     use LogsActivity, WorkflowTrait;
 
     protected $fillable = [
-        'name'
+        'name',
+        'point'
     ];
 
     public $hidden=[
@@ -41,9 +43,15 @@ class Activity extends Model
         return $this->belongsToMany(User::class, 'user_activity')->withTimestamps()->withPivot(['status_id']);
     }
 
-    public function rewards()
+    public function rewards(): MorphToMany
     {
-        return $this->belongsToMany(Reward::class, 'activity_reward');
+        return $this->morphToMany(
+            Reward::class,
+            'model',
+            'model_has_rewards',
+            'model_id',
+            'reward_id'
+        );
     }
 
     public function workflow()
