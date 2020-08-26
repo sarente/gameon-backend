@@ -24,8 +24,8 @@ Route::resource('user', 'Api\UserController');
 Route::resource('category', 'Api\CategoryController');
 Route::post('category/{category}/sync-users', 'Api\CategoryController@syncUsers');
 
-Route::resource('workflow', 'Api\WorkflowController');
 Route::post('workflow/{workflow}/add-activity', 'Api\WorkflowController@addActivity');
+Route::resource('workflow', 'Api\WorkflowController');
 
 
 Route::group(['prefix' => 'auth'], function ($router) {

@@ -31,23 +31,10 @@ class Reward extends Model
         'user_id',
         'pivot'
     ];
-    protected $appends = [
-        'has_got'
-    ];
-
-    public function getHasGotAttribute()
-    {
-        return auth()->user()->rewards()->where('reward_id',$this->id)->exists();
-    }
 
     public function creator()
     {
         return $this->belongsTo(User::class);
-    }
-
-    public function owners()
-    {
-        return $this->belongsToMany(User::class, 'user_reward');
     }
 
     public function image()
