@@ -28,12 +28,12 @@ class Transition extends Model
 
     public function getFromAttribute($value)
     {
-        return $this->from_state->name;
+        return $this->from_activity->name;
     }
 
     public function getToAttribute($value)
     {
-        return $this->to_state->name;
+        return $this->to_activity->name;
     }
 
     public function workflow()
@@ -41,13 +41,13 @@ class Transition extends Model
         return $this->belongsTo(Workflow::class);
     }
 
-    public function from_state()
+    public function from_activity()
     {
-        return $this->hasOne(Activity::class,'id', 'from_state_id');
+        return $this->hasOne(Activity::class,'id', 'from_activity_id');
     }
 
-    public function to_state()
+    public function to_activity()
     {
-        return $this->hasOne(Activity::class,'id', 'to_state_id');
+        return $this->hasOne(Activity::class,'id', 'to_activity_id');
     }
 }
