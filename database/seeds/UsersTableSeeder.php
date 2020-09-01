@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
         ///////////
         $admin = factory(\App\Models\User::class)->create([
             'username' => 11111111111,
-            'gender' => 0,
+            'gender' => 1,
             'email' => 'admin@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('g@meon'),
             'name' => $name,

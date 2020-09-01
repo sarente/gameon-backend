@@ -54,12 +54,11 @@ class UserController extends Controller
 
     public function saveAvatarConfiguration(Request $request)
     {
-        //FIXME: change here to auth()->user()
         $user = User::find(1);
         $avatar = $user->avatar;
-        $avatar->update($request->input());
-
-        return response()->success($avatar);
+        $data=json_decode($request->items, true);
+        $avatar->items = $data;
+        $avatar->save();
     }
 
     public function getMyCategories()
