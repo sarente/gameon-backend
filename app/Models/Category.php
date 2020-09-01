@@ -18,7 +18,15 @@ class Category extends Model
 
     protected $hidden = [
         'translations',
+        'pivot',
+        'created_at',
+        'updated_at'
     ];
+
+    public function levels()
+    {
+        return $this->hasMany(Pane::class);
+    }
 
     public function workflows()
     {

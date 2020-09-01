@@ -21,6 +21,7 @@ Route::post('user/avatar', 'Api\UserController@saveAvatarConfiguration');
 Route::get('user/get-my-categories', 'Api\UserController@getMyCategories');
 Route::resource('user', 'Api\UserController');
 
+Route::get('get-my-categories', 'Api\CategoryController@getMyCategories');
 Route::resource('category', 'Api\CategoryController');
 Route::post('category/{category}/sync-users', 'Api\CategoryController@syncUsers');
 

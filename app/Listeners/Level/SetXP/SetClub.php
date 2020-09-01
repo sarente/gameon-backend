@@ -3,7 +3,7 @@
 namespace App\Listeners\Level\SetXP;
 
 use App\Events\LevelConfigured;
-use App\Models\Level;
+use App\Models\Pane;
 use App\Models\Setting;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -30,7 +30,7 @@ class SetClub implements ShouldQueue
         // Set default per month if null
         $per_month =  $event->club_monthly?? Setting::getByKey(Setting::ARTIFACT_CLUB_MONTHLY) ?? 5;
         $percent = $event->club_xp ?? Setting::getByKey(Setting::ARTIFACT_CLUB_XP);
-        Level::configXP($event->level_count, $event->education_term, $event->total_xp, Setting::ARTIFACT_CLUB, $per_month, $percent, null);
+        Pane::configXP($event->level_count, $event->education_term, $event->total_xp, Setting::ARTIFACT_CLUB, $per_month, $percent, null);
         //
         Setting::setByKey(Setting::CLUB_PER_MONTH, $per_month);
         Setting::setByKey(Setting::CLUB_PERCENT, $percent);

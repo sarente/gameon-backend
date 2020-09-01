@@ -4,7 +4,7 @@ namespace App\Listeners\Reward;
 
 use App\Events\ArtifactIsCompleted;
 use App\Events\ActivitySaved;
-use App\Models\Level;
+use App\Models\Pane;
 use App\Models\Point;
 use App\Models\Profile;
 use App\Models\User;

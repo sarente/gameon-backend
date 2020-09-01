@@ -1,7 +1,7 @@
 <?php
 
 use App\Events\ModelCreated;
-use App\Models\Level;
+use App\Models\Pane;
 use App\Models\Rosette;
 use App\Models\Task;
 use App\Models\User;
@@ -66,8 +66,8 @@ class TaskTableSeeder extends Seeder
         ]);
         //Creator
         $task->creator()->associate(User::find(1));
-        //Level 0 of tasks
-        $level = Level::find(13);
+        //Pane 0 of tasks
+        $level = Pane::find(13);
         $task->level()->associate($level);
         //Endorser
         $endorser = User::find(1);

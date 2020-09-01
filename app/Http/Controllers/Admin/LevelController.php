@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Image;
-use App\Models\Level;
+use App\Models\Pane;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -13,7 +13,7 @@ class LevelController extends Controller
 
     public function index()
     {
-        $levels = Level::all();
+        $levels = Pane::all();
 
         return view('admin.levels.index', compact('levels'))->with('transPrefix', $this->transPrefix);
     }
@@ -30,7 +30,7 @@ class LevelController extends Controller
 
     public function store(Request $request)
     {
-        $level = new Level($request->all());
+        $level = new Pane($request->all());
         $level->save();
 
         if ($request->hasFile('image')) {
@@ -39,19 +39,19 @@ class LevelController extends Controller
             ]));
         }
 
-        return redirect('admin/levels')->with('flash_message', 'Level added!');
+        return redirect('admin/levels')->with('flash_message', 'Pane added!');
     }
 
     public function show($id)
     {
-        $level = Level::find($id);
+        $level = Pane::find($id);
 
         return view('admin.levels.show', compact('level'))->with('transPrefix', $this->transPrefix);
     }
 
     public function edit($id)
     {
-        $level = Level::find($id);
+        $level = Pane::find($id);
         $artifacts = [
             $level->artifact => $level->artifact
         ];
@@ -64,7 +64,7 @@ class LevelController extends Controller
 
     public function update(Request $request, $id)
     {
-        $level = Level::find($id);
+        $level = Pane::find($id);
 
         if ($request->hasFile('image')) {
             $level->image()->delete();
@@ -75,13 +75,13 @@ class LevelController extends Controller
 
         $level->update($request->all());
 
-        return redirect('admin/levels')->with('flash_message', 'Level updated!');
+        return redirect('admin/levels')->with('flash_message', 'Pane updated!');
     }
 
     public function destroy($id)
     {
-        Level::destroy($id);
+        Pane::destroy($id);
 
-        return redirect('admin/levels')->with('flash_message', 'Level deleted!');
+        return redirect('admin/levels')->with('flash_message', 'Pane deleted!');
     }
 }

@@ -3,7 +3,7 @@
 namespace App\Listeners\Task;
 
 use App\Events\TaskSaved;
-use App\Models\Level;
+use App\Models\Pane;
 use App\Models\Rosette;
 use App\Models\Setting;
 use Illuminate\Queue\InteractsWithQueue;
@@ -30,10 +30,10 @@ class AddLevel implements ShouldQueue
     public function handle(TaskSaved $event)
     {
         $task=$event->task;
-        $level = Level::findOrFail($event->level);
+        $level = Pane::findOrFail($event->level);
         if(!$level){
             // -1 : These tasks are independent of levels
-            $level=new Level([
+            $level=new Pane([
                 'max_xp' => 0,
                 'is_active' => 0,
                 'artifact' => trans(Setting::NO_ARTIFACT)

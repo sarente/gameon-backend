@@ -4,7 +4,7 @@ namespace App\Listeners\Task;
 
 use App\Events\TaskSaved;
 use App\Models\Classroom;
-use App\Models\Level;
+use App\Models\Pane;
 use App\Models\Setting;
 use App\Models\User;
 use http\Env\Response;

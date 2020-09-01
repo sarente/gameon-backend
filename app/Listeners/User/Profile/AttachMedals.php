@@ -4,7 +4,7 @@ namespace App\Listeners\User\Profile;
 
 use App\Events\LevelUp;
 use App\Events\ActivitySaved;
-use App\Models\Level;
+use App\Models\Pane;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Log;

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Image;
-use App\Models\Level;
+use App\Models\Pane;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -108,7 +108,7 @@ class UsersController extends Controller
             $user_roles[] = $role->name;
         }
 
-        $levels = Level::all();
+        $levels = Pane::all();
         $my_levels = $user->levels()->get();
         $my_xps = $user->levels()->pluck('current_xp')->toArray();
 

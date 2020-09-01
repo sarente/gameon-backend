@@ -21,6 +21,13 @@ class CategorySeeder extends Seeder
         $category->save();
         $category->users()->attach([1,2,3]);
 
+        for ($level_no = 0; $level_no < 6; $level_no++) {
+            $pane = \App\Models\Pane::create(['level_no' => $level_no, 'pane_no' => 1, 'category_id' => $category->id]);
+            $pane->image()->save(new  \App\Models\Image([
+                'image' => Intervention::make(resource_path("images/level/level_{$level_no}/pane-1.png")),
+            ]));
+        }
+
         $workflow = new Workflow(['name' => 'Yetkinlik 1']);
         $workflow->category()->associate($category);
         $workflow->save();
@@ -52,6 +59,13 @@ class CategorySeeder extends Seeder
         ]);
         $category->save();
         $category->users()->attach([1,2,3]);
+
+        for ($level_no = 0; $level_no < 6; $level_no++) {
+            $pane = \App\Models\Pane::create(['level_no' => $level_no, 'pane_no' => 2, 'category_id' => $category->id]);
+            $pane->image()->save(new  \App\Models\Image([
+                'image' => Intervention::make(resource_path("images/level/level_{$level_no}/pane-2.png")),
+            ]));
+        }
 
         $workflow = new Workflow(['name' => 'Dürüstlük']);
         $workflow->category()->associate($category);

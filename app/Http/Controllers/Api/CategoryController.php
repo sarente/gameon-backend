@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Category;
+use App\Models\Pane;
 use App\Models\User;
 use App\Models\Workflow\UserWorkflow;
 use App\Models\Workflow\Workflow;
@@ -12,6 +13,22 @@ use Illuminate\Support\Facades\Response;
 
 class CategoryController extends Controller
 {
+    public function getMyCategories()
+    {
+        $user = User::find(1);
+
+        $categories = $user->categories;
+
+        foreach ($categories as $category) {
+            $level = $category->levels()->where('level_no', $category->pivot->level_no)->first();
+            $category->level = $level;
+            $category->level->image = $level->image;
+        }
+
+        return response()->success($categories);
+
+    }
+
     public function index()
     {
         $categories = Category::all();

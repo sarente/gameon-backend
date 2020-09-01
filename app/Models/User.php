@@ -41,7 +41,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
  * @property-read int|null $image_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Introduction[] $introductions
  * @property-read int|null $introductions_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Level[] $levels
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Pane[] $levels
  * @property-read int|null $levels_count
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
  * @property-read int|null $notifications_count

@@ -8,7 +8,7 @@
 
 namespace App\Events;
 
-use App\Models\Level;
+use App\Models\Pane;
 use App\Models\User;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
@@ -33,7 +33,7 @@ class LevelUp implements ShouldBroadcast
     public function __construct(User $user, $level_id, $has_got_xp)
     {
         $this->level_id = $level_id;
-        $level = Level::findOrFail($level_id);
+        $level = Pane::findOrFail($level_id);
         sleep(1);
         $this->level_no = $level->artifact_status;
         $this->artifact = $level->artifact;

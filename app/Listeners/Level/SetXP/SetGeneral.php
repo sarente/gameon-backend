@@ -3,7 +3,7 @@
 namespace App\Listeners\Level\SetXP;
 
 use App\Events\LevelConfigured;
-use App\Models\Level;
+use App\Models\Pane;
 use App\Models\Setting;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -27,7 +27,7 @@ class SetGeneral implements ShouldQueue
      */
     public function handle(LevelConfigured $event)
     {
-        $general_max_xp = Level::whereIn('artifact', [
+        $general_max_xp = Pane::whereIn('artifact', [
             Setting::ARTIFACT_PROJECT,
             Setting::ARTIFACT_CLUB,
             Setting::ARTIFACT_TASK,
@@ -40,7 +40,7 @@ class SetGeneral implements ShouldQueue
         if (is_null($general_max_xp)) {
             $general_max_xp=1050;
         }
-        Level::configXP($event->level_count, null, null, Setting::ARTIFACT_GENERAL, null, null, $general_max_xp);
+        Pane::configXP($event->level_count, null, null, Setting::ARTIFACT_GENERAL, null, null, $general_max_xp);
 
     }
 }
