@@ -19,62 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="Revert code to previous version">
-      <change afterPath="$PROJECT_DIR$/app/Exceptions/Token/TokenExpiredException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Exceptions/Token/TokenInvalidException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Exceptions/Token/TokenNotfoundException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Exceptions/UserModelNotFoundException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Guard/JwtGuard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/GenereateJwt.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/InternalUserProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_07_22_062406_create_permission_tables.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/PermissionsTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/keys/private.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/keys/public.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/errors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gameon-workflow.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gameon-workflow.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ActivityLogsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ClubController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LevelController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MessageController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PagesController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PermissionsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectPostController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectUserController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/QuestionController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/RolesController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/RosetteController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SocketController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/StepController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TaskController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Broadcast/AuthController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/JWTAuth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/JwtAuth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/jwt.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jwt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +36,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="127.0.0.1" id="b49ea503-f879-470e-83b0-ef1f04404137" name="127.0.0.1" port="8000" />
+    </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -357,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598969770846</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add asymmetric authentication">
+      <created>1599044381794</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1599044381794</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +349,8 @@
     <MESSAGE value="Workflow rewards info added in show function" />
     <MESSAGE value="Reward get bug fix" />
     <MESSAGE value="Revert code to previous version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert code to previous version" />
+    <MESSAGE value="Add asymmetric authentication" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add asymmetric authentication" />
   </component>
   <component name="WindowStateProjectService">
     <state x="504" y="118" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598968364287">
@@ -411,21 +371,73 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599034198143" />
-    <state x="565" y="106" key="CommitChangelistDialog2" timestamp="1599030605813">
+    <state x="565" y="106" key="CommitChangelistDialog2" timestamp="1599044380100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="565" y="106" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599030605813" />
+    <state x="565" y="106" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599044380100" />
+    <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599046302913">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="455" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1599046302913" />
     <state x="193" y="86" width="1536" height="860" key="DiffContextDialog" timestamp="1599027227360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="193" y="86" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939593331" />
     <state x="193" y="86" width="1536" height="860" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599027227360" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1598969772432">
+    <state width="1877" height="330" key="GridCell.Tab.0.bottom" timestamp="1599046272251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599046272251" />
+    <state width="1877" height="330" key="GridCell.Tab.0.center" timestamp="1599046272251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599046272251" />
+    <state width="1877" height="330" key="GridCell.Tab.0.left" timestamp="1599046272250">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599046272250" />
+    <state width="1877" height="330" key="GridCell.Tab.0.right" timestamp="1599046272251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599046272251" />
+    <state width="1877" height="330" key="GridCell.Tab.1.bottom" timestamp="1599046272252">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599046272252" />
+    <state width="1877" height="330" key="GridCell.Tab.1.center" timestamp="1599046272252">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599046272252" />
+    <state width="1877" height="330" key="GridCell.Tab.1.left" timestamp="1599046272251">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599046272251" />
+    <state width="1877" height="330" key="GridCell.Tab.1.right" timestamp="1599046272252">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599046272252" />
+    <state width="1877" height="330" key="GridCell.Tab.2.bottom" timestamp="1599046272252">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599046272252" />
+    <state width="1877" height="330" key="GridCell.Tab.2.center" timestamp="1599046272252">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599046272252" />
+    <state width="1877" height="330" key="GridCell.Tab.2.left" timestamp="1599046272252">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599046272252" />
+    <state width="1877" height="330" key="GridCell.Tab.2.right" timestamp="1599046272252">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599046272252" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599044385743">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1598969772432" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599044385743" />
     <state x="781" y="191" width="449" height="614" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599036935752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -461,11 +473,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339983001" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598433843453">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599045852587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339136996" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598433843453" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599045852587" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -473,6 +485,21 @@
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/database/migrations/2020_08_07_114611_create_supports_table.php</url>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php</url>
+          <line>102</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php</url>
+          <line>123</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php</url>
+          <line>105</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

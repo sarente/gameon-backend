@@ -17,7 +17,7 @@ Route::post('login', 'Api\AuthController@login')->name('login');
 Route::post('forget', 'Api\AuthController@forgot');
 //Route::post('social/{provider}', 'Api\AuthController@social');
 
-Route::group(['prefix' => 'auth.jwt'], function ($router) {
+Route::group(['middleware' => 'auth.jwt'], function ($router) {
     Route::get('me', 'Api\AuthController@me');
     Route::get('refresh', 'Api\AuthController@refresh');
     Route::get('logout', 'Api\AuthController@logout');
