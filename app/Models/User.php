@@ -87,14 +87,12 @@ class User extends Authenticatable implements HasLocalePreference
      * @var array
      */
     protected $fillable = [
+        'username',
         'name',
+        'surname',
         'email',
         'password',
-        'experience',
-        'point',
-        'level',
         'gender',
-        'username'
     ];
 
     /**
@@ -104,6 +102,7 @@ class User extends Authenticatable implements HasLocalePreference
     protected $hidden = [
         'password',
         'remember_token',
+        'updated_at',
         'pivot'
     ];
 
@@ -111,8 +110,13 @@ class User extends Authenticatable implements HasLocalePreference
      * The attributes that should be cast to native types.
      * @var array
      */
+    protected $dates = [
+        'email_verified_at'
+    ];
+
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'email_verified_at'  => 'date:Y-m-d',
+        'created_at' => 'datetime:Y-m-d H:00',
     ];
 
     // Rest omitted for brevity
@@ -144,15 +148,6 @@ class User extends Authenticatable implements HasLocalePreference
     public function preferredLocale()
     {
         return $this->locale;
-    }
-
-    /**
-     * Get the identifier that will be stored in the subject claim of the JWT.
-     * @return mixed
-     */
-    public function getJWTIdentifier()
-    {
-        return $this->getKey();
     }
 
     /**

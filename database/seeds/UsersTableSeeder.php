@@ -23,6 +23,10 @@ class UsersTableSeeder extends Seeder
 
 
         //Get the role of admin
+        //$role = app(\Spatie\Permission\PermissionRegistrar::class)->getRoleClass()::findByName('admin');true
+        $role_admin = \App\Models\Role::findByName(\App\Models\Setting::ROLE_ADMIN, 'web');
+        $role_student = \App\Models\Role::findByName(\App\Models\Setting::ROLE_STUDENT, 'web');
+        $role_teacher = \App\Models\Role::findByName(\App\Models\Setting::ROLE_TEACHER, 'web');
         $name=app()->environment('production')?'Administrator':'Test Admin';
         ///////////
         $admin = factory(\App\Models\User::class)->create([
@@ -31,8 +35,10 @@ class UsersTableSeeder extends Seeder
             'email' => 'admin@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('g@meon'),
             'name' => $name,
+            'surname' => $name,
 
         ]);
+        $admin->assignRole($role_admin);
 
         ///////////
         $name=app()->environment('production')?'Student':'Test Student';
@@ -42,9 +48,11 @@ class UsersTableSeeder extends Seeder
             'email' => 'student@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => $name,
+            'surname' => $name,
 
         ]);
 
+        $student->assignRole($role_student);
 
         ///////////
         $name=app()->environment('production')?'Teacher':'Test Teacher';
@@ -54,8 +62,10 @@ class UsersTableSeeder extends Seeder
             'email' => 'teacher@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => $name,
+            'surname' => $name,
 
         ]);
 
+        $teacher->assignRole($role_teacher);
     }
 }

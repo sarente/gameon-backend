@@ -2,55 +2,37 @@
 
 namespace App\Providers;
 
-use App\Models\Permission;
-use App\Models\Setting;
-use Illuminate\Contracts\Auth\Access\Gate as GateContract;
+use App\Guard\JwtGuard;
+use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class AuthServiceProvider extends ServiceProvider
 {
     /**
      * The policy mappings for the application.
+     *
      * @var array
      */
-    protected $policies = [];
+    protected $policies = [
+        // 'App\Model' => 'App\Policies\ModelPolicy',
+    ];
 
     /**
-     * Register any application authentication / authorization services.
-     * @param  \Illuminate\Contracts\Auth\Access\Gate $gate
+     * Register any authentication / authorization services.
+     *
      * @return void
      */
-    public function boot(GateContract $gate)
+    public function boot()
     {
-        try {
-            parent::registerPolicies($gate);
+       Auth::extend('jwt', function ($app, $name, array $config) {
+            return new JwtGuard(Auth::createUserProvider($config['provider']), $app['request']);
+        });
+        Auth::provider('gameonuserprovider', function($app, array $config) {
+            return new InternalUserProvider($app['hash'], $config['model']);
+        });
 
-            if (\Schema::hasTable('permissions')) {
-                // Implicitly grant "Super Admin" role all permissions
-                // This works in the app by using gate-related functions like auth()->user->can() and @can()
-                $gate->before(function ($user, $ability) {
-                    return $user->hasRole(Setting::ROLE_SUPER_ADMIN) ? true : null;
-                });
-                // Dynamically register permissions with Laravel's Gate.
-                foreach ($this->getPermissions() as $permission) {
-                    $gate->define($permission->name, function ($user) use ($permission) {
-                        return $user->hasPermission($permission);
-                    });
-                }
-            }
-
-        } catch (\Illuminate\Database\QueryException $ex) {
-            return;
-        }
-    }
-
-    /**
-     * Fetch the collection of site permissions.
-     * @return \Illuminate\Database\Eloquent\Collection
-     */
-    protected function getPermissions()
-    {
-        return Permission::with('roles')->get();
+        $this->registerPolicies();
     }
 }

@@ -2,14 +2,12 @@
 
 namespace App\Http\Middleware;
 
-use App\Models\User;
-use Cache;
-use Carbon\Carbon;
+use App\Exceptions\Token\TokenNotfoundException;
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
 
-class JWTAuth
+class JwtAuth
 {
     /**
      * @var Guard
@@ -28,14 +26,16 @@ class JWTAuth
 
     /**
      * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \Closure $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure $next
      * @return mixed
      */
     public function handle($request, Closure $next)
     {
         $bearer = $request->bearerToken();
+        if ($bearer) {
+            $this->auth->getUserFromToken($bearer);
+        }
         return $next($request);
     }
 }

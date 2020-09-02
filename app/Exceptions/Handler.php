@@ -2,7 +2,18 @@
 
 namespace App\Exceptions;
 
+use App\Exceptions\UserModelNotFoundException;
+use App\Exceptions\Token\TokenExpiredException;
+use App\Exceptions\Token\TokenInvalidException;
+use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Validation\ValidationException;
+use Exception;
+use Illuminate\Auth\AuthenticationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Tymon\JWTAuth\Exceptions;
+
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -50,6 +61,31 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        if ($exception instanceof AuthorizationException) {
+            if ($request->expectsJson()) {
+                return response()->error('auth.unauthorised', [], [], 403);
+            }
+        } else if ($exception instanceof ValidationException) {
+            if ($request->expectsJson()) {
+                return response()->error('common.none-valid', [], [], 404);
+            }
+        } else if ($exception instanceof HttpResponseException) {
+            if ($request->expectsJson() || $request->acceptsJson()) {
+                return response()->error($exception->getMessage(), [], [], 500);
+            }
+        }/*else if ($exception instanceof ModelNotFoundException) {
+            if ($request->expectsJson() || $request->acceptsJson()) {
+                //return response()->error($exception->getModel(), [], [], 404);
+                throw new UserModelNotFoundException();
+            }
+            return redirect()->back();
+        }
+        else if ($exception instanceof \Exception) {
+            if ($request->expectsJson() || $request->acceptsJson()) {
+                return response()->error('common.none-valid', [], [], 404);
+            }
+            return redirect()->back();
+        }*/
         return parent::render($request, $exception);
     }
 }

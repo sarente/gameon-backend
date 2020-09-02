@@ -14,6 +14,10 @@ class DatabaseSeeder extends Seeder
 
         //This seeder used in user creation
 
+        $this->call(PermissionsTableSeeder::class);
+        $this->call(RolesTableSeeder::class);
+
+
         $this->call(LanguageTableSeeder::class);
         $this->call(UsersTableSeeder::class);
         $this->call(StatusSeeder::class);
