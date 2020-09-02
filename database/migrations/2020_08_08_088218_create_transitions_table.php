@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class CreateTransitionsTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Used as workflows config
      *
      * @return void
      */

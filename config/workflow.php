@@ -10,12 +10,12 @@ return [
         'places'        => ['gather_cvs', 'send_quiz', 'select_top_3', 'offering'],
         'transitions'   => [
             't1' => [
-                'from' => 'a',
-                'to'   => 'b',
+                'from' => 'gather_cvs',
+                'to'   => 'send_quiz',
             ],
             't2' => [
-                'from' => 'b',
-                'to'   => 'c',
+                'from' => 'send_quiz',
+                'to'   => 'select_top_3',
             ],
             't3' => [
                 'from' => 'c',
