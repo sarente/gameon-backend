@@ -73,13 +73,9 @@ class Handler extends ExceptionHandler
             if ($request->expectsJson() || $request->acceptsJson()) {
                 return response()->error($exception->getMessage(), [], [], 500);
             }
-        }/*else if ($exception instanceof ModelNotFoundException) {
-            if ($request->expectsJson() || $request->acceptsJson()) {
-                //return response()->error($exception->getModel(), [], [], 404);
-                throw new UserModelNotFoundException();
-            }
-            return redirect()->back();
-        }
+        }else if ($exception instanceof ModelNotFoundException) {
+                return response()->error('common.not-found', [], $request->toArray(), 404);
+        }/*
         else if ($exception instanceof \Exception) {
             if ($request->expectsJson() || $request->acceptsJson()) {
                 return response()->error('common.none-valid', [], [], 404);
