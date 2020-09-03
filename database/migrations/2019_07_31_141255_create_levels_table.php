@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserCategory extends Migration
+class CreateLevelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,25 +13,18 @@ class CreateUserCategory extends Migration
      */
     public function up()
     {
-        Schema::create('user_category', function (Blueprint $table) {
+        Schema::create('levels', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->boolean('level_no');
+            $table->integer('max_point');
+            $table->timestamps();
+
             $table->bigInteger('category_id')->unsigned();
             $table->foreign('category_id')
                 ->references('id')
                 ->on('categories')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
-
-            $table->bigInteger('user_id')->unsigned();
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
-            $table->softDeletes();
-            $table->timestamps();
-
-            $table->unique(['category_id', 'user_id']);
         });
     }
 
@@ -42,6 +35,6 @@ class CreateUserCategory extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_category');
+        Schema::dropIfExists('levels');
     }
 }

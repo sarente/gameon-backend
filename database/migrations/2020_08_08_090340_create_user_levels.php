@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserCategory extends Migration
+class CreateUserWorkflow extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateUserCategory extends Migration
      */
     public function up()
     {
-        Schema::create('user_category', function (Blueprint $table) {
-            $table->bigInteger('category_id')->unsigned();
-            $table->foreign('category_id')
+        Schema::create('user_levels', function (Blueprint $table) {
+            $table->bigInteger('level_id')->unsigned();
+            $table->foreign('level_id')
                 ->references('id')
-                ->on('categories')
+                ->on('levels')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
@@ -31,7 +31,7 @@ class CreateUserCategory extends Migration
             $table->softDeletes();
             $table->timestamps();
 
-            $table->unique(['category_id', 'user_id']);
+            $table->unique(['workflow_id', 'user_id']);
         });
     }
 
@@ -42,6 +42,6 @@ class CreateUserCategory extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_category');
+        Schema::dropIfExists('user_activity');
     }
 }

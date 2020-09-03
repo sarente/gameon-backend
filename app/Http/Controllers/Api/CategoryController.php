@@ -15,11 +15,17 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::all();
+        //TODO: check user role
+        $user = User::findOrFaild(auth()->id());
 
-        if (!$categories) {
-            return response()->error('error.not-found');
+        $categories = $user->categories;
+
+        foreach ($categories as $category) {
+            $level = $category->levels()->where('level_no', $category->pivot->level_no)->first();
+            $category->level = $level;
+            $category->level->image = $level->image;
         }
+
         return response()->success($categories);
     }
 
@@ -53,7 +59,7 @@ class CategoryController extends Controller
 
     public function getMyCategories()
     {
-        $user = User::find(auth()->id());
+        $user = User::findOrFaild(auth()->id());
 
         $categories = $user->categories;
 
