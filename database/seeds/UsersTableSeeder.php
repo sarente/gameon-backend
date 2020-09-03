@@ -45,7 +45,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'student@'.$domain_name,
+            'email' => 'user@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => $name,
             'surname' => $name,
@@ -59,7 +59,7 @@ class UsersTableSeeder extends Seeder
         $teacher = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'teacher@'.$domain_name,
+            'email' => 'advisor@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => $name,
             'surname' => $name,
