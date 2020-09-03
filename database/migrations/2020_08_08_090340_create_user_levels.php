@@ -31,7 +31,10 @@ class CreateUserWorkflow extends Migration
             $table->softDeletes();
             $table->timestamps();
 
-            $table->unique(['workflow_id', 'user_id']);
+            //$table->string('artifact_name');
+            //$table->integer('current_xp')->default(0);
+
+            $table->unique(['user_id', 'level_id']);
         });
     }
 
