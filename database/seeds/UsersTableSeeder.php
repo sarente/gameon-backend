@@ -24,9 +24,9 @@ class UsersTableSeeder extends Seeder
 
         //Get the role of admin
         //$role = app(\Spatie\Permission\PermissionRegistrar::class)->getRoleClass()::findByName('admin');true
-        $role_admin = \App\Models\Role::findByName(\App\Models\Setting::ROLE_ADMIN, 'web');
-        $role_student = \App\Models\Role::findByName(\App\Models\Setting::ROLE_STUDENT, 'web');
-        $role_teacher = \App\Models\Role::findByName(\App\Models\Setting::ROLE_TEACHER, 'web');
+        //$role_admin = \App\Models\Role::findByName(\App\Models\Setting::ROLE_ADMIN, config('auth.defaults.guard'));
+        //$role_student = \App\Models\Role::findByName(\App\Models\Setting::ROLE_STUDENT, config('auth.defaults.guard'));
+        //$role_teacher = \App\Models\Role::findByName(\App\Models\Setting::ROLE_TEACHER, config('auth.defaults.guard'));
         $name=app()->environment('production')?'Administrator':'Test Admin';
         ///////////
         $admin = factory(\App\Models\User::class)->create([
@@ -38,10 +38,10 @@ class UsersTableSeeder extends Seeder
             'surname' => $name,
 
         ]);
-        $admin->assignRole($role_admin);
+        //$admin->assignRole($role_admin);
 
         ///////////
-        $name=app()->environment('production')?'Student':'Test Student';
+        $name=app()->environment('production')?'User':'Test User';
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
@@ -52,10 +52,10 @@ class UsersTableSeeder extends Seeder
 
         ]);
 
-        $student->assignRole($role_student);
+        //$student->assignRole($role_student);
 
         ///////////
-        $name=app()->environment('production')?'Teacher':'Test Teacher';
+        $name=app()->environment('production')?'Advisor':'Test Advisor';
         $teacher = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
@@ -66,6 +66,6 @@ class UsersTableSeeder extends Seeder
 
         ]);
 
-        $teacher->assignRole($role_teacher);
+        //$teacher->assignRole($role_teacher);
     }
 }

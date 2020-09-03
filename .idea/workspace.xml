@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
+    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="Us">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/workflow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_07_114611_create_supports_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +179,12 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/en" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -324,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599046378031</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Some changes in workflow manager">
+      <created>1599056595848</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1599056595848</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,13 +369,22 @@
     <MESSAGE value="Revert code to previous version" />
     <MESSAGE value="Add asymmetric authentication" />
     <MESSAGE value="Add asymmetric authentication v1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add asymmetric authentication v1.0" />
+    <MESSAGE value="Some changes in workflow manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some changes in workflow manager" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="504" y="118" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598968364287">
+    <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="504" y="118" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598968364287" />
+    <state x="552" y="178" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1599117414370" />
+    <state x="536" y="165" key="#SSH_Configurations" timestamp="1599117222913">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="536" y="165" key="#SSH_Configurations/0.0.1920.1040@0.0.1920.1040" timestamp="1599117222913" />
+    <state x="633" y="110" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599117598375">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="633" y="110" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599117598375" />
     <state x="2654" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598265541694">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -380,11 +399,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599034198143" />
-    <state x="565" y="106" key="CommitChangelistDialog2" timestamp="1599046376909">
+    <state x="565" y="106" key="CommitChangelistDialog2" timestamp="1599119872102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="565" y="106" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599046376909" />
+    <state x="565" y="106" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599119872102" />
     <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599046302913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -442,11 +461,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="175" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599055764032" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599046382879">
+    <state x="747" y="222" key="RollbackChangesDialog" timestamp="1599119862887">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="747" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599119862887" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599056668907">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599046382879" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599056668907" />
     <state x="781" y="191" width="449" height="614" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599036935752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -470,11 +493,11 @@
     </state>
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598861608855" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597593489371" />
-    <state x="656" y="252" width="607" height="625" key="find.popup" timestamp="1599055690261">
+    <state x="656" y="252" width="607" height="625" key="find.popup" timestamp="1599118923941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="252" width="607" height="625" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597048766109" />
-    <state x="656" y="252" width="607" height="625" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599055690261" />
+    <state x="656" y="252" width="607" height="625" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599118923941" />
     <state x="601" y="246" width="700" height="530" key="recent.locations.popup" timestamp="1596724786179">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
