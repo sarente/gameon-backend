@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/Pane.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_31_122539_create_panes_table.php" afterDir="false" />
+    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="Category">
       <change afterPath="$PROJECT_DIR$/public/images/00357272-9139-421c-ba18-33f392a98e2d.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/025f1311-f864-4b3d-8b39-d0eec3d8a8c5.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/030fa197-8c70-4be5-a24d-c4762f630b30.png" afterDir="false" />
@@ -372,57 +370,7 @@
       <change afterPath="$PROJECT_DIR$/public/images/fe15e4f5-2c77-4a15-9a9d-76dc0cfc3560.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/fe53f70a-b147-4a0d-8a02-2734b51c0248.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/fee01426-65f5-458b-98ee-052aaf608d91.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_0/pane-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_0/pane-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_0/pane-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_0/pane-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_1/pane-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_1/pane-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_1/pane-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_1/pane-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_2/pane-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_2/pane-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_2/pane-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_2/pane-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_3/pane-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_3/pane-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_3/pane-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_3/pane-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_4/pane-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_4/pane-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_4/pane-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_4/pane-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_5/pane-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_5/pane-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_5/pane-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/level/level_5/pane-4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Events/LevelConfigured.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/LevelConfigured.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Events/LevelUp.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/LevelUp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LevelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LevelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/Level/SetXP/SetClub.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/Level/SetXP/SetClub.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/Level/SetXP/SetGeneral.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/Level/SetXP/SetGeneral.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/Level/SetXP/SetProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/Level/SetXP/SetProject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/Level/SetXP/SetQA.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/Level/SetXP/SetQA.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/Level/SetXP/SetTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/Level/SetXP/SetTask.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/Reward/AttachRosette.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/Reward/AttachRosette.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/Reward/ComputeGeneralXP.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/Reward/ComputeGeneralXP.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/Reward/ComputePoint.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/Reward/ComputePoint.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/Reward/ComputeXP.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/Reward/ComputeXP.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/Task/AddClassroom.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/Task/AddClassroom.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/Task/AddLevel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/Task/AddLevel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/Task/AddUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/Task/AddUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/User/Profile/AttachMedals.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/User/Profile/AttachMedals.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/User/Profile/CreateProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/User/Profile/CreateProfile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/User/SetDefaultLevel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/User/SetDefaultLevel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/TaskTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/TaskTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/demo/TaskTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/TaskTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -632,7 +580,8 @@
       <workItem from="1598355320719" duration="5000" />
       <workItem from="1598355783271" duration="753000" />
       <workItem from="1598425830647" duration="14029000" />
-      <workItem from="1598861456200" duration="8140000" />
+      <workItem from="1598861456200" duration="9500000" />
+      <workItem from="1598949959304" duration="3262000" />
     </task>
     <task id="LOCAL-00001" summary="Fetch config data of workflow from database">
       <created>1596810894159</created>
@@ -697,7 +646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598457476769</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Category level images added">
+      <created>1598939679043</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1598939679043</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -705,6 +661,17 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -717,7 +684,8 @@
     <MESSAGE value="Workflow users info added in show function" />
     <MESSAGE value="Workflow rewards info added in show function" />
     <MESSAGE value="Reward get bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reward get bug fix" />
+    <MESSAGE value="Category level images added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Category level images added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2654" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598265541694">
@@ -734,24 +702,24 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598431504124" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1598939623348">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1598967262122">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598967262122" />
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1598457475600" />
-    <state x="193" y="86" key="DiffContextDialog" timestamp="1598939593331">
+    <state x="193" y="86" width="1536" height="860" key="DiffContextDialog" timestamp="1598967334382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="193" y="86" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939593331" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1598939649084">
+    <state x="193" y="86" width="1536" height="860" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598967334382" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1598939680284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939680284" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1598457477731" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1598861458837">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1598949963530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598861458837" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598949963530" />
     <state x="2576" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1598277749117" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598425864526" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598861608855">
