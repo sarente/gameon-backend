@@ -18,9 +18,7 @@ Route::post('login', 'Api\AuthController@login');
 Route::post('forget', 'Api\AuthController@forgot');
 //Route::post('social/{provider}', 'Api\AuthController@social');
 Route::resource('version', 'VersionController', ['only' => ['index']]);
-Route::get('test', function(){
-    return response()->json('test');
-});
+
 
 Route::group(['middleware' => 'auth.jwt'], function ($router) {
     Route::get('me', 'Api\AuthController@me');

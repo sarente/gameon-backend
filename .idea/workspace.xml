@@ -20,8 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -375,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599122129867</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="exception handler changed">
+      <created>1599131308621</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1599131308621</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,7 +419,8 @@
     <MESSAGE value="Remove role from user seeder" />
     <MESSAGE value="Model notfound handler changed" />
     <MESSAGE value="user seeder changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="user seeder changed" />
+    <MESSAGE value="exception handler changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="exception handler changed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -451,11 +457,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599034198143" />
-    <state x="565" y="106" key="CommitChangelistDialog2" timestamp="1599122128893">
+    <state x="565" y="106" key="CommitChangelistDialog2" timestamp="1599131307252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="565" y="106" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599122128893" />
+    <state x="565" y="106" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599131307252" />
     <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599123308930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -517,11 +523,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="747" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599119862887" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599122131522">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599131310018">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599122131522" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599131310018" />
     <state x="781" y="191" width="449" height="614" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599036935752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
