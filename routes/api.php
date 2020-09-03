@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,16 +14,20 @@ use Illuminate\Http\Request;
 |
 */
 Route::post('register', 'Api\AuthController@register');
-Route::post('login', 'Api\AuthController@login')->name('login');
+Route::post('login', 'Api\AuthController@login');
 Route::post('forget', 'Api\AuthController@forgot');
 //Route::post('social/{provider}', 'Api\AuthController@social');
+Route::resource('version', 'VersionController', ['only' => ['index']]);
+Route::get('test', function(){
+    return response()->json('test');
+});
 
 Route::group(['middleware' => 'auth.jwt'], function ($router) {
     Route::get('me', 'Api\AuthController@me');
     Route::get('refresh', 'Api\AuthController@refresh');
     Route::get('logout', 'Api\AuthController@logout');
 
-    Route::resource('version', 'VersionController', ['only' => ['index']]);
+
 
     Route::get('user/avatar', 'Api\UserController@getAvatar');
     Route::post('user/avatar', 'Api\UserController@saveAvatarConfiguration');
