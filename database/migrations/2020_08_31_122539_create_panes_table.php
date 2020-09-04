@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class CreatePanesTable extends Migration
 {
     /**
-     * Run the migrations.
+     * template > panes 
      *
      * @return void
      */
@@ -18,10 +18,10 @@ class CreatePanesTable extends Migration
             $table->integer('level_no')->default(0);
             $table->integer('pane_no')->default(0);
 
-            $table->bigInteger('category_id')->unsigned();
-            $table->foreign('category_id')
+            $table->bigInteger('template_id')->unsigned();
+            $table->foreign('template_id')
                 ->references('id')
-                ->on('categories')
+                ->on('templates')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->timestamps();

@@ -20,9 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Models/Level.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Template.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2018_08_01_183156_create_templates_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_072800_create_user_point.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_072800_create_user_point.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_090340_create_user_levels.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_090340_create_user_levels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Pane.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Pane.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_31_122539_create_panes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_31_122539_create_panes_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +40,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="127.0.0.1" id="b49ea503-f879-470e-83b0-ef1f04404137" name="127.0.0.1" port="8000" />
@@ -188,7 +190,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/migrations" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Models" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -197,11 +199,11 @@
       <recent name="C:\Users\yusuf\Desktop\Projects\gameon-workflow\app\Http\Controllers\Api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Models" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\database\migrations" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Http\Controllers\Api\Admin" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\resources\lang\en" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\config" />
-      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\resources" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
@@ -403,7 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599135414293</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="user level point changed">
+      <created>1599205058930</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1599205058930</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Config categories&gt; workflow&gt; activity&gt; point">
+      <created>1599219615443</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1599219615443</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +462,9 @@
     <MESSAGE value="Add admin services" />
     <MESSAGE value="levels added to system" />
     <MESSAGE value="Add user levels table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add user levels table" />
+    <MESSAGE value="user level point changed" />
+    <MESSAGE value="Config categories&gt; workflow&gt; activity&gt; point" />
+    <option name="LAST_COMMIT_MESSAGE" value="Config categories&gt; workflow&gt; activity&gt; point" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -483,77 +501,77 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599034198143" />
-    <state x="565" y="106" key="CommitChangelistDialog2" timestamp="1599135413283">
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599219614130">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="565" y="106" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599135413283" />
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599219614130" />
     <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599123308930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="455" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1599123308930" />
-    <state x="193" y="86" width="1536" height="860" key="DiffContextDialog" timestamp="1599027227360">
+    <state x="193" y="86" width="1536" height="860" key="DiffContextDialog" timestamp="1599205030334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="193" y="86" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939593331" />
-    <state x="193" y="86" width="1536" height="860" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599027227360" />
-    <state width="1877" height="359" key="GridCell.Tab.0.bottom" timestamp="1599123299856">
+    <state x="193" y="86" width="1536" height="860" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599205030334" />
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom" timestamp="1599217894985">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="359" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599123299856" />
-    <state width="1877" height="359" key="GridCell.Tab.0.center" timestamp="1599123299856">
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599217894985" />
+    <state width="1877" height="286" key="GridCell.Tab.0.center" timestamp="1599217894983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="359" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599123299856" />
-    <state width="1877" height="359" key="GridCell.Tab.0.left" timestamp="1599123299856">
+    <state width="1877" height="286" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599217894983" />
+    <state width="1877" height="286" key="GridCell.Tab.0.left" timestamp="1599217894953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="359" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599123299856" />
-    <state width="1877" height="359" key="GridCell.Tab.0.right" timestamp="1599123299856">
+    <state width="1877" height="286" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599217894953" />
+    <state width="1877" height="286" key="GridCell.Tab.0.right" timestamp="1599217894983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="359" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599123299856" />
-    <state width="1877" height="359" key="GridCell.Tab.1.bottom" timestamp="1599123298183">
+    <state width="1877" height="286" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599217894983" />
+    <state width="1877" height="286" key="GridCell.Tab.1.bottom" timestamp="1599217894994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="359" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599123298183" />
-    <state width="1877" height="359" key="GridCell.Tab.1.center" timestamp="1599123298183">
+    <state width="1877" height="286" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599217894994" />
+    <state width="1877" height="286" key="GridCell.Tab.1.center" timestamp="1599217894990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="359" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599123298183" />
-    <state width="1877" height="359" key="GridCell.Tab.1.left" timestamp="1599123298183">
+    <state width="1877" height="286" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599217894990" />
+    <state width="1877" height="286" key="GridCell.Tab.1.left" timestamp="1599217894988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="359" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599123298183" />
-    <state width="1877" height="359" key="GridCell.Tab.1.right" timestamp="1599123298183">
+    <state width="1877" height="286" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599217894988" />
+    <state width="1877" height="286" key="GridCell.Tab.1.right" timestamp="1599217894994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="359" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599123298183" />
-    <state width="1877" height="359" key="GridCell.Tab.2.bottom" timestamp="1599123298184">
+    <state width="1877" height="286" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599217894994" />
+    <state width="1877" height="286" key="GridCell.Tab.2.bottom" timestamp="1599217895001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="359" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599123298184" />
-    <state width="1877" height="359" key="GridCell.Tab.2.center" timestamp="1599123298183">
+    <state width="1877" height="286" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599217895001" />
+    <state width="1877" height="286" key="GridCell.Tab.2.center" timestamp="1599217894999">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="359" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599123298183" />
-    <state width="1877" height="359" key="GridCell.Tab.2.left" timestamp="1599123298183">
+    <state width="1877" height="286" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599217894999" />
+    <state width="1877" height="286" key="GridCell.Tab.2.left" timestamp="1599217894995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="359" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599123298183" />
-    <state width="1877" height="359" key="GridCell.Tab.2.right" timestamp="1599123298183">
+    <state width="1877" height="286" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599217894995" />
+    <state width="1877" height="286" key="GridCell.Tab.2.right" timestamp="1599217895000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="359" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599123298183" />
+    <state width="1877" height="286" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599217895000" />
     <state x="747" y="222" key="RollbackChangesDialog" timestamp="1599119862887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="747" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599119862887" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599135416676">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599219618130">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599135416676" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599219618130" />
     <state x="781" y="191" width="449" height="614" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599036935752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -582,6 +600,10 @@
     </state>
     <state x="656" y="252" width="607" height="625" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597048766109" />
     <state x="656" y="252" width="607" height="625" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599121104960" />
+    <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog" timestamp="1599202336837">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599202336837" />
     <state x="601" y="246" width="700" height="530" key="recent.locations.popup" timestamp="1596724786179">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -590,11 +612,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339983001" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599132748846">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599220577300">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339136996" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599132748846" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599220577300" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
