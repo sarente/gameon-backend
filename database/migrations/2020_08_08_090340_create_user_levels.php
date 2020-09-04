@@ -13,7 +13,7 @@ class CreateUserWorkflow extends Migration
      */
     public function up()
     {
-        Schema::create('user_levels', function (Blueprint $table) {
+        Schema::create('user_ ', function (Blueprint $table) {
             $table->bigInteger('level_id')->unsigned();
             $table->foreign('level_id')
                 ->references('id')

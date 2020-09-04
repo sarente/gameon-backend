@@ -24,7 +24,7 @@ class CreateUserPoint extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->string('artifact_name');
+            $table->string('catid');
             $table->integer('point')->default(0);
             $table->timestamps();
         });
