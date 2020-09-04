@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Exceptions\UserModelNotFoundException;
 use App\Models\Category;
 use App\Models\Pane;
 use App\Models\User;
@@ -16,7 +17,8 @@ class CategoryController extends Controller
     public function index()
     {
         //TODO: check user role
-        $user = User::findOrFaild(auth()->id());
+        //$user = User::findOrFail(auth()->id());
+        $user = User::find(auth()->id());
 
         $categories = $user->categories;
 

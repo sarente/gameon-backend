@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class CreateWorkflowsTable extends Migration
 {
     /**
-     * Run the migrations.
+     * categories > workflow > activity > point
      *
      * @return void
      */

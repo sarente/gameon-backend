@@ -7,7 +7,7 @@ use Illuminate\Database\Migrations\Migration;
 class CreateUserPoint extends Migration
 {
     /**
-     * Run the migrations.
+     * User get point from which activity
      *
      * @return void
      */
@@ -24,7 +24,13 @@ class CreateUserPoint extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->string('catid');
+            $table->bigInteger('activity_id')->unsigned();
+            $table->foreign('activity_id')
+                ->references('id')
+                ->on('activities')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
             $table->integer('point')->default(0);
             $table->timestamps();
         });

@@ -7,7 +7,7 @@ use Illuminate\Database\Migrations\Migration;
 class CreateActivitiesTable extends Migration
 {
     /**
-     * Run the migrations.
+     * categories > workflow > activity > point
      *
      * @return void
      */
