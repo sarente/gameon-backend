@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserWorkflow extends Migration
+class CreateUserLevel extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateUserWorkflow extends Migration
      */
     public function up()
     {
-        Schema::create('user_ ', function (Blueprint $table) {
+        Schema::create('user_level ', function (Blueprint $table) {
             $table->bigInteger('level_id')->unsigned();
             $table->foreign('level_id')
                 ->references('id')
@@ -45,6 +45,6 @@ class CreateUserWorkflow extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_activity');
+        Schema::dropIfExists('user_level');
     }
 }

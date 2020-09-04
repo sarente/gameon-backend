@@ -7,14 +7,14 @@ use Illuminate\Support\Facades\Schema;
 class CreatePanesTable extends Migration
 {
     /**
-     * template > panes 
+     * template > panes
      *
      * @return void
      */
     public function up()
     {
         Schema::create('panes', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->integer('level_no')->default(0);
             $table->integer('pane_no')->default(0);
 

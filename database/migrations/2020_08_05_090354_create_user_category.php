@@ -31,13 +31,6 @@ class CreateUserCategory extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->bigInteger('level_id')->unsigned();
-            $table->foreign('level_id')
-                ->references('id')
-                ->on('levels')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
             $table->softDeletes();
             $table->timestamps();
 
