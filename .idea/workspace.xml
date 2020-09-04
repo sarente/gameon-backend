@@ -19,13 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/Level.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Template.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2018_08_01_183156_create_templates_table.php" afterDir="false" />
+    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="Add Template and Pane models">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_072801_create_categoty_pane.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Pane.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Pane.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_31_122539_create_panes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_31_122539_create_panes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_08_01_183156_create_templates_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_08_01_183156_create_templates_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_21_132024_create_friend_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_21_132024_create_user_friend.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_072800_create_user_point.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_072800_create_user_point.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_05_090354_create_user_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_05_090354_create_user_category.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +191,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/migrations" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -199,8 +200,8 @@
       <recent name="C:\Users\yusuf\Desktop\Projects\gameon-workflow\app\Http\Controllers\Api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Models" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\database\migrations" />
+      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Models" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Http\Controllers\Api\Admin" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\resources\lang\en" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\config" />
@@ -419,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599219615443</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Add Template and Pane models">
+      <created>1599221048694</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1599221048694</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +472,8 @@
     <MESSAGE value="Add user levels table" />
     <MESSAGE value="user level point changed" />
     <MESSAGE value="Config categories&gt; workflow&gt; activity&gt; point" />
-    <option name="LAST_COMMIT_MESSAGE" value="Config categories&gt; workflow&gt; activity&gt; point" />
+    <MESSAGE value="Add Template and Pane models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Template and Pane models" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -501,11 +510,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599034198143" />
-    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599219614130">
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599224560839">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599219614130" />
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599224560839" />
     <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599123308930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -567,11 +576,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="747" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599119862887" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599219618130">
+    <state width="596" height="446" key="SwitcherDM" timestamp="1599222873969">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="596" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1599222873969" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599221050257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599219618130" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599221050257" />
     <state x="781" y="191" width="449" height="614" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599036935752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -580,10 +593,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599039973999" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599037636291">
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599225708423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599037636291" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599225708423" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1598861458837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

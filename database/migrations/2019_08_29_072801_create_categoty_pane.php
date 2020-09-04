@@ -4,35 +4,36 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserPoint extends Migration
+class CreateCategoryPane extends Migration
 {
     /**
-     * user - activity - point
+     * Connect category to templates panes
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('user_point', function (Blueprint $table) {
+        Schema::create('category_pane', function (Blueprint $table) {
 
             $table->bigInteger('id')->autoIncrement();
 
-            $table->bigInteger('user_id')->unsigned();
-            $table->foreign('user_id')
+            $table->bigInteger('category_id')->unsigned();
+            $table->foreign('category_id')
                 ->references('id')
-                ->on('users')
+                ->on('categories')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->bigInteger('activity_id')->unsigned()->nullable();
-            $table->foreign('activity_id')
+            $table->bigInteger('pane_id')->unsigned()->nullable();
+            $table->foreign('pane_id')
                 ->references('id')
-                ->on('activities')
+                ->on('panes')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->integer('point')->default(0);
             $table->timestamps();
+            //FIXME: User could be add to this table
+            //we have to add user_template
         });
     }
 
@@ -43,6 +44,6 @@ class CreateUserPoint extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_point');
+        Schema::dropIfExists('category_pane');
     }
 }
