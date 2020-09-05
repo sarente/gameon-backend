@@ -119,8 +119,6 @@ class User extends Authenticatable implements HasLocalePreference
         'created_at' => 'datetime:Y-m-d H:00',
     ];
 
-    // Rest omitted for brevity
-
     public static function getUrl($roleName = null, $is_intro_completed)
     {
         unset($url);
@@ -141,22 +139,9 @@ class User extends Authenticatable implements HasLocalePreference
         return $url;
     }
 
-    /**
-     * Get the user's preferred locale.
-     * @return string
-     */
     public function preferredLocale()
     {
         return $this->locale;
-    }
-
-    /**
-     * Return a key value array, containing any custom claims to be added to the JWT.
-     * @return array
-     */
-    public function getJWTCustomClaims()
-    {
-        return [];
     }
 
     public function avatar()
@@ -166,7 +151,8 @@ class User extends Authenticatable implements HasLocalePreference
 
     public function categories()
     {
-        return $this->belongsToMany(Category::class, 'user_category')->withPivot('level_no', 'current_point');
+        //TODO: get user level and point in each category
+        return $this->belongsToMany(Category::class, 'user_category');
     }
 
     public function workflows()

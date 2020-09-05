@@ -19,16 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="Connect levels Users Categories">
+    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="tables design is done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_072801_create_categoty_pane.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_072801_create_category_pane.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_05_084718_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_31_141254_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_05_090354_create_user_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_05_090354_create_user_category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_07_114028_create_workflows_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_072500_create_workflows_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_085337_create_activities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_072700_create_activities_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_090339_create_user_workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_072600_create_user_workflow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_090340_create_user_levels.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_090340_create_user_level.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_31_122539_create_panes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_072800_create_panes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_31_141254_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_31_141254_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -436,7 +432,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599225820741</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="some changes in tables arrangemnet">
+      <created>1599229558763</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1599229558763</updated>
+    </task>
+    <task id="LOCAL-00026" summary="tables design is done">
+      <created>1599327565261</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1599327565261</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +469,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fetch config data of workflow from database" />
     <MESSAGE value="Response types updated" />
     <MESSAGE value="Api route bug fixes" />
     <MESSAGE value="Workflow create bug fix" />
@@ -483,7 +492,9 @@
     <MESSAGE value="Config categories&gt; workflow&gt; activity&gt; point" />
     <MESSAGE value="Add Template and Pane models" />
     <MESSAGE value="Connect levels Users Categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connect levels Users Categories" />
+    <MESSAGE value="some changes in tables arrangemnet" />
+    <MESSAGE value="tables design is done" />
+    <option name="LAST_COMMIT_MESSAGE" value="tables design is done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -520,11 +531,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599034198143" />
-    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599228662416">
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599328312049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599228662416" />
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599328312049" />
     <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599123308930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -590,11 +601,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="596" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1599222873969" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599225822071">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599229562366">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599225822071" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599229562366" />
     <state x="781" y="191" width="449" height="614" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599036935752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -618,11 +629,11 @@
     </state>
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598861608855" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597593489371" />
-    <state x="656" y="252" width="607" height="625" key="find.popup" timestamp="1599121104960">
+    <state x="337" y="34" width="926" height="843" key="find.popup" timestamp="1599326006994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="252" width="607" height="625" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597048766109" />
-    <state x="656" y="252" width="607" height="625" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599121104960" />
+    <state x="337" y="34" width="926" height="843" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599326006994" />
     <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog" timestamp="1599202336837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -635,11 +646,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339983001" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599220577300">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599328754797">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339136996" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599220577300" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599328754797" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

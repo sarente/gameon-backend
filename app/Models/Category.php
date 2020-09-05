@@ -10,7 +10,7 @@ use Spatie\Activitylog\Traits\LogsActivity;
 class Category extends Model
 {
     use LogsActivity;
-    //use Translatable;
+    //use Translatable
 
     protected $fillable = [
         'name',
@@ -35,6 +35,7 @@ class Category extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'user_category')->withPivot('level_no', 'current_point');
+        //return $this->belongsToMany(User::class, 'user_category')->withPivot('level_no', 'point');
+        return $this->belongsToMany(User::class, 'user_category')->withTimestamps();
     }
 }
