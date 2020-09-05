@@ -17,6 +17,7 @@ class CreateWorkflowsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('type');
+            $table->json('supports');
             $table->string('description')->nullable();
             $table->timestamp('start_date')->nullable();
             $table->timestamp('end_date')->nullable();

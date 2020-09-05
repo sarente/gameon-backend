@@ -19,13 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="database optimization">
+    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Setting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Workflow/UserWorkflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Workflow/UserWorkflow.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Workflow/Workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Workflow/Workflow.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_072500_create_workflows_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_072500_create_workflows_table.php" afterDir="false" />
     </list>
@@ -484,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599331799193</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="work flow mechanism changed">
+      <created>1599341273517</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1599341273517</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +509,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Workflow category info added in show function" />
     <MESSAGE value="Workflow users info added in show function" />
     <MESSAGE value="Workflow rewards info added in show function" />
     <MESSAGE value="Reward get bug fix" />
@@ -532,7 +533,8 @@
     <MESSAGE value="seeder works fine" />
     <MESSAGE value="some optimization" />
     <MESSAGE value="database optimization" />
-    <option name="LAST_COMMIT_MESSAGE" value="database optimization" />
+    <MESSAGE value="work flow mechanism changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="work flow mechanism changed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -569,11 +571,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599341028441" />
-    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599334934669">
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599341272090">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599334934669" />
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599341272090" />
     <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599123308930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -583,6 +585,10 @@
     </state>
     <state x="193" y="86" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939593331" />
     <state x="193" y="86" width="1536" height="860" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599205030334" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599341208270">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599341208270" />
     <state width="1877" height="380" key="GridCell.Tab.0.bottom" timestamp="1599227958841">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -671,11 +677,11 @@
     </state>
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598861608855" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597593489371" />
-    <state x="337" y="34" width="926" height="843" key="find.popup" timestamp="1599340955004">
+    <state x="337" y="34" width="926" height="843" key="find.popup" timestamp="1599341761941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="252" width="607" height="625" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597048766109" />
-    <state x="337" y="34" width="926" height="843" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599340955004" />
+    <state x="337" y="34" width="926" height="843" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599341761941" />
     <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog" timestamp="1599202336837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -688,11 +694,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339983001" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599340402370">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599342056153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339136996" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599340402370" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599342056153" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -20,7 +20,12 @@ class Workflow extends Model
         'updated_at',
     ];
     protected $attributes = [
-        'type' => Setting::WF_TYPE_SM,
+        'type' => Setting::WF_TYPE_WF,
+        'supports' => '{'.Activity::class.'}',
+    ];
+
+    protected $casts = [
+        'supports' => 'array',
     ];
 
     public static function boot()
