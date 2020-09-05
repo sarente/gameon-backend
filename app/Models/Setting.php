@@ -48,6 +48,9 @@ class Setting extends Model
      */
     protected $fillable = ['key', 'value'];
 
+    const WF_TYPE_WF = 'workflow';
+    const WF_TYPE_SM = 'state_machine';
+
     const APP_NAME = 'Sarente Gameon';
     const DEFAULT_PASS = 'Gameon';
 
@@ -65,6 +68,11 @@ class Setting extends Model
     const GENDER_FEMALE = 0;
     const GENDER_MALE = 1;
     const GENDER_UNISEX = 2;
+
+    public static $workflow_types = [
+        0 => Setting::WF_TYPE_WF,
+        1 => Setting::WF_TYPE_SM,
+    ];
 
     public static $status_types = [
         0 => Setting::STATUS_OPENED,

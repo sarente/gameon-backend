@@ -50,20 +50,4 @@ class CategoryController extends Controller
 
         return response()->success($category);
     }
-
-    public function getMyCategories()
-    {
-        $user = User::find(auth()->id());
-
-        $categories = $user->categories;
-
-        foreach ($categories as $category) {
-            $level = $category->levels()->where('level_no', $category->pivot->level_no)->first();
-            $category->level = $level;
-            $category->level->image = $level->image;
-        }
-
-        return response()->success($categories);
-
-    }
 }

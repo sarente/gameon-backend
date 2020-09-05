@@ -39,7 +39,7 @@ class Post extends Model
         $artifact = get_class($this->postable);
         switch ($artifact) {
             case Activity::class:
-                $postable_name= Project::withTranslation()->findOrFail($postable_id)->name;
+                $postable_name= Activity::withTranslation()->findOrFail($postable_id)->name;
                 break;
             case User::class:
                 $postable_name = User::findOrFail($postable_id)->name;
@@ -65,7 +65,6 @@ class Post extends Model
 
     public function originPost()
     {
-        //return $this->belongsTo(Post::class,'original_post_id','id')->select('id','user_id');
         return $this->belongsTo(Post::class, 'original_post_id', 'id')->select('id', 'user_id');
     }
 

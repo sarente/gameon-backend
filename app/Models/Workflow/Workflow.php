@@ -3,13 +3,14 @@
 namespace App\Models\Workflow;
 
 use App\Models\Activity;
-use App\Models\Avatar;
 use App\Models\Category;
+use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Workflow extends Model
 {
+
     protected $fillable = [
         'name'
     ];
@@ -18,6 +19,22 @@ class Workflow extends Model
         'created_at',
         'updated_at',
     ];
+    protected $attributes = [
+        'type' => Setting::WF_TYPE_SM,
+    ];
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::created(function (self $model) {
+
+            //create last activity as finishing state of workflow
+            $activity = new Activity(['name' => "Final"]);
+            $activity->workflow()->associate($model);
+            $activity->save();
+        });
+    }
 
     public function activities()
     {
@@ -37,18 +54,5 @@ class Workflow extends Model
     public function users()
     {
         return $this->belongsToMany(User::class, 'user_workflow')->withPivot('marking');
-    }
-
-    public static function boot()
-    {
-        parent::boot();
-
-        static::created(function (self $model) {
-
-            //create last activity as finishing state of workflow
-            $activity = new Activity(['name' => "Final"]);
-            $activity->workflow()->associate($model);
-            $activity->save();
-        });
     }
 }
