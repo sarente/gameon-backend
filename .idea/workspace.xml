@@ -19,8 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_088218_create_transitions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_088218_create_transitions_table.php" afterDir="false" />
+    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="some optimization">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_072800_create_panes_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" afterDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -37,6 +41,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="21" end1="23" start2="21" end2="26" changelist="68a5e3da-9008-4db1-bea8-f5fe70938b15" />
+        <range start1="39" end1="39" start2="42" end2="59" changelist="68a5e3da-9008-4db1-bea8-f5fe70938b15" />
+        <range start1="461" end1="462" start2="481" end2="496" changelist="68a5e3da-9008-4db1-bea8-f5fe70938b15" />
+        <range start1="484" end1="486" start2="518" end2="518" changelist="68a5e3da-9008-4db1-bea8-f5fe70938b15" />
+        <range start1="509" end1="510" start2="541" end2="544" changelist="68a5e3da-9008-4db1-bea8-f5fe70938b15" />
+        <range start1="546" end1="547" start2="580" end2="581" changelist="68a5e3da-9008-4db1-bea8-f5fe70938b15" />
+        <range start1="550" end1="551" start2="584" end2="585" changelist="68a5e3da-9008-4db1-bea8-f5fe70938b15" />
+        <range start1="555" end1="556" start2="589" end2="590" changelist="7b6c8bb0-27e1-4607-8630-5847dc8383c1" />
+        <range start1="559" end1="560" start2="593" end2="594" changelist="7b6c8bb0-27e1-4607-8630-5847dc8383c1" />
+        <range start1="620" end1="621" start2="654" end2="655" changelist="68a5e3da-9008-4db1-bea8-f5fe70938b15" />
+        <range start1="624" end1="625" start2="658" end2="659" changelist="68a5e3da-9008-4db1-bea8-f5fe70938b15" />
+      </ranges>
+    </file>
   </component>
   <component name="PhpServers">
     <servers>
@@ -459,7 +480,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599329360078</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="seeder works fine">
+      <created>1599329493179</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1599329493179</updated>
+    </task>
+    <task id="LOCAL-00030" summary="database optimization">
+      <created>1599331799193</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1599331799193</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,8 +517,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Workflow create bug fix" />
-    <MESSAGE value="Workflow show bug fix" />
     <MESSAGE value="Workflow category info added in show function" />
     <MESSAGE value="Workflow users info added in show function" />
     <MESSAGE value="Workflow rewards info added in show function" />
@@ -507,7 +540,9 @@
     <MESSAGE value="tables design is done" />
     <MESSAGE value="remove old seeder" />
     <MESSAGE value="seeder works fine" />
-    <option name="LAST_COMMIT_MESSAGE" value="seeder works fine" />
+    <MESSAGE value="some optimization" />
+    <MESSAGE value="database optimization" />
+    <option name="LAST_COMMIT_MESSAGE" value="database optimization" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -544,11 +579,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599034198143" />
-    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599329359070">
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599331797768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599329359070" />
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599331797768" />
     <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599123308930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -618,11 +653,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599329351796" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599329361497">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599331828328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599329361497" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599331828328" />
     <state x="781" y="191" width="449" height="614" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599036935752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

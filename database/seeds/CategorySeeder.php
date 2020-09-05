@@ -19,7 +19,7 @@ class CategorySeeder extends Seeder
             'name' => "Yetkinlikler"
         ]);
         $category->save();
-        //$category->users()->attach([1,2,3]);
+        $category->users()->attach([1,2,3]);
 
         for ($level_no = 0; $level_no < 6; $level_no++) {
             $pane = \App\Models\Pane::create(['level_no' => $level_no, 'pane_no' => 1, 'category_id' => $category->id]);
