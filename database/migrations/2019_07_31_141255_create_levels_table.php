@@ -15,6 +15,7 @@ class CreateLevelsTable extends Migration
     {
         Schema::create('levels', function (Blueprint $table) {
             $table->bigIncrements('id');
+
             $table->boolean('level_no');
             $table->integer('max_point');
             $table->timestamps();

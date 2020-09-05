@@ -13,7 +13,8 @@ class CreateUserLevel extends Migration
      */
     public function up()
     {
-        Schema::create('user_level ', function (Blueprint $table) {
+        Schema::create('user_level', function (Blueprint $table) {
+
             $table->bigInteger('level_id')->unsigned();
             $table->foreign('level_id')
                 ->references('id')
@@ -28,13 +29,9 @@ class CreateUserLevel extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->softDeletes();
             $table->timestamps();
-
-            //$table->string('artifact_name');
-            //$table->integer('current_xp')->default(0);
-
             $table->unique(['user_id', 'level_id']);
+
         });
     }
 

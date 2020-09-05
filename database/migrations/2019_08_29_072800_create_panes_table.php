@@ -35,6 +35,6 @@ class CreatePanesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('levels');
+        Schema::dropIfExists('panes');
     }
 }
