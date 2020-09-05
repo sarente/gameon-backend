@@ -79,9 +79,7 @@ class User extends Authenticatable implements HasLocalePreference
     use HasRoles;
     use LogsActivity;
 
-    //protected $guard = 'api';
-
-    protected $guard_name = 'web';
+    protected $guard_name = 'api';
     /**
      * The attributes that are mass assignable.
      * @var array
