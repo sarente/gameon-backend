@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="tables design is done">
+    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_088218_create_transitions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_088218_create_transitions_table.php" afterDir="false" />
+    </list>
+    <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_31_141254_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_31_141254_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -446,7 +445,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599327565261</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="remove old seeder">
+      <created>1599329090593</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1599329090593</updated>
+    </task>
+    <task id="LOCAL-00028" summary="seeder works fine">
+      <created>1599329360078</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1599329360078</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,8 +482,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Response types updated" />
-    <MESSAGE value="Api route bug fixes" />
     <MESSAGE value="Workflow create bug fix" />
     <MESSAGE value="Workflow show bug fix" />
     <MESSAGE value="Workflow category info added in show function" />
@@ -494,7 +505,9 @@
     <MESSAGE value="Connect levels Users Categories" />
     <MESSAGE value="some changes in tables arrangemnet" />
     <MESSAGE value="tables design is done" />
-    <option name="LAST_COMMIT_MESSAGE" value="tables design is done" />
+    <MESSAGE value="remove old seeder" />
+    <MESSAGE value="seeder works fine" />
+    <option name="LAST_COMMIT_MESSAGE" value="seeder works fine" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -531,11 +544,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599034198143" />
-    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599328312049">
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599329359070">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599328312049" />
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599329359070" />
     <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599123308930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -601,11 +614,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="596" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1599222873969" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599229562366">
+    <state x="825" y="448" key="VCS.ChangelistChooser" timestamp="1599329351796">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599329351796" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599329361497">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599229562366" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599329361497" />
     <state x="781" y="191" width="449" height="614" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599036935752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
