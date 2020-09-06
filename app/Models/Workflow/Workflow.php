@@ -22,11 +22,6 @@ class Workflow extends Model
     ];
     protected $attributes = [
         'type' => Setting::WF_TYPE_WF,
-        'supports' => '{'.Activity::class.'}',
-    ];
-
-    protected $casts = [
-        'supports' => 'array',
     ];
 
     public static function boot()
@@ -50,6 +45,11 @@ class Workflow extends Model
     public function transitions()
     {
         return $this->hasMany(Transition::class);
+    }
+
+    public function support()
+    {
+        return $this->hasMany(Support::class);
     }
 
     public function category()
