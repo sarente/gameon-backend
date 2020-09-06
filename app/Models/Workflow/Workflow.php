@@ -12,7 +12,8 @@ class Workflow extends Model
 {
 
     protected $fillable = [
-        'name'
+        'name',
+        'supports',
     ];
 
     protected $hidden = [
