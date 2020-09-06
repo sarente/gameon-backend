@@ -17,18 +17,18 @@ class CreateTransitionsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->timestamps();
-
-            $table->bigInteger('from_activity_id')->unsigned();
-            $table->foreign('from_activity_id')
+            //It could be Activity
+            $table->bigInteger('from_support_id')->unsigned();
+            $table->foreign('from_support_id')
                 ->references('id')
-                ->on('activities')
+                ->on('supports')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->bigInteger('to_activity_id')->unsigned();
-            $table->foreign('to_activity_id')
+            $table->bigInteger('to_support_id')->unsigned();
+            $table->foreign('to_support_id')
                 ->references('id')
-                ->on('activities')
+                ->on('supports')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
