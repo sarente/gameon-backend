@@ -15,17 +15,17 @@ class CreateUserLevel extends Migration
     {
         Schema::create('user_level', function (Blueprint $table) {
 
-            $table->bigInteger('level_id')->unsigned();
-            $table->foreign('level_id')
-                ->references('id')
-                ->on('levels')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->bigInteger('level_id')->unsigned();
+            $table->foreign('level_id')
+                ->references('id')
+                ->on('levels')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 

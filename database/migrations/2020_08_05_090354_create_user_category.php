@@ -17,6 +17,7 @@ class CreateUserCategory extends Migration
     public function up()
     {
         Schema::create('user_category', function (Blueprint $table) {
+
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')
                 ->references('id')
@@ -30,6 +31,10 @@ class CreateUserCategory extends Migration
                 ->on('categories')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
+
+
+            $table->integer('level_no')->default(0);
+            $table->integer('current_point')->default(0);
 
             $table->softDeletes();
             $table->timestamps();

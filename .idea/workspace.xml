@@ -21,18 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/workflow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_08_01_183154_create_pages_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_072500_create_workflows_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_071390_create_workflows_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_072801_create_category_pane.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_05_090905_create_statuses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_07249_create_statuses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_05_121027_create_category_status.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_072502_create_category_status.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_088218_create_transitions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_072501_create_transitions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DressTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/EyeTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/IntroductionSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/OldIntroductionTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/TaskTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_071390_create_workflows_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_071390_create_workflows_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_071400_create_supports_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_071500_create_places_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_07249_create_statuses_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_072501_create_transitions_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_072502_create_category_status.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_072600_create_user_workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_072600_create_user_workflow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_05_090354_create_user_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_05_090354_create_user_category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_090340_create_user_level.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_090340_create_user_level.php" afterDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -278,7 +275,7 @@
       <workItem from="1598355783271" duration="753000" />
       <workItem from="1598425830647" duration="14029000" />
       <workItem from="1598861456200" duration="8140000" />
-      <workItem from="1599404310658" duration="3495000" />
+      <workItem from="1599404310658" duration="5203000" />
     </task>
     <task id="LOCAL-00001" summary="Fetch config data of workflow from database">
       <created>1596810894159</created>
@@ -532,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599391451267</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="some changes in work flow by database">
+      <created>1599411537630</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1599411537630</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +559,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add asymmetric authentication v1.0" />
     <MESSAGE value="Some changes in workflow manager" />
     <MESSAGE value="Remove role from user seeder" />
     <MESSAGE value="Model notfound handler changed" />
@@ -580,7 +583,8 @@
     <MESSAGE value="work flow mechanism changed 3" />
     <MESSAGE value="work flow mechanism changed 4" />
     <MESSAGE value="work flow mechanism changed 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="work flow mechanism changed 5" />
+    <MESSAGE value="some changes in work flow by database" />
+    <option name="LAST_COMMIT_MESSAGE" value="some changes in work flow by database" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -617,11 +621,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599341028441" />
-    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599391450283">
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599411536196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599391450283" />
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599411536196" />
     <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599123308930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -695,11 +699,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599334931451" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599389443052">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599411539161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599389443052" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599411539161" />
     <state x="781" y="191" width="449" height="614" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599036935752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -708,10 +712,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599039973999" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599225708423">
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599412224176">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599225708423" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599412224176" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1598861458837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
