@@ -20,7 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Models/Workflow/Workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Workflow/Workflow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/workflow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_08_01_183154_create_pages_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_072500_create_workflows_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_071390_create_workflows_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_072801_create_category_pane.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_05_090905_create_statuses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_07249_create_statuses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_05_121027_create_category_status.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_072502_create_category_status.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_088218_create_transitions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_072501_create_transitions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DressTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/EyeTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/IntroductionSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/OldIntroductionTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/TaskTableSeeder.php" beforeDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -266,6 +278,7 @@
       <workItem from="1598355783271" duration="753000" />
       <workItem from="1598425830647" duration="14029000" />
       <workItem from="1598861456200" duration="8140000" />
+      <workItem from="1599404310658" duration="3495000" />
     </task>
     <task id="LOCAL-00001" summary="Fetch config data of workflow from database">
       <created>1596810894159</created>
@@ -505,11 +518,25 @@
       <option name="project" value="LOCAL" />
       <updated>1599391136718</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="work flow mechanism changed 4">
+      <created>1599391229775</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1599391229775</updated>
+    </task>
+    <task id="LOCAL-00036" summary="work flow mechanism changed 5">
+      <created>1599391451267</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1599391451267</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
@@ -528,8 +555,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Revert code to previous version" />
-    <MESSAGE value="Add asymmetric authentication" />
     <MESSAGE value="Add asymmetric authentication v1.0" />
     <MESSAGE value="Some changes in workflow manager" />
     <MESSAGE value="Remove role from user seeder" />
@@ -553,7 +578,9 @@
     <MESSAGE value="work flow mechanism changed 1" />
     <MESSAGE value="work flow mechanism changed 2" />
     <MESSAGE value="work flow mechanism changed 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="work flow mechanism changed 3" />
+    <MESSAGE value="work flow mechanism changed 4" />
+    <MESSAGE value="work flow mechanism changed 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="work flow mechanism changed 5" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -590,11 +617,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599341028441" />
-    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599391135412">
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599391450283">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599391135412" />
+    <state x="581" y="103" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599391450283" />
     <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599123308930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -696,11 +723,11 @@
     </state>
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598861608855" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597593489371" />
-    <state x="337" y="34" width="926" height="843" key="find.popup" timestamp="1599390647263">
+    <state x="337" y="34" width="926" height="843" key="find.popup" timestamp="1599410833681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="252" width="607" height="625" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597048766109" />
-    <state x="337" y="34" width="926" height="843" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599390647263" />
+    <state x="337" y="34" width="926" height="843" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599410833681" />
     <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog" timestamp="1599202336837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

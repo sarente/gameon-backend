@@ -1,25 +1,40 @@
 <?php
 
 return [
-    'recruitment'   => [
-        'type'          => 'state_machine',
-        'marking_store' => [
-            'type' => 'single_state',
+    'recruitment' => [
+        'type' => 'state_machine',
+        'metadata' => [
+            'title' => 'Blog Publishing Workflow',
         ],
-        'supports'      => ['App\Models\Activity'],
-        'places'        => ['gather_cvs', 'send_quiz', 'select_top_3', 'offering'],
-        'transitions'   => [
-            't1' => [
-                'from' => 'gather_cvs',
-                'to'   => 'send_quiz',
+        'marking_store' => [
+            'type' => 'single_state', // or 'state_machine'
+            //'property' => 'currentPlace', // this is the property on the model
+            //'class' => MethodMarkingStore::class, // you may omit for default, or set to override marking store class
+        ],
+        'supports' => ['App\Models\Activity'],
+        'places' => [
+            'gather_cvs' => ['metadata' => [
+                'max_num_of_words' => 500,
+            ]],
+            'send_quiz',
+            'select_top_3',
+            'offering'
+        ], //steps of workflow
+        'transitions' => [
+            'to_review' => [
+                'from' => 'draft',
+                'to' => 'review',
+                'metadata' => [
+                    'priority' => 0.5,
+                ]
             ],
-            't2' => [
-                'from' => 'send_quiz',
-                'to'   => 'select_top_3',
+            'publish' => [
+                'from' => 'review',
+                'to' => 'published'
             ],
-            't3' => [
-                'from' => 'c',
-                'to'   => 'd',
+            'reject' => [
+                'from' => 'review',
+                'to' => 'rejected'
             ]
         ],
     ]
