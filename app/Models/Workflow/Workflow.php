@@ -20,6 +20,7 @@ class Workflow extends Model
         'created_at',
         'updated_at',
     ];
+
     protected $attributes = [
         'type' => Setting::WF_TYPE_WF,
     ];
@@ -47,9 +48,14 @@ class Workflow extends Model
         return $this->hasMany(Transition::class);
     }
 
-    public function support()
+    public function supports()
     {
         return $this->hasMany(Support::class);
+    }
+
+    public function places()
+    {
+        return $this->hasMany(Place::class);
     }
 
     public function category()
