@@ -2,14 +2,14 @@
 
 return [
     'recruitment' => [
-        'type' => 'state_machine',
+        'type' => 'workflow', // or 'state_machine'
         'metadata' => [
-            'title' => 'Blog Publishing Workflow',
+            'title' => 'Activity Publishing Workflow',
         ],
         'marking_store' => [
             'type' => 'single_state', // or 'state_machine'
             //'property' => 'currentPlace', // this is the property on the model
-            //'class' => MethodMarkingStore::class, // you may omit for default, or set to override marking store class
+            'class' => \App\Models\Workflow\UserWorkflow::class, // you may omit for default, or set to override marking store class
         ],
         'supports' => ['App\Models\Activity'],
         'places' => [
