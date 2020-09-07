@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
+use ZeroDaHero\LaravelWorkflow\Exceptions\DuplicateWorkflowException;
 
 class Workflow extends Model
 {
@@ -23,6 +24,11 @@ class Workflow extends Model
 
     protected $attributes = [
         'type' => Setting::WF_TYPE_WF,
+        'supports' => '{'.Activity::class.'}',
+    ];
+
+    protected $casts = [
+        'supports' => 'array',
     ];
 
     public static function boot()
@@ -30,7 +36,6 @@ class Workflow extends Model
         parent::boot();
 
         static::created(function (self $model) {
-
             //create last activity as finishing state of workflow
             $activity = new Activity(['name' => "Final"]);
             $activity->workflow()->associate($model);
@@ -66,5 +71,30 @@ class Workflow extends Model
     public function users()
     {
         return $this->belongsToMany(User::class, 'user_workflow')->withPivot('marking');
+    }
+    /**
+     * Load the workflow type definition into the registry
+     */
+    protected function loadWorkflow()
+    {
+        $registry = app()->make('workflow');
+        $workflowName = 'straight';
+        $workflowDefinition = [
+            // Workflow definition here
+            // (same format as config/symfony docs)
+            // This should be the definition only,
+            // not including the key for the name.
+            // See note below on initial_places for an example.
+        ];
+
+        $registry->addFromArray($workflowName, $workflowDefinition);
+
+        // or if catching duplicates
+
+        try {
+            $registry->addFromArray($workflowName, $workflowDefinition);
+        } catch (DuplicateWorkflowException $e) {
+            // already loaded
+        }
     }
 }

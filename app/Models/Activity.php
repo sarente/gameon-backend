@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Workflow\State;
 use App\Models\Workflow\Workflow;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
@@ -58,4 +57,5 @@ class Activity extends Model
     {
         return $this->belongsTo(Workflow::class);
     }
+
 }

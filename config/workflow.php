@@ -20,6 +20,7 @@ return [
             'select_top_3',
             'offering'
         ], //steps of workflow
+        'initial_places' => 'draft', // or set to an array if multiple initial places
         'transitions' => [
             'to_review' => [
                 'from' => 'draft',
