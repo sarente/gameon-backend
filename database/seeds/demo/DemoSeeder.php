@@ -13,6 +13,7 @@ class DemoSeeder extends Seeder
     {
         $this->call(CategoryTableSeeder::class);
         $this->call(ActivityTableSeeder::class);
+        $this->call(WorkflowTableSeeder::class);
         //$this->call(UsersTableSeeder::class);
         //$this->call(ProfileTableSeeder::class);
         //$this->call(PointTableSeeder::class);

@@ -1,9 +1,9 @@
 <?php
 
-use App\Models\Activity;
-use App\Models\Workflow\Transition;
-use App\Models\Workflow\Workflow;
-use App\Models\Workflow\WorkflowType;
+namespace App\Database\Seeds\Demo;
+
+use App\Models\Category;
+use App\Models\Setting;
 use Illuminate\Database\Seeder;
 
 class WorkflowTableSeeder extends Seeder
@@ -17,10 +17,17 @@ class WorkflowTableSeeder extends Seeder
     {
         //TODO: get workflow configs from files
 
-        $workflow = new \App\Models\Workflow([
-            'name' => "Test Work Flow",
-            'config' => null
-        ]);
-        $workflow->save();
+        $categories=Category::all()->pluck('id');
+        //dd($categories);
+
+        foreach ($categories as $key=> $value){
+            $workflow = new \App\Models\Workflow([
+                'name' => "Test Work Flow",
+                //'type' => Setting::WF_TYPE_WF,
+                'config' => null
+            ]);
+            $workflow->category()->associate($value);
+            $workflow->save();
+        }
     }
 }
