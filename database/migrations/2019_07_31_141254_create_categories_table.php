@@ -18,7 +18,15 @@ class CreateCategoriesTable extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->timestamps();
+
+            $table->bigInteger('category_id')->unsigned()->nullable();
+            $table->foreign('category_id')
+                ->references('id')
+                ->on('categories')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
+
 
         Schema::create('category_translations', function(Blueprint $table)
         {

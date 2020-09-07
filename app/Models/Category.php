@@ -36,4 +36,9 @@ class Category extends Model
     {
         return $this->belongsToMany(User::class, 'user_category')->withTimestamps();
     }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
