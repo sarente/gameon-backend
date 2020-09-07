@@ -15,21 +15,15 @@ class ActivityTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($level_no = 0; $level_no < 6; $level_no++) {
-            $pane = \App\Models\Category::create(['level_no' => $level_no, 'pane_no' => 1, 'category_id' => $category->id]);
-            $pane->image()->save(new  \App\Models\Image([
-                'image' => Intervention::make(resource_path("images/level/level_{$level_no}/pane-1.png")),
-            ]));
-        }
+
+
 
         $workflow = new Workflow(['name' => 'Yetkinlik 1']);
         $workflow->category()->associate($category);
         $workflow->save();
         $workflow->users()->attach([1, 2, 3]);
 
-        $from_activity = null;
-        $to_activity = null;
-        $activities = ['Giriş', 'Gelişme', 'Sonuç'];
+        $activities = ['Activity1', 'Activity2', 'Activity3'];
 
         foreach ($activities as $key => $activity) {
 

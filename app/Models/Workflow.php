@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Workflow;
+namespace App\Models;
 
 use App\Models\Activity;
 use App\Models\Category;
@@ -14,7 +14,8 @@ class Workflow extends Model
 
     protected $fillable = [
         'name',
-        'supports',
+        'type',
+        'config',
     ];
 
     protected $hidden = [
@@ -24,44 +25,19 @@ class Workflow extends Model
 
     protected $attributes = [
         'type' => Setting::WF_TYPE_WF,
-        'supports' => '{'.Activity::class.'}',
     ];
 
-    protected $casts = [
-        'supports' => 'array',
-    ];
-
-    public static function boot()
-    {
-        parent::boot();
-
-        static::created(function (self $model) {
-            //create last activity as finishing state of workflow
-            $activity = new Activity(['name' => "Final"]);
-            $activity->workflow()->associate($model);
-            $activity->save();
-        });
-    }
-
-    public function activities()
-    {
-        return $this->hasMany(Activity::class);
-    }
-
-    public function transitions()
-    {
-        return $this->hasMany(Transition::class);
-    }
-
-    public function supports()
-    {
-        return $this->hasMany(Support::class);
-    }
-
-    public function places()
-    {
-        return $this->hasMany(Place::class);
-    }
+//    public static function boot()
+//    {
+//        parent::boot();
+//
+//        static::created(function (self $model) {
+//            //create last activity as finishing state of workflow
+//            $activity = new Activity(['name' => "Final"]);
+//            $activity->workflow()->associate($model);
+//            $activity->save();
+//        });
+//    }
 
     public function category()
     {

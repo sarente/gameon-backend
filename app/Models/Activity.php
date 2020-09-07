@@ -53,9 +53,9 @@ class Activity extends Model
         );
     }
 
-    public function workflow()
+    /*public function workflow()
     {
         return $this->belongsTo(Workflow::class);
-    }
+    }*/
 
 }

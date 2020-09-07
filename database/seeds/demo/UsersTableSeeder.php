@@ -28,7 +28,7 @@ class UsersTableSeeder extends Seeder
         $teacher = factory(\App\Models\User::class)->make([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğretmen@'.$domain_name,
+            'email' => 'supervisor@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Javad Fathi',
         ]);
@@ -41,7 +41,7 @@ class UsersTableSeeder extends Seeder
         $teacher = factory(\App\Models\User::class)->create([
             'username' =>  rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğretmen1@'.$domain_name,
+            'email' => 'supervisor1@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Enver Türkmen',
 
@@ -56,7 +56,7 @@ class UsersTableSeeder extends Seeder
         $student0 = factory(\App\Models\User::class)->create([
             'username' =>  rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci0@'.$domain_name,
+            'email' => 'user0@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Hasan Rıza Uzuner',
 
@@ -79,7 +79,7 @@ class UsersTableSeeder extends Seeder
         $student1 = factory(\App\Models\User::class)->create([
             'username' =>55555555555,
             'gender' => 1,
-            'email' => 'öğrenci1@'.$domain_name,
+            'email' => 'user1@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Talha Boyraz',
 
@@ -111,7 +111,7 @@ class UsersTableSeeder extends Seeder
         $student2 = factory(\App\Models\User::class)->create([
             'username' =>66666666666,
             'gender' => 1,
-            'email' => 'öğrenci2@'.$domain_name,
+            'email' => 'user2@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Arın Şüküroğlu',
         ]);
@@ -142,7 +142,7 @@ class UsersTableSeeder extends Seeder
         $student3 = factory(\App\Models\User::class)->create([
             'username' =>77777777777,
             'gender' => 0,
-            'email' => 'öğrenci3@'.$domain_name,
+            'email' => 'user3@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Ebru Akbulut',
 
@@ -174,7 +174,7 @@ class UsersTableSeeder extends Seeder
         $student4 = factory(\App\Models\User::class)->create([
             'username' =>88888888888,
             'gender' => 1,
-            'email' => 'öğrenci4@'.$domain_name,
+            'email' => 'user4@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Can Yücel',
 
@@ -206,7 +206,7 @@ class UsersTableSeeder extends Seeder
         $student5 = factory(\App\Models\User::class)->create([
             'username' =>99999999999,
             'gender' => 1,
-            'email' => 'öğrenci5@'.$domain_name,
+            'email' => 'user5@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Aras Şüküroğlu',
 
@@ -241,7 +241,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci60@'.$domain_name,
+            'email' => 'user60@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Murat Akçay',
 
@@ -252,7 +252,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci61@'.$domain_name,
+            'email' => 'user61@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Ahmet Karslı',
 
@@ -263,7 +263,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci62@'.$domain_name,
+            'email' => 'user62@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Tolga Işık',
         ]);
@@ -273,7 +273,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci63@'.$domain_name,
+            'email' => 'user63@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Sevilay Ataman',
 
@@ -284,7 +284,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci64@'.$domain_name,
+            'email' => 'user64@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Bora Atay',
 
@@ -306,7 +306,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci65@'.$domain_name,
+            'email' => 'user65@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Acun Akyol',
         ]);
@@ -477,7 +477,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci6@'.$domain_name,
+            'email' => 'user6@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Fevzi Çalışkan',
 
@@ -488,7 +488,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci7@'.$domain_name,
+            'email' => 'user7@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Ahmet Hamdi Akyol',
 
@@ -499,7 +499,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci8@'.$domain_name,
+            'email' => 'user8@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Selim Yıldız',
         ]);
@@ -509,7 +509,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci9@'.$domain_name,
+            'email' => 'user9@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Ebru Akbulut',
 
@@ -520,7 +520,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci10@'.$domain_name,
+            'email' => 'user10@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Kerim İnan',
 
@@ -531,7 +531,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci11@'.$domain_name,
+            'email' => 'user11@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Okan Küçük',
 
@@ -542,7 +542,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci12@'.$domain_name,
+            'email' => 'user12@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Yılmaz Şen',
         ]);
@@ -552,7 +552,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci13@'.$domain_name,
+            'email' => 'user13@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Kaan Lokumcu',
 
@@ -562,7 +562,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci14@'.$domain_name,
+            'email' => 'user14@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Berke Öztürk',
 
@@ -572,7 +572,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci15@'.$domain_name,
+            'email' => 'user15@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Çağatay Ekinci',
 
@@ -582,7 +582,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci16@'.$domain_name,
+            'email' => 'user16@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Sarp Kaya',
 
@@ -592,7 +592,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci17@'.$domain_name,
+            'email' => 'user17@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Merve Düşkuran',
         ]);
@@ -601,7 +601,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci18@'.$domain_name,
+            'email' => 'user18@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Şengül Artıran',
 
@@ -611,7 +611,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci19@'.$domain_name,
+            'email' => 'user19@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Lamia Altın',
 
@@ -621,7 +621,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci20@'.$domain_name,
+            'email' => 'user20@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Nazlı Uçmaz',
 
@@ -631,7 +631,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci21@'.$domain_name,
+            'email' => 'user21@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Pelin Demirbilek',
 
@@ -641,7 +641,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci22@'.$domain_name,
+            'email' => 'user22@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Yasemin İnce',
 
@@ -651,7 +651,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci23@'.$domain_name,
+            'email' => 'user23@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Bahar Handan',
 
@@ -661,7 +661,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci24@'.$domain_name,
+            'email' => 'user24@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Sena Karaman',
 
@@ -671,7 +671,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci25@'.$domain_name,
+            'email' => 'user25@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'İrem Sancar',
 
@@ -707,7 +707,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci26@'.$domain_name,
+            'email' => 'user26@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Ahmet Metin Alpaslan',
 
@@ -718,7 +718,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci27@'.$domain_name,
+            'email' => 'user27@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Berk Özcan',
 
@@ -729,7 +729,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci28@'.$domain_name,
+            'email' => 'user28@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Garp Can Elmas',
         ]);
@@ -739,7 +739,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci29@'.$domain_name,
+            'email' => 'user29@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'İsa Emre Gül',
 
@@ -750,7 +750,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci30@'.$domain_name,
+            'email' => 'user30@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Abdullah Kuşaslan',
 
@@ -761,7 +761,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci31@'.$domain_name,
+            'email' => 'user31@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Kerem Onur Bekçi',
 
@@ -772,7 +772,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci32@'.$domain_name,
+            'email' => 'user32@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Enes Öncel',
         ]);
@@ -782,7 +782,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci33@'.$domain_name,
+            'email' => 'user33@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Hakan Şener',
 
@@ -792,7 +792,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci34@'.$domain_name,
+            'email' => 'user34@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Emrecan Küçüksarı',
 
@@ -802,7 +802,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci35@'.$domain_name,
+            'email' => 'user35@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Ahmet Yasin Yılmaz',
 
@@ -812,7 +812,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'öğrenci36@'.$domain_name,
+            'email' => 'user36@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Yusuf Akyol',
 
@@ -822,7 +822,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci37@'.$domain_name,
+            'email' => 'user37@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Gamze Aksu',
         ]);
@@ -831,7 +831,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci38@'.$domain_name,
+            'email' => 'user38@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Bahar Okuyucu',
 
@@ -841,7 +841,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci39@'.$domain_name,
+            'email' => 'user39@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'İrem Eyüboğlu',
 
@@ -851,7 +851,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci40@'.$domain_name,
+            'email' => 'user40@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Merve Erdem',
 
@@ -861,7 +861,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci41@'.$domain_name,
+            'email' => 'user41@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Yaren Doğan',
 
@@ -871,7 +871,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci42@'.$domain_name,
+            'email' => 'user42@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Ceren Yalçın',
 
@@ -881,7 +881,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci43@'.$domain_name,
+            'email' => 'user43@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Hazal Yılmaz',
 
@@ -891,7 +891,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci44@'.$domain_name,
+            'email' => 'user44@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Aysu Göregen',
 
@@ -901,7 +901,7 @@ class UsersTableSeeder extends Seeder
         $student = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 0,
-            'email' => 'öğrenci45@'.$domain_name,
+            'email' => 'user45@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Pınar Yarasaran',
 
