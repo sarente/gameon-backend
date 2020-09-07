@@ -1,12 +1,10 @@
 <?php
 
-use App\Models\Activity;
-use App\Models\Workflow\Transition;
-use App\Models\Workflow\Workflow;
-use App\Models\Workflow\WorkflowType;
+namespace App\Database\Seeds\Demo;
+
 use Illuminate\Database\Seeder;
 
-class CategorySeeder extends Seeder
+class CategoryTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

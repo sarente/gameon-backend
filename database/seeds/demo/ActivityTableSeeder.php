@@ -1,9 +1,7 @@
 <?php
 
-use App\Models\Activity;
-use App\Models\Workflow\Transition;
-use App\Models\Workflow\Workflow;
-use App\Models\Workflow\WorkflowType;
+namespace App\Database\Seeds\Demo;
+use App\Models\Workflow;
 use Illuminate\Database\Seeder;
 
 class ActivityTableSeeder extends Seeder

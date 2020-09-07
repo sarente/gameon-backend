@@ -18,7 +18,7 @@ class WorkflowTableSeeder extends Seeder
         //TODO: get workflow configs from files
 
         $workflow = new \App\Models\Workflow([
-            'name' => "Test Category",
+            'name' => "Test Work Flow",
             'config' => null
         ]);
         $workflow->save();
