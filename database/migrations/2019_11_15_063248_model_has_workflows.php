@@ -13,7 +13,7 @@ class ModelHasWorkflow extends Migration
      */
     public function up()
     {
-        Schema::create('model_has_workflow', function (Blueprint $table) {
+        Schema::create('model_has_workflows', function (Blueprint $table) {
 
             $table->string('model_type',100);
             $table->unsignedBigInteger('model_id');
@@ -38,6 +38,6 @@ class ModelHasWorkflow extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('model_has_workflow');
+        Schema::dropIfExists('model_has_workflows');
     }
 }

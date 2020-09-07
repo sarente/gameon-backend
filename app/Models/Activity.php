@@ -32,11 +32,6 @@ class Activity extends Model
         return $this->morphMany(Image::class, 'imageable');
     }
 
-    public function posts()
-    {
-        return $this->hasMany(Post::class);
-    }
-
     public function users()
     {
         return $this->belongsToMany(User::class, 'user_activity')->withTimestamps()->withPivot(['status_id']);
@@ -53,9 +48,19 @@ class Activity extends Model
         );
     }
 
-    /*public function workflow()
+    public function workflow()
     {
-        return $this->belongsTo(Workflow::class);
-    }*/
+        return $this->belongsTo(\App\Models\Workflow::class);
+    }
+    public function rosettes():MorphToMany
+    {
+        return $this->morphToMany(
+            \App\Models\Workflow::class,
+            'model',
+            'model_has_workflows',
+            'model_id',
+            'workflow_id'
+        );
+    }
 
 }

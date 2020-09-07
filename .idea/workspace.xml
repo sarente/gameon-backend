@@ -27,10 +27,10 @@
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/StatusSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/demo/DemoSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/DemoSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/demo/WorkflowTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/WorkflowTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Activity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Workflow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_15_063248_model_has_workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_15_063248_model_has_workflows.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/demo/ActivityTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/ActivityTableSeeder.php" afterDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -278,7 +278,7 @@
       <workItem from="1598355783271" duration="753000" />
       <workItem from="1598425830647" duration="14029000" />
       <workItem from="1598861456200" duration="8140000" />
-      <workItem from="1599404310658" duration="20524000" />
+      <workItem from="1599404310658" duration="21595000" />
     </task>
     <task id="LOCAL-00001" summary="Fetch config data of workflow from database">
       <created>1596810894159</created>
@@ -581,7 +581,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599482272740</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Change demo seeder">
+      <created>1599483619957</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1599483619957</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add admin services" />
     <MESSAGE value="levels added to system" />
     <MESSAGE value="Add user levels table" />
     <MESSAGE value="user level point changed" />
@@ -641,7 +647,8 @@
     <MESSAGE value="some changes in work flow by database 1" />
     <MESSAGE value="some changes in work flow by database 2" />
     <MESSAGE value="add parent to categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="add parent to categories" />
+    <MESSAGE value="Change demo seeder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change demo seeder" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -669,20 +676,21 @@
     </state>
     <state x="2654" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1598265541694" />
     <state x="734" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1597520694083" />
-    <state x="714" y="31" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598877492468">
+    <state x="714" y="31" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599483511554">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="714" y="31" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598877492468" />
+    <state x="714" y="31" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599483511554" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599475662351">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599475662351" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599482270147">
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599483618805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599482270147" />
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599483618805" />
     <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599123308930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -756,11 +764,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599334931451" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599482274461">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599483622151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599482274461" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599483622151" />
     <state x="781" y="191" width="449" height="614" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599036935752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -802,11 +810,11 @@
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339983001" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599475427541" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599470729943">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599484132192">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339136996" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599470729943" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599484132192" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

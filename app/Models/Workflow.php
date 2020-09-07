@@ -48,6 +48,12 @@ class Workflow extends Model
     {
         return $this->belongsToMany(User::class, 'user_workflow')->withPivot('marking');
     }
+
+    public function workflowable()
+    {
+        return $this->morphTo();
+    }
+
     /**
      * Load the workflow type definition into the registry
      */

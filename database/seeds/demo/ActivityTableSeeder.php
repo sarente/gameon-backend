@@ -15,12 +15,6 @@ class ActivityTableSeeder extends Seeder
     {
 
 
-
-        $workflow = new Workflow(['name' => 'Yetkinlik 1']);
-        $workflow->category()->associate($category);
-        $workflow->save();
-        $workflow->users()->attach([1, 2, 3]);
-
         $activities = ['Activity1', 'Activity2', 'Activity3'];
 
         foreach ($activities as $key => $activity) {
