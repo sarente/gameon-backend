@@ -11,11 +11,11 @@ class DemoSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(CategorySeeder::class);
+        $this->call(CategoryTableSeeder::class);
         $this->call(ActivityTableSeeder::class);
-        $this->call(UsersTableSeeder::class);
-        $this->call(ProfileTableSeeder::class);
-        $this->call(PointTableSeeder::class);
+        //$this->call(UsersTableSeeder::class);
+        //$this->call(ProfileTableSeeder::class);
+        //$this->call(PointTableSeeder::class);
 
         /*if (app()->environment('local')) {
             $this->call(FakeSeeder::class);

@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Workflow\Workflow;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Spatie\Activitylog\Traits\LogsActivity;
@@ -22,19 +21,9 @@ class Activity extends Model
         'updated_at'
     ];
 
-    public function creator()
-    {
-        return $this->belongsTo(User::class, 'user_id');
-    }
-
     public function image()
     {
         return $this->morphMany(Image::class, 'imageable');
-    }
-
-    public function users()
-    {
-        return $this->belongsToMany(User::class, 'user_activity')->withTimestamps()->withPivot(['status_id']);
     }
 
     public function rewards(): MorphToMany
@@ -52,15 +41,4 @@ class Activity extends Model
     {
         return $this->belongsTo(\App\Models\Workflow::class);
     }
-    public function rosettes():MorphToMany
-    {
-        return $this->morphToMany(
-            \App\Models\Workflow::class,
-            'model',
-            'model_has_workflows',
-            'model_id',
-            'workflow_id'
-        );
-    }
-
 }

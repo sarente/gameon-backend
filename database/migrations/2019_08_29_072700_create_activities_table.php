@@ -18,13 +18,6 @@ class CreateActivitiesTable extends Migration
             $table->string('name');
             $table->integer('point')->default(0);
             $table->timestamps();
-
-            $table->bigInteger('workflow_id')->unsigned();
-            $table->foreign('workflow_id')
-                ->references('id')
-                ->on('workflows')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
         });
     }
 
