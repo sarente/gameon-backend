@@ -180,7 +180,8 @@ return [
         //Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        ZeroDaHero\LaravelWorkflow\WorkflowServiceProvider::class,
+        //ZeroDaHero\LaravelWorkflow\WorkflowServiceProvider::class,
+        App\Providers\WorkflowServiceProvider::class,
     ],
 
     /*

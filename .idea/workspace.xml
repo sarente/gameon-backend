@@ -26,10 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Providers/WorkflowServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_071390_create_workflows_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_071390_create_workflows_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/demo/DemoSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/DemoSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/demo/WorkflowTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/WorkflowTableSeeder.php" afterDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -205,18 +203,18 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Models" />
-      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\database\seeds\demo" />
-      <recent name="C:\Users\yusuf\Desktop\Laravel Projects\gameon-backend\app\Models\Workflow" />
-      <recent name="C:\Users\yusuf\Desktop\Projects\gameon-workflow\app\Http\Controllers\Api" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\database\seeds\demo" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\database\seeds" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\database\migrations" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Listeners" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Http\Controllers\Api\Admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Models" />
+      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\database\seeds\demo" />
+      <recent name="C:\Users\yusuf\Desktop\Laravel Projects\gameon-backend\app\Models\Workflow" />
+      <recent name="C:\Users\yusuf\Desktop\Projects\gameon-workflow\app\Http\Controllers\Api" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
@@ -277,7 +275,9 @@
       <workItem from="1598355783271" duration="753000" />
       <workItem from="1598425830647" duration="14029000" />
       <workItem from="1598861456200" duration="8140000" />
-      <workItem from="1599404310658" duration="24967000" />
+      <workItem from="1599404310658" duration="25268000" />
+      <workItem from="1599549388332" duration="131000" />
+      <workItem from="1599549605785" duration="2935000" />
     </task>
     <task id="LOCAL-00001" summary="Fetch config data of workflow from database">
       <created>1596810894159</created>
@@ -601,7 +601,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599486793768</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="workflow database changed">
+      <created>1599488396581</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1599488396581</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -669,9 +676,9 @@
     <MESSAGE value="some changes in work flow by database 2" />
     <MESSAGE value="add parent to categories" />
     <MESSAGE value="Change demo seeder" />
-    <MESSAGE value="workflow database changed" />
     <MESSAGE value="activity database changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="activity database changed" />
+    <MESSAGE value="workflow database changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="workflow database changed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -709,11 +716,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599487179343" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599486792657">
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599488395530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599486792657" />
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599488395530" />
     <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599123308930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -723,10 +730,10 @@
     </state>
     <state x="193" y="86" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939593331" />
     <state x="193" y="86" width="1536" height="860" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599205030334" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599341208270">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599549406500">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599341208270" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599549406500" />
     <state width="1877" height="380" key="GridCell.Tab.0.bottom" timestamp="1599227958841">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -787,11 +794,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599334931451" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599486795147">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599488397715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599486795147" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599488397715" />
     <state x="781" y="191" width="449" height="614" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599036935752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -815,11 +822,11 @@
     </state>
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598861608855" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597593489371" />
-    <state x="337" y="34" width="926" height="843" key="find.popup" timestamp="1599487400125">
+    <state x="497" y="122" width="926" height="843" key="find.popup" timestamp="1599552028828">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="252" width="607" height="625" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597048766109" />
-    <state x="337" y="34" width="926" height="843" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599487400125" />
+    <state x="497" y="122" width="926" height="843" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599552028828" />
     <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog" timestamp="1599202336837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
