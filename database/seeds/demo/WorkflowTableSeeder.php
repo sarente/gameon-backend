@@ -19,12 +19,13 @@ class WorkflowTableSeeder extends Seeder
 
         $categories=Category::all()->pluck('id');
         //dd($categories);
-
+        $workflowDefinition=include(config_path('workflow.php'));
+        //dd($workflowDefinition['test']);
         foreach ($categories as $key=> $value){
             $workflow = new \App\Models\CustomWorkflow([
                 'name' => "Test Work Flow",
                 //'type' => Setting::WF_TYPE_WF,
-                'config' => null
+                'config' =>$workflowDefinition['test']
             ]);
             $workflow->category()->associate($value);
             $workflow->save();
