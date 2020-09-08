@@ -14,6 +14,8 @@ class CreateUserWorkflow extends Migration
     public function up()
     {
         Schema::create('user_workflow', function (Blueprint $table) {
+            $table->bigIncrements('id');
+
             $table->bigInteger('workflow_id')->unsigned();
             $table->foreign('workflow_id')
                 ->references('id')

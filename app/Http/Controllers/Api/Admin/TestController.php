@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api\Admin;
 use App\Models\Activity;
 use App\Models\CustomWorkflow;
 use App\Models\User;
-use Workflow;
+use App\Models\UserWorkflow;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use App\Http\Controllers\Controller;
@@ -25,8 +25,11 @@ class TestController extends Controller
         //$wf=CustomWorkflow::first();
 
         $act = Activity::find(1);
-        $workflow =$act->workflow_get();
-        $current_place=$workflow->getMarking($act)->getPlaces();
+        $workflow =$act->workflow_get('straight2');
+
+        $uwf = UserWorkflow::find(1);
+        $workflow =$uwf->workflow_get('straight1');
+        $current_place=$workflow->getMarking($uwf)->getPlaces();
 
         //$workflow =\Symfony\Component\Workflow\Workflow::get($act, $workflowName);
 
