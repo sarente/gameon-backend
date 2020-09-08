@@ -1,33 +1,22 @@
 <?php
 
 return [
-    'test' => [
-        'type' => 'workflow', // or 'state_machine'
-        'metadata' => [
-            'title' => 'Activity Publishing CustomWorkflow',
-        ],
+    'competence'   => [
+        'type' => 'state_machine',
         'marking_store' => [
-            'type' => 'single_state', // or 'state_machine'
-            //'property' => 'currentPlace', // this is the property on the model
-            'class' => \App\Models\Workflow\UserWorkflow::class, // you may omit for default, or set to override marking store class
+            'type' => 'single_state',
         ],
-        'supports' => ['App\Models\Activity'],
+        'supports' => [\App\Models\Activity::class],
         'places' => [
-            'gather_cvs' => ['metadata' => [
-                'max_num_of_words' => 500,
-            ]],
-            'send_quiz',
-            'select_top_3',
-            'offering'
-        ], //steps of workflow
-        'initial_places' => 'draft', // or set to an array if multiple initial places
-        'transitions' => [
+            'draft',
+            'review',
+            'rejected',
+            'published'
+        ],
+        'transitions'   => [
             'to_review' => [
                 'from' => 'draft',
-                'to' => 'review',
-                'metadata' => [
-                    'priority' => 0.5,
-                ]
+                'to' => 'review'
             ],
             'publish' => [
                 'from' => 'review',

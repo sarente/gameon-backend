@@ -39,6 +39,8 @@ Route::group(['middleware' => 'auth.jwt'], function ($router) {
     Route::resource('workflow', 'Api\WorkflowController');
 });
 
+Route::get('get-workflow', 'Api\Admin\TestController@getWorkflow');
+
 
 
 

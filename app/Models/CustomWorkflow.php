@@ -17,7 +17,6 @@ class CustomWorkflow extends Model
 
     protected $fillable = [
         'name',
-        'type',
         'config',
     ];
 
@@ -56,15 +55,10 @@ class CustomWorkflow extends Model
         return $this->belongsToMany(User::class, 'user_workflow')->withPivot('marking');
     }
 
-    public function workflowable()
-    {
-        return $this->morphTo();
-    }
-
     /**
      * Load the workflow type definition into the registry
      */
-    protected function loadWorkflow(string $name = null)
+    public function loadWorkflow(string $name = null)
     {
         $registry = app()->make('workflow');
         $workflowName = $name ?? $this->name;
