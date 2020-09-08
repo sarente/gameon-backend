@@ -26,10 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config/workflow2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserWorkflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserWorkflow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/WorkflowServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/WorkflowServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/TestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/TestController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/workflow.php" afterDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
@@ -280,14 +279,7 @@
       <workItem from="1598861456200" duration="8140000" />
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
-      <workItem from="1599549605785" duration="16601000" />
-    </task>
-    <task id="LOCAL-00003" summary="Api route bug fixes">
-      <created>1598448625366</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1598448625366</updated>
+      <workItem from="1599549605785" duration="17917000" />
     </task>
     <task id="LOCAL-00004" summary="Workflow create bug fix">
       <created>1598450878228</created>
@@ -625,7 +617,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599570518020</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="workflow seeder works fine 2">
+      <created>1599571704813</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1599571704813</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,7 +669,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="some changes in tables arrangemnet" />
     <MESSAGE value="tables design is done" />
     <MESSAGE value="remove old seeder" />
     <MESSAGE value="seeder works fine" />
@@ -695,7 +693,8 @@
     <MESSAGE value="change wf read config method" />
     <MESSAGE value="workflow seeder works fine" />
     <MESSAGE value="workflow seeder works fine 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="workflow seeder works fine 1" />
+    <MESSAGE value="workflow seeder works fine 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="workflow seeder works fine 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -733,11 +732,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599553379859" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599570516709">
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599571703860">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599570516709" />
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599571703860" />
     <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599123308930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

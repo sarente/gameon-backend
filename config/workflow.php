@@ -1,32 +1,36 @@
 <?php
-
 return [
-    'competence'   => [
-        'type' => 'state_machine',
-        'marking_store' => [
-            'type' => 'method',
-            'property'=> 'state'
+    'straight' => [
+        'type' => 'workflow',
+        'metadata' => [
+            'title' => 'Blog Publishing Workflow',
         ],
-        'supports' => [\App\Models\Activity::class],
+        'marking_store' => [
+            'type' => 'multiple_state',
+            'property' => 'currentPlace'
+        ],
+        'supports' => ['App\Models\Activity'],
         'places' => [
             'draft',
-            'review',
-            'rejected',
+            'content_review',
+            'content_approved',
+            'legal_review',
+            'legal_approved',
             'published'
         ],
-        'transitions'   => [
+        'transitions' => [
             'to_review' => [
                 'from' => 'draft',
-                'to' => 'review'
+                'to' => ['content_review', 'legal_review'],
             ],
+// ... transitions to "approved" states here
             'publish' => [
-                'from' => 'review',
+                'from' => [ // note array in array
+                    ['content_review', 'legal_review']
+                ],
                 'to' => 'published'
             ],
-            'reject' => [
-                'from' => 'review',
-                'to' => 'rejected'
-            ]
+// ...
         ],
     ]
 ];
