@@ -29,7 +29,7 @@ class AuthServiceProvider extends ServiceProvider
        Auth::extend('jwt', function ($app, $name, array $config) {
             return new JwtGuard(Auth::createUserProvider($config['provider']), $app['request']);
         });
-        Auth::provider('gameonuserprovider', function($app, array $config) {
+        Auth::provider('internal_user_provider', function($app, array $config) {
             return new InternalUserProvider($app['hash'], $config['model']);
         });
 

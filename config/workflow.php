@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'recruitment' => [
+    'test' => [
         'type' => 'workflow', // or 'state_machine'
         'metadata' => [
-            'title' => 'Activity Publishing Workflow',
+            'title' => 'Activity Publishing CustomWorkflow',
         ],
         'marking_store' => [
             'type' => 'single_state', // or 'state_machine'

@@ -15,7 +15,7 @@ class WorkFlowSubscriber implements ShouldQueue
      * Handle workflow guard events.
      */
     public function onGuard(GuardEvent $event) {
-        /** Symfony\Component\Workflow\Event\GuardEvent */
+        /** Symfony\Component\CustomWorkflow\Event\GuardEvent */
         $originalEvent = $event->getOriginalEvent();
 
         /** @var App\Model\Activity $post */

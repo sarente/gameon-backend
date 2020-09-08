@@ -39,6 +39,6 @@ class Activity extends Model
 
     public function workflow()
     {
-        return $this->belongsTo(\App\Models\Workflow::class);
+        return $this->belongsTo(\App\Models\CustomWorkflow::class);
     }
 }

@@ -235,7 +235,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Workflow' => ZeroDaHero\LaravelWorkflow\Facades\WorkflowFacade::class,
+        'CustomWorkflow' => ZeroDaHero\LaravelWorkflow\Facades\WorkflowFacade::class,
     ],
 
 ];

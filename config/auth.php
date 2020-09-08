@@ -76,7 +76,7 @@ return [
             'model' => App\Models\User::class,
         ],
         'jwt' => [
-            'driver' => 'gameonuserprovider',
+            'driver' => 'internal_user_provider',
             'model' => App\Models\User::class,
             'table' => 'users',
         ],

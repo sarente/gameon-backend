@@ -21,7 +21,7 @@ class WorkflowTableSeeder extends Seeder
         //dd($categories);
 
         foreach ($categories as $key=> $value){
-            $workflow = new \App\Models\Workflow([
+            $workflow = new \App\Models\CustomWorkflow([
                 'name' => "Test Work Flow",
                 //'type' => Setting::WF_TYPE_WF,
                 'config' => null
