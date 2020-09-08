@@ -4,7 +4,8 @@ return [
     'competence'   => [
         'type' => 'state_machine',
         'marking_store' => [
-            'type' => 'single_state',
+            'type' => 'method',
+            'property'=> 'state'
         ],
         'supports' => [\App\Models\Activity::class],
         'places' => [

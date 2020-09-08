@@ -10,10 +10,13 @@ class UserWorkflow extends Model
     use WorkflowTrait;
 
     protected $table = "user_workflow";
-
+    protected $casts = [
+        'marking' => 'array'
+    ];
     private $currentPlace;
 
     // getter/setter methods must exist for property access by the marking store
+
     public function getCurrentPlace()
     {
         return $this->currentPlace;
