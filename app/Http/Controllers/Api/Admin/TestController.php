@@ -24,17 +24,19 @@ class TestController extends Controller
     {
         //$wf=CustomWorkflow::first();
 
-        $act = Activity::find(1);
-        $workflow =$act->workflow_get('straight2');
+        $user_flow = UserWorkflow::find(1);
+        $workflow =$user_flow->workflow_get('values');
+        //dd($workflow);
+        dump($workflow->getMetadataStore());
 
-        $uwf = UserWorkflow::find(1);
-        $workflow =$uwf->workflow_get('straight1');
-        $current_place=$workflow->getMarking($uwf)->getPlaces();
+        //$uwf = UserWorkflow::find(1);
+        //$workflow =$uwf->workflow_get('straight1');
+        //$current_place=$workflow->getMarking($uwf)->getPlaces();
 
         //$workflow =\Symfony\Component\Workflow\Workflow::get($act, $workflowName);
 
         //dump($act->workflow_transitions());
-        dump($workflow->getMetadataStore());
+        //dump($workflow->getMetadataStore());
 
         //return response()->message(json_encode($wf->config));
         //$wf->loadWorkflow();

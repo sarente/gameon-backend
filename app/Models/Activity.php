@@ -9,7 +9,7 @@ use ZeroDaHero\LaravelWorkflow\Traits\WorkflowTrait;
 
 class Activity extends Model
 {
-    use LogsActivity, WorkflowTrait;
+    use LogsActivity;
 
     protected $fillable = [
         'name',
@@ -35,10 +35,5 @@ class Activity extends Model
             'model_id',
             'reward_id'
         );
-    }
-
-    public function workflow()
-    {
-        return $this->belongsTo(\App\Models\CustomWorkflow::class);
     }
 }

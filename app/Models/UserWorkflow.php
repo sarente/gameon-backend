@@ -10,6 +10,7 @@ class UserWorkflow extends Model
     use WorkflowTrait;
 
     protected $table = "user_workflow";
+
     protected $casts = [
         'marking' => 'array'
     ];

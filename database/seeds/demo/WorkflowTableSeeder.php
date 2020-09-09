@@ -17,8 +17,7 @@ class WorkflowTableSeeder extends Seeder
 
         $categories = Category::query()->get(['name']);
         $workflowDefinition = include(config_path('workflow.php'));
-        //dd($workflowDefinition['values']['places']);
-        //dd($categories->toArray());
+
         //$workflowKeys=array_keys($workflowDefinition);
 
         foreach ($categories as $key => $value) {

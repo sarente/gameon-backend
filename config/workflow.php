@@ -24,11 +24,11 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => ['rosette','point']
+                'to' => ['rosette', 'point']
             ],
             'show_rosette' => [
                 'from' => 'rosette',
-                'to' => ['done','point']
+                'to' => ['done', 'point']
             ],
             'return_point' => [
                 'from' => 'point',
@@ -36,7 +36,7 @@ return [
             ],
         ],
     ],
-'base_competence' => [
+    'base_competence' => [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'Temel Yetkinlikler',
@@ -67,7 +67,7 @@ return [
             ],
         ],
     ],
-'management_competence' => [
+    'management_competence' => [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'Yönetsel Yetkinlikler',
@@ -98,7 +98,7 @@ return [
             ],
         ],
     ],
-'high_level_competence' => [
+    'high_level_competence' => [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'Üst Düzey Yetkinlikler',
@@ -129,7 +129,7 @@ return [
             ],
         ],
     ],
-'entertainment' => [
+    'entertainment' => [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'Eğlence',
