@@ -29,9 +29,9 @@ class CustomWorkflow extends Model
         'config' => 'array',
     ];
 
-    protected $attributes = [
+/*    protected $attributes = [
         'type' => Setting::WF_TYPE_WF,
-    ];
+    ];*/
 
 //    public static function boot()
 //    {

@@ -15,21 +15,22 @@ class WorkflowTableSeeder extends Seeder
     {
         //TODO: get workflow configs from files
 
-        $categories = Category::get(['name']);
+        $categories = Category::find(1)->get(['name']);
         $workflowDefinition = include(config_path('workflow.php'));
         //$workflowKeys=array_keys($workflowDefinition);
 
         foreach ($categories as $key => $value) {
-            dd($value);
+            $name = $value->translations['name']['tr'];
+
             if ($key < 1) {
                 $workflow = new \App\Models\CustomWorkflow([
-                    'name' => $value->name,
+                    'name' => $name,
                     'config' => $workflowDefinition['values']
                 ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
             }
 
-            $workflow->category()->associate($value);
-            $workflow->save();
         }
     }
 }

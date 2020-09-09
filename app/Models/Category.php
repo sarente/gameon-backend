@@ -8,21 +8,24 @@ use Spatie\Translatable\HasTranslations;
 
 class Category extends Model
 {
-    use LogsActivity,HasTranslations;
+    use LogsActivity, HasTranslations;
 
+    public $translatable = ['name', 'description'];
+    protected $casts = [
+        'name' => 'array',
+        'description' => 'array'
+    ];
     protected $fillable = [
         'name',
         'description',
         'category_id',
     ];
-
     protected $hidden = [
         'translations',
         'pivot',
         'created_at',
         'updated_at'
     ];
-    public $translatable = ['name','description'];
 
     public function levels()
     {
