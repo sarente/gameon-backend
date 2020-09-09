@@ -11,6 +11,8 @@ class Category extends Model
     use LogsActivity,HasTranslations;
 
     protected $fillable = [
+        'name',
+        'description',
         'category_id',
     ];
 
@@ -20,7 +22,7 @@ class Category extends Model
         'created_at',
         'updated_at'
     ];
-    public $translatable = ['name'];
+    public $translatable = ['name','description'];
 
     public function levels()
     {
