@@ -15,8 +15,6 @@ class CreateCategoriesTable extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->text('description')->nullable();
             $table->timestamps();
 
             $table->bigInteger('category_id')->unsigned()->nullable();
@@ -32,6 +30,7 @@ class CreateCategoriesTable extends Migration
         {
             $table->increments('id');
             $table->string('name');
+            $table->text('description')->nullable();
             $table->string('locale')->index();
 
             $table->bigInteger('category_id')->unsigned();

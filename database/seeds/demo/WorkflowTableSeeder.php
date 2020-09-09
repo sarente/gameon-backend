@@ -25,7 +25,7 @@ class WorkflowTableSeeder extends Seeder
             $workflow = new \App\Models\CustomWorkflow([
                 'name' => "Test Work Flow",
                 //'type' => Setting::WF_TYPE_WF,
-                'config' =>$workflowDefinition['test']
+                'config' =>$workflowDefinition[$key]
             ]);
             $workflow->category()->associate($value);
             $workflow->save();
