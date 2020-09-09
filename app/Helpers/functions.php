@@ -7,3 +7,10 @@ function getCategories()
 
     return $result;
 }
+
+// strip out all whitespace
+// convert the string to all lowercase
+function stripLowercaseName($name_clean)
+{
+    return strtolower(str_replace(' ', '_', $name_clean));
+}

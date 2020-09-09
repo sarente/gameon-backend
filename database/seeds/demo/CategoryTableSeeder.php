@@ -19,16 +19,10 @@ class CategoryTableSeeder extends Seeder
 
         foreach($category_names as $category_name){
             $category = new \App\Models\Category([
-                'name:'.app()->getLocale() => $category_names,
+                'name:'.app()->getLocale() => stripLowercaseName($category_name),
             ]);
             $category->save();
             $category->users()->attach([1,2,3]);
         }
-    }
-    private function convertToName($zname_clean){
-        // strip out all whitespace
-        $zname_clean = preg_replace('/\s*/', '', $zname_clean);
-        // convert the string to all lowercase
-        return strtolower($zname_clean);
     }
 }

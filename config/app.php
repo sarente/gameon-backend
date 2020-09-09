@@ -182,7 +182,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         //ZeroDaHero\LaravelWorkflow\WorkflowServiceProvider::class,
         App\Providers\WorkflowServiceProvider::class,
-        App\Providers\HelperServiceProvider::class,
+        //App\Providers\HelperServiceProvider::class,
     ],
 
     /*

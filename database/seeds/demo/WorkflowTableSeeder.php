@@ -4,6 +4,7 @@ namespace App\Database\Seeds\Demo;
 
 use App\Models\Category;
 use App\Models\Setting;
+use App\Providers\HelperServiceProvider;
 use Illuminate\Database\Seeder;
 
 class WorkflowTableSeeder extends Seeder
@@ -18,14 +19,12 @@ class WorkflowTableSeeder extends Seeder
         //TODO: get workflow configs from files
 
         $categories=Category::all()->pluck('id');
-        //dd($categories);
         $workflowDefinition=include(config_path('workflow.php'));
-        //dd($workflowDefinition['test']);
+
         foreach ($categories as $key=> $value){
             $workflow = new \App\Models\CustomWorkflow([
                 'name' => "Test Work Flow",
-                //'type' => Setting::WF_TYPE_WF,
-                'config' =>$workflowDefinition[$key]
+                'config' =>$key
             ]);
             $workflow->category()->associate($value);
             $workflow->save();

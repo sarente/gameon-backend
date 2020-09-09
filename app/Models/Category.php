@@ -2,18 +2,15 @@
 
 namespace App\Models;
 
-use App\Models\Workflow\Workflow;
-use App\Models\Workflow\WorkflowType;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Translatable\HasTranslations;
 
 class Category extends Model
 {
-    use LogsActivity;
+    use LogsActivity,HasTranslations;
 
     protected $fillable = [
-        'name',
-        'description',
         'category_id',
     ];
 
@@ -23,6 +20,9 @@ class Category extends Model
         'created_at',
         'updated_at'
     ];
+    public $translatedAttributes = [
+        'name',
+    ];
 
     public function levels()
     {
@@ -31,7 +31,7 @@ class Category extends Model
 
     public function workflows()
     {
-        return $this->hasMany(Workflow::class);
+        return $this->hasMany(CustomWorkflow::class);
     }
 
     public function users()
