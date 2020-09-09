@@ -15,6 +15,8 @@ class CreateCategoriesTable extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->text('name');
+            $table->text('description')->nullable();
             $table->timestamps();
 
             $table->bigInteger('category_id')->unsigned()->nullable();
@@ -23,19 +25,6 @@ class CreateCategoriesTable extends Migration
                 ->on('categories')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
-        });
-
-
-        Schema::create('category_translations', function(Blueprint $table)
-        {
-            $table->increments('id');
-            $table->string('name');
-            $table->text('description')->nullable();
-            $table->string('locale')->index();
-
-            $table->bigInteger('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('categories')->onUpdate('cascade')->onDelete('cascade');
-
         });
     }
 

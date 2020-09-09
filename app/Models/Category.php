@@ -20,9 +20,7 @@ class Category extends Model
         'created_at',
         'updated_at'
     ];
-    public $translatedAttributes = [
-        'name',
-    ];
+    public $translatable = ['name'];
 
     public function levels()
     {

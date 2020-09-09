@@ -26,14 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Helpers/functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/CategoryTranslation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/translatable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helper/MainHelper.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/HelperServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/HelperServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_31_141254_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_31_141254_create_categories_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/demo/CategoryTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/CategoryTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/demo/WorkflowTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/WorkflowTableSeeder.php" afterDir="false" />
     </list>
@@ -285,14 +282,7 @@
       <workItem from="1598861456200" duration="8140000" />
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
-      <workItem from="1599549605785" duration="30673000" />
-    </task>
-    <task id="LOCAL-00007" summary="Workflow users info added in show function">
-      <created>1598455999348</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1598455999348</updated>
+      <workItem from="1599549605785" duration="34330000" />
     </task>
     <task id="LOCAL-00008" summary="Workflow rewards info added in show function">
       <created>1598457158198</created>
@@ -630,7 +620,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599640505403</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Category translation added">
+      <created>1599644567636</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1599644567638</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +672,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="some optimization" />
     <MESSAGE value="database optimization" />
     <MESSAGE value="work flow mechanism changed" />
     <MESSAGE value="work flow mechanism changed 1" />
@@ -700,7 +696,8 @@
     <MESSAGE value="workflow config 2 added to system" />
     <MESSAGE value="user_workflow tracker added" />
     <MESSAGE value="Add helper method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add helper method" />
+    <MESSAGE value="Category translation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Category translation added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -738,20 +735,20 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599553379859" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599640504385">
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599644566578">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599640504385" />
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599644566578" />
     <state width="455" height="466" key="DebuggerActiveHint" timestamp="1599123308930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="455" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1599123308930" />
-    <state x="193" y="86" width="1536" height="860" key="DiffContextDialog" timestamp="1599205030334">
+    <state x="193" y="86" width="1536" height="860" key="DiffContextDialog" timestamp="1599645983315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="193" y="86" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939593331" />
-    <state x="193" y="86" width="1536" height="860" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599205030334" />
+    <state x="193" y="86" width="1536" height="860" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599645983315" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599549406500">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -820,11 +817,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599334931451" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599640507689">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599644573846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599640507689" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599644573846" />
     <state x="781" y="191" width="449" height="614" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599575241888">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -3,7 +3,6 @@
 namespace App\Database\Seeds\Demo;
 
 use App\Models\Category;
-use App\Models\Setting;
 use App\Providers\HelperServiceProvider;
 use Illuminate\Database\Seeder;
 
@@ -20,6 +19,7 @@ class WorkflowTableSeeder extends Seeder
 
         $categories=Category::all()->pluck('id');
         $workflowDefinition=include(config_path('workflow.php'));
+        $workflowKeys=array_key(include(config_path('workflow.php')));
 
         foreach ($categories as $key=> $value){
             $workflow = new \App\Models\CustomWorkflow([

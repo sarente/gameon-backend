@@ -2,6 +2,7 @@
 
 namespace App\Database\Seeds\Demo;
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class CategoryTableSeeder extends Seeder
@@ -13,16 +14,17 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
+        $users=User::pluck('id')->toArray();
+
         app()->setLocale('tr');
-        //$category_names=['Temel Yetkinlikler','Yönetsel Yetkinlikler','Üst Düzey Yetkinlikler','Değler','Eğlence',];
-        $category_names=['Yetkinlikler','Değeler','Eğlence'];
+        $category_names=['Değeler','Yetkinlikler','Eğlence'];
 
         foreach($category_names as $category_name){
             $category = new \App\Models\Category([
-                'name:'.app()->getLocale() => stripLowercaseName($category_name),
+                'name'=> $category_name,
             ]);
             $category->save();
-            $category->users()->attach([1,2,3]);
+            $category->users()->attach($users);
         }
     }
 }
