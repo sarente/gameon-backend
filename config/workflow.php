@@ -11,27 +11,32 @@ return [
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
-            'draft',
-            'content_review',
-            'content_approved',
-            'legal_review',
-            'legal_approved',
-            'published'
+            'slide_show',
+            'the_blanks',
+            'rosette',
+            'point',
+            'done'
         ],
         'transitions' => [
-            'to_review' => [
-                'from' => 'draft',
-                'to' => ['content_review', 'legal_review'],
+            'play_slide_show' => [
+                'from' => 'slide_show',
+                'to' => 'the_blanks',
             ],
-            'publish' => [
-                'from' => [
-                    ['content_review', 'legal_review']
-                ],
-                'to' => 'published'
+            'fill_in_the_blanks' => [
+                'from' => 'the_blanks',
+                'to' => ['rosette','point']
+            ],
+            'show_rosette' => [
+                'from' => 'rosette',
+                'to' => ['done','point']
+            ],
+            'return_point' => [
+                'from' => 'point',
+                'to' => 'done'
             ],
         ],
     ],
-    'base_competence' => [
+'base_competence' => [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'Temel Yetkinlikler',
@@ -42,7 +47,7 @@ return [
         ],
         'supports' => ['App\Models\Activity'],
         'places' => [
-            'draft1',
+            'slide_show1',
             'content_review1',
             'content_approved1',
             'legal_review1',
@@ -51,7 +56,7 @@ return [
         ],
         'transitions' => [
             'to_review1' => [
-                'from' => 'draft1',
+                'from' => 'slide_show1',
                 'to' => ['content_review1', 'legal_review1'],
             ],
             'publish1' => [
@@ -62,7 +67,7 @@ return [
             ],
         ],
     ],
-    'management_competence' => [
+'management_competence' => [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'Yönetsel Yetkinlikler',
@@ -73,7 +78,7 @@ return [
         ],
         'supports' => ['App\Models\Activity'],
         'places' => [
-            'draft1',
+            'slide_show1',
             'content_review1',
             'content_approved1',
             'legal_review1',
@@ -82,7 +87,7 @@ return [
         ],
         'transitions' => [
             'to_review1' => [
-                'from' => 'draft1',
+                'from' => 'slide_show1',
                 'to' => ['content_review1', 'legal_review1'],
             ],
             'publish1' => [
@@ -93,7 +98,7 @@ return [
             ],
         ],
     ],
-    'high_level_competence' => [
+'high_level_competence' => [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'Üst Düzey Yetkinlikler',
@@ -104,7 +109,7 @@ return [
         ],
         'supports' => ['App\Models\Activity'],
         'places' => [
-            'draft1',
+            'slide_show1',
             'content_review1',
             'content_approved1',
             'legal_review1',
@@ -113,7 +118,7 @@ return [
         ],
         'transitions' => [
             'to_review1' => [
-                'from' => 'draft1',
+                'from' => 'slide_show1',
                 'to' => ['content_review1', 'legal_review1'],
             ],
             'publish1' => [
@@ -124,7 +129,7 @@ return [
             ],
         ],
     ],
-    'entertainment' => [
+'entertainment' => [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'Eğlence',
@@ -135,7 +140,7 @@ return [
         ],
         'supports' => ['App\Models\Activity'],
         'places' => [
-            'draft1',
+            'slide_show1',
             'content_review1',
             'content_approved1',
             'legal_review1',
@@ -144,7 +149,7 @@ return [
         ],
         'transitions' => [
             'to_review1' => [
-                'from' => 'draft1',
+                'from' => 'slide_show1',
                 'to' => ['content_review1', 'legal_review1'],
             ],
             'publish1' => [
