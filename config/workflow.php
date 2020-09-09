@@ -3,7 +3,7 @@ return [
     'values' => [
         'type' => 'workflow',
         'metadata' => [
-            'title' => 'Blog Publishing Workflow',
+            'title' => 'Değeler',
         ],
         'marking_store' => [
             'type' => 'multiple_state',
@@ -34,7 +34,7 @@ return [
     'base_competence' => [
         'type' => 'workflow',
         'metadata' => [
-            'title' => 'Blog Publishing Workflow',
+            'title' => 'Temel Yetkinlikler',
         ],
         'marking_store' => [
             'type' => 'multiple_state',
@@ -65,7 +65,7 @@ return [
     'management_competence' => [
         'type' => 'workflow',
         'metadata' => [
-            'title' => 'Blog Publishing Workflow',
+            'title' => 'Yönetsel Yetkinlikler',
         ],
         'marking_store' => [
             'type' => 'multiple_state',
@@ -96,7 +96,7 @@ return [
     'high_level_competence' => [
         'type' => 'workflow',
         'metadata' => [
-            'title' => 'Blog Publishing Workflow',
+            'title' => 'Üst Düzey Yetkinlikler',
         ],
         'marking_store' => [
             'type' => 'multiple_state',
@@ -127,7 +127,7 @@ return [
     'entertainment' => [
         'type' => 'workflow',
         'metadata' => [
-            'title' => 'Blog Publishing Workflow',
+            'title' => 'Eğlence',
         ],
         'marking_store' => [
             'type' => 'multiple_state',

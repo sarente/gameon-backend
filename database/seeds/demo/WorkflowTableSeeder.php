@@ -15,22 +15,50 @@ class WorkflowTableSeeder extends Seeder
     {
         //TODO: get workflow configs from files
 
-        $categories = Category::find(1)->get(['name']);
+        $categories = Category::query()->get(['name']);
         $workflowDefinition = include(config_path('workflow.php'));
+        //dd($workflowDefinition['values']['places']);
+        //dd($categories->toArray());
         //$workflowKeys=array_keys($workflowDefinition);
 
         foreach ($categories as $key => $value) {
             $name = $value->translations['name']['tr'];
 
-            if ($key < 1) {
-                $workflow = new \App\Models\CustomWorkflow([
-                    'name' => $name,
-                    'config' => $workflowDefinition['values']
-                ]);
-                $workflow->category()->associate($value);
-                $workflow->save();
+            switch ($key) {
+                case $key == 0:
+                    $workflow = new \App\Models\CustomWorkflow([
+                        'name' => $name,
+                        'config' => $workflowDefinition['values']
+                    ]);
+                    break;
+                case $key == 1:
+                    $workflow = new \App\Models\CustomWorkflow([
+                        'name' => $name,
+                        'config' => $workflowDefinition['base_competence']
+                    ]);
+                    break;
+               /* case $key == 2:
+                    $workflow = new \App\Models\CustomWorkflow([
+                        'name' => $name,
+                        'config' => $workflowDefinition['management_competence']
+                    ]);
+                    break;
+                case $key == 3:
+                    $workflow = new \App\Models\CustomWorkflow([
+                        'name' => $name,
+                        'config' => $workflowDefinition['high_level_competence']
+                    ]);
+                    break;*/
+                case $key == 2:
+                    $workflow = new \App\Models\CustomWorkflow([
+                        'name' => $name,
+                        'config' => $workflowDefinition['entertainment']
+                    ]);
+                    break;
             }
 
+            $workflow->category()->associate($value);
+            $workflow->save();
         }
     }
 }
