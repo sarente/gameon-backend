@@ -30,10 +30,22 @@ class TestController extends Controller
         //$workflow->getMetadataStore();
         //dump($workflow->can($flowable, 'play_slide_show'));
         //dd($workflow->can($flowable, 'fill_in_the_blanks'));
-        $transitions = $workflow->getEnabledTransitions($flowable); //give me the action the user have to do
-        dd($transitions);
 
-        //$workflow->apply($flowable, 'play_slide_show');
+        //$transitions = $workflow->getEnabledTransitions($flowable); //give me the action the user have to do
+        //dd($transitions);
+
+        // Get the current places
+        //$place=$workflow->getMarking($flowable)->getPlaces();
+        //dd($place);
+
+        // Get the definition
+        //$definition = $workflow->getDefinition();
+        //dump($definition);
+
+        $placeMetadata = $workflow->getMetadataStore()->getPlaceMetadata('slide_show'); // string place name
+        dump($placeMetadata);
+
+        //$workflow->apply($flowable, 'play_slide_show'); //Doing a transitio   n
         //$workflow->apply($flowable, 'fill_in_the_blanks');
         //$flowable->save(); // Don't forget to persist the state
         return response()->message('common.success');
