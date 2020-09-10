@@ -13,7 +13,7 @@ use ZeroDaHero\LaravelWorkflow\Exceptions\DuplicateWorkflowException;
 
 class CustomWorkflow extends Model
 {
-    protected $table='workflows';
+    protected $table = 'workflows';
 
     protected $fillable = [
         'name',
@@ -29,9 +29,9 @@ class CustomWorkflow extends Model
         'config' => 'array',
     ];
 
-/*    protected $attributes = [
-        'type' => Setting::WF_TYPE_WF,
-    ];*/
+    /*    protected $attributes = [
+            'type' => Setting::WF_TYPE_WF,
+        ];*/
 
 //    public static function boot()
 //    {
@@ -45,6 +45,23 @@ class CustomWorkflow extends Model
 //        });
 //    }
 
+    /**
+     * TODO:: add this method to boot of class
+     */
+    public static function loadWorkflow(string $name, array $workflowDefinition)
+    {
+        $registry = app()->make('workflow');
+        $workflowName = $name;
+        //$workflowDefinition = include(config_path('workflow1.php'));
+        $registry->addFromArray($workflowName, $workflowDefinition);
+        // or if catching duplicates
+        try {
+            $registry->addFromArray($workflowName, $workflowDefinition);
+        } catch (DuplicateWorkflowException $e) {
+            //throw new DuplicateWorkflowException();
+        }
+    }
+
     public function category()
     {
         return $this->belongsTo(Category::class);
@@ -53,26 +70,5 @@ class CustomWorkflow extends Model
     public function users()
     {
         return $this->belongsToMany(User::class, 'user_workflow')->withPivot('marking');
-    }
-
-    /**
-     * Load the workflow type definition into the registry
-     */
-    public function loadWorkflow(string $name = null)
-    {
-        $registry = app()->make('workflow');
-        $workflowName = $name ?? $this->name;
-
-        $workflowDefinition = include(config_path('workflow1.php'));
-
-        $registry->addFromArray($workflowName, $workflowDefinition['values1']);
-
-        // or if catching duplicates
-
-        try {
-            $registry->addFromArray($workflowName, $workflowDefinition['values1']);
-        } catch (DuplicateWorkflowException $e) {
-            // already loaded
-        }
     }
 }

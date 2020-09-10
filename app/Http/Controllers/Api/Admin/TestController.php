@@ -25,11 +25,22 @@ class TestController extends Controller
            //throw new WorkFlowNotFoundException();
         }
         //Get work flow definition
-        dd($flowable->customWorkflow->config);
+        //dd($flowable->customWorkflow->name);
 
-        $flowable = UserWorkflow::find(2);
+        $wf_name=$flowable->customWorkflow->name;
+        $data=$flowable->customWorkflow->config;
+        //CustomWorkflow::loadWorkflow($wf_name,$data);
+
+        //$workflow = Workflow::get($flowable, $wf_name);
+        $workflow=$flowable->workflow_get('entertainment');
+
+        //$workflow=$flowable->workflow_get($wf_name);
+        $metadata = $workflow->getMetadataStore();
+
+        dd($metadata);
+
+        //$flowable = UserWorkflow::find(2);
         //$workflow =$flowable->workflow_get('values');
-        dump($flowable->workflow_transitions());
     }
 
     public function getWorkflow(Request $request)

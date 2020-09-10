@@ -51,7 +51,7 @@ return [
             'type' => 'multiple_state',
             'property' => 'currentPlace'
         ],
-        'supports' => ['App\Models\Activity'],
+        'supports' => ['App\Models\UserWorkflow'],
         'places' => [
             'slide_show1',
             'content_review1',
@@ -82,7 +82,7 @@ return [
             'type' => 'multiple_state',
             'property' => 'currentPlace'
         ],
-        'supports' => ['App\Models\Activity'],
+        'supports' => ['App\Models\UserWorkflow'],
         'places' => [
             'slide_show1',
             'content_review1',
@@ -113,7 +113,7 @@ return [
             'type' => 'multiple_state',
             'property' => 'currentPlace'
         ],
-        'supports' => ['App\Models\Activity'],
+        'supports' => ['App\Models\UserWorkflow'],
         'places' => [
             'slide_show1',
             'content_review1',
@@ -144,7 +144,7 @@ return [
             'type' => 'multiple_state',
             'property' => 'currentPlace'
         ],
-        'supports' => ['App\Models\Activity'],
+        'supports' => ['App\Models\UserWorkflow'],
         'places' => [
             'slide_show1',
             'content_review1',
