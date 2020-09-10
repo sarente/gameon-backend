@@ -16,7 +16,7 @@ class TestController extends Controller
     public function getMyWorkflow(Request $request)
     {
         //Get user
-        $user=User::find(3);
+        $user=User::find(2);
 
         //Look for user workflows
         $flowable= UserWorkflow::with(['customWorkflow','user'])->newQuery()->where('user_id',$user->id)->first();
@@ -32,9 +32,10 @@ class TestController extends Controller
         //CustomWorkflow::loadWorkflow($wf_name,$data);
 
         //$workflow = Workflow::get($flowable, $wf_name);
-        $workflow=$flowable->workflow_get('entertainment');
+        $workflow=$flowable->workflow_get($wf_name);
 
         //$workflow=$flowable->workflow_get($wf_name);
+        //$metadata = $workflow->getMetadataStore();
         $metadata = $workflow->getMetadataStore();
 
         dd($metadata);

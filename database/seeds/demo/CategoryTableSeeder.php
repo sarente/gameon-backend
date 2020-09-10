@@ -17,7 +17,7 @@ class CategoryTableSeeder extends Seeder
         $users=User::pluck('id')->toArray();
 
         app()->setLocale('tr');
-        $category_names=['Değeler','Yetkinlikler','Eğlence'];
+        $category_names=[['tr'=>'Değeler','en'=>'Values'],['tr'=>'Yetkinlikler','en'=>'Competence'],['tr'=>'Eğlence','en'=>'Entertainment']];
 
         foreach($category_names as $category_name){
             $category = new \App\Models\Category([

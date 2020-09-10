@@ -21,7 +21,7 @@ class WorkflowTableSeeder extends Seeder
         //$workflowKeys=array_keys($workflowDefinition);
 
         foreach ($categories as $key => $value) {
-            $name = $value->translations['name']['tr'];
+            $name = stripLowercaseName($value->translations['name']['en']);
 
             switch ($key) {
                 case $key == 0:
