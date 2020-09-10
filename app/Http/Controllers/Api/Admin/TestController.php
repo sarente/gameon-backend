@@ -31,11 +31,11 @@ class TestController extends Controller
         //dump($workflow->can($flow, 'play_slide_show'));
         //dump($workflow->can($flow, 'fill_in_the_blanks'));
         $transitions = $workflow->getEnabledTransitions($flowable); //Get where is transaction
-        //dump($transitions);
+        dump($transitions);
 
-        $workflow->apply($flowable, 'play_slide_show');
-        $flowable->save(); // Don't forget to persist the state
-        return response()->message('common.success');
+        //$workflow->apply($flowable, 'play_slide_show');
+        //$flowable->save(); // Don't forget to persist the state
+        //return response()->message('common.success');
 
         //$uwf = UserWorkflow::find(1);
         //$workflow =$uwf->workflow_get('straight1');

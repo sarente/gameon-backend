@@ -6,7 +6,8 @@ return [
             'title' => 'Değeler',
         ],
         'marking_store' => [
-            'type' => 'single_state'
+            'type' => 'multiple_state',
+            'property' => 'current_place'
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [

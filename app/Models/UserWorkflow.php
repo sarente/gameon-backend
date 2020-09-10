@@ -12,7 +12,8 @@ class UserWorkflow extends Model
     protected $table = "user_workflow";
 
     protected $casts = [
-        'marking' => 'array'
+        'marking' => 'array',
+        'current_place' => 'array'
     ];
     private $currentPlace;
 
