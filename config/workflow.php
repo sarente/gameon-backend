@@ -15,7 +15,10 @@ return [
                 'activity_id' => '1'
                     ]
             ],
-            'the_blanks',
+            'the_blanks'=> ['metadata' => [
+                'activity_id' => '2'
+            ]
+            ],
             'rosette',
             'point',
             'done'

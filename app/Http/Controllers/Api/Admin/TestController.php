@@ -24,18 +24,19 @@ class TestController extends Controller
     {
         //$wf=CustomWorkflow::first();
 
-        $flowable = UserWorkflow::find(1);
+        $flowable = UserWorkflow::find(2);
         $workflow =$flowable->workflow_get('values');
 
         //$workflow->getMetadataStore();
-        //dump($workflow->can($flow, 'play_slide_show'));
-        //dump($workflow->can($flow, 'fill_in_the_blanks'));
-        $transitions = $workflow->getEnabledTransitions($flowable); //Get where is transaction
-        dump($transitions);
+        //dump($workflow->can($flowable, 'play_slide_show'));
+        //dd($workflow->can($flowable, 'fill_in_the_blanks'));
+        $transitions = $workflow->getEnabledTransitions($flowable); //give me the action the user have to do
+        dd($transitions);
 
         //$workflow->apply($flowable, 'play_slide_show');
+        //$workflow->apply($flowable, 'fill_in_the_blanks');
         //$flowable->save(); // Don't forget to persist the state
-        //return response()->message('common.success');
+        return response()->message('common.success');
 
         //$uwf = UserWorkflow::find(1);
         //$workflow =$uwf->workflow_get('straight1');
