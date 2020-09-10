@@ -6,12 +6,14 @@ return [
             'title' => 'Değeler',
         ],
         'marking_store' => [
-            'type' => 'multiple_state',
-            'property' => 'currentPlace'
+            'type' => 'single_state'
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
-            'slide_show',
+            'slide_show' => ['metadata' => [
+                'activity_id' => '1'
+                    ]
+            ],
             'the_blanks',
             'rosette',
             'point',

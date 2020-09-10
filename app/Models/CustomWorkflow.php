@@ -62,7 +62,7 @@ class CustomWorkflow extends Model
     {
         $registry = app()->make('workflow');
         $workflowName = $name ?? $this->name;
-        /*   $workflowDefinition = [
+           $workflowDefinition = [
                // CustomWorkflow definition here
                // (same format as config/symfony docs)
                // This should be the definition only,
@@ -105,7 +105,7 @@ class CustomWorkflow extends Model
                        'to' => 'rejected'
                    ]
                ],
-           ];*/
+           ];
         $workflowDefinition = include(config_path('workflow.php'));
 
         $registry->addFromArray($workflowName, $workflowDefinition['test']);
