@@ -25,8 +25,6 @@ Route::group(['middleware' => 'auth.jwt'], function ($router) {
     Route::get('refresh', 'Api\AuthController@refresh');
     Route::get('logout', 'Api\AuthController@logout');
 
-
-
     Route::get('user/avatar', 'Api\UserController@getAvatar');
     Route::post('user/avatar', 'Api\UserController@saveAvatarConfiguration');
     Route::get('user/get-my-categories', 'Api\UserController@getMyCategories');
@@ -40,6 +38,7 @@ Route::group(['middleware' => 'auth.jwt'], function ($router) {
 });
 
 Route::get('get-workflow', 'Api\Admin\TestController@getWorkflow');
+Route::get('get-my-workflow', 'Api\Admin\TestController@getMyWorkflow');
 
 
 

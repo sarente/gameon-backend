@@ -1,42 +1,46 @@
 <?php
 
 return [
-    'test' => [
-        'type' => 'workflow', // or 'state_machine'
+    'base_competence' => [
+        'type' => 'workflow',
         'metadata' => [
-            'title' => 'Activity Publishing CustomWorkflow',
+            'title' => 'Temel Yetkinlikler',
         ],
         'marking_store' => [
-            'type' => 'single_state', // or 'state_machine'
-            //'property' => 'currentPlace', // this is the property on the model
-            'class' => \App\Models\Workflow\UserWorkflow::class, // you may omit for default, or set to override marking store class
+            'type' => 'multiple_state',
+            'property' => 'current_place'
         ],
-        'supports' => ['App\Models\Activity'],
+        'supports' => ['App\Models\UserWorkflow'],
         'places' => [
-            'gather_cvs' => ['metadata' => [
-                'max_num_of_words' => 500,
-            ]],
-            'send_quiz',
-            'select_top_3',
-            'offering'
-        ], //steps of workflow
-        'initial_places' => 'draft', // or set to an array if multiple initial places
-        'transitions' => [
-            'to_review' => [
-                'from' => 'draft',
-                'to' => 'review',
-                'metadata' => [
-                    'priority' => 0.5,
-                ]
-            ],
-            'publish' => [
-                'from' => 'review',
-                'to' => 'published'
-            ],
-            'reject' => [
-                'from' => 'review',
-                'to' => 'rejected'
+            'slide_show' => ['metadata' => [
+                'activity_id' => '2'
             ]
+            ],
+            'the_blanks'=> ['metadata' => [
+                'activity_id' => '3'
+            ]
+            ],
+            'rosette',
+            'point',
+            'done'
+        ],
+        'transitions' => [
+            'play_slide_show' => [
+                'from' => 'slide_show',
+                'to' => 'the_blanks',
+            ],
+            'fill_in_the_blanks' => [
+                'from' => 'the_blanks',
+                'to' => ['rosette', 'point']
+            ],
+            'show_rosette' => [
+                'from' => 'rosette',
+                'to' => ['done', 'point']
+            ],
+            'return_point' => [
+                'from' => 'point',
+                'to' => 'done'
+            ],
         ],
     ]
 ];

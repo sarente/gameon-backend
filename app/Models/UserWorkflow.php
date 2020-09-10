@@ -15,17 +15,14 @@ class UserWorkflow extends Model
         'marking' => 'array',
         'current_place' => 'array'
     ];
-    private $currentPlace;
 
-    // getter/setter methods must exist for property access by the marking store
-
-    public function getCurrentPlace()
+    public function customWorkflow()
     {
-        return $this->currentPlace;
+        return $this->belongsTo(CustomWorkflow::class);
     }
 
-    public function setCurrentPlace($currentPlace, $context = [])
+    public function user()
     {
-        $this->currentPlace = $currentPlace;
+        return $this->belongsTo(User::class);
     }
 }

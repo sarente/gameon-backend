@@ -62,58 +62,15 @@ class CustomWorkflow extends Model
     {
         $registry = app()->make('workflow');
         $workflowName = $name ?? $this->name;
-           $workflowDefinition = [
-               // CustomWorkflow definition here
-               // (same format as config/symfony docs)
-               // This should be the definition only,
-               // not including the key for the name.
-               // See note below on initial_places for an example.
 
-               'type' => 'workflow', // or 'state_machine'
-               'metadata' => [
-                   'title' => 'Activity Publishing CustomWorkflow',
-               ],
-               'marking_store' => [
-                   'type' => 'single_state', // or 'state_machine'
-                   //'property' => 'currentPlace', // this is the property on the model
-                   'class' => UserWorkflow::class, // you may omit for default, or set to override marking store class
-               ],
-               'supports' => ['App\Models\Activity'],
-               'places' => [
-                   'gather_cvs' => ['metadata' => [
-                       'max_num_of_words' => 500,
-                   ]],
-                   'send_quiz',
-                   'select_top_3',
-                   'offering'
-               ], //steps of workflow
-               'initial_places' => 'draft', // or set to an array if multiple initial places
-               'transitions' => [
-                   'to_review' => [
-                       'from' => 'draft',
-                       'to' => 'review',
-                       'metadata' => [
-                           'priority' => 0.5,
-                       ]
-                   ],
-                   'publish' => [
-                       'from' => 'review',
-                       'to' => 'published'
-                   ],
-                   'reject' => [
-                       'from' => 'review',
-                       'to' => 'rejected'
-                   ]
-               ],
-           ];
-        $workflowDefinition = include(config_path('workflow.php'));
+        $workflowDefinition = include(config_path('workflow1.php'));
 
-        $registry->addFromArray($workflowName, $workflowDefinition['test']);
+        $registry->addFromArray($workflowName, $workflowDefinition['values1']);
 
         // or if catching duplicates
 
         try {
-            $registry->addFromArray($workflowName, $workflowDefinition['test']);
+            $registry->addFromArray($workflowName, $workflowDefinition['values1']);
         } catch (DuplicateWorkflowException $e) {
             // already loaded
         }
