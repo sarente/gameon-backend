@@ -18,7 +18,7 @@ class UserWorkflow extends Model
 
     public function customWorkflow()
     {
-        return $this->belongsTo(CustomWorkflow::class);
+        return $this->belongsTo(CustomWorkflow::class, 'workflow_id');
     }
 
     public function user()
