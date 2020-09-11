@@ -4,6 +4,7 @@ namespace App\Database\Seeds\Demo;
 
 use App\Models\Category;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Log;
 
 class WorkflowTableSeeder extends Seeder
 {
@@ -15,14 +16,15 @@ class WorkflowTableSeeder extends Seeder
     {
         //TODO: get workflow configs from files
 
-        $categories = Category::query()->get(['name']);
+        $categories = Category::select(['id'])->get();
         $workflowDefinition = include(config_path('workflow.php'));
 
         $workflowKeys = array_keys($workflowDefinition);
 
         foreach ($categories as $key => $value) {
             //$name = stripLowercaseName($value->translations['name']['en']);
-                if($key == 0){
+            Log::info($value);
+            if($key == 0){
                     $workflow = new \App\Models\CustomWorkflow([
                         'name' => $workflowKeys[0],
                         'config' => $workflowDefinition['values']

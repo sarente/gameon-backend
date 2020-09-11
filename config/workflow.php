@@ -22,8 +22,11 @@ return [
                 'model_type' => 'App\Models\Activity',
             ]
             ],
-            'rosette',
-            'point',
+            'rosette' => ['metadata' => [
+                'model_id' => '1',
+                'model_type' => 'App\Models\Rosette',
+            ]
+            ],
             'done'
         ],
         'transitions' => [
