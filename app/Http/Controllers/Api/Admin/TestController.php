@@ -32,11 +32,31 @@ class TestController extends Controller
         $workflow = $flowable->workflow_get($wf_name);
         //dd($workflow->getMetadataStore()->getPlaceMetadata('slide_show'));
         /*@var */
-        //dd($workflow->getEnabledTransitions($flowable));
 
-        $place = 'play_slide_show';
+
+        //Get current place
+        $place=$workflow->getMarking($flowable)->getPlaces();
+        //dd($place);
+
+        //Get what action user have to do it
+        $transitions=$workflow->getEnabledTransitions($flowable);
+
+        //Get user transtion on
+        $transition=$workflow->getEnabledTransitions($flowable);
+
+        if (is_array($transition)) {
+            foreach ($transition as $transition) {
+                $t[] = $transition->getName();
+            }
+            $transition=$t[0];
+        }
+
+
+        //$place = 'play_slide_show';
+        //$place = 'fill_in_the_blanks';
+        //$place = 'fill_in_the_blanks';
         try {
-            $workflow->apply($flowable, $place);
+            $workflow->apply($flowable, $transition[0]);
             $flowable->save();
         } catch (LogicException $e) {
             return response()->error('workflow.place-not-allowed');
