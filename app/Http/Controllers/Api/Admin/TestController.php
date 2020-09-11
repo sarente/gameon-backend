@@ -50,7 +50,7 @@ class TestController extends Controller
             }
             $transition=$t[0];
         }
-
+        dd($transition);
 
         //$place = 'play_slide_show';
         //$place = 'fill_in_the_blanks';
