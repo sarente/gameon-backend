@@ -53,18 +53,17 @@ class TestController extends Controller
         }
         //dd($transition);
         ////////////////////////////////////////////////////////////////////
-        //$place = 'play_slide_show';
-        //$place = 'fill_in_the_blanks';
-        //$place = 'fill_in_the_blanks';
+        ////////////////////////////////////////////////////////////////////
+        /// Save user workflow to next pace
         try {
-            $workflow->apply($flowable, $transition[0]);
+            $workflow->apply($flowable, $transition);
             $flowable->save();
         } catch (LogicException $e) {
             return response()->error('workflow.place-not-allowed');
         }
-
-
+        ////////////////////////////////////////////////////////////////////
         return response()->message('common.success');
+
         //$metadata = $workflow->getMetadataStore();
         //$metadata = $workflow->getMetadataStore();
         //dd($metadata);
