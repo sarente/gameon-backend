@@ -23,7 +23,7 @@ class WorkflowTableSeeder extends Seeder
 
         foreach ($categories as $key => $value) {
             //$name = stripLowercaseName($value->translations['name']['en']);
-            Log::info($value);
+            //Log::info($value);
             if($key == 0){
                     $workflow = new \App\Models\CustomWorkflow([
                         'name' => $workflowKeys[0],

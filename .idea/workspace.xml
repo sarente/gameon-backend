@@ -281,14 +281,7 @@
       <workItem from="1598861456200" duration="8140000" />
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
-      <workItem from="1599549605785" duration="73694000" />
-    </task>
-    <task id="LOCAL-00023" summary="Add Template and Pane models">
-      <created>1599221048694</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1599221048694</updated>
+      <workItem from="1599549605785" duration="75349000" />
     </task>
     <task id="LOCAL-00024" summary="Connect levels Users Categories">
       <created>1599225820741</created>
@@ -626,7 +619,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599817641061</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="workflow wrote to database from config file">
+      <created>1599822310848</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1599822310848</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,7 +671,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="workflow database changed" />
     <MESSAGE value="add my workflow service provider" />
     <MESSAGE value="change wf read config method" />
     <MESSAGE value="workflow seeder works fine" />
@@ -696,7 +695,8 @@
     <MESSAGE value="workflow load from config&gt;workflow" />
     <MESSAGE value="workflow load from config&gt;workflow  1" />
     <MESSAGE value="workflow load from config&gt;workflow 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="workflow load from config&gt;workflow 2" />
+    <MESSAGE value="workflow wrote to database from config file" />
+    <option name="LAST_COMMIT_MESSAGE" value="workflow wrote to database from config file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -734,11 +734,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599553379859" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599817639739">
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599822309977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599817639739" />
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599822309977" />
     <state width="610" height="466" key="DebuggerActiveHint" timestamp="1599743216675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -752,22 +752,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599549406500" />
-    <state width="1876" height="319" key="GridCell.Tab.0.bottom" timestamp="1599746409603">
+    <state width="1563" height="296" key="GridCell.Tab.0.bottom" timestamp="1599822180206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="319" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599746409603" />
-    <state width="1876" height="319" key="GridCell.Tab.0.center" timestamp="1599746409602">
+    <state width="1563" height="296" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599822180206" />
+    <state width="1563" height="296" key="GridCell.Tab.0.center" timestamp="1599822180206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="319" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599746409602" />
-    <state width="1876" height="319" key="GridCell.Tab.0.left" timestamp="1599746409602">
+    <state width="1563" height="296" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599822180206" />
+    <state width="1563" height="296" key="GridCell.Tab.0.left" timestamp="1599822180206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="319" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599746409602" />
-    <state width="1876" height="319" key="GridCell.Tab.0.right" timestamp="1599746409602">
+    <state width="1563" height="296" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599822180206" />
+    <state width="1563" height="296" key="GridCell.Tab.0.right" timestamp="1599822180206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="319" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599746409602" />
+    <state width="1563" height="296" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599822180206" />
     <state width="1876" height="319" key="GridCell.Tab.1.bottom" timestamp="1599746409603">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -816,11 +816,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599334931451" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599817642703">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599822312057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599817642703" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599822312057" />
     <state x="751" y="227" width="449" height="614" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599720029646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

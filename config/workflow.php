@@ -11,22 +11,25 @@ return [
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
-            'slide_show' => ['metadata' => [
-                'model_id' => '1',
-                'model_type' => 'App\Models\Activity',
-
+            'slide_show' => [
+                'metadata' => [
+                    'model_id' => '1',
+                    'model_type' => 'App\Models\Activity',
             ]
             ],
-            'the_blanks' => ['metadata' => [
-                'model_id' => '2',
-                'model_type' => 'App\Models\Activity',
+            'the_blanks' => [
+                'metadata' => [
+                    'model_id' => '2',
+                    'model_type' => 'App\Models\Activity',
             ]
             ],
-            'rosette' => ['metadata' => [
-                'model_id' => '1',
-                'model_type' => 'App\Models\Rosette',
-            ]
+            'rosette' => [
+                'metadata' => [
+                    'model_id' => '3',
+                    'model_type' => 'App\Models\Rosette',
+                ]
             ],
+            'point',
             'done'
         ],
         'transitions' => [
