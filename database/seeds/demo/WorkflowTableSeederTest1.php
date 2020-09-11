@@ -13,7 +13,7 @@ class WorkflowTableSeederTest1 extends Seeder
      */
     public function run()
     {
-        //TODO: get workflow configs from files
+        //TODO: change workflow configs from files
 
         $category = Category::find(11);
         $workflowDefinition = include(config_path('workflow1.php'));

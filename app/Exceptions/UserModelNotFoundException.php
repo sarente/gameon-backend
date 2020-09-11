@@ -16,7 +16,7 @@ class UserModelNotFoundException extends ModelNotFoundException
      */
     public function report()
     {
-        Log::channel('errorlog')->error($this->getModel() . PHP_EOL . $this->multi_implode ($this->getTrace()[0],','));
+        Log::channel('errorlog')->error($this->getModel() . PHP_EOL . multi_implode ($this->getTrace()[0],','));
     }
 
     /**
@@ -28,21 +28,5 @@ class UserModelNotFoundException extends ModelNotFoundException
     {
         $this->report();
         return response()->error('common.not-found', [], $request->toArray(), 404);
-    }
-
-    public function multi_implode($array, $glue) {
-        $ret = '';
-
-        foreach ($array as $key=>$value) {
-            if (is_array($value)) {
-                $ret .= $key.':'.$this->multi_implode($value, $glue) . $glue;
-            } else {
-                $ret .= $key.':'.$value . $glue;
-            }
-        }
-
-        $ret = substr($ret, 0, 0-strlen($glue));
-
-        return $ret;
     }
 }

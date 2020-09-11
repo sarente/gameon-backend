@@ -46,31 +46,8 @@ return [
     'post' => [
         'not-found' => 'Post not found.',
     ],
-    'project' => [
-        'not-found' => 'Project not found.',
-        'name-valid' => 'Name is valid',
-        'end' => 'Project has already ended',
-        'classroom-not-valid' => 'Classroom not valid',
-        'member' => [
-            'exists' => 'Member already exists.',
-            'not-found' => 'Member not found.'
-        ]
-    ],
-    'club' => [
-        'not-found' => 'Club not found.',
-        'name-valid' => 'Name is valid',
-        'classroom-not-valid' => 'Classroom not valid',
-        'member' => [
-            'exists' => 'Member already exists.',
-            'not-found' => 'Member not found.'
-        ]
-    ],
     'rosette' => [
         'not-found' => 'Rosette not found.',
-        'name-valid' => 'Name is valid'
-    ],
-    'step' => [
-        'not-found' => 'Step not found.',
         'name-valid' => 'Name is valid'
     ],
     'user' => [
@@ -84,17 +61,15 @@ return [
         'exists' => 'Claim already exists.',
         'not-found' => 'Claim not found'
     ],
-    'advice' => [
-        'type-notfound' => 'Claim not found'
-    ],
     'tag' => [
         'label-notfound' => 'label is null'
     ],
     'level' => [
         'notfound' => 'level notfound in :artifact_name'
     ],
-    'task' => [
+    'workflow' => [
         'not-found' => 'Task not found.',
+        'place-not-allowed' => 'Current place not allowed ',
         'name-valid' => 'Name is valid'
     ],
     'classroom' => [

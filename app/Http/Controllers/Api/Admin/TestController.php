@@ -2,46 +2,61 @@
 
 namespace App\Http\Controllers\Api\Admin;
 
-use App\Models\Activity;
-use App\Models\CustomWorkflow;
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\UserWorkflow;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Response;
-use App\Http\Controllers\Controller;
-use ZeroDaHero\LaravelWorkflow\Exceptions\DuplicateWorkflowException;
+use Symfony\Component\Workflow\Exception\LogicException;
 
 class TestController extends Controller
 {
     public function getMyWorkflow(Request $request)
     {
         //Get user
-        $user=User::find(1);
+        $user = User::find(1);
 
         //Look for user workflows
-        $flowable= UserWorkflow::with(['customWorkflow','user'])->newQuery()->where('user_id',$user->id)->first();
+        $flowable = UserWorkflow::with(['customWorkflow', 'user'])->newQuery()->where('user_id', $user->id)->first();
 
-        if(!$flowable){
-           //throw new WorkFlowNotFoundException();
+        if (!$flowable) {
+            //throw new WorkFlowNotFoundException();
         }
         //Get work flow definition
         //dd($flowable->customWorkflow->name);
 
-        $wf_name=$flowable->customWorkflow->name;
-        $data=$flowable->customWorkflow->config;
+        $wf_name = $flowable->customWorkflow->name;
+        //$data=$flowable->customWorkflow->config;
         //CustomWorkflow::loadWorkflow($wf_name,$data);
 
         //$workflow = Workflow::get($flowable, $wf_name);
-        $workflow=$flowable->workflow_get($wf_name);
+        $workflow = $flowable->workflow_get($wf_name);
+        //dd($workflow->getMetadataStore()->getPlaceMetadata('slide_show'));
+        /*@var */
+        //dd($workflow->getEnabledTransitions($flowable));
 
-        //$workflow=$flowable->workflow_get($wf_name);
+        $place = 'play_slide_show';
+        try {
+            $workflow->apply($flowable, $place);
+            $flowable->save();
+        } catch (LogicException $e) {
+            return response()->error('workflow.place-not-allowed');
+        }
+
+
+        return response()->message('common.success');
         //$metadata = $workflow->getMetadataStore();
-        $metadata = $workflow->getMetadataStore();
+        //$metadata = $workflow->getMetadataStore();
+        //dd($metadata);
 
-        dd($metadata);
+        //$activity_id=$workflow->getMetadataStore();
+        //$activity_id=$workflow->getMetadataStore()->getMetadata('model_id', 'slide_show');
+        //dd($activity_id);
 
-        //$flowable = UserWorkflow::find(2);
-        //$workflow =$flowable->workflow_get('values');
+        /* foreach ($flowable->workflow_transitions() as $transition) {
+             echo $transition->getName();
+         }*/
+
+
     }
 
     public function getWorkflow(Request $request)
@@ -49,7 +64,7 @@ class TestController extends Controller
         //$wf=CustomWorkflow::first();
 
         $flowable = UserWorkflow::find(2);
-        $workflow =$flowable->workflow_get('values');
+        $workflow = $flowable->workflow_get('values');
 
         //$workflow->getMetadataStore();
         //dump($workflow->can($flowable, 'play_slide_show'));
@@ -75,9 +90,10 @@ class TestController extends Controller
         // or by key
         //$otherPlaceMetadata = $workflow->getMetadataStore()->getMetadata('max_num_of_words', 'draft');
 
+
         $placeMetadata = $workflow->getMetadataStore()->getPlaceMetadata('slide_show'); // string place name
-        $activity_id=$workflow->getMetadataStore()->getMetadata('activity_id', 'slide_show');
-        dump($activity_id);
+        //$activity_id=$workflow->getMetadataStore()->getMetadata('activity_id', 'slide_show');
+        //dump($activity_id);
 
         //$workflow->apply($flowable, 'play_slide_show'); //Doing a transitio   n
         //$workflow->apply($flowable, 'fill_in_the_blanks');

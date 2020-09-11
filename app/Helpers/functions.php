@@ -14,3 +14,19 @@ function stripLowercaseName($name_clean)
 {
     return strtolower(str_replace(' ', '_', $name_clean));
 }
+
+function multi_implode($array, $glue) {
+    $ret = '';
+
+    foreach ($array as $key=>$value) {
+        if (is_array($value)) {
+            $ret .= $key.':'.multi_implode($value, $glue) . $glue;
+        } else {
+            $ret .= $key.':'.$value . $glue;
+        }
+    }
+
+    $ret = substr($ret, 0, 0-strlen($glue));
+
+    return $ret;
+}
