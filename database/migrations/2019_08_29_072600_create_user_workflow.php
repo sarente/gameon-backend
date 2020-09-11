@@ -16,17 +16,17 @@ class CreateUserWorkflow extends Migration
         Schema::create('user_workflow', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->bigInteger('workflow_id')->unsigned();
-            $table->foreign('workflow_id')
-                ->references('id')
-                ->on('workflows')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->bigInteger('workflow_id')->unsigned();
+            $table->foreign('workflow_id')
+                ->references('id')
+                ->on('workflows')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 

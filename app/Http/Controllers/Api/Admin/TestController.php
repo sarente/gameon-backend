@@ -16,7 +16,7 @@ class TestController extends Controller
     public function getMyWorkflow(Request $request)
     {
         //Get user
-        $user=User::find(2);
+        $user=User::find(1);
 
         //Look for user workflows
         $flowable= UserWorkflow::with(['customWorkflow','user'])->newQuery()->where('user_id',$user->id)->first();
