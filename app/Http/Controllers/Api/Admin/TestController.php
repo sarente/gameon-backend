@@ -41,17 +41,18 @@ class TestController extends Controller
         //Get what action user have to do it
         $transitions=$workflow->getEnabledTransitions($flowable);
 
-        //Get user transtion on
+        ////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////
+        /// Get user transtion on
         $transition=$workflow->getEnabledTransitions($flowable);
-
         if (is_array($transition)) {
             foreach ($transition as $transition) {
                 $t[] = $transition->getName();
             }
             $transition=$t[0];
         }
-        dd($transition);
-
+        //dd($transition);
+        ////////////////////////////////////////////////////////////////////
         //$place = 'play_slide_show';
         //$place = 'fill_in_the_blanks';
         //$place = 'fill_in_the_blanks';

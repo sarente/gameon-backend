@@ -26,7 +26,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/TestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/TestController.php" afterDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
@@ -48,7 +47,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="127.0.0.1" id="b49ea503-f879-470e-83b0-ef1f04404137" name="127.0.0.1" port="8000" />
@@ -281,21 +279,7 @@
       <workItem from="1598861456200" duration="8140000" />
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
-      <workItem from="1599549605785" duration="82331000" />
-    </task>
-    <task id="LOCAL-00026" summary="tables design is done">
-      <created>1599327565261</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1599327565261</updated>
-    </task>
-    <task id="LOCAL-00027" summary="remove old seeder">
-      <created>1599329090593</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1599329090593</updated>
+      <workItem from="1599549605785" duration="82453000" />
     </task>
     <task id="LOCAL-00028" summary="seeder works fine">
       <created>1599329360078</created>
@@ -626,7 +610,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599830041304</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="workflow error exception not allowed 1">
+      <created>1599831998828</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1599831998828</updated>
+    </task>
+    <task id="LOCAL-00076" summary="workflow error exception not allowed 2">
+      <created>1599832054668</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1599832054668</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,8 +669,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="workflow seeder works fine" />
-    <MESSAGE value="workflow seeder works fine 1" />
     <MESSAGE value="workflow seeder works fine 2" />
     <MESSAGE value="workflow config 2 added to system" />
     <MESSAGE value="user_workflow tracker added" />
@@ -696,7 +692,9 @@
     <MESSAGE value="workflow wrote to database from config file" />
     <MESSAGE value="workflow wrote to database from config file 1" />
     <MESSAGE value="workflow error exception not allowed" />
-    <option name="LAST_COMMIT_MESSAGE" value="workflow error exception not allowed" />
+    <MESSAGE value="workflow error exception not allowed 1" />
+    <MESSAGE value="workflow error exception not allowed 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="workflow error exception not allowed 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -734,11 +732,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599553379859" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599830040186">
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599832053757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599830040186" />
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599832053757" />
     <state width="610" height="466" key="DebuggerActiveHint" timestamp="1599743216675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -816,11 +814,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599334931451" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599830042479">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599832057975">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599830042479" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599832057975" />
     <state x="751" y="227" width="449" height="614" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599720029646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
