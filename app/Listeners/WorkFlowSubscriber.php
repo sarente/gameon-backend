@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use App\Models\Activity;
 use App\Models\Setting;
 
 use App\Models\User;
@@ -28,7 +29,7 @@ class WorkFlowSubscriber implements ShouldQueue
         $this->flowable = $event->getOriginalEvent()->getSubject();
 
         Log::info($user->id.' onGuard ');
-
+        //Check activity return type
         if (empty( $this->flowable->id)) {
             $originalEvent->setBlocked(true);
         }
@@ -39,6 +40,13 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onLeave($event) {
         Log::info('onLeave');
+        //Check the activity type
+        $model_id=$event->getOriginalEvent()->getMetadata('model_id', key($event->getOriginalEvent()->getMarking()->getPlaces()));
+        $activity_type=Activity::findOrFail($model_id)->type;
+        if($activity_type==Setting::ACTIVITY_RETURN){
+            //Check user returned request with metadata type
+
+        }
     }
 
     /**
