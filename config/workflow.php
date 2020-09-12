@@ -114,12 +114,11 @@ return [
                 'model_type' => 'App\Models\Activity',
             ]
             ],
-            'reward' => ['metadata' => [
+            'result' => ['metadata' => [
                 'model_id' => '3',
                 'model_type' => 'App\Models\Reward',
             ]
             ],
-            'point',
             'done'
         ],
         'transitions' => [
@@ -129,14 +128,10 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => ['reward', 'point']
+                'to' => 'result'
             ],
-            'show_reward' => [
-                'from' => 'reward',
-                'to' => ['done', 'point']
-            ],
-            'return_point' => [
-                'from' => 'point',
+            'show_result' => [
+                'from' => 'result',
                 'to' => 'done'
             ]
         ]
