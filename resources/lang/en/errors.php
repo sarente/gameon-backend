@@ -69,7 +69,8 @@ return [
     ],
     'workflow' => [
         'not-found' => 'Task not found.',
-        'place-not-allowed' => 'Current place not allowed ',
+        'place-not-allowed' => 'Workflow place not found',
+        'transition-not-allowed' => 'Workflow transition not found',
         'name-valid' => 'Name is valid'
     ],
     'classroom' => [

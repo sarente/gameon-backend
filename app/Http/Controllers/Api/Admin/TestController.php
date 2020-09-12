@@ -35,22 +35,23 @@ class TestController extends Controller
 
 
         //Get current place
-        $place=$workflow->getMarking($flowable)->getPlaces();
+        $place = $workflow->getMarking($flowable)->getPlaces();
         //dd($place);
 
         //Get what action user have to do it
-        $transitions=$workflow->getEnabledTransitions($flowable);
+        $transitions = $workflow->getEnabledTransitions($flowable);
 
         ////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////
         /// Get user transtion on
-        $transition=$workflow->getEnabledTransitions($flowable);
-        if (is_array($transition)) {
-            foreach ($transition as $transition) {
-                $t[] = $transition->getName();
-            }
-            $transition=$t[0];
+        $transition = $workflow->getEnabledTransitions($flowable);
+        if (is_array($transition) || count($transition) == 0) {
+            return response()->error('workflow.transition-not-allowed');
         }
+        foreach ($transition as $transition) {
+            $t[] = $transition->getName();
+        }
+        $transition = $t[0];
         //dd($transition);
         ////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////

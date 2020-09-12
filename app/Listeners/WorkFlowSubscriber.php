@@ -24,7 +24,7 @@ class WorkFlowSubscriber implements ShouldQueue
         $originalEvent = $event->getOriginalEvent();
         /** @var App\Models\UserWorkflow $user_workflow */
         $user_workflow = $originalEvent->getSubject();
-        Log::info($user->id.'_'.'onGuard');
+        Log::info($user->id.' onGuard '.$user_workflow->id);
 
         $title = $user_workflow->id;
 
