@@ -9,7 +9,7 @@ use App\Models\UserWorkflow;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Log;
-use Symfony\Component\Workflow\Event\GuardEvent;
+use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
 
 class WorkFlowSubscriber implements ShouldQueue
 {
@@ -18,14 +18,15 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onGuard(GuardEvent $event) {
 
-        $user_id=auth()->id();
+        $user=auth()->user() ?? User::find(1);
 
         /** Symfony\Component\CustomWorkflow\Event\GuardEvent */
         $originalEvent = $event->getOriginalEvent();
-
         /** @var App\Models\UserWorkflow $user_workflow */
         $user_workflow = $originalEvent->getSubject();
-        $title = $user_workflow->title;
+        Log::info($user->id.'_'.'onGuard');
+
+        $title = $user_workflow->id;
 
         if (empty($title)) {
             // Posts with no title should not be allowed
@@ -70,27 +71,27 @@ class WorkFlowSubscriber implements ShouldQueue
     {
         $events->listen(
             'ZeroDaHero\LaravelWorkflow\Events\GuardEvent',
-            'App\Listeners\BlogPostWorkflowSubscriber@onGuard'
+            'App\Listeners\WorkFlowSubscriber@onGuard'
         );
 
         $events->listen(
             'ZeroDaHero\LaravelWorkflow\Events\LeaveEvent',
-            'App\Listeners\BlogPostWorkflowSubscriber@onLeave'
+            'App\Listeners\WorkFlowSubscriber@onLeave'
         );
 
         $events->listen(
             'ZeroDaHero\LaravelWorkflow\Events\TransitionEvent',
-            'App\Listeners\BlogPostWorkflowSubscriber@onTransition'
+            'App\Listeners\WorkFlowSubscriber@onTransition'
         );
 
         $events->listen(
             'ZeroDaHero\LaravelWorkflow\Events\EnterEvent',
-            'App\Listeners\BlogPostWorkflowSubscriber@onEnter'
+            'App\Listeners\WorkFlowSubscriber@onEnter'
         );
 
         $events->listen(
             'ZeroDaHero\LaravelWorkflow\Events\EnteredEvent',
-            'App\Listeners\BlogPostWorkflowSubscriber@onEntered'
+            'App\Listeners\WorkFlowSubscriber@onEntered'
         );
     }
 }
