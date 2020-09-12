@@ -13,6 +13,8 @@ use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
 
 class WorkFlowSubscriber implements ShouldQueue
 {
+    private $flowable;
+
     /**
      * Handle workflow guard events.
      */
@@ -22,14 +24,12 @@ class WorkFlowSubscriber implements ShouldQueue
 
         /** Symfony\Component\CustomWorkflow\Event\GuardEvent */
         $originalEvent = $event->getOriginalEvent();
-        /** @var App\Models\UserWorkflow $user_workflow */
-        $user_workflow = $originalEvent->getSubject();
-        Log::info($user->id.' onGuard '.$user_workflow->id);
+        /** @var \App\Models\UserWorkflow $user_workflow */
+        $this->flowable = $event->getOriginalEvent()->getSubject();
 
-        $title = $user_workflow->id;
+        Log::info($user->id.' onGuard '. $this->flowable->customWorkflow);
 
-        if (empty($title)) {
-            // Posts with no title should not be allowed
+        if (empty( $this->flowable->id)) {
             $originalEvent->setBlocked(true);
         }
     }
@@ -46,6 +46,9 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onTransition($event) {
         Log::info('onTransition');
+        //check the activity type in transition
+
+        $flowable->workflow_get($wf_name);
     }
 
     /**

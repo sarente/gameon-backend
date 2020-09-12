@@ -13,13 +13,13 @@ class TestController extends Controller
     public function getMyWorkflow(Request $request)
     {
         //Get user
-        $user = User::find(1);
+        $user = User::find(2);
 
         //Look for user workflows
         $flowable = UserWorkflow::with(['customWorkflow', 'user'])->newQuery()->where('user_id', $user->id)->first();
 
         if (!$flowable) {
-            //throw new WorkFlowNotFoundException();
+            //TODO: throw new WorkFlowNotFoundException();
         }
         //Get work flow definition
         //dd($flowable->customWorkflow->name);
@@ -45,7 +45,8 @@ class TestController extends Controller
         ////////////////////////////////////////////////////////////////////
         /// Get user transtion on
         $transition = $workflow->getEnabledTransitions($flowable);
-        if (is_array($transition) || count($transition) == 0) {
+        if (count($transition) == 0) {
+            //TODO: throw new exception
             return response()->error('workflow.transition-not-allowed');
         }
         foreach ($transition as $transition) {

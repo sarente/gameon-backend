@@ -51,6 +51,9 @@ class Setting extends Model
     const WF_TYPE_WF = 'workflow';
     const WF_TYPE_SM = 'state_machine';
 
+    const ACT_ACTION ='action';
+    const ACT_RESULT ='result';
+
     const APP_NAME = 'Sarente Gameon';
     const DEFAULT_PASS = 'Gameon';
 
@@ -74,6 +77,11 @@ class Setting extends Model
         1 => Setting::WF_TYPE_SM,
     ];
 
+    public static $activity_types = [
+        0 => Setting::ACT_ACTION,
+        1 => Setting::ACT_RESULT,
+    ];
+
     public static $status_types = [
         0 => Setting::STATUS_OPENED,
         1 => Setting::STATUS_DOING,
@@ -83,12 +91,6 @@ class Setting extends Model
         5 => Setting::STATUS_DECLINED, //reddedildi
         6 => Setting::STATUS_POSTPONE, //erteleme
         7 => Setting::STATUS_CANCELED,
-    ];
-
-    public static $notification_type = [
-        0 => Setting::ARTIFACT_PROFILE,
-        1 => Setting::ARTIFACT_PROJECT,
-        2 => Setting::ARTIFACT_CLUB,
     ];
 
     public static $message_types = [
@@ -112,14 +114,6 @@ class Setting extends Model
         7 => Setting::ARTIFACT_POST,
     ];
 
-    //Used in education institution
-    public static $educational_institution = [
-        0 => Setting::INSTITUTOIN_COLLEAGUE,
-        1 => Setting::INSTITUTOIN_CAMPUS,
-        2 => Setting::INSTITUTOIN_SCHOOL,
-        3 => Setting::INSTITUTOIN_CLASSROOM,
-        4 => Setting::INSTITUTOIN_BRANCH,
-    ];
 
     //Default rewards
     const REWARD_ROSETTE = 'rosette';
