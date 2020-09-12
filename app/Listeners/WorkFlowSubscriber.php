@@ -41,12 +41,15 @@ class WorkFlowSubscriber implements ShouldQueue
     public function onLeave($event) {
         Log::info('onLeave');
         //Check the activity type
-        $model_id=$event->getOriginalEvent()->getMetadata('model_id', key($event->getOriginalEvent()->getMarking()->getPlaces()));
-        $activity_type=Activity::findOrFail($model_id)->type;
-        if($activity_type==Setting::ACTIVITY_RETURN){
-            //Check user returned request with metadata type
+        $model_id=(int)$event->getOriginalEvent()->getMetadata('model_id', key($event->getOriginalEvent()->getMarking()->getPlaces()));
 
-        }
+        $activity_metadata=Activity::findOrFail($model_id)->where(function ($query){
+            $query->where('type',Setting::ACTIVITY_RETURN);
+        })->firstOrFail()->metadata;
+        //$activity_metadata['result'];
+        //TODO: compare with request from user
+        exit();
+
     }
 
     /**
