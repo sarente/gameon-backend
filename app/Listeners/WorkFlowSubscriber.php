@@ -14,21 +14,21 @@ use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
 
 class WorkFlowSubscriber implements ShouldQueue
 {
-    private $flowable;
+    private $flowable,$user;
 
     /**
      * Handle workflow guard events.
      */
     public function onGuard(GuardEvent $event) {
 
-        $user=auth()->user() ?? User::find(1);
+        $this->user=auth()->user() ?? User::find(1);
 
         /** Symfony\Component\CustomWorkflow\Event\GuardEvent */
         $originalEvent = $event->getOriginalEvent();
         /** @var \App\Models\UserWorkflow $user_workflow */
         $this->flowable = $event->getOriginalEvent()->getSubject();
 
-        Log::info($user->id.' onGuard ');
+        //Log::info($this->user->id.' onGuard ');
         //Check activity return type
         if (empty( $this->flowable->id)) {
             $originalEvent->setBlocked(true);
@@ -43,13 +43,13 @@ class WorkFlowSubscriber implements ShouldQueue
         //Check the activity type
         $model_id=(int)$event->getOriginalEvent()->getMetadata('model_id', key($event->getOriginalEvent()->getMarking()->getPlaces()));
 
-        $activity_metadata=Activity::findOrFail($model_id)->where(function ($query){
+        $activity=Activity::findOrFail($model_id)->where(function ($query){
             $query->where('type',Setting::ACTIVITY_RETURN);
-        })->firstOrFail()->metadata;
-        //$activity_metadata['result'];
-        //TODO: compare with request from user
-        exit();
+        })->firstOrFail();
 
+        if(!is_null($activity->metadata['result']) && $activity->metadata['result']===request()->get('result')) {
+           //Add point of activity to user point
+        }
     }
 
     /**
