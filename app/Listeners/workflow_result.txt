@@ -1,0 +1,308 @@
+-----------------------------------------------------------------
+‌‌$event->getOriginalEvent()->getMarking();
+‌Symfony\Component\Workflow\Marking::__set_state(array(
+   'places' =>
+  array (
+    'slide_show' => 1,
+  ),
+))
+-----------------------------------------------------------------
+‌‌$event->getOriginalEvent()->getTransition();
+‌Symfony\Component\Workflow\Transition::__set_state(array(
+   'name' => 'play_slide_show',
+   'froms' =>
+  array (
+    0 => 'slide_show',
+  ),
+   'tos' =>
+  array (
+    0 => 'the_blanks',
+  ),
+))
+-----------------------------------------------------------------
+‌‌$event->getOriginalEvent()->getWorkflowName();
+‌management_competence
+-----------------------------------------------------------------
+
+$event->getOriginalEvent()->getMetadata('model_id', 'slide_show');
+
+1
+-----------------------------------------------------------------
+‌‌$event->getOriginalEvent()->getSubject();
+‌App\Models\UserWorkflow::__set_state(array(
+   'table' => 'user_workflow',
+   'casts' =>
+  array (
+    'marking' => 'array',
+    'current_place' => 'array',
+  ),
+   'connection' => 'mysql',
+   'primaryKey' => 'id',
+   'keyType' => 'int',
+   'incrementing' => true,
+   'with' =>
+  array (
+  ),
+   'withCount' =>
+  array (
+  ),
+   'perPage' => 15,
+   'exists' => true,
+   'wasRecentlyCreated' => false,
+   'attributes' =>
+  array (
+    'id' => 7,
+    'workflow_id' => 78,
+    'user_id' => 2,
+    'marking' => NULL,
+    'deleted_at' => NULL,
+    'created_at' => NULL,
+    'updated_at' => '2020-09-12 17:21:55',
+    'current_place' => '{"slide_show":1}',
+  ),
+   'original' =>
+  array (
+    'id' => 7,
+    'workflow_id' => 78,
+    'user_id' => 2,
+    'marking' => NULL,
+    'deleted_at' => NULL,
+    'created_at' => NULL,
+    'updated_at' => '2020-09-12 17:21:55',
+    'current_place' => NULL,
+  ),
+   'changes' =>
+  array (
+  ),
+   'classCastCache' =>
+  array (
+  ),
+   'dates' =>
+  array (
+  ),
+   'dateFormat' => NULL,
+   'appends' =>
+  array (
+  ),
+   'dispatchesEvents' =>
+  array (
+  ),
+   'observables' =>
+  array (
+  ),
+   'relations' =>
+  array (
+    'customWorkflow' =>
+    App\Models\CustomWorkflow::__set_state(array(
+       'table' => 'workflows',
+       'fillable' =>
+      array (
+        0 => 'name',
+        1 => 'config',
+      ),
+       'hidden' =>
+      array (
+        0 => 'created_at',
+        1 => 'updated_at',
+      ),
+       'casts' =>
+      array (
+        'config' => 'array',
+      ),
+       'connection' => 'mysql',
+       'primaryKey' => 'id',
+       'keyType' => 'int',
+       'incrementing' => true,
+       'with' =>
+      array (
+      ),
+       'withCount' =>
+      array (
+      ),
+       'perPage' => 15,
+       'exists' => true,
+       'wasRecentlyCreated' => false,
+       'attributes' =>
+      array (
+        'id' => 78,
+        'name' => 'management_competence',
+        'config' => '{"type": "workflow", "places": {"0": "rosette", "1": "point", "2": "done", "slide_show": {"metadata": {"model_id": "1"}}, "the_blanks": {"metadata": {"model_id": "2"}}}, "metadata": {"title": "Yönetsel Yetkinlikler"}, "supports": ["App\\\\Models\\\\UserWorkflow"], "transitions": {"return_point": {"to": "done", "from": "point"}, "show_rosette": {"to": ["done", "point"], "from": "rosette"}, "play_slide_show": {"to": "the_blanks", "from": "slide_show"}, "fill_in_the_blanks": {"to": ["rosette", "point"], "from": "the_blanks"}}, "marking_store": {"type": "multiple_state", "property": "current_place"}}',
+        'start_date' => NULL,
+        'end_date' => NULL,
+        'created_at' => '2020-09-11 11:03:46',
+        'updated_at' => '2020-09-11 11:03:46',
+        'category_id' => 14,
+      ),
+       'original' =>
+      array (
+        'id' => 78,
+        'name' => 'management_competence',
+        'config' => '{"type": "workflow", "places": {"0": "rosette", "1": "point", "2": "done", "slide_show": {"metadata": {"model_id": "1"}}, "the_blanks": {"metadata": {"model_id": "2"}}}, "metadata": {"title": "Yönetsel Yetkinlikler"}, "supports": ["App\\\\Models\\\\UserWorkflow"], "transitions": {"return_point": {"to": "done", "from": "point"}, "show_rosette": {"to": ["done", "point"], "from": "rosette"}, "play_slide_show": {"to": "the_blanks", "from": "slide_show"}, "fill_in_the_blanks": {"to": ["rosette", "point"], "from": "the_blanks"}}, "marking_store": {"type": "multiple_state", "property": "current_place"}}',
+        'start_date' => NULL,
+        'end_date' => NULL,
+        'created_at' => '2020-09-11 11:03:46',
+        'updated_at' => '2020-09-11 11:03:46',
+        'category_id' => 14,
+      ),
+       'changes' =>
+      array (
+      ),
+       'classCastCache' =>
+      array (
+      ),
+       'dates' =>
+      array (
+      ),
+       'dateFormat' => NULL,
+       'appends' =>
+      array (
+      ),
+       'dispatchesEvents' =>
+      array (
+      ),
+       'observables' =>
+      array (
+      ),
+       'relations' =>
+      array (
+      ),
+       'touches' =>
+      array (
+      ),
+       'timestamps' => true,
+       'visible' =>
+      array (
+      ),
+       'guarded' =>
+      array (
+        0 => '*',
+      ),
+    )),
+    'user' =>
+    App\Models\User::__set_state(array(
+       'guard_name' => 'api',
+       'fillable' =>
+      array (
+        0 => 'username',
+        1 => 'name',
+        2 => 'surname',
+        3 => 'email',
+        4 => 'password',
+        5 => 'gender',
+      ),
+       'hidden' =>
+      array (
+        0 => 'password',
+        1 => 'remember_token',
+        2 => 'updated_at',
+        3 => 'pivot',
+      ),
+       'dates' =>
+      array (
+        0 => 'email_verified_at',
+      ),
+       'casts' =>
+      array (
+        'email_verified_at' => 'date:Y-m-d',
+        'created_at' => 'datetime:Y-m-d H:00',
+      ),
+       'connection' => 'mysql',
+       'table' => 'users',
+       'primaryKey' => 'id',
+       'keyType' => 'int',
+       'incrementing' => true,
+       'with' =>
+      array (
+      ),
+       'withCount' =>
+      array (
+      ),
+       'perPage' => 15,
+       'exists' => true,
+       'wasRecentlyCreated' => false,
+       'attributes' =>
+      array (
+        'id' => 2,
+        'username' => 75246965398,
+        'name' => 'Test User',
+        'surname' => 'Test User',
+        'email' => 'user@test.com',
+        'email_verified_at' => '2020-09-09 11:57:33',
+        'password' => '$2y$10$pKTqqLvx7NL6lbFmFn0GHuqpO7I5usJDH9RljRCxDzKP.ipPWS6j.',
+        'gender' => 1,
+        'remember_token' => 'BQLkDqUku8',
+        'created_at' => '2020-09-09 11:57:33',
+        'updated_at' => '2020-09-09 11:57:33',
+      ),
+       'original' =>
+      array (
+        'id' => 2,
+        'username' => 75246965398,
+        'name' => 'Test User',
+        'surname' => 'Test User',
+        'email' => 'user@test.com',
+        'email_verified_at' => '2020-09-09 11:57:33',
+        'password' => '$2y$10$pKTqqLvx7NL6lbFmFn0GHuqpO7I5usJDH9RljRCxDzKP.ipPWS6j.',
+        'gender' => 1,
+        'remember_token' => 'BQLkDqUku8',
+        'created_at' => '2020-09-09 11:57:33',
+        'updated_at' => '2020-09-09 11:57:33',
+      ),
+       'changes' =>
+      array (
+      ),
+       'classCastCache' =>
+      array (
+      ),
+       'dateFormat' => NULL,
+       'appends' =>
+      array (
+      ),
+       'dispatchesEvents' =>
+      array (
+      ),
+       'observables' =>
+      array (
+      ),
+       'relations' =>
+      array (
+      ),
+       'touches' =>
+      array (
+      ),
+       'timestamps' => true,
+       'visible' =>
+      array (
+      ),
+       'guarded' =>
+      array (
+        0 => '*',
+      ),
+       'rememberTokenName' => 'remember_token',
+       'roleClass' => NULL,
+       'permissionClass' => NULL,
+       'enableLoggingModelsEvents' => true,
+       'oldAttributes' =>
+      array (
+      ),
+    )),
+  ),
+   'touches' =>
+  array (
+  ),
+   'timestamps' => true,
+   'hidden' =>
+  array (
+  ),
+   'visible' =>
+  array (
+  ),
+   'fillable' =>
+  array (
+  ),
+   'guarded' =>
+  array (
+    0 => '*',
+  ),
+))
+

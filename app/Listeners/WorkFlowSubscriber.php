@@ -27,7 +27,7 @@ class WorkFlowSubscriber implements ShouldQueue
         /** @var \App\Models\UserWorkflow $user_workflow */
         $this->flowable = $event->getOriginalEvent()->getSubject();
 
-        Log::info($user->id.' onGuard '. $this->flowable->customWorkflow);
+        Log::info($user->id.' onGuard ');
 
         if (empty( $this->flowable->id)) {
             $originalEvent->setBlocked(true);
@@ -48,7 +48,7 @@ class WorkFlowSubscriber implements ShouldQueue
         Log::info('onTransition');
         //check the activity type in transition
 
-        $flowable->workflow_get($wf_name);
+        //$flowable->workflow_get($wf_name);
     }
 
     /**

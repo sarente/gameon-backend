@@ -114,9 +114,9 @@ return [
                 'model_type' => 'App\Models\Activity',
             ]
             ],
-            'rosette' => ['metadata' => [
+            'reward' => ['metadata' => [
                 'model_id' => '3',
-                'model_type' => 'App\Models\Rosette',
+                'model_type' => 'App\Models\Reward',
             ]
             ],
             'point',
@@ -129,10 +129,10 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => ['rosette', 'point']
+                'to' => ['reward', 'point']
             ],
-            'show_rosette' => [
-                'from' => 'rosette',
+            'show_reward' => [
+                'from' => 'reward',
                 'to' => ['done', 'point']
             ],
             'return_point' => [
