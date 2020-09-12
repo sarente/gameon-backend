@@ -16,7 +16,7 @@ class CreateActivitiesTable extends Migration
         Schema::create('activities', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->integer('point')->default(0);
+            $table->integer('point')->nullable();
             $table->string('type');
             $table->json('metadata')->nullable();
             $table->timestamps();

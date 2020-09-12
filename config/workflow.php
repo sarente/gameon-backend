@@ -15,13 +15,13 @@ return [
                 'metadata' => [
                     'model_id' => '1',
                     'model_type' => 'App\Models\Activity',
-            ]
+                ]
             ],
             'the_blanks' => [
                 'metadata' => [
                     'model_id' => '2',
                     'model_type' => 'App\Models\Activity',
-            ]
+                ]
             ],
             'rosette' => [
                 'metadata' => [
@@ -105,14 +105,20 @@ return [
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
             'slide_show' => ['metadata' => [
-                'model_id' => '1'
+                'model_id' => '1',
+                'model_type' => 'App\Models\Activity',
             ]
             ],
             'the_blanks' => ['metadata' => [
-                'model_id' => '2'
+                'model_id' => '2',
+                'model_type' => 'App\Models\Activity',
             ]
             ],
-            'rosette',
+            'rosette' => ['metadata' => [
+                'model_id' => '3',
+                'model_type' => 'App\Models\Rosette',
+            ]
+            ],
             'point',
             'done'
         ],
