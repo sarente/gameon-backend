@@ -25,10 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/workflow.php" afterDir="false" />
-    </list>
+    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="" />
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,14 +277,7 @@
       <workItem from="1598861456200" duration="8140000" />
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
-      <workItem from="1599549605785" duration="101198000" />
-    </task>
-    <task id="LOCAL-00039" summary="add .idea to work flow">
-      <created>1599413371520</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1599413371520</updated>
+      <workItem from="1599549605785" duration="101529000" />
     </task>
     <task id="LOCAL-00040" summary="some changes in work flow by database 1">
       <created>1599478457034</created>
@@ -625,7 +615,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599942726619</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="workflow rosette change to reward 1.0">
+      <created>1599944029538</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1599944029538</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,7 +667,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="workflow of values changed 1" />
     <MESSAGE value="workflow of values changed 2" />
     <MESSAGE value="workflow save more than on place" />
     <MESSAGE value="workflow save more than on place 1" />
@@ -695,7 +691,8 @@
     <MESSAGE value="Add activity result 1.1" />
     <MESSAGE value="make activity point nullable" />
     <MESSAGE value="workflow rosette change to reward" />
-    <option name="LAST_COMMIT_MESSAGE" value="workflow rosette change to reward" />
+    <MESSAGE value="workflow rosette change to reward 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="workflow rosette change to reward 1.0" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -733,11 +730,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599553379859" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599942725660">
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1599944028774">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599942725660" />
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599944028774" />
     <state width="610" height="466" key="DebuggerActiveHint" timestamp="1599743216675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
