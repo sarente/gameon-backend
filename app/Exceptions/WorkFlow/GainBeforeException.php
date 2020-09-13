@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Log;
 
 class GainBeforeException extends Exception
 {
-    protected $model = User::class;
     /**
      * Report the exception.
      *
@@ -16,7 +15,7 @@ class GainBeforeException extends Exception
      */
     public function report()
     {
-        Log::channel('errorlog')->error($this->getModel() . PHP_EOL . multi_implode ($this->getTrace()[0],','));
+        //Log::channel('errorlog')->error(trans('workflow.wrong-answer') . PHP_EOL . multi_implode ($this->getTrace()[0],','));
     }
 
     /**
