@@ -15,7 +15,7 @@ class CreateUserPoint extends Migration
     {
         Schema::create('user_point', function (Blueprint $table) {
 
-            $table->bigInteger('id')->autoIncrement();
+            $table->bigIncrements('id');
 
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')

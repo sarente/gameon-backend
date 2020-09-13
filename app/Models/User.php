@@ -158,6 +158,11 @@ class User extends Authenticatable implements HasLocalePreference
         return $this->belongsToMany(Workflow::class, 'user_workflow')->withPivot('marking');
     }
 
+    public function points()
+    {
+        return $this->belongsToMany(UserPoint::class, 'user_point')->withPivot('point');
+    }
+
     public function rewards():MorphToMany
     {
         return $this->morphToMany(
