@@ -15,7 +15,7 @@ class GainBeforeException extends Exception
      */
     public function report()
     {
-        //Log::channel('errorlog')->error(trans('workflow.wrong-answer') . PHP_EOL . multi_implode ($this->getTrace()[0],','));
+        Log::channel('errorlog')->error(trans('workflow.gain-before') . PHP_EOL .substr($this->getTraceAsString(),1,118));
     }
 
     /**
