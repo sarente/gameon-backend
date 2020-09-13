@@ -3,6 +3,7 @@
 namespace App\Listeners;
 
 use App\Exceptions\WorkFlow\GainBeforeException;
+use App\Exceptions\WorkFlow\WrongAnswerException;
 use App\Models\Activity;
 use App\Models\Setting;
 use App\Models\User;
@@ -58,7 +59,7 @@ class WorkFlowSubscriber implements ShouldQueue
                     $query->where('activity_id', $activity->id)->where('user_id', $this->user);
                 })->exists();
                 if ($gain_before) {
-                    //TODO:throw gain_before exception;
+                    //if user gain before from this activity return error
                     throw new GainBeforeException();
 
                 }
@@ -72,7 +73,6 @@ class WorkFlowSubscriber implements ShouldQueue
 
             } else {
                 //return to user result replied is not equal with valid result in workflow
-                //TODO:throw new exception;
                 throw new WrongAnswerException();
             }
         }
