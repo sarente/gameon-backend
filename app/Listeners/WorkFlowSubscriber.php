@@ -40,6 +40,7 @@ class WorkFlowSubscriber implements ShouldQueue
     public function onLeave($event)
     {
         //Log::info('onLeave');
+        $this->user = auth()->user() ?? User::find(1);
         //Get key of place
         $key = key($event->getOriginalEvent()->getMarking()->getPlaces());
         //Check the activity type
@@ -59,6 +60,7 @@ class WorkFlowSubscriber implements ShouldQueue
                 $user_point->save();
 
             } else {
+                 //return to user result replied is not equal with valid result in workflow
 
             }
         }
