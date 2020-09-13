@@ -71,6 +71,8 @@ return [
         'not-found' => 'Task not found.',
         'place-not-allowed' => 'Workflow place not found',
         'transition-not-allowed' => 'Workflow transition not found',
+        'wrong-answer' => 'Wrong Answer is detected, Try in again',
+        'gain-before' => 'Gain before from this activity',
         'name-valid' => 'Name is valid'
     ],
     'classroom' => [

@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use App\Exceptions\WorkFlow\GainBeforeException;
 use App\Models\Activity;
 use App\Models\Setting;
 use App\Models\User;
@@ -41,6 +42,7 @@ class WorkFlowSubscriber implements ShouldQueue
     {
         //Log::info('onLeave');
         $this->user = auth()->user() ?? User::find(1);
+
         //Get key of place
         $key = key($event->getOriginalEvent()->getMarking()->getPlaces());
         //Check the activity type
@@ -51,6 +53,15 @@ class WorkFlowSubscriber implements ShouldQueue
         //Check activity type and Set user point that caught from this activity
         if ($activity->type === Setting::ACTIVITY_RETURN && !is_null($activity->metadata['result'])) {
             if ($activity->metadata['result'] === request()->get('result')) {
+                //Check user not gain point before from this activity
+                $gain_before = UserPoint::where(function ($query) use ($activity) {
+                    $query->where('activity_id', $activity->id)->where('user_id', $this->user);
+                })->exists();
+                if ($gain_before) {
+                    //TODO:throw gain_before exception;
+                    throw new GainBeforeException();
+
+                }
                 //Add point of activity to user point
                 $user_point = new UserPoint([
                     'point' => $activity->point
@@ -60,8 +71,9 @@ class WorkFlowSubscriber implements ShouldQueue
                 $user_point->save();
 
             } else {
-                 //return to user result replied is not equal with valid result in workflow
-
+                //return to user result replied is not equal with valid result in workflow
+                //TODO:throw new exception;
+                throw new WrongAnswerException();
             }
         }
     }
