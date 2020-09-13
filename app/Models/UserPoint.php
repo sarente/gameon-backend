@@ -3,12 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use ZeroDaHero\LaravelWorkflow\Traits\WorkflowTrait;
 
 class UserPoint extends Model
 {
 
     protected $table = "user_point";
+    protected $fillable = [
+        'point',
+    ];
 
     public function activity()
     {

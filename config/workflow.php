@@ -128,7 +128,7 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'result'
+                'to' => ['result','slide_show']
             ],
             'show_result' => [
                 'from' => 'result',

@@ -4,24 +4,23 @@ namespace App\Listeners;
 
 use App\Models\Activity;
 use App\Models\Setting;
-
 use App\Models\User;
-use App\Models\UserWorkflow;
-use Illuminate\Queue\InteractsWithQueue;
+use App\Models\UserPoint;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Log;
 use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
 
 class WorkFlowSubscriber implements ShouldQueue
 {
-    private $flowable,$user;
+    private $flowable, $user;
 
     /**
      * Handle workflow guard events.
      */
-    public function onGuard(GuardEvent $event) {
+    public function onGuard(GuardEvent $event)
+    {
 
-        $this->user=auth()->user() ?? User::find(1);
+        $this->user = auth()->user() ?? User::find(1);
 
         /** Symfony\Component\CustomWorkflow\Event\GuardEvent */
         $originalEvent = $event->getOriginalEvent();
@@ -30,7 +29,7 @@ class WorkFlowSubscriber implements ShouldQueue
 
         //Log::info($this->user->id.' onGuard ');
         //Check activity return type
-        if (empty( $this->flowable->id)) {
+        if (empty($this->flowable->id)) {
             $originalEvent->setBlocked(true);
         }
     }
@@ -38,24 +37,38 @@ class WorkFlowSubscriber implements ShouldQueue
     /**
      * Handle workflow leave event.
      */
-    public function onLeave($event) {
-        Log::info('onLeave');
+    public function onLeave($event)
+    {
+        //Log::info('onLeave');
+        //Get key of place
+        $key = key($event->getOriginalEvent()->getMarking()->getPlaces());
         //Check the activity type
-        $model_id=(int)$event->getOriginalEvent()->getMetadata('model_id', key($event->getOriginalEvent()->getMarking()->getPlaces()));
+        $model_id = (int)$event->getOriginalEvent()->getMetadata('model_id', $key);
 
-        $activity=Activity::findOrFail($model_id)->where(function ($query){
-            $query->where('type',Setting::ACTIVITY_RETURN);
-        })->firstOrFail();
+        $activity = Activity::findOrFail($model_id);
 
-        if(!is_null($activity->metadata['result']) && $activity->metadata['result']===request()->get('result')) {
-           //Add point of activity to user point
+        //Check activity type and Set user point that caught from this activity
+        if ($activity->type === Setting::ACTIVITY_RETURN && !is_null($activity->metadata['result'])) {
+            if ($activity->metadata['result'] === request()->get('result')) {
+                //Add point of activity to user point
+                $user_point = new UserPoint([
+                    'point' => $activity->point
+                ]);
+                $user_point->user()->associate($this->user);
+                $user_point->activity()->associate($activity);
+                $user_point->save();
+
+            } else {
+
+            }
         }
     }
 
     /**
      * Handle workflow transition event.
      */
-    public function onTransition($event) {
+    public function onTransition($event)
+    {
         Log::info('onTransition');
         //check the activity type in transition
 
@@ -65,21 +78,22 @@ class WorkFlowSubscriber implements ShouldQueue
     /**
      * Handle workflow enter event.
      */
-    public function onEnter($event) {
+    public function onEnter($event)
+    {
         Log::info('onEnter');
     }
 
     /**
      * Handle workflow entered event.
      */
-    public function onEntered($event) {
+    public function onEntered($event)
+    {
         Log::info('onEntered');
     }
 
     /**
      * Register the listeners for the subscriber.
-     *
-     * @param  Illuminate\Events\Dispatcher  $events
+     * @param Illuminate\Events\Dispatcher $events
      */
     public function subscribe($events)
     {
