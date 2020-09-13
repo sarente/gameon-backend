@@ -2,23 +2,21 @@
 
 
 namespace App\Exceptions\WorkFlow;
+use App\Models\User;
 Use  Exception;
 use Illuminate\Support\Facades\Log;
 
 class GainBeforeException extends Exception
 {
-    protected $message = 'An error occurred';
+    protected $model = User::class;
     /**
      * Report the exception.
      *
      * @return void
      */
-    public function report($request,\Throwable $exception)
+    public function report()
     {
-        $this->message=$exception->getMessage();
-        Log::error($exception->getMessage(),$request->toArray());
-
-        parent::report($exception);
+        Log::channel('errorlog')->error($this->getModel() . PHP_EOL . multi_implode ($this->getTrace()[0],','));
     }
 
     /**
@@ -29,6 +27,7 @@ class GainBeforeException extends Exception
      */
     public function render($request)
     {
-        return response()->error('workflow.gain-before', [], [], 401);
+        $this->report();
+        return response()->error('workflow.gain-before', [], $request->toArray(), 404);
     }
 }

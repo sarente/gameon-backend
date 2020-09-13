@@ -11,6 +11,7 @@ use App\Models\UserPoint;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Log;
 use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
+use Symfony\Component\Workflow\TransitionBlocker;
 
 class WorkFlowSubscriber implements ShouldQueue
 {
@@ -56,11 +57,12 @@ class WorkFlowSubscriber implements ShouldQueue
             if ($activity->metadata['result'] === request()->get('result')) {
                 //Check user not gain point before from this activity
                 $gain_before = UserPoint::where(function ($query) use ($activity) {
-                    $query->where('activity_id', $activity->id)->where('user_id', $this->user);
+                    $query->where('activity_id', $activity->id)->where('user_id', $this->user->id);
                 })->exists();
                 if ($gain_before) {
                     //if user gain before from this activity return error
-                    throw new GainBeforeException();
+                    throw new GainBeforeException(request());
+                    //return;
 
                 }
                 //Add point of activity to user point
@@ -73,7 +75,8 @@ class WorkFlowSubscriber implements ShouldQueue
 
             } else {
                 //return to user result replied is not equal with valid result in workflow
-                throw new WrongAnswerException();
+                throw new WrongAnswerException(request());
+                //return;
             }
         }
     }
