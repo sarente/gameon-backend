@@ -2,13 +2,11 @@
 
 namespace App\Models;
 
-use App\Models\Avatar;
 use App\Models\Workflow\Workflow;
 use Illuminate\Contracts\Translation\HasLocalePreference;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Facades\DB;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Permission\Traits\HasRoles;
 use Tymon\JWTAuth\Contracts\JWTSubject;
@@ -113,7 +111,7 @@ class User extends Authenticatable implements HasLocalePreference
     ];
 
     protected $casts = [
-        'email_verified_at'  => 'date:Y-m-d',
+        'email_verified_at' => 'date:Y-m-d',
         'created_at' => 'datetime:Y-m-d H:00',
     ];
 
@@ -135,6 +133,25 @@ class User extends Authenticatable implements HasLocalePreference
             }
         }
         return $url;
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::created(function (self $model) {
+
+            //create user avatar, one to one relation, each user has one avatar in avatars table
+            $avatar = new Avatar();
+            $avatar->user()->associate($model);
+            $avatar->save();
+        });
+    }
+
+    public function isAdmin()
+    {
+        //FIXME: check user role
+        return auth()->user()->username == 11111111111;
     }
 
     public function preferredLocale()
@@ -163,7 +180,7 @@ class User extends Authenticatable implements HasLocalePreference
         return $this->belongsToMany(UserPoint::class, 'user_point')->withPivot('point');
     }
 
-    public function rewards():MorphToMany
+    public function rewards(): MorphToMany
     {
         return $this->morphToMany(
             Reward::class,
@@ -172,18 +189,5 @@ class User extends Authenticatable implements HasLocalePreference
             'model_id',
             'reward_id'
         );
-    }
-
-    public static function boot()
-    {
-        parent::boot();
-
-        static::created(function (self $model) {
-
-            //create user avatar, one to one relation, each user has one avatar in avatars table
-            $avatar = new Avatar();
-            $avatar->user()->associate($model);
-            $avatar->save();
-        });
     }
 }

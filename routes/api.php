@@ -21,15 +21,16 @@ Route::resource('version', 'VersionController', ['only' => ['index']]);
 
 
 Route::group(['middleware' => 'auth.jwt'], function ($router) {
+    //User Management
     Route::get('me', 'Api\AuthController@me');
     Route::get('refresh', 'Api\AuthController@refresh');
     Route::get('logout', 'Api\AuthController@logout');
-
+    //Avatar
     Route::get('user/avatar', 'Api\UserController@getAvatar');
     Route::post('user/avatar', 'Api\UserController@saveAvatarConfiguration');
-    Route::get('user/get-my-categories', 'Api\UserController@getMyCategories');
+    //Route::get('user/get-my-categories', 'Api\UserController@getMyCategories');
     Route::resource('user', 'Api\UserController');
-
+    //Categories
     Route::resource('category', 'Api\CategoryController');
     Route::post('category/{category}/sync-users', 'Api\CategoryController@syncUsers');
 
