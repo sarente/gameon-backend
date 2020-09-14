@@ -27,6 +27,6 @@ class UserModelNotFoundException extends ModelNotFoundException
     public function render($request)
     {
         $this->report();
-        return response()->error('common.not-found', [], $request->toArray(), 404);
+        return response()->error('auth.invalid', [], $request->toArray(), 404);
     }
 }
