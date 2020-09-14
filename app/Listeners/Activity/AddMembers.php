@@ -38,7 +38,7 @@ class AddMembers implements ShouldQueue
                 $model->members()->attach($members, ['is_member' => true]);
 
                 foreach ($members as $member) {
-                    if ($member->hasRole(Setting::ROLE_STUDENT)) {
+                    if ($member->hasRole(Setting::ROLE_USER)) {
 
                         foreach ($model->steps as $step) {
                             $step->users()->attach($member);

@@ -14,10 +14,10 @@ class ProfileTableSeeder extends Seeder
     public function run()
     {
         $profiles = Profile::whereHas('user.roles', function ($role) {
-            $role->where('name', Setting::ROLE_STUDENT);
+            $role->where('name', Setting::ROLE_USER);
         })->orderBy('id')->skip(1)->take(1000)->get();
 
-        //$profiles=User::role(Setting::ROLE_STUDENT)->whereNotIn('id',[1])->profile()->get();
+        //$profiles=User::role(Setting::ROLE_USER)->whereNotIn('id',[1])->profile()->get();
 
         foreach ($profiles as $key => $profile) {
             $users = User::query()->skip(20)->inRandomOrder()->take(5)->get();
@@ -152,10 +152,10 @@ class ProfileTableSeeder extends Seeder
             /*$users = User::role('admin')->pluck('id');
             $profile->claims()->attach($users, ['is_friend' => false]);*/
 
-            $users = User::role(Setting::ROLE_STUDENT)->whereNotIn('id', [$profile->id])->pluck('id');
+            $users = User::role(Setting::ROLE_USER)->whereNotIn('id', [$profile->id])->pluck('id');
             $profile->claims()->attach($users, ['is_friend' => false]);
 
-            /*$users = User::role('student')->pluck('id');
+            /*$users = User::role('user')->pluck('id');
             $profile->claims()->attach($users, ['is_friend' => false]);*/
 
             $post = new \App\Models\Post([

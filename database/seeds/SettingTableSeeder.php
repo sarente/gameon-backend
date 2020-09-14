@@ -24,19 +24,19 @@ class SettingTableSeeder extends Seeder
 
         \App\Models\Setting::create([
             'key' => Setting::URL_STUDENT_INTRO,
-            'value' => Config::get('urls.student_intro_url'),
+            'value' => Config::get('urls.user_intro_url'),
             //'value'    => env('STUDENT_INTRO_URL'),
         ]);
 
         \App\Models\Setting::create([
             'key' => Setting::URL_STUDENT,
-            'value' => Config::get('urls.student_url'),
+            'value' => Config::get('urls.user_url'),
             //'value'    => env('STUDENT_URL'),
         ]);
 
         \App\Models\Setting::create([
             'key' => Setting::URL_TEACHER,
-            'value' => Config::get('urls.teacher_url'),
+            'value' => Config::get('urls.supervisor_url'),
             //'value'    => env('TEACHER_URL'),
         ]);
 

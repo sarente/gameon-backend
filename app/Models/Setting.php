@@ -61,9 +61,9 @@ class Setting extends Model
     const DOMAIN_REAL = 'sarente.com';
     const DOMAIN_TEST = 'test.com';
 
-    const URL_STUDENT = 'student_url';
-    const URL_STUDENT_INTRO = 'student_intro_url';
-    const URL_TEACHER = 'teacher_url';
+    const URL_STUDENT = 'user_url';
+    const URL_STUDENT_INTRO = 'user_intro_url';
+    const URL_TEACHER = 'supervisor_url';
     const URL_ADMIN = 'admin_url';
     const URL_API = 'api_url';
     const URL_LOGOUT = 'logout_url';
@@ -177,8 +177,8 @@ class Setting extends Model
     const ROLE_CLUB_MEMBER = 'club-member';
 
     //Default Roles of system
-    const ROLE_STUDENT = 'student';
-    const ROLE_TEACHER = 'teacher';
+    const ROLE_USER = 'user';
+    const ROLE_SUPERVISOR = 'supervisor';
     const ROLE_ADMIN = 'admin';
     const ROLE_SUPER_ADMIN = 'super-admin';
 

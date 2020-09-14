@@ -13,7 +13,7 @@ class TaskRequest extends Request
      */
     public function rules()
     {
-        if(Auth::user()->hasRole([Setting::ROLE_STUDENT])){
+        if(Auth::user()->hasRole([Setting::ROLE_USER])){
             return [
                 'status'=> 'required|max:255',
             ];

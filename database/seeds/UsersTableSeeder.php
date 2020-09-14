@@ -25,8 +25,8 @@ class UsersTableSeeder extends Seeder
         //Get the role of admin
         //$role = app(\Spatie\Permission\PermissionRegistrar::class)->getRoleClass()::findByName('admin');true
         //$role_admin = \App\Models\Role::findByName(\App\Models\Setting::ROLE_ADMIN, config('auth.defaults.guard'));
-        //$role_student = \App\Models\Role::findByName(\App\Models\Setting::ROLE_STUDENT, config('auth.defaults.guard'));
-        //$role_teacher = \App\Models\Role::findByName(\App\Models\Setting::ROLE_TEACHER, config('auth.defaults.guard'));
+        //$role_user = \App\Models\Role::findByName(\App\Models\Setting::ROLE_USER, config('auth.defaults.guard'));
+        //$role_supervisor = \App\Models\Role::findByName(\App\Models\Setting::ROLE_SUPERVISOR, config('auth.defaults.guard'));
         $name=app()->environment('production')?'Administrator':'Test Admin';
         ///////////
         $admin = factory(\App\Models\User::class)->create([
@@ -42,7 +42,7 @@ class UsersTableSeeder extends Seeder
 
         ///////////
         $name=app()->environment('production')?'User':'Test User';
-        $student = factory(\App\Models\User::class)->create([
+        $user = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
             'email' => 'user@'.$domain_name,
@@ -52,11 +52,11 @@ class UsersTableSeeder extends Seeder
 
         ]);
 
-        //$student->assignRole($role_student);
+        //$user->assignRole($role_user);
 
         ///////////
         $name=app()->environment('production')?'Advisor':'Test Advisor';
-        $teacher = factory(\App\Models\User::class)->create([
+        $supervisor = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
             'email' => 'advisor@'.$domain_name,
@@ -66,6 +66,6 @@ class UsersTableSeeder extends Seeder
 
         ]);
 
-        //$teacher->assignRole($role_teacher);
+        //$supervisor->assignRole($role_supervisor);
     }
 }

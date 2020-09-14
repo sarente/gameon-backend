@@ -34,21 +34,21 @@ class RolesTableSeeder extends Seeder
             \App\Models\Setting::PERMISSION_ROSETTE_UPDATE
         ]);
 
-        $role_student = \Spatie\Permission\Models\Role::create([
+        $role_user = \Spatie\Permission\Models\Role::create([
             'guard_name' => config('auth.defaults.guard'),
-            'name' => \App\Models\Setting::ROLE_STUDENT
+            'name' => \App\Models\Setting::ROLE_USER
         ]);
 
-        $role_student->syncPermissions([
+        $role_user->syncPermissions([
             \App\Models\Setting::PERMISSION_PROJECT_CREATE,
         ]);
 
-        $role_teacher = \Spatie\Permission\Models\Role::create([
+        $role_supervisor = \Spatie\Permission\Models\Role::create([
             'guard_name' => config('auth.defaults.guard'),
-            'name' => \App\Models\Setting::ROLE_TEACHER
+            'name' => \App\Models\Setting::ROLE_SUPERVISOR
         ]);
 
-        $role_teacher->syncPermissions([
+        $role_supervisor->syncPermissions([
             \App\Models\Setting::PERMISSION_PROJECT_CREATE,
             \App\Models\Setting::PERMISSION_CLUB_CREATE,
             \App\Models\Setting::PERMISSION_QUESTION_CREATE,

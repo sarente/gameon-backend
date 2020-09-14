@@ -128,7 +128,7 @@ class User extends Authenticatable implements HasLocalePreference
             $keys = Setting::where('key', 'like', "%$roleName%")->pluck('value', 'key');
             if (count($keys)) {
                 $url = $keys[$roleName . $urlStr];
-                if (!$is_intro_completed && $roleName == Setting::ROLE_STUDENT) {
+                if (!$is_intro_completed && $roleName == Setting::ROLE_USER) {
                     unset($url);
                     $url = $keys[$roleName . '_intro' . $urlStr];
                 }
