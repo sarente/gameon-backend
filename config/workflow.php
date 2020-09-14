@@ -5,10 +5,6 @@ return [
         'metadata' => [
             'title' => 'Değeler',
         ],
-        'marking_store' => [
-            'type' => 'multiple_state',
-            'property' => 'current_place'
-        ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
             'slide_show' => ['metadata' => [
@@ -35,7 +31,7 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => ['result','slide_show']
+                'to' => 'result'
             ],
             'show_result' => [
                 'from' => 'result',
@@ -48,10 +44,6 @@ return [
         'metadata' => [
             'title' => 'Temel Yetkinlikler',
         ],
-        'marking_store' => [
-            'type' => 'multiple_state',
-            'property' => 'current_place'
-        ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
             'slide_show' => ['metadata' => [
@@ -78,7 +70,7 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => ['result','slide_show']
+                'to' => 'result'
             ],
             'show_result' => [
                 'from' => 'result',
@@ -130,10 +122,6 @@ return [
         'metadata' => [
             'title' => 'Üst Düzey Yetkinlikler',
         ],
-        'marking_store' => [
-            'type' => 'multiple_state',
-            'property' => 'current_place'
-        ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
             'slide_show' => ['metadata' => [
@@ -160,7 +148,7 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => ['result','slide_show']
+                'to' => 'result'
             ],
             'show_result' => [
                 'from' => 'result',
@@ -173,10 +161,6 @@ return [
         'metadata' => [
             'title' => 'Eğlence',
         ],
-        'marking_store' => [
-            'type' => 'multiple_state',
-            'property' => 'current_place'
-        ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
             'slide_show' => ['metadata' => [
@@ -203,7 +187,7 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => ['result','slide_show']
+                'to' => 'result'
             ],
             'show_result' => [
                 'from' => 'result',
