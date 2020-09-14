@@ -23,14 +23,16 @@ class UsersTableSeeder extends Seeder
 
 
         //Get the role of admin
-        //$role = app(\Spatie\Permission\PermissionRegistrar::class)->getRoleClass()::findByName('admin');true
-        //$role_admin = \App\Models\Role::findByName(\App\Models\Setting::ROLE_ADMIN, config('auth.defaults.guard'));
-        //$role_user = \App\Models\Role::findByName(\App\Models\Setting::ROLE_USER, config('auth.defaults.guard'));
-        //$role_supervisor = \App\Models\Role::findByName(\App\Models\Setting::ROLE_SUPERVISOR, config('auth.defaults.guard'));
-        $name=app()->environment('production')?'Administrator':'Test Admin';
+        //$role = app(\Spatie\Permission\PermissionRegistrar::class)->getRoleClass()::findByName('admin');
+
+        $role_admin = \App\Models\Role::findByName(\App\Models\Setting::ROLE_ADMIN, config('auth.defaults.guard'));
+        $role_user = \App\Models\Role::findByName(\App\Models\Setting::ROLE_USER, config('auth.defaults.guard'));
+        $role_supervisor = \App\Models\Role::findByName(\App\Models\Setting::ROLE_SUPERVISOR, config('auth.defaults.guard'));
+
         ///////////
+        $name=app()->environment('production')?'Administrator':'Test Admin';
         $admin = factory(\App\Models\User::class)->create([
-            'username' => 11111111111,
+            'username' => rand(00000000000, 99999999999),
             'gender' => 1,
             'email' => 'admin@'.$domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('g@meon'),
@@ -38,7 +40,7 @@ class UsersTableSeeder extends Seeder
             'surname' => $name,
 
         ]);
-        //$admin->assignRole($role_admin);
+        $admin->assignRole($role_admin);
 
         ///////////
         $name=app()->environment('production')?'User':'Test User';
@@ -52,7 +54,7 @@ class UsersTableSeeder extends Seeder
 
         ]);
 
-        //$user->assignRole($role_user);
+        $user->assignRole($role_user);
 
         ///////////
         $name=app()->environment('production')?'Advisor':'Test Advisor';
@@ -66,6 +68,6 @@ class UsersTableSeeder extends Seeder
 
         ]);
 
-        //$supervisor->assignRole($role_supervisor);
+        $supervisor->assignRole($role_supervisor);
     }
 }
