@@ -151,7 +151,7 @@ class User extends Authenticatable implements HasLocalePreference
     public function isAdmin()
     {
         //FIXME: check user role
-        return auth()->user()->username == 11111111111;
+        return auth()->user()->hasRole(Setting::ROLE_ADMIN);
     }
 
     public function preferredLocale()
