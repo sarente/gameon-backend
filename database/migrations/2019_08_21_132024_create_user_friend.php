@@ -13,7 +13,7 @@ class CreateUserFriend extends Migration
      */
     public function up()
     {
-        Schema::create('friend_user', function (Blueprint $table) {
+        Schema::create('user_friend', function (Blueprint $table) {
 
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')
@@ -40,6 +40,6 @@ class CreateUserFriend extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('friend_user');
+        Schema::dropIfExists('user_friend');
     }
 }

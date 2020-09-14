@@ -124,23 +124,23 @@ class Profile extends Model
 
     public function claims()
     {
-        return $this->belongsToMany(User::class, 'friend_user', 'user_id', 'friend_id', 'user_id')
+        return $this->belongsToMany(User::class, 'user_friend', 'user_id', 'friend_id', 'user_id')
             ->wherePivot('is_friend', '=', false);
     }
 
     public function friends()
     {
         //FIXME: change it to laravel standards
-        $first = DB::table('friend_user')
+        $first = DB::table('user_friend')
             ->where('friend_id', '=', $this->user->id)
             ->where('is_friend','=', true)
-            ->leftJoin('users', 'users.id', '=', 'friend_user.user_id')
+            ->leftJoin('users', 'users.id', '=', 'user_friend.user_id')
             ->select('id');
 
-        $friend_ids = DB::table('friend_user')
+        $friend_ids = DB::table('user_friend')
             ->where('user_id', '=', $this->user->id)
             ->where('is_friend','=', true)
-            ->rightJoin('users','users.id', '=', 'friend_user.friend_id')
+            ->rightJoin('users','users.id', '=', 'user_friend.friend_id')
             ->select('id')
             ->union($first)
             ->pluck('id')

@@ -42,7 +42,7 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onLeave($event)
     {
-        //Log::info('onLeave');
+        Log::info('onLeave');
         $this->user = auth()->user() ?? User::find(1);
 
         //Get key of place
@@ -62,8 +62,6 @@ class WorkFlowSubscriber implements ShouldQueue
                 if ($gain_before) {
                     //if user gain before from this activity return error
                     throw new GainBeforeException(request());
-                    //return;
-
                 }
                 //Add point of activity to user point
                 $user_point = new UserPoint([
@@ -76,7 +74,6 @@ class WorkFlowSubscriber implements ShouldQueue
             } else {
                 //return to user result replied is not equal with valid result in workflow
                 throw new WrongAnswerException(request());
-                //return;
             }
         }
     }
