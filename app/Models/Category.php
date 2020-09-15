@@ -21,8 +21,7 @@ class Category extends Model
         'category_id',
     ];
     protected $hidden = [
-        'translations',
-        'pivot',
+         'pivot',
         'created_at',
         'updated_at'
     ];

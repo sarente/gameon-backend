@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use App\Guard\JwtGuard;
-use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
@@ -34,5 +33,10 @@ class AuthServiceProvider extends ServiceProvider
         });
 
         $this->registerPolicies();
+
+        Gate::before(function ($user, $ability) {
+            //return $user->hasRole(\App\Models\Setting::ROLE_SUPER_ADMIN) ? true : null;
+            return $user->hasRole(\App\Models\Setting::ROLE_ADMIN) ? true : null;
+        });
     }
 }

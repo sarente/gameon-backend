@@ -39,8 +39,15 @@ class Role extends Model implements \Spatie\Permission\Contracts\Role
     protected $fillable = [
         'name',
     ];
+    protected $dates=[
+        'created_at',
+        'updated_at'
+    ];
+
     protected $hidden = [
-        'pivot'
+        'pivot',
+        'created_at',
+        'updated_at',
     ];
 
     protected $guard = 'api';

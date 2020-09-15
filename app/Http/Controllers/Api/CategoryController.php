@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Exceptions\UserModelNotFoundException;
 use App\Models\Category;
-use App\Models\Pane;
 use App\Models\User;
-use App\Models\Workflow\UserWorkflow;
-use App\Models\Workflow\Workflow;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Response;
+
 
 class CategoryController extends Controller
 {
@@ -19,13 +15,7 @@ class CategoryController extends Controller
         //TODO: check user role
         $user = User::findOrFail(auth()->id());
 
-        $categories = $user->categories;
-
-        foreach ($categories as $category) {
-            $level = $category->levels()->where('level_no', $category->pivot->level_no)->first();
-            $category->level = $level;
-            $category->level->image = $level->image;
-        }
+        $categories = $user->categories->load('levels.image');
 
         return response()->success($categories);
     }
