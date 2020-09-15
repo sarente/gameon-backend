@@ -76,13 +76,13 @@ class Handler extends ExceptionHandler
                 throw new UserModelNotFoundException();
             }
             return redirect()->back();
-        }*/
+        }
         elseif ($exception instanceof \Exception) {
             if ($request->expectsJson() || $request->acceptsJson()) {
                 return response()->error('common.none-valid', [], [], 404);
             }
             return redirect()->back();
-        }
+        }*/
         return parent::render($request, $exception);
     }
 }

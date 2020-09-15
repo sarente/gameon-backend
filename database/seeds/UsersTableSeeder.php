@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         //First of all add permission to db then create roles thus connect the permission to related role
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         App\Models\User::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 

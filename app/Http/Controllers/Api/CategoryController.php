@@ -13,10 +13,10 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        //TODO: check user role
         $user = User::getUser();
 
-        $categories = $user->categories->load('levels.image');
+        //$categories = $user->categories->load('levels.image');
+        $categories = $user->categories->with('levels.image');
 
         return response()->success($categories);
     }

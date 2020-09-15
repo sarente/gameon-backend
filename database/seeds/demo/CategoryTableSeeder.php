@@ -14,6 +14,11 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
+        //First of all add permission to db then create roles thus connect the permission to related role
+        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        \App\Models\Category::truncate();
+        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
         $users=User::pluck('id')->toArray();
 
         $category_names=[['tr'=>'Değeler','en'=>'Values'],['tr'=>'Yetkinlikler','en'=>'Competence'],['tr'=>'Eğlence','en'=>'Entertainment']];

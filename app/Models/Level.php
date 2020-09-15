@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Level extends Model
 {
+    protected $fillable=[
+        'level_no',
+        'max_point',
+        'category_id'
+    ];
     protected $hidden = [
         'pivot',
         'created_at',
