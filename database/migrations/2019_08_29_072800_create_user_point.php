@@ -31,6 +31,20 @@ class CreateUserPoint extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
+            $table->bigInteger('workflow_id')->unsigned()->nullable();
+            $table->foreign('workflow_id')
+                ->references('id')
+                ->on('workflows')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->bigInteger('category_id')->unsigned()->nullable();
+            $table->foreign('category_id')
+                ->references('id')
+                ->on('categories')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
             $table->integer('point')->default(0);
             $table->timestamps();
         });

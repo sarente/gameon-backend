@@ -32,7 +32,6 @@ class CreateUserCategory extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->softDeletes();
             $table->timestamps();
 
             $table->unique(['category_id', 'user_id']);

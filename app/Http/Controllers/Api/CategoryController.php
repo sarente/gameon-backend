@@ -15,7 +15,7 @@ class CategoryController extends Controller
     {
         $user = User::getUser();
 
-        $categories = $user->levels->load('image','category');
+        $categories = $user->levels->load('image','category')->map();
 
         return response()->success($categories);
     }

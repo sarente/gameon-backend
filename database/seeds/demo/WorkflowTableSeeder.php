@@ -14,6 +14,11 @@ class WorkflowTableSeeder extends Seeder
      */
     public function run()
     {
+        //First of all add permission to db then create roles thus connect the permission to related role
+        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        \App\Models\CustomWorkflow::truncate();
+        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
         //TODO: get workflow configs from files
 
         $categories = Category::select(['id'])->get();

@@ -13,6 +13,11 @@ class ActivityTableSeeder extends Seeder
      */
     public function run()
     {
+        //First of all add permission to db then create roles thus connect the permission to related role
+        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        \App\Models\Activity::truncate();
+        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
         $activities = ['Activity1', 'Activity2', 'Activity3'];
 
         foreach ($activities as $key => $activity) {
