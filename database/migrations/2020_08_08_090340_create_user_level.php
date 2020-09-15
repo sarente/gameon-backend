@@ -16,6 +16,7 @@ class CreateUserLevel extends Migration
         Schema::create('user_level', function (Blueprint $table) {
 
             $table->bigInteger('user_id')->unsigned();
+
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
@@ -28,6 +29,8 @@ class CreateUserLevel extends Migration
                 ->on('levels')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
+
+            $table->integer('current_point')->default(0);
 
             $table->timestamps();
             $table->unique(['user_id', 'level_id']);

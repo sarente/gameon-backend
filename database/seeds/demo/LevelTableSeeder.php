@@ -29,7 +29,7 @@ class LevelTableSeeder extends Seeder
             for ($i = 0; $i < $this->max_level_count; $i++)
                 Level::create([
                     'level_no' => $i,
-                    'max_point' => $i > 0 ? 200 : 0,
+                    'max_point' => $i > 0 ? $i * 200 : 0,
                     'category_id' => $cat->id,
                 ]);
         });
