@@ -21,12 +21,11 @@ Route::resource('version', 'VersionController', ['only' => ['index']]);
 
 //Admin
 Route::group(['prefix'=> 'admin','middleware' => ['auth.jwt','role:admin']],function ($router) {
-//Route::group(['middleware' => ['auth.jwt']], function ($router) {
-    Route::get('category', 'Api\Admin\CategoryController@index');
+    Route::resource('category', 'Api\Admin\CategoryController');
 });
 
 //Other users
-Route::group(['middleware' => ['auth.jwt','role:user']], function ($router) {
+Route::group(['middleware' => 'auth.jwt'], function ($router) {
 
     //User Management
     Route::get('me', 'Api\AuthController@me');
