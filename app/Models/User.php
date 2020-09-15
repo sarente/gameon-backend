@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Exceptions\UserModelNotFoundException;
 use App\Models\Workflow\Workflow;
 use Illuminate\Contracts\Translation\HasLocalePreference;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
@@ -146,6 +147,15 @@ class User extends Authenticatable implements HasLocalePreference
             $avatar->user()->associate($model);
             $avatar->save();
         });
+    }
+
+    public static function getUser()
+    {
+        $user = auth()->user();
+        if (!$user) {
+            throw new UserModelNotFoundException();
+        }
+        return $user;
     }
 
     public function isAdmin()

@@ -14,10 +14,7 @@ class CategoryController extends Controller
     public function index()
     {
         //TODO: check user role
-        $user = User::find(45);
-        if(!$user){
-            throw new UserModelNotFoundException();
-        }
+        $user = User::getUser();
 
         $categories = $user->categories->load('levels.image');
 
