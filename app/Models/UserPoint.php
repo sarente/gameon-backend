@@ -16,6 +16,14 @@ class UserPoint extends Model
     {
         return $this->belongsTo(Activity::class, 'activity_id');
     }
+    public function workflow()
+    {
+        return $this->belongsTo(CustomWorkflow::class, 'workflow_id');
+    }
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
 
     public function user()
     {

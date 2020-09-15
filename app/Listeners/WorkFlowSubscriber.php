@@ -5,9 +5,11 @@ namespace App\Listeners;
 use App\Exceptions\WorkFlow\GainBeforeException;
 use App\Exceptions\WorkFlow\WrongAnswerException;
 use App\Models\Activity;
+use App\Models\CustomWorkflow;
 use App\Models\Setting;
 use App\Models\User;
 use App\Models\UserPoint;
+use App\Models\UserWorkflow;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Log;
 use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
@@ -43,14 +45,19 @@ class WorkFlowSubscriber implements ShouldQueue
     public function onLeave($event)
     {
         Log::info('onLeave');
-        $this->user = auth()->user() ?? User::find(1);
+        $this->user = auth()->user() ?? User::find(2);
 
         //Get key of place
         $key = key($event->getOriginalEvent()->getMarking()->getPlaces());
         //Check the activity type
-        $model_id = (int)$event->getOriginalEvent()->getMetadata('model_id', $key);
+        $activity_id = (int)$event->getOriginalEvent()->getMetadata('model_id', $key);
 
-        $activity = Activity::findOrFail($model_id);
+        //Grab this data to fill user point
+        $activity = Activity::findOrFail($activity_id);
+        $workflow_id=$event->getOriginalEvent()->getSubject()->workflow_id;
+        $category_id=CustomWorkflow::with('category')->findOrFail($workflow_id)->category_id;
+
+        $this->flowable = $event->getOriginalEvent()->getSubject();
 
         //Check activity type and Set user point that caught from this activity
         if ($activity->type === Setting::ACTIVITY_RETURN && !is_null($activity->metadata['result'])) {
@@ -68,7 +75,9 @@ class WorkFlowSubscriber implements ShouldQueue
                     'point' => $activity->point
                 ]);
                 $user_point->user()->associate($this->user);
-                $user_point->activity()->associate($activity);
+                $user_point->activity()->associate($activity_id);
+                $user_point->workflow()->associate($workflow_id);
+                $user_point->category()->associate($category_id);
                 $user_point->save();
 
             } else {
