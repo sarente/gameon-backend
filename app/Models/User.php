@@ -160,8 +160,7 @@ class User extends Authenticatable implements HasLocalePreference
 
     public function isAdmin()
     {
-        //FIXME: check user role
-        return auth()->user()->hasRole(Setting::ROLE_ADMIN);
+        return $this->hasRole(Setting::ROLE_ADMIN);
     }
 
     public function preferredLocale()
@@ -188,6 +187,10 @@ class User extends Authenticatable implements HasLocalePreference
     public function points()
     {
         return $this->belongsToMany(UserPoint::class, 'user_point')->withPivot('point');
+    }
+    public function levels()
+    {
+        return $this->belongsToMany(Level::class,'user_level');
     }
 
     public function rewards(): MorphToMany
