@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Exceptions\UserModelNotFoundException;
 use App\Models\Category;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -13,7 +14,10 @@ class CategoryController extends Controller
     public function index()
     {
         //TODO: check user role
-        $user = User::findOrFail(auth()->id());
+        $user = User::find(45);
+        if(!$user){
+            throw new UserModelNotFoundException();
+        }
 
         $categories = $user->categories->load('levels.image');
 

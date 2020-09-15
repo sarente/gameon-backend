@@ -49,19 +49,24 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
-        if ($exception instanceof \Spatie\Permission\Exceptions\UnauthorizedException) {
+        if ($exception instanceof UserModelNotFoundException) {
+            if ($request->expectsJson() || $request->acceptsJson()) {
+                return response()->error('auth.invalid', [], $request->toArray(), 404);
+            }
+        }
+        elseif ($exception instanceof \Spatie\Permission\Exceptions\UnauthorizedException) {
             if ($request->expectsJson() || $request->acceptsJson()) {
                 return response()->error('auth.unauthorised', [], [], 403);
             }
-        } else if ($exception instanceof AuthenticationException) {
-            if ($request->expectsJson()) {
+        } elseif ($exception instanceof AuthenticationException) {
+            if ($request->expectsJson()|| $request->acceptsJson()) {
                 return response()->error('auth.unauthenticated', [], [], 401);
             }
-        } else if ($exception instanceof AuthorizationException) {
+        } elseif ($exception instanceof AuthorizationException) {
             return response()->error('auth.unauthorised', [], [], 403);
         } else if ($exception instanceof ValidationException) {
             return response()->error('common.none-valid', [], [], 404);
-        } else if ($exception instanceof HttpResponseException) {
+        } elseif ($exception instanceof HttpResponseException) {
             if ($request->expectsJson() || $request->acceptsJson()) {
                 return response()->error($exception->getMessage(), [], [], 500);
             }
@@ -71,13 +76,13 @@ class Handler extends ExceptionHandler
                 throw new UserModelNotFoundException();
             }
             return redirect()->back();
-        }
-        else if ($exception instanceof \Exception) {
+        }*/
+        elseif ($exception instanceof \Exception) {
             if ($request->expectsJson() || $request->acceptsJson()) {
                 return response()->error('common.none-valid', [], [], 404);
             }
             return redirect()->back();
-        }*/
+        }
         return parent::render($request, $exception);
     }
 }
