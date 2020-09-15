@@ -10,10 +10,14 @@ class Category extends Model
 {
     use LogsActivity, HasTranslations;
 
-    public $translatable = ['name', 'description'];
+    public $translatable = [
+        'name',
+        'description'
+    ];
     protected $casts = [
         'name' => 'array',
-        'description' => 'array'
+        'description' => 'array',
+        'created_at' => 'datetime:Y-m-d H:00',
     ];
     protected $fillable = [
         'name',
