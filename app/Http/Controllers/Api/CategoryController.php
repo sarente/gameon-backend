@@ -12,13 +12,9 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        return Category::find(1)->levels->map(function ($q) {
-            return [
-                'level_id' => $q->id,
-                'max_point' => $q->max_point,
-                'level_no' => $q->max_point,
-            ];
-        });
+
+        $cats= Category::with('levels')->get();
+        return $cats->where('id',2)->first()->levels->where('level_no',1)->first();
 
         return Category::with('levels')->whereHas('levels', function ($q) {
             $q->where('levels.level_no', 2);
