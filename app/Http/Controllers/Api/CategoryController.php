@@ -4,34 +4,34 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Level;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 
 
 class CategoryController extends Controller
 {
+    private $cat_level=[];
+
     public function index()
     {
-
-        $cats= Category::with('levels')->get();
-        return $cats->where('id',2)->first()->levels->where('level_no',1)->first();
-
-        return Category::with('levels')->whereHas('levels', function ($q) {
-            $q->where('levels.level_no', 2);
-        })->get();
-
         $result = collect();
         $user = User::getUser();
-
+        $categories = Category::with('levels');
         $user_category_points = $user->pointsByCategory()->toArray();
 
         //Get level by point of category
-        foreach ($user_category_points as $key => $value) {
-
+        foreach ($user_category_points as $usr_cat_pnt) {
+            //Get max point of each level
+            $level=$categories->where('id', (int)$usr_cat_pnt['category_id'])->first()->levels->each(function ($elvel) use($usr_cat_pnt) {
+                $this->cat_level[]=$this->getLevelOfUserByPoint($usr_cat_pnt['current_point'],$elvel);
+            });
+            $result->push([$usr_cat_pnt,$level]);
         }
         //{'category_id','level_no','current_point','max_point'}
 
-        return response()->success($categories);
+        return response()->success($this->cat_level);
     }
 
     public function store(Request $request)
@@ -62,6 +62,17 @@ class CategoryController extends Controller
         $category->users()->sync($users);
 
         return response()->success($category);
+    }
+    private function getLevelOfUserByPoint($current_point,Array $levels){
+        //Get level data bu current point user
+        $result=[];
+        foreach($levels as $level){
+             if($current_point > $level->max_point){
+                 $result[]=$level;
+             }
+        }
+        $index=count($result)-1;
+        return $result[$index];
     }
 
 }

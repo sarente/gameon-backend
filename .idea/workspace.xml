@@ -281,14 +281,7 @@
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
       <workItem from="1599549605785" duration="117169000" />
-      <workItem from="1600014207227" duration="62709000" />
-    </task>
-    <task id="LOCAL-00071" summary="workflow load from config&gt;workflow 2">
-      <created>1599817641061</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1599817641061</updated>
+      <workItem from="1600014207227" duration="66215000" />
     </task>
     <task id="LOCAL-00072" summary="workflow wrote to database from config file">
       <created>1599822310848</created>
@@ -626,7 +619,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600258503497</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="get user categories: not done yet">
+      <created>1600262138617</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1600262138617</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,7 +671,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="check activity type received in workflow" />
     <MESSAGE value="check activity type received in workflow 1.0" />
     <MESSAGE value="add exception to workflows" />
     <MESSAGE value="add exception to workflows 1.0" />
@@ -696,7 +695,8 @@
     <MESSAGE value="change seeder and tables" />
     <MESSAGE value="workflow manger subscriber changed" />
     <MESSAGE value="get user categories: not done" />
-    <option name="LAST_COMMIT_MESSAGE" value="get user categories: not done" />
+    <MESSAGE value="get user categories: not done yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="get user categories: not done yet" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -734,11 +734,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600165984304" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600258502658">
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600262137868">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600258502658" />
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600262137868" />
     <state width="610" height="466" key="DebuggerActiveHint" timestamp="1600152402428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
