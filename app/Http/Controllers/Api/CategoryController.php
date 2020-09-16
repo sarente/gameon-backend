@@ -35,10 +35,14 @@ class CategoryController extends Controller
                         //Check $usr_cat_pnt['current_point'] in
                         $slected_level = $this->getLevelOfUserByPoint($user_category_points[$i]['current_point'], $levels->get()->toArray());
 
-                        $result->push([$user_category_points[$i], $slected_level]);
+                        $slected_level['current_point']=(int)$user_category_points[$i]['current_point'];
+                        $slected_level['level_id']=$slected_level['id'];
+                        unset($slected_level['id']);
+
+                        $result->push($slected_level);
                     }
                 }else{
-                    //If user has any point in specific category
+                    //TODO:If user has any point in specific category
                     //$result->push([$user_category_points[$i], $slected_level]);
                 }
 
