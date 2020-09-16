@@ -29,9 +29,9 @@ class CategoryController extends Controller
 
                 if (!is_null($user_category_points[$i]['category_id']) && $user_category_points[$i]['category_id'] == $value){
                     //Get max point of each level { "id": 10,"level_no": 4,"max_point": 800,"category_id": 2}},....
-                    $levels1 = $levels->where('category_id', $value);
+                    $levels = Level::where('category_id', $value);
 
-                    if ($levels1->exists()) {
+                    if ($levels->exists()) {
                         //Check $usr_cat_pnt['current_point'] in
                         $slected_level = $this->getLevelOfUserByPoint($user_category_points[$i]['current_point'], $levels->get()->toArray());
 
@@ -88,7 +88,7 @@ class CategoryController extends Controller
         //Get level data bu current point user
         $result = [];
         foreach ($levels as $level) {
-            if ($current_point > $level['max_point']) {
+            if ($current_point >= $level['max_point']) {
                 $result[] = $level;
             }
         }
