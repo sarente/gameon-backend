@@ -45,7 +45,7 @@ class WorkFlowSubscriber implements ShouldQueue
     public function onLeave($event)
     {
         Log::info('onLeave');
-        $this->user = auth()->user() ?? User::find(2);
+        $this->user = auth()->user() ?? User::find(1);
 
         //Get key of place
         $key = key($event->getOriginalEvent()->getMarking()->getPlaces());

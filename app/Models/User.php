@@ -186,11 +186,15 @@ class User extends Authenticatable implements HasLocalePreference
 
     public function points()
     {
-        return $this->belongsToMany(UserPoint::class, 'user_point')->withPivot('point');
+        return $this->belongsToMany(Point::class, 'user_point')->withPivot('point','category_id','workflow_id');
     }
-    public function levels()
+
+    public function pointsByCategory()
     {
-        return $this->belongsToMany(Level::class,'user_level');
+        return UserPoint::Where('user_id',$this->id)
+            ->selectRaw("category_id,SUM(point) as current_point")
+            ->groupBy('category_id')
+            ->get();
     }
 
     public function rewards(): MorphToMany

@@ -8,6 +8,7 @@ class UserPoint extends Model
 {
 
     protected $table = "user_point";
+
     protected $fillable = [
         'point',
     ];
