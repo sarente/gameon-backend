@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Level;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,7 @@ class CategoryController extends Controller
         $user = User::getUser();
 
         $categories = Category::query();
-        $categories_level = $categories->with('levels');
+        $levels = Level::query();
 
         // ["category_id": 1,"current_point": "50"],...
         $user_category_points = $user->pointsByCategory()->toArray();
@@ -28,11 +29,11 @@ class CategoryController extends Controller
 
                 if (!is_null($user_category_points[$i]['category_id']) && $user_category_points[$i]['category_id'] == $value){
                     //Get max point of each level { "id": 10,"level_no": 4,"max_point": 800,"category_id": 2}},....
-                    $levels = $categories_level->where('id', $value);
+                    $levels1 = $levels->where('category_id', $value);
 
-                    if ($levels->exists()) {
+                    if ($levels1->exists()) {
                         //Check $usr_cat_pnt['current_point'] in
-                        $slected_level = $this->getLevelOfUserByPoint($user_category_points[$i]['current_point'], $levels->first()->levels->toArray());
+                        $slected_level = $this->getLevelOfUserByPoint($user_category_points[$i]['current_point'], $levels->get()->toArray());
 
                         $result->push([$user_category_points[$i], $slected_level]);
                     }
