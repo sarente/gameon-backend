@@ -15,27 +15,41 @@ class CategoryController extends Controller
         $result = collect();
         $user = User::getUser();
 
-        $categories = Category::with('levels');
+        $categories = Category::query();
+        $categories_level = $categories->with('levels');
 
         // ["category_id": 1,"current_point": "50"],...
         $user_category_points = $user->pointsByCategory()->toArray();
 
         //Get level by point of category
-        foreach ($user_category_points as $usr_cat_pnt) {
-            //Get max point of each level { "id": 10,"level_no": 4,"max_point": 800,"category_id": 2}},....
-            $levels = $categories->where('id', (int)$usr_cat_pnt['category_id']);
-            if($levels->exists()){
-                $slected_level = $this->getLevelOfUserByPoint($usr_cat_pnt['current_point'], $levels->first()->levels->toArray());
-                $result->push([$usr_cat_pnt, $slected_level]);
+        foreach ($categories->pluck('id')->toArray() as $key => $value) {
+
+            for ($i = 0; $i < count($user_category_points); $i++) {
+
+                if (!is_null($user_category_points[$i]['category_id']) && $user_category_points[$i]['category_id'] == $value){
+                    //Get max point of each level { "id": 10,"level_no": 4,"max_point": 800,"category_id": 2}},....
+                    $levels = $categories_level->where('id', $value);
+
+                    if ($levels->exists()) {
+                        //Check $usr_cat_pnt['current_point'] in
+                        $slected_level = $this->getLevelOfUserByPoint($user_category_points[$i]['current_point'], $levels->first()->levels->toArray());
+
+                        $result->push([$user_category_points[$i], $slected_level]);
+                    }
+                }else{
+                    //If user has any point in specific category
+                    //$result->push([$user_category_points[$i], $slected_level]);
+                }
+
             }
-            $result->push([$usr_cat_pnt, null]);
         }
         //{'category_id','level_no','current_point','max_point'}
 
         return response()->success($result);
     }
 
-    public function store(Request $request)
+    public
+    function store(Request $request)
     {
         $model = new Category($request->input());
         $model->save();
@@ -43,7 +57,8 @@ class CategoryController extends Controller
         return response()->success('common.success');
     }
 
-    public function show($id)
+    public
+    function show($id)
     {
         //FIXME: change here to auth()->user()
         $user_id = 1;
@@ -55,7 +70,8 @@ class CategoryController extends Controller
         return response()->success($category);
     }
 
-    public function syncUsers(Request $request, $id)
+    public
+    function syncUsers(Request $request, $id)
     {
         $category = Category::find($id);
 
@@ -65,7 +81,8 @@ class CategoryController extends Controller
         return response()->success($category);
     }
 
-    private function getLevelOfUserByPoint($current_point, $levels)
+    private
+    function getLevelOfUserByPoint($current_point, $levels)
     {
         //Get level data bu current point user
         $result = [];
