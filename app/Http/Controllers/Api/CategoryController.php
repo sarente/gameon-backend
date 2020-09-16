@@ -4,34 +4,35 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
-use App\Models\Level;
 use App\Models\User;
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 
 
 class CategoryController extends Controller
 {
-    private $cat_level=[];
-
     public function index()
     {
         $result = collect();
         $user = User::getUser();
+
         $categories = Category::with('levels');
+
+        // ["category_id": 1,"current_point": "50"],...
         $user_category_points = $user->pointsByCategory()->toArray();
 
         //Get level by point of category
         foreach ($user_category_points as $usr_cat_pnt) {
-            //Get max point of each level
-            $level=$categories->where('id', (int)$usr_cat_pnt['category_id'])->first()->levels->each(function ($elvel) use($usr_cat_pnt) {
-                $this->cat_level[]=$this->getLevelOfUserByPoint($usr_cat_pnt['current_point'],$elvel);
-            });
-            $result->push([$usr_cat_pnt,$level]);
+            //Get max point of each level { "id": 10,"level_no": 4,"max_point": 800,"category_id": 2}},....
+            $levels = $categories->where('id', (int)$usr_cat_pnt['category_id']);
+            if($levels->exists()){
+                $slected_level = $this->getLevelOfUserByPoint($usr_cat_pnt['current_point'], $levels->first()->levels->toArray());
+                $result->push([$usr_cat_pnt, $slected_level]);
+            }
+            $result->push([$usr_cat_pnt, null]);
         }
         //{'category_id','level_no','current_point','max_point'}
 
-        return response()->success($this->cat_level);
+        return response()->success($result);
     }
 
     public function store(Request $request)
@@ -63,15 +64,18 @@ class CategoryController extends Controller
 
         return response()->success($category);
     }
-    private function getLevelOfUserByPoint($current_point,Array $levels){
+
+    private function getLevelOfUserByPoint($current_point, $levels)
+    {
         //Get level data bu current point user
-        $result=[];
-        foreach($levels as $level){
-             if($current_point > $level->max_point){
-                 $result[]=$level;
-             }
+        $result = [];
+        foreach ($levels as $level) {
+            if ($current_point > $level['max_point']) {
+                $result[] = $level;
+            }
         }
-        $index=count($result)-1;
+        $len = count($result);
+        $index = $len > 0 ? $len - 1 : 0;
         return $result[$index];
     }
 
