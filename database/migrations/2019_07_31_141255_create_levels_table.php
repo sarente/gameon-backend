@@ -17,7 +17,7 @@ class CreateLevelsTable extends Migration
             $table->bigIncrements('id');
 
             $table->boolean('level_no');
-            $table->integer('max_point');
+            $table->integer('level_point');
             $table->timestamps();
 
             $table->bigInteger('category_id')->unsigned();

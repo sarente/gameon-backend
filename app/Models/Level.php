@@ -8,7 +8,7 @@ class Level extends Model
 {
     protected $fillable = [
         'level_no',
-        'max_point',
+        'level_point',
         'category_id'
     ];
     protected $hidden = [

@@ -30,19 +30,19 @@ class LevelTableSeeder extends Seeder
                 if ($i == 0) {
                     Level::create([
                         'level_no' => $i,
-                        'max_point' => 0,
+                        'level_point' => 0,
                         'category_id' => $cat->id,
                     ]);
                 } else if ($i == 1) {
                     Level::create([
                         'level_no' => $i,
-                        'max_point' => 10,
+                        'level_point' => 10,
                         'category_id' => $cat->id,
                     ]);
                 } else {
                     Level::create([
                         'level_no' => $i,
-                        'max_point' => $i * 200,
+                        'level_point' => $i * 200,
                         'category_id' => $cat->id,
                     ]);
                 }

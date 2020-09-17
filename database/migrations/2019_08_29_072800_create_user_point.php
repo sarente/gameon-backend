@@ -24,7 +24,7 @@ class CreateUserPoint extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->bigInteger('activity_id')->unsigned()->nullable();
+            $table->bigInteger('activity_id')->unsigned();
             $table->foreign('activity_id')
                 ->references('id')
                 ->on('activities')
@@ -38,7 +38,7 @@ class CreateUserPoint extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->bigInteger('category_id')->unsigned()->nullable();
+            $table->bigInteger('category_id')->unsigned();
             $table->foreign('category_id')
                 ->references('id')
                 ->on('categories')
