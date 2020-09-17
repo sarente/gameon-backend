@@ -56,7 +56,7 @@ class CategoryController extends Controller
                         "current_point" => 0,
                         "category_name" => $category_name
                     ];
-                    $result->push($null_poin_category);
+                    //$result->push($null_poin_category);
                 }
             }
         }

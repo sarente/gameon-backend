@@ -26,7 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/database/seeds/demo/UserPointTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/UserPointTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/demo/LevelTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/LevelTableSeeder.php" afterDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -280,14 +282,7 @@
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
       <workItem from="1599549605785" duration="117169000" />
-      <workItem from="1600014207227" duration="91079000" />
-    </task>
-    <task id="LOCAL-00085" summary="Add activity result 1.1">
-      <created>1599935948549</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1599935948549</updated>
+      <workItem from="1600014207227" duration="92318000" />
     </task>
     <task id="LOCAL-00086" summary="make activity point nullable">
       <created>1599938888728</created>
@@ -625,7 +620,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600348376215</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="user point clear before seed">
+      <created>1600348634058</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1600348634058</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,7 +672,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="separate admin rout from user" />
     <MESSAGE value="separate admin rout from user 1.0" />
     <MESSAGE value="add exception to role by json" />
     <MESSAGE value="user not found exception optimized" />
@@ -695,7 +696,8 @@
     <MESSAGE value="handel category" />
     <MESSAGE value="remove user category relation" />
     <MESSAGE value="Activity demo seeder changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Activity demo seeder changed" />
+    <MESSAGE value="user point clear before seed" />
+    <option name="LAST_COMMIT_MESSAGE" value="user point clear before seed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -733,11 +735,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600347490683" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600348375394">
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600348633344">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600348375394" />
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600348633344" />
     <state width="610" height="466" key="DebuggerActiveHint" timestamp="1600337082632">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -815,11 +817,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599334931451" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600348377517">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600348636083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600348377517" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600348636083" />
     <state x="822" y="394" width="316" height="252" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1600338652403">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -874,11 +876,11 @@
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339983001" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600266181183" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600347588222">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600349508633">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339136996" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600347588222" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600349508633" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

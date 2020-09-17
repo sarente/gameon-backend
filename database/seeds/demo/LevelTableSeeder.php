@@ -42,7 +42,7 @@ class LevelTableSeeder extends Seeder
                 } else {
                     Level::create([
                         'level_no' => $i,
-                        'level_point' => $i * 200,
+                        'level_point' => $i * 50,
                         'category_id' => $cat->id,
                     ]);
                 }
