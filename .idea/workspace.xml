@@ -26,7 +26,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
     </list>
@@ -282,14 +281,7 @@
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
       <workItem from="1599549605785" duration="117169000" />
-      <workItem from="1600014207227" duration="80280000" />
-    </task>
-    <task id="LOCAL-00078" summary="workflow error exception not allowed 3">
-      <created>1599833899081</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1599833899081</updated>
+      <workItem from="1600014207227" duration="80602000" />
     </task>
     <task id="LOCAL-00079" summary="workflow subscriber added">
       <created>1599923587828</created>
@@ -627,7 +619,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600281702893</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="add activity type">
+      <created>1600331048997</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1600331048997</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -672,7 +671,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="workflow change to marking place" />
     <MESSAGE value="workflow change to marking place 1.0" />
     <MESSAGE value="change roles" />
     <MESSAGE value="Add roles to system" />
@@ -697,7 +695,8 @@
     <MESSAGE value="get user categories: done 1.1" />
     <MESSAGE value="get user categories: done 1.2 well" />
     <MESSAGE value="get user categories: done 1.3 check todo's" />
-    <option name="LAST_COMMIT_MESSAGE" value="get user categories: done 1.3 check todo's" />
+    <MESSAGE value="add activity type" />
+    <option name="LAST_COMMIT_MESSAGE" value="add activity type" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -735,11 +734,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600165984304" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600281702244">
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600331048110">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600281702244" />
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600331048110" />
     <state width="610" height="466" key="DebuggerActiveHint" timestamp="1600279358098">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -872,11 +871,11 @@
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339983001" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600266181183" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600256625147">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600330791121">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339136996" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600256625147" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600330791121" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

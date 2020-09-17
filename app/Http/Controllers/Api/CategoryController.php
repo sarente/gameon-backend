@@ -13,6 +13,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
+        $lang=app()->getLocale();
         $result = collect();
         $user = User::getUser();
 
@@ -35,8 +36,10 @@ class CategoryController extends Controller
                         //Check $usr_cat_pnt['current_point'] in
                         $slected_level = $this->getLevelOfUserByPoint($user_category_points[$i]['current_point'], $levels->get()->toArray());
 
+                        //sort data of array
                         $slected_level['current_point']=(int)$user_category_points[$i]['current_point'];
                         $slected_level['level_id']=$slected_level['id'];
+                        $slected_level['category_name']=Category::find($slected_level['category_id'])->translations['name'][$lang];
                         unset($slected_level['id']);
 
                         $result->push($slected_level);
