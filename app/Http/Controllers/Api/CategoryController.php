@@ -25,7 +25,7 @@ class CategoryController extends Controller
 
         //Get level by point of category
         foreach ($categories->pluck('id')->toArray() as $key => $value) {
-            $category_name=Category::find($value)->translations['name'][$lang];
+            $category_name = Category::find($value)->translations['name'][$lang];
 
             for ($i = 0; $i < count($user_category_points); $i++) {
 
@@ -58,11 +58,8 @@ class CategoryController extends Controller
                     ];
                     $result->push($null_poin_category);
                 }
-
             }
         }
-        //{'category_id','level_no','current_point','level_point'}
-
         return response()->success($result);
     }
 
