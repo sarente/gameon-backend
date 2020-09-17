@@ -28,7 +28,6 @@ class CategoryTableSeeder extends Seeder
                 'name'=> $category_name,
             ]);
             $category->save();
-            $category->users()->attach($users);
         }
     }
 }
