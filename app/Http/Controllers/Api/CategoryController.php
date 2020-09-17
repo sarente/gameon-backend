@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\CustomWorkflow;
 use App\Models\Level;
 use App\Models\User;
-use Illuminate\Http\Request;
 
 
 class CategoryController extends Controller
@@ -50,41 +50,17 @@ class CategoryController extends Controller
         return response()->success($result);
     }
 
-    public
-    function store(Request $request)
+    public function show($id)
     {
-        $model = new Category($request->input());
-        $model->save();
-
-        return response()->success('common.success');
-    }
-
-    public
-    function show($id)
-    {
-        //FIXME: change here to auth()->user()
-        $user_id = 1;
-        $category = Category::with('users')->find($id);
-        $workflows = User::find($user_id)->workflows()->where('category_id', $id)->get();
-
-        $category->workflows = $workflows;
+        //$user = User::getUser();
+        $category = CustomWorkflow::whereHas('category',function($q) use ($id){
+                 $q->where('categories.id',$id);
+        })->get();
 
         return response()->success($category);
     }
 
-    public
-    function syncUsers(Request $request, $id)
-    {
-        $category = Category::find($id);
-
-        $users = User::find($request->user_ids);
-        $category->users()->sync($users);
-
-        return response()->success($category);
-    }
-
-    private
-    function getLevelOfUserByPoint($current_point, $levels)
+    private function getLevelOfUserByPoint($current_point, $levels)
     {
         //Get level data bu current point user
         $result = [];

@@ -29,22 +29,6 @@ class CustomWorkflow extends Model
         'config' => 'array',
     ];
 
-    /*    protected $attributes = [
-            'type' => Setting::WF_TYPE_WF,
-        ];*/
-
-//    public static function boot()
-//    {
-//        parent::boot();
-//
-//        static::created(function (self $model) {
-//            //create last activity as finishing state of workflow
-//            $activity = new Activity(['name' => "Final"]);
-//            $activity->workflow()->associate($model);
-//            $activity->save();
-//        });
-//    }
-
     /**
      * TODO:: add this method to boot of class
      */

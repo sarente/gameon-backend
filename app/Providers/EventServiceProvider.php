@@ -27,7 +27,7 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
-  /*      'Illuminate\Mail\Events\MessageSending' => [
+        /*'Illuminate\Mail\Events\MessageSending' => [
             'App\Listeners\LogSendingMessage',
         ],
         'Illuminate\Mail\Events\MessageSent' => [
@@ -42,16 +42,7 @@ class EventServiceProvider extends ServiceProvider
             //'App\Listeners\Project\UpdateImage',
             //'App\Listeners\Project\AddRoles',
             'App\Listeners\Activity\AddRewards',
-            //'App\Listeners\Project\UpdateClaims',
-            //'App\Listeners\Project\AddMembers',
             'App\Listeners\Activity\AddTag',
-        ],
-        'App\Events\ClubSaved' => [
-            'App\Listeners\Club\UpdateImage',
-            'App\Listeners\Club\AddRoles',
-            'App\Listeners\Club\UpdateClaims',
-            'App\Listeners\Club\AddMembers',
-            'App\Listeners\Club\AddTag',
         ],
         'App\Events\TaskSaved' => [
             'App\Listeners\Task\UpdateImage',
@@ -77,14 +68,8 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\User\Profile\AttachMedals',
             'App\Listeners\User\Profile\UpdateImage',
         ],
-        //'App\Events\UserUpdate' => [
-        //'App\Listeners\Reward\AddRoles',
-        //Update point                                                             a
-        //Update general level
-        //],
         //Run this event when project and task is completed by admin
         'App\Events\ArtifactIsCompleted' => [
-            'App\Listeners\Reward\ComputeXP',
             'App\Listeners\Reward\ComputeGeneralXP',
             'App\Listeners\Reward\ComputePoint',
             'App\Listeners\Reward\AttachRosette',
@@ -103,10 +88,6 @@ class EventServiceProvider extends ServiceProvider
          //When user has level up this event have to be fire
         'App\Events\LevelUp' => [
             'App\Listeners\User\Profile\AttachMedals',
-        ],
-        'App\Events\OnBoardingLevelUp' => [
-            'App\Listeners\OnBoarding\AttachRosettes',
-            'App\Listeners\OnBoarding\AttachMedals',
         ],
     ];
 

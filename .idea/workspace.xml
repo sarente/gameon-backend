@@ -26,7 +26,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Listeners/Club/AddMembers.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Listeners/Club/AddRoles.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Listeners/Club/AddTag.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Listeners/Club/UpdateClaims.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Listeners/Club/UpdateImage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CustomWorkflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CustomWorkflow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/workflow.php" afterDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -280,14 +289,7 @@
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
       <workItem from="1599549605785" duration="117169000" />
-      <workItem from="1600014207227" duration="95214000" />
-    </task>
-    <task id="LOCAL-00088" summary="workflow rosette change to reward 1.0">
-      <created>1599944029538</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1599944029538</updated>
+      <workItem from="1600014207227" duration="97919000" />
     </task>
     <task id="LOCAL-00089" summary="workflow rosette change to reward 1.1">
       <created>1599944243663</created>
@@ -625,7 +627,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600352344318</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="edit category index">
+      <created>1600352890321</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1600352890321</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,7 +679,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="user not found exception optimized" />
     <MESSAGE value="user get in model" />
     <MESSAGE value="Level seeder added" />
     <MESSAGE value="get categories by user" />
@@ -695,7 +703,8 @@
     <MESSAGE value="user point clear before seed" />
     <MESSAGE value="level table seeder changed" />
     <MESSAGE value="calculate empty category level points" />
-    <option name="LAST_COMMIT_MESSAGE" value="calculate empty category level points" />
+    <MESSAGE value="edit category index" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit category index" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -733,11 +742,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600347490683" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600352343504">
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600352889591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600352343504" />
+    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600352889591" />
     <state width="610" height="466" key="DebuggerActiveHint" timestamp="1600350479132">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -815,11 +824,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599334931451" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600352345270">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600352891290">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600352345270" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600352891290" />
     <state x="822" y="394" width="316" height="252" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1600338652403">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -900,7 +909,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Models/CustomWorkflow.php</url>
-          <line>55</line>
+          <line>39</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -959,34 +968,9 @@
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php</url>
-          <line>23</line>
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php</url>
-          <line>30</line>
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php</url>
-          <line>33</line>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php</url>
-          <line>37</line>
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php</url>
-          <line>46</line>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php</url>
-          <line>35</line>
-          <option name="timeStamp" value="100" />
+          <url>file://$PROJECT_DIR$/config/workflow.php</url>
+          <line>48</line>
+          <option name="timeStamp" value="103" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
