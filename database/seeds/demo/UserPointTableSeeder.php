@@ -27,14 +27,16 @@ class UserPointTableSeeder extends Seeder
             'workflow_id'=> 2,
             'category_id'=> 2,
             'point' => 60
-        ]);  //wvf: management_competence
+        ]);
+        //wvf: management_competence
         \App\Models\UserPoint::create([
             'user_id'=> 2,
             'activity_id'=> 1,
             'workflow_id'=> 3,
             'category_id'=> 2,
             'point' => 60
-        ]);   //wvf: high_level_competence
+        ]);
+        //wvf: high_level_competence
         \App\Models\UserPoint::create([
             'user_id'=> 2,
             'activity_id'=> 1,
