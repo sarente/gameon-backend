@@ -57,7 +57,7 @@ class CategoryController extends Controller
                  $q->where('categories.id',$id);
         })->get();
 
-        return response()->success($category);
+        return response()->success($category->load('category'));
     }
 
     private function getLevelOfUserByPoint($current_point, $levels)
