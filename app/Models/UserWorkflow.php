@@ -15,6 +15,12 @@ class UserWorkflow extends Model
         'marking' => 'array',
         'current_place' => 'array'
     ];
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'deleted_at',
+        'current_place',
+    ];
 
     public function customWorkflow()
     {
@@ -24,5 +30,11 @@ class UserWorkflow extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function category()
+    {
+        //return $this->belongsTo(CustomWorkflow::class, 'workflow_id');
+        return $this->hasManyThrough(Category::class, CustomWorkflow::class);
     }
 }

@@ -54,6 +54,6 @@ class CustomWorkflow extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'user_workflow')->withPivot('marking');
+        return $this->belongsToMany(User::class, 'user_workflow','workflow_id','user_id')->withPivot('marking');
     }
 }

@@ -23,13 +23,13 @@ class WorkflowController extends Controller
     {
         $user = User::getUser();
 
-        $user_workflow = UserWorkflow::where('user_id', $user->id)->where('workflow_id',$id);
+        $user_workflow = UserWorkflow::where('user_id', $user->id)
+            ->where('workflow_id', $id);
 
         if (!$user_workflow->exists()) {
-            $workflow=CustomWorkflow::find($id);
+            $workflow = CustomWorkflow::find($id);
             $user->workflows()->sync($workflow);
         }
-
         return response()->success($user_workflow->first());
     }
 }

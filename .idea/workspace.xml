@@ -27,8 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="workflow edited(Add order to paces)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/WorkflowController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/WorkflowController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/WorkflowController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/WorkflowController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/CustomWorkflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CustomWorkflow.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
@@ -288,14 +286,7 @@
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
       <workItem from="1599549605785" duration="117169000" />
-      <workItem from="1600014207227" duration="120296000" />
-    </task>
-    <task id="LOCAL-00095" summary="check activity type received in workflow">
-      <created>1600006019077</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1600006019077</updated>
+      <workItem from="1600014207227" duration="121819000" />
     </task>
     <task id="LOCAL-00096" summary="check activity type received in workflow 1.0">
       <created>1600006238043</created>
@@ -633,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600431368137</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="workflow get by id">
+      <created>1600439079138</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1600439079138</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,7 +676,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="get user categories: not done" />
     <MESSAGE value="get user categories: not done yet" />
     <MESSAGE value="get user categories: not done yet 1" />
     <MESSAGE value="get user categories: done" />
@@ -703,7 +700,8 @@
     <MESSAGE value="Add activity controller" />
     <MESSAGE value="Add ActivityResult type" />
     <MESSAGE value="workflow config changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="workflow config changed" />
+    <MESSAGE value="workflow get by id" />
+    <option name="LAST_COMMIT_MESSAGE" value="workflow get by id" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -741,11 +739,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600436882353" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600431367124">
+    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600439078259">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="530" y="91" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600431367124" />
+    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600439078259" />
     <state width="610" height="466" key="DebuggerActiveHint" timestamp="1600350479132">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -823,11 +821,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599334931451" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600431369305">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600439080334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600431369305" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600439080334" />
     <state x="822" y="394" width="316" height="252" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1600338652403">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -882,11 +880,11 @@
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339983001" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600266181183" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600436771982">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600439207130">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339136996" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600436771982" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600439207130" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -965,11 +963,6 @@
           <url>file://$PROJECT_DIR$/app/Listeners/WorkFlowSubscriber.php</url>
           <line>57</line>
           <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/WorkflowController.php</url>
-          <line>23</line>
-          <option name="timeStamp" value="109" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
