@@ -52,7 +52,6 @@ class CategoryController extends Controller
 
     public function show($id)
     {
-        //$user = User::getUser();
         $category = CustomWorkflow::whereHas('category',function($q) use ($id){
                  $q->where('categories.id',$id);
         })->get();

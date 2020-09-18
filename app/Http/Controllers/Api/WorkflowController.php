@@ -3,21 +3,15 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Activity;
-use App\Models\Category;
-use App\Models\Reward;
+use App\Models\CustomWorkflow;
 use App\Models\User;
-use App\Models\Workflow\State;
-use App\Models\Workflow\Transition;
-use App\Models\Workflow\Workflow;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Response;
+use App\Models\UserWorkflow;
 
 class WorkflowController extends Controller
 {
     public function index()
     {
-        $workflows = Workflow::all();
+        $workflows = CustomWorkflow::all();
 
         if (!$workflows) {
             return response()->error('error.not-found');
@@ -25,63 +19,17 @@ class WorkflowController extends Controller
         return response()->success($workflows->load('category'));
     }
 
-    public function store(Request $request)
+    public function show($id)
     {
-        $workflow_name = $request->only('name');
-        $workflow = Workflow::where('name', $workflow_name)->exists();
+        $user = User::getUser();
 
-        if ($workflow) {
-            return response()->error('workflow.name-valid');
+        $user_workflow = UserWorkflow::where('user_id', $user->id)->where('workflow_id',$id);
+
+        if (!$user_workflow->exists()) {
+            $workflow=CustomWorkflow::find($id);
+            $user->workflows()->sync($workflow);
         }
 
-        $category = Category::find($request->category_id);
-
-        $workflow = new Workflow($request->input());
-        $workflow->category()->associate($category);
-        $workflow->save();
-
-        return response()->success($workflow);
-    }
-
-    public function addActivity(Request $request, $id)
-    {
-        $workflow = Workflow::find($id);
-        if (!$workflow) {
-            return response()->error('workflow.name-valid');
-        }
-
-        $activity = new Activity(['name' => $request->activity_name, 'point' => $request->point]);
-        $activity->workflow()->associate($workflow);
-        $activity->save();
-
-        $rewards = Reward::find($request->rewards);
-        $activity->rewards()->sync($rewards,false);
-
-        $final_activity = $workflow->activities->first();
-
-        $transition = new Transition(['name' => $workflow->name . ' from ' . $activity->name . ' to ' . $final_activity->name, 'from_activity_id' => $activity->id, 'to_activity_id' => $final_activity->id]);
-        $transition->workflow()->associate($workflow);
-        $transition->save();
-
-        return response()->success($workflow);
-    }
-
-    public function show($id){
-        $workflow = Workflow::with('category', 'users', 'activities.rewards.image', 'transitions')->find($id);
-        if (!$workflow) {
-            return response()->error('workflow.not-found');
-        }
-        return response()->success($workflow);
-    }
-
-    public function addUser(Request $request, $id)
-    {
-        $workflow = Workflow::find($id);
-        if (!$workflow) {
-            return response()->error('workflow.not-found');
-        }
-
-        $users = User::find($request->user_ids);
-        $workflow->users()->sync($users);
+        return response()->success($user_workflow->first());
     }
 }
