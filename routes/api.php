@@ -36,17 +36,18 @@ Route::group(['middleware' => 'auth.jwt'], function ($router) {
     Route::get('user/avatar', 'Api\UserController@getAvatar');
     Route::post('user/avatar', 'Api\UserController@saveAvatarConfiguration');
 
-    //Route::get('user/get-my-categories', 'Api\UserController@getMyCategories');
     Route::resource('user', 'Api\UserController');
 
     //Categories
     Route::resource('category', 'Api\CategoryController');
 
-    Route::post('category/{category}/sync-users', 'Api\CategoryController@syncUsers');
-
-    Route::post('workflow/{workflow}/add-activity', 'Api\WorkflowController@addActivity');
+    //WorkFlow
     Route::resource('workflow', 'Api\WorkflowController');
+
+    //Activity
+    Route::post('workflow/{workflow}/activity/{activity}', 'Api\ActivityController@doActivity');
 });
+
 
 Route::get('get-workflow', 'Api\Admin\TestController@getWorkflow');
 Route::post('get-my-workflow', 'Api\Admin\TestController@getMyWorkflow');
