@@ -18,7 +18,7 @@ return [
                 'order' => '2',
                 'place_name' => 'Değer İsmini Gir',
                 'model_id' => '2',
-                'model_type' => 'App\Models\Activity',
+                'model_type' => 'App\Models\ActivityResult',
             ]
             ],
             'result' => ['metadata' => [
@@ -66,7 +66,7 @@ return [
                 'order' => '2',
                 'place_name' => 'Değer İsmini Gir',
                 'model_id' => '2',
-                'model_type' => 'App\Models\Activity',
+                'model_type' => 'App\Models\ActivityResult',
             ]
             ],
             'result' => ['metadata' => [
@@ -114,7 +114,7 @@ return [
                 'order' => '2',
                 'place_name' => 'Değer İsmini Gir',
                 'model_id' => '2',
-                'model_type' => 'App\Models\Activity',
+                'model_type' => 'App\Models\ActivityResult',
             ]
             ],
             'result' => ['metadata' => [
@@ -162,7 +162,7 @@ return [
                 'order' => '2',
                 'place_name' => 'Değer İsmini Gir',
                 'model_id' => '2',
-                'model_type' => 'App\Models\Activity',
+                'model_type' => 'App\Models\ActivityResult',
             ]
             ],
             'result' => ['metadata' => [
@@ -210,7 +210,7 @@ return [
                 'order' => '2',
                 'place_name' => 'Değer İsmini Gir',
                 'model_id' => '2',
-                'model_type' => 'App\Models\Activity',
+                'model_type' => 'App\Models\ActivityResult',
             ]
             ],
             'result' => ['metadata' => [
