@@ -34,7 +34,6 @@ class UserWorkflow extends Model
 
     public function category()
     {
-        //return $this->belongsTo(CustomWorkflow::class, 'workflow_id');
         return $this->hasManyThrough(Category::class, CustomWorkflow::class);
     }
 }

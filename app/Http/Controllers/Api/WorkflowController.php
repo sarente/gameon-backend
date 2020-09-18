@@ -28,7 +28,7 @@ class WorkflowController extends Controller
 
         if (!$user_workflow->exists()) {
             $workflow = CustomWorkflow::find($id);
-            $user->workflows()->sync($workflow);
+            $user->workflows()->syncWithoutDetaching($workflow);
         }
         return response()->success($user_workflow->first());
     }
