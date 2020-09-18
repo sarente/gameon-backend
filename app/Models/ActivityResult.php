@@ -8,29 +8,14 @@ use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Translatable\HasTranslations;
 use ZeroDaHero\LaravelWorkflow\Traits\WorkflowTrait;
 
-class Activity extends Model
+class ActivityResult extends Model
 {
-    use LogsActivity,HasTranslations;
+    use LogsActivity;
 
-    public $translatable = [
-        'name',
-    ];
-    protected $fillable = [
-        'name',
-        'type',
-        'point'
-    ];
-    protected $casts=[
-        'metadata'=>'array',
-        'name'=>'array',
-    ];
+    protected $table = "activities";
 
-    public $hidden=[
-        'created_at',
-        'updated_at'
-    ];
     protected $attributes = [
-        'type' => Setting::ACTIVITY_ACTION,
+        'type' => Setting::ACTIVITY_RETURN,
     ];
 
     public function image()
