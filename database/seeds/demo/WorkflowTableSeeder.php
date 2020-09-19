@@ -44,38 +44,59 @@ class WorkflowTableSeeder extends Seeder
                 ]);
                 $workflow->category()->associate($value);
                 $workflow->save();
-
-            } else if ($key == 1) {
+                //
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[2],
-                    'config' => $workflowDefinition['having_an_analytical_perspective']
+                    'config' => $workflowDefinition['being_we_centered']
                 ]);
                 $workflow->category()->associate($value);
                 $workflow->save();
                 //
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[3],
-                    'config' => $workflowDefinition['being_creative_band_innovative']
+                    'config' => $workflowDefinition['clearance']
                 ]);
                 $workflow->category()->associate($value);
                 $workflow->save();
                 //
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[4],
-                    'config' => $workflowDefinition['taking_initiative']
+                    'config' => $workflowDefinition['bona_fides']
                 ]);
                 $workflow->category()->associate($value);
                 $workflow->save();
-                //
+
+            } else if ($key == 1) {
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[5],
-                    'config' => $workflowDefinition['agility']
+                    'config' => $workflowDefinition['having_an_analytical_perspective']
                 ]);
                 $workflow->category()->associate($value);
                 $workflow->save();
                 //
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[6],
+                    'config' => $workflowDefinition['being_creative_band_innovative']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+                //
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[7],
+                    'config' => $workflowDefinition['taking_initiative']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+                //
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[8],
+                    'config' => $workflowDefinition['agility']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+                //
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[9],
                     'config' => $workflowDefinition['communication']
                 ]);
                 $workflow->category()->associate($value);

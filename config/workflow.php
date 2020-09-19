@@ -96,6 +96,150 @@ return [
             ]
         ]
     ],
+    'being_we_centered' => [
+        'type' => 'workflow',
+        'metadata' => [
+            'title' => 'Biz Merkezli Olmak',
+        ],
+        'supports' => ['App\Models\UserWorkflow'],
+        'places' => [
+            'slide_show' => ['metadata' => [
+                'order' => '1',
+                'place_name' => 'Slideları İzle',
+                'model_id' => '2',
+                'model_type' => 'App\Models\Activity',
+            ]
+            ],
+            'the_blanks' => ['metadata' => [
+                'order' => '2',
+                'place_name' => 'Değer İsmini Gir',
+                'model_id' => '2',
+                'model_type' => 'App\Models\ActivityResult',
+            ]
+            ],
+            'result' => ['metadata' => [
+                'order' => '3',
+                'place_name' => 'Sonuclari Gor',
+                'model_id' => '1',
+                'model_type' => 'App\Models\Reward',
+            ]
+            ],
+            'done' => ['metadata' => [
+                'order' => '4',
+            ]
+            ]
+        ],
+        'transitions' => [
+            'play_slide_show' => [
+                'from' => 'slide_show',
+                'to' => 'the_blanks',
+            ],
+            'fill_in_the_blanks' => [
+                'from' => 'the_blanks',
+                'to' => 'result'
+            ],
+            'show_result' => [
+                'from' => 'result',
+                'to' => 'done'
+            ]
+        ]
+    ],
+    'staying_in_the_game' => [
+        'type' => 'workflow',
+        'metadata' => [
+            'title' => 'Oyunda Kalmak',
+        ],
+        'supports' => ['App\Models\UserWorkflow'],
+        'places' => [
+            'slide_show' => ['metadata' => [
+                'order' => '1',
+                'place_name' => 'Slideları İzle',
+                'model_id' => '2',
+                'model_type' => 'App\Models\Activity',
+            ]
+            ],
+            'the_blanks' => ['metadata' => [
+                'order' => '2',
+                'place_name' => 'Değer İsmini Gir',
+                'model_id' => '2',
+                'model_type' => 'App\Models\ActivityResult',
+            ]
+            ],
+            'result' => ['metadata' => [
+                'order' => '3',
+                'place_name' => 'Sonuclari Gor',
+                'model_id' => '1',
+                'model_type' => 'App\Models\Reward',
+            ]
+            ],
+            'done' => ['metadata' => [
+                'order' => '4',
+            ]
+            ]
+        ],
+        'transitions' => [
+            'play_slide_show' => [
+                'from' => 'slide_show',
+                'to' => 'the_blanks',
+            ],
+            'fill_in_the_blanks' => [
+                'from' => 'the_blanks',
+                'to' => 'result'
+            ],
+            'show_result' => [
+                'from' => 'result',
+                'to' => 'done'
+            ]
+        ]
+    ],
+    'clearance' => [
+        'type' => 'workflow',
+        'metadata' => [
+            'title' => 'Açıklık',
+        ],
+        'supports' => ['App\Models\UserWorkflow'],
+        'places' => [
+            'slide_show' => ['metadata' => [
+                'order' => '1',
+                'place_name' => 'Slideları İzle',
+                'model_id' => '2',
+                'model_type' => 'App\Models\Activity',
+            ]
+            ],
+            'the_blanks' => ['metadata' => [
+                'order' => '2',
+                'place_name' => 'Değer İsmini Gir',
+                'model_id' => '2',
+                'model_type' => 'App\Models\ActivityResult',
+            ]
+            ],
+            'result' => ['metadata' => [
+                'order' => '3',
+                'place_name' => 'Sonuclari Gor',
+                'model_id' => '1',
+                'model_type' => 'App\Models\Reward',
+            ]
+            ],
+            'done' => ['metadata' => [
+                'order' => '4',
+            ]
+            ]
+        ],
+        'transitions' => [
+            'play_slide_show' => [
+                'from' => 'slide_show',
+                'to' => 'the_blanks',
+            ],
+            'fill_in_the_blanks' => [
+                'from' => 'the_blanks',
+                'to' => 'result'
+            ],
+            'show_result' => [
+                'from' => 'result',
+                'to' => 'done'
+            ]
+        ]
+    ],
     'having_an_analytical_perspective' => [
         'type' => 'workflow',
         'metadata' => [
