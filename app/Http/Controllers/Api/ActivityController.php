@@ -2,32 +2,22 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Exceptions\WorkFlow\WorkFlowNotFoundException;
 use App\Http\Controllers\Controller;
-use App\Models\Activity;
-use App\Models\Category;
 use App\Models\CustomWorkflow;
-use App\Models\Reward;
-use App\Models\User;
-use Illuminate\Http\Request;
 
 class ActivityController extends Controller
 {
-    public function index()
+    public function store($workflow, $activity)
     {
-        $workflows = Workflow::all();
+        //Get workflow name
+        //Load workflow
+        //Apply it
+        dd($workflow, $activity, request()->input());
+        $workflow = CustomWorkflow::where('id', $workflow_id);
 
-        if (!$workflows) {
-            return response()->error('error.not-found');
-        }
-        return response()->success($workflows->load('category'));
-    }
-
-    public function doActivity($workflow,$activity)
-    {
-        $workflow = CustomWorkflow::where('id', $workflow)->exists();
-
-        if (!$workflow) {
-            return response()->error('workflow.name-valid');
+        if (!$workflow->exists()) {
+            throw new WorkFlowNotFoundException();
         }
 
         return response()->success($workflow);

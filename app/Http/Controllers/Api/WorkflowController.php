@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Exceptions\WorkFlow\WorkFlowNotFoundException;
 use App\Http\Controllers\Controller;
 use App\Models\CustomWorkflow;
 use App\Models\User;
@@ -14,7 +15,7 @@ class WorkflowController extends Controller
         $workflows = CustomWorkflow::all();
 
         if (!$workflows) {
-            return response()->error('error.not-found');
+            throw new WorkFlowNotFoundException();
         }
         return response()->success($workflows->load('category'));
     }
@@ -23,13 +24,22 @@ class WorkflowController extends Controller
     {
         $user = User::getUser();
 
-        $user_workflow = UserWorkflow::where('user_id', $user->id)
+        $flowable = UserWorkflow::where('user_id', $user->id)
             ->where('workflow_id', $id);
 
-        if (!$user_workflow->exists()) {
-            $workflow = CustomWorkflow::find($id);
-            $user->workflows()->syncWithoutDetaching($workflow);
+        if (!$flowable->exists()) {
+            $this->addUsertoWorkflow($id, $user);
         }
-        return response()->success($user_workflow->first());
+        return response()->success($flowable->first());
+    }
+
+    /**
+     * @param $id
+     * @param \Illuminate\Contracts\Auth\Authenticatable $user
+     */
+    private function addUsertoWorkflow($id, \Illuminate\Contracts\Auth\Authenticatable $user): void
+    {
+        $workflow = CustomWorkflow::find($id);
+        $user->workflows()->syncWithoutDetaching($workflow);
     }
 }

@@ -17,9 +17,10 @@ class TestController extends Controller
         $user = User::find(2);
 
         //Look for user workflows
-        $flowable = UserWorkflow::with(['customWorkflow', 'user'])->newQuery()->where('user_id', $user->id)->first();
+        $flowable = UserWorkflow::with(['customWorkflow', 'user'])
+            ->where('user_id', $user->id);
 
-        if (!$flowable) {
+        if (!$flowable->exists()) {
             throw new WorkFlowNotFoundException();
         }
         //Get work flow definition
