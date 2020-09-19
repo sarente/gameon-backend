@@ -268,19 +268,8 @@ class Setting extends Model
     ///////////////
     const ARTIFACT_ROSETTE = 'rosette';
 
-    const ROSETTE_PLANET = 'Gezgin';
-    const ROSETTE_WISE = 'Bilge';
-    /*const ROSETTE_PLANET_1 = 'Gezgin 1';
-    const ROSETTE_PLANET_2 = 'Gezgin 2';
-    const ROSETTE_PLANET_3 = 'Gezgin 3';
-    const ROSETTE_WISE_1 = 'Bilge 1';
-    const ROSETTE_WISE_2 = 'Bilge 2';
-    const ROSETTE_WISE_3 = 'Bilge 3';*/
-    const ROSETTE_BANYAN = 'Banyan';
-    const ROSETTE_BANYAN_1 = 'Banyan 1';
-    const ROSETTE_BANYAN_2 = 'Banyan 2';
-    const ROSETTE_EINSTEIN = 'Einstein';
-    const ROSETTE_HIDDEN = 'Görünmez';
+    const ROSETTE_VALUES = ['tr'=>'Değerler','en'=>'Values'];
+    const ROSETTE_COMPETENCE = ['tr'=>'Yetkinlikler','en'=>'Competence'];
 
     const MEDAL_CHARLIE = 'Charlie Chaplin';
     const MEDAL_FRIDA = 'Frida Kahlo';
