@@ -1,5 +1,6 @@
 <?php
 namespace App\Database\Seeds\Demo;
+use App\Models\ActivityResult;
 use Illuminate\Database\Seeder;
 
 class DemoSeeder extends Seeder
@@ -14,6 +15,7 @@ class DemoSeeder extends Seeder
         $this->call(CategoryTableSeeder::class);
         $this->call(WorkflowTableSeeder::class);
         $this->call(ActivityTableSeeder::class);
+        $this->call(ActivityResultTableSeeder::class);
         $this->call(LevelTableSeeder::class);
         //$this->call(ProfileTableSeeder::class);
         $this->call(UserPointTableSeeder::class);

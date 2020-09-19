@@ -12,7 +12,23 @@ class ActivityResult extends Model
 {
     use LogsActivity;
 
-    protected $table = "activities";
+    public $translatable = [
+        'name',
+    ];
+    protected $fillable = [
+        'name',
+        'type',
+        'point'
+    ];
+    protected $casts=[
+        'metadata'=>'array',
+        'name'=>'array',
+    ];
+
+    public $hidden=[
+        'created_at',
+        'updated_at'
+    ];
 
     protected $attributes = [
         'type' => Setting::ACTIVITY_RETURN,

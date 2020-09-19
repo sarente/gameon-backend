@@ -17,8 +17,7 @@ class Activity extends Model
     ];
     protected $fillable = [
         'name',
-        'type',
-        'point'
+        'type'
     ];
     protected $casts=[
         'metadata'=>'array',

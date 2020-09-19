@@ -26,442 +26,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/images/rosette/competence.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/rosette/values.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/RewardSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RewardSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/badge/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/badge/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/badge/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/badge/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/badge/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/badge/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/classroom/classroom_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_0/club_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_0/post_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_0/post_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_0/post_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_1/club_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_1/post_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_1/post_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_1/post_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_2/club_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_2/club_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_2/post_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_2/post_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_3/club_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_3/post_1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_3/post_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_3/post_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_4/club_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_4/post_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club/club_4/post_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/club_badge/club.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/medal/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/default_header.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_0/post_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_0/post_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_0/project_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_1/post_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_1/post_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_1/project_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_2/project_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_3/project_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_4/project_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_5 - Copy/project_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_5 - Copy/project_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_5/project_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_6/project_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_6/project_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_7/project_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/project/project_7/project_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/banyan/banyan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/banyan/banyan_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/banyan/banyan_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/banyan/banyan_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/einstein.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/empty_rosette.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/gorev_bilinci.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/hidden.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/iskaci.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/kanat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/kasif.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/kayip.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/mudavim.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/nobel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/planet/planet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/planet/planet_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/planet/planet_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/planet/planet_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/seyirci.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/ucan_vida.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/ustat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/uyanik.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/uyurgezer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/wise/wise_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/wise/wise_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/wise/wise_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/yaklasan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/yanitkar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/rosette/yukselen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/dress_0_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/dress_0_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/dress_0_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/dress_0_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/dress_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/dress_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/dress_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/dress_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/dress_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/dress_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/dress_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/dress_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/icon_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/icon_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/dress/icon_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_0_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_0_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_0_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_0_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_10_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_10_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_10_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_10_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_4_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_4_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_4_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_4_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_5_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_5_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_5_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_5_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_6_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_6_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_6_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_6_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_7_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_7_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_7_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_7_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_8_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_8_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_8_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_8_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_9_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_9_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_9_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/eye_9_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/icon_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/icon_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/icon_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/icon_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/icon_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/icon_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/icon_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/icon_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/icon_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/icon_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/eye/icon_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_1_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_1_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_1_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_1_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_1_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_1_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_1_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_1_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_1_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_1_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_1_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_1_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_2_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_2_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_2_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_2_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_2_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_2_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_2_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_2_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_2_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_2_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_2_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_2_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_3_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_3_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_3_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_3_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_3_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_3_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_3_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_3_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_3_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_3_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_3_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_3_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_4_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_4_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_4_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_4_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_4_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_4_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_4_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_4_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_4_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_4_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_4_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_4_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_5_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_5_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_5_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_5_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_5_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_5_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_5_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_5_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_5_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_5_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_5_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/hair_5_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/icon_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/icon_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/icon_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/icon_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/female/icon_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_10_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_10_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_10_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_10_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_10_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_10_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_10_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_10_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_10_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_10_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_10_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_10_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_6_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_6_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_6_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_6_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_6_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_6_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_6_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_6_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_6_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_6_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_6_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_6_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_7_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_7_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_7_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_7_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_7_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_7_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_7_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_7_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_7_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_7_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_7_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_7_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_8_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_8_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_8_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_8_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_8_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_8_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_8_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_8_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_8_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_8_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_8_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_8_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_9_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_9_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_9_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_9_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_9_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_9_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_9_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_9_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_9_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_9_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_9_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/hair_9_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/icon_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/icon_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/icon_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/icon_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/hair/male/icon_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/headgear_0_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/headgear_0_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/headgear_0_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/headgear_0_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/headgear_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/headgear_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/headgear_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/headgear_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/headgear_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/headgear_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/headgear_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/headgear_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/icon_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/icon_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/headgear/unisex/icon_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/icon_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/icon_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/icon_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/icon_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/icon_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_0_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_0_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_0_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_0_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_4_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_4_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_4_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/jeans/jeans_4_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/icon_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/icon_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/icon_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/icon_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/icon_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_0_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_0_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_0_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_0_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_4_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_4_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_4_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/shoe/shoe_4_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/icon_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/icon_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/icon_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/skin_0_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/skin_0_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/skin_0_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/skin_0_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/skin_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/skin_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/skin_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/skin_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/skin_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/skin_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/skin_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/skin/skin_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/icon_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/icon_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/icon_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/icon_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/icon_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_0_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_0_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_0_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_0_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_4_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_4_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_4_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/female/tshirt_4_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/icon_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/icon_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/icon_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/icon_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_0_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_0_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_0_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_0_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_3_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/male/tshirt_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/unisex/icon_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/unisex/icon_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/unisex/tshirt_0_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/unisex/tshirt_0_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/unisex/tshirt_0_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/unisex/tshirt_0_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/unisex/tshirt_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/unisex/tshirt_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/unisex/tshirt_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/wear/tshirt/unisex/tshirt_1_3.png" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/demo/ActivityResultTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Activity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ActivityResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ActivityResult.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/demo/ActivityTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/ActivityTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/demo/DemoSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/DemoSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/demo/UserPointTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/UserPointTableSeeder.php" afterDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -634,7 +204,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/images/rosette" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeds/demo" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -645,11 +215,11 @@
       <recent name="C:\Users\yusuf\Desktop\Projects\gameon-workflow\app\Http\Controllers\Api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\database\seeds\demo" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\resources\images\rosette" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\database\migrations" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Exceptions\WorkFlow" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\config" />
-      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Models" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -721,14 +291,7 @@
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
       <workItem from="1599549605785" duration="117169000" />
-      <workItem from="1600014207227" duration="144068000" />
-    </task>
-    <task id="LOCAL-00111" summary="add exception to role by json">
-      <created>1600165321766</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1600165321766</updated>
+      <workItem from="1600014207227" duration="145559000" />
     </task>
     <task id="LOCAL-00112" summary="user not found exception optimized">
       <created>1600165911360</created>
@@ -1066,7 +629,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600543816536</updated>
     </task>
-    <option name="localTasksCounter" value="160" />
+    <task id="LOCAL-00160" summary="bilkom rosettes added">
+      <created>1600544325144</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1600544325144</updated>
+    </task>
+    <option name="localTasksCounter" value="161" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1111,7 +681,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="user point clear before seed" />
     <MESSAGE value="level table seeder changed" />
     <MESSAGE value="calculate empty category level points" />
     <MESSAGE value="edit category index" />
@@ -1136,7 +705,8 @@
     <MESSAGE value="add activity results" />
     <MESSAGE value="Rosettes changed" />
     <MESSAGE value="Rosettes changed added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rosettes changed added" />
+    <MESSAGE value="bilkom rosettes added" />
+    <option name="LAST_COMMIT_MESSAGE" value="bilkom rosettes added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -1178,11 +748,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="779" y="284" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1920.1040@0.0.1920.1040" timestamp="1600517317667" />
-    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600543815759">
+    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600544323001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600543815759" />
+    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600544323001" />
     <state width="610" height="466" key="DebuggerActiveHint" timestamp="1600350479132">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -1264,11 +834,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599334931451" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600543817788">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600544326619">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600543817788" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600544326619" />
     <state x="822" y="394" width="316" height="252" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1600338652403">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

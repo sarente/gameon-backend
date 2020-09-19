@@ -55,7 +55,7 @@ class UserPointTableSeeder extends Seeder
             'user_id'=> 2,
             'activity_id'=> 1,
             'workflow_id'=> 5,
-            'category_id'=> 3,
+            'category_id'=> 2,
             'point' => 60
         ]);
 
