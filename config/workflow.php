@@ -105,7 +105,7 @@ return [
         'places' => [
             'slide_show' => ['metadata' => [
                 'order' => '1',
-                'place_name' => 'Slideları İzle',
+                'place_name' => 'Slaytları İzle',
                 'model_id' => '2',
                 'model_type' => 'App\Models\Activity',
             ]
