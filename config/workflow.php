@@ -1,7 +1,6 @@
 <?php
 return [
-    //Değerler
-    'union_of _forces' => [
+    'union_of_forces' => [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'GÜÇ BİRLİĞİ',
@@ -97,7 +96,6 @@ return [
             ]
         ]
     ],
-    //Yetkinlikler
     'having_an_analytical_perspective' => [
         'type' => 'workflow',
         'metadata' => [
