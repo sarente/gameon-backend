@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActivitiesTable extends Migration
+class CreateActivityResultsTable extends Migration
 {
     /**
      * categories > workflow > activity > point
@@ -13,10 +13,10 @@ class CreateActivitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('activities', function (Blueprint $table) {
+        Schema::create('activity_results', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->json('name');
-            //$table->integer('point')->nullable();
+            $table->integer('point')->nullable();
             $table->string('type');
             $table->json('metadata')->nullable();
             $table->timestamps();
@@ -30,6 +30,6 @@ class CreateActivitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('activities');
+        Schema::dropIfExists('activity_results');
     }
 }
