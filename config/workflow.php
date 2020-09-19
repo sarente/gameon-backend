@@ -9,14 +9,14 @@ return [
         'places' => [
             'slide_show' => ['metadata' => [
                 'order' => '1',
-                'place_name' => 'Slideları İzle',
+                'place_name' => 'Slaytları İzle',
                 'model_id' => '2',
                 'model_type' => 'App\Models\Activity',
             ]
             ],
             'the_blanks' => ['metadata' => [
                 'order' => '2',
-                'place_name' => 'Değer İsmini Gir',
+                'place_name' => 'Kelimeyi Gir',
                 'model_id' => '2',
                 'model_type' => 'App\Models\ActivityResult',
             ]
@@ -57,14 +57,14 @@ return [
         'places' => [
             'slide_show' => ['metadata' => [
                 'order' => '1',
-                'place_name' => 'Slideları İzle',
+                'place_name' => 'Slaytları İzle',
                 'model_id' => '2',
                 'model_type' => 'App\Models\Activity',
             ]
             ],
             'the_blanks' => ['metadata' => [
                 'order' => '2',
-                'place_name' => 'Değer İsmini Gir',
+                'place_name' => 'Kelimeyi Gir',
                 'model_id' => '2',
                 'model_type' => 'App\Models\ActivityResult',
             ]
@@ -112,7 +112,7 @@ return [
             ],
             'the_blanks' => ['metadata' => [
                 'order' => '2',
-                'place_name' => 'Değer İsmini Gir',
+                'place_name' => 'Kelimeyi Gir',
                 'model_id' => '2',
                 'model_type' => 'App\Models\ActivityResult',
             ]
@@ -153,14 +153,14 @@ return [
         'places' => [
             'slide_show' => ['metadata' => [
                 'order' => '1',
-                'place_name' => 'Slideları İzle',
+                'place_name' => 'Slaytları İzle',
                 'model_id' => '2',
                 'model_type' => 'App\Models\Activity',
             ]
             ],
             'the_blanks' => ['metadata' => [
                 'order' => '2',
-                'place_name' => 'Değer İsmini Gir',
+                'place_name' => 'Kelimeyi Gir',
                 'model_id' => '2',
                 'model_type' => 'App\Models\ActivityResult',
             ]
@@ -201,14 +201,14 @@ return [
         'places' => [
             'slide_show' => ['metadata' => [
                 'order' => '1',
-                'place_name' => 'Slideları İzle',
+                'place_name' => 'Slaytları İzle',
                 'model_id' => '2',
                 'model_type' => 'App\Models\Activity',
             ]
             ],
             'the_blanks' => ['metadata' => [
                 'order' => '2',
-                'place_name' => 'Değer İsmini Gir',
+                'place_name' => 'Kelimeyi Gir',
                 'model_id' => '2',
                 'model_type' => 'App\Models\ActivityResult',
             ]
@@ -249,14 +249,14 @@ return [
         'places' => [
             'slide_show' => ['metadata' => [
                 'order' => '1',
-                'place_name' => 'Slideları İzle',
+                'place_name' => 'Slaytları İzle',
                 'model_id' => '2',
                 'model_type' => 'App\Models\Activity',
             ]
             ],
             'the_blanks' => ['metadata' => [
                 'order' => '2',
-                'place_name' => 'Değer İsmini Gir',
+                'place_name' => 'Kelimeyi Gir',
                 'model_id' => '2',
                 'model_type' => 'App\Models\ActivityResult',
             ]
@@ -297,14 +297,14 @@ return [
         'places' => [
             'slide_show' => ['metadata' => [
                 'order' => '1',
-                'place_name' => 'Slideları İzle',
+                'place_name' => 'Slaytları İzle',
                 'model_id' => '2',
                 'model_type' => 'App\Models\Activity',
             ]
             ],
             'the_blanks' => ['metadata' => [
                 'order' => '2',
-                'place_name' => 'Değer İsmini Gir',
+                'place_name' => 'Kelimeyi Gir',
                 'model_id' => '2',
                 'model_type' => 'App\Models\ActivityResult',
             ]
@@ -345,14 +345,14 @@ return [
         'places' => [
             'slide_show' => ['metadata' => [
                 'order' => '1',
-                'place_name' => 'Slideları İzle',
+                'place_name' => 'Slaytları İzle',
                 'model_id' => '2',
                 'model_type' => 'App\Models\Activity',
             ]
             ],
             'the_blanks' => ['metadata' => [
                 'order' => '2',
-                'place_name' => 'Değer İsmini Gir',
+                'place_name' => 'Kelimeyi Gir',
                 'model_id' => '2',
                 'model_type' => 'App\Models\ActivityResult',
             ]
@@ -393,14 +393,14 @@ return [
         'places' => [
             'slide_show' => ['metadata' => [
                 'order' => '1',
-                'place_name' => 'Slideları İzle',
+                'place_name' => 'Slaytları İzle',
                 'model_id' => '2',
                 'model_type' => 'App\Models\Activity',
             ]
             ],
             'the_blanks' => ['metadata' => [
                 'order' => '2',
-                'place_name' => 'Değer İsmini Gir',
+                'place_name' => 'Kelimeyi Gir',
                 'model_id' => '2',
                 'model_type' => 'App\Models\ActivityResult',
             ]
@@ -441,14 +441,14 @@ return [
         'places' => [
             'slide_show' => ['metadata' => [
                 'order' => '1',
-                'place_name' => 'Slideları İzle',
+                'place_name' => 'Slaytları İzle',
                 'model_id' => '2',
                 'model_type' => 'App\Models\Activity',
             ]
             ],
             'the_blanks' => ['metadata' => [
                 'order' => '2',
-                'place_name' => 'Değer İsmini Gir',
+                'place_name' => 'Kelimeyi Gir',
                 'model_id' => '2',
                 'model_type' => 'App\Models\ActivityResult',
             ]
