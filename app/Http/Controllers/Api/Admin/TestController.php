@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Admin;
 
+use App\Exceptions\WorkFlow\WorkFlowNotFoundException;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\UserWorkflow;
@@ -10,7 +11,7 @@ use Symfony\Component\Workflow\Exception\LogicException;
 
 class TestController extends Controller
 {
-    public function getMyWorkflow(Request $request)
+    public function test1(Request $request)
     {
         //Get user
         $user = User::find(2);
@@ -19,7 +20,7 @@ class TestController extends Controller
         $flowable = UserWorkflow::with(['customWorkflow', 'user'])->newQuery()->where('user_id', $user->id)->first();
 
         if (!$flowable) {
-            //TODO: throw new WorkFlowNotFoundException();
+            throw new WorkFlowNotFoundException();
         }
         //Get work flow definition
         //dd($flowable->customWorkflow->name);

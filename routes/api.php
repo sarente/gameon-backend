@@ -50,7 +50,7 @@ Route::group(['middleware' => 'auth.jwt'], function ($router) {
 
 
 Route::get('get-workflow', 'Api\Admin\TestController@getWorkflow');
-Route::post('get-my-workflow', 'Api\Admin\TestController@getMyWorkflow');
+Route::post('wf-return-value', 'Api\Admin\TestController@test1');
 
 
 
