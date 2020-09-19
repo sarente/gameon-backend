@@ -26,11 +26,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="workflow edited(Add order to paces)">
+      <change afterPath="$PROJECT_DIR$/config/workflow1.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/WorkflowController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/WorkflowController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserWorkflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserWorkflow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/workflow.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/customer/CustomerSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/customer/CustomerSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/customer/SummerSchoolsUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/customer/SummerSchoolsUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/demo/CategoryTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/CategoryTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/demo/WorkflowTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/WorkflowTableSeeder.php" afterDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +204,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -213,11 +215,11 @@
       <recent name="C:\Users\yusuf\Desktop\Projects\gameon-workflow\app\Http\Controllers\Api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\config" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Models" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Http\Controllers\Api" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\database\seeds\demo" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\routes" />
-      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Exceptions\WorkFlow" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
@@ -284,14 +286,7 @@
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
       <workItem from="1599549605785" duration="117169000" />
-      <workItem from="1600014207227" duration="123097000" />
-    </task>
-    <task id="LOCAL-00097" summary="add exception to workflows">
-      <created>1600007936815</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1600007936815</updated>
+      <workItem from="1600014207227" duration="125909000" />
     </task>
     <task id="LOCAL-00098" summary="add exception to workflows 1.0">
       <created>1600008079239</created>
@@ -629,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600441221982</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="get workflow of user is done">
+      <created>1600442671429</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1600442671429</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,7 +676,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="get user categories: not done yet 1" />
     <MESSAGE value="get user categories: done" />
     <MESSAGE value="get user categories: done 1.0" />
     <MESSAGE value="get user categories: done 1.1" />
@@ -699,7 +700,8 @@
     <MESSAGE value="workflow config changed" />
     <MESSAGE value="workflow get by id" />
     <MESSAGE value="user work flow optimize" />
-    <option name="LAST_COMMIT_MESSAGE" value="user work flow optimize" />
+    <MESSAGE value="get workflow of user is done" />
+    <option name="LAST_COMMIT_MESSAGE" value="get workflow of user is done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -737,11 +739,11 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600436882353" />
-    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600441221229">
+    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600507755722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600441221229" />
+    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600507755722" />
     <state width="610" height="466" key="DebuggerActiveHint" timestamp="1600350479132">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -755,22 +757,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600167557701" />
-    <state width="1584" height="328" key="GridCell.Tab.0.bottom" timestamp="1600441990555">
+    <state width="1584" height="281" key="GridCell.Tab.0.bottom" timestamp="1600442907133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1584" height="328" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600441990555" />
-    <state width="1584" height="328" key="GridCell.Tab.0.center" timestamp="1600441990555">
+    <state width="1584" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600442907133" />
+    <state width="1584" height="281" key="GridCell.Tab.0.center" timestamp="1600442907133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1584" height="328" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600441990555" />
-    <state width="1584" height="328" key="GridCell.Tab.0.left" timestamp="1600441990555">
+    <state width="1584" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600442907133" />
+    <state width="1584" height="281" key="GridCell.Tab.0.left" timestamp="1600442907132">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1584" height="328" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600441990555" />
-    <state width="1584" height="328" key="GridCell.Tab.0.right" timestamp="1600441990555">
+    <state width="1584" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600442907132" />
+    <state width="1584" height="281" key="GridCell.Tab.0.right" timestamp="1600442907133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1584" height="328" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600441990555" />
+    <state width="1584" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600442907133" />
     <state width="1877" height="369" key="GridCell.Tab.1.bottom" timestamp="1600355501050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -819,11 +821,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599334931451" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600441282520">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600442673401">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600441282520" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600442673401" />
     <state x="822" y="394" width="316" height="252" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1600338652403">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
