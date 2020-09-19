@@ -6,28 +6,29 @@ use Dimsav\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Translatable\HasTranslations;
 
 class Reward extends Model
 {
-    use LogsActivity;
-    //use Translatable;
+    use LogsActivity, HasTranslations;
 
-    protected $guarded = [
-        'id',
-        'image'
-    ];
-
-    protected $fillable = [
-        'type'
-    ];
-
-    public $translatedAttributes = [
+    public $translatable = [
         'name',
         'description'
     ];
 
+    protected $casts=[
+        'description'=>'array',
+        'name'=>'array',
+    ];
+
+    protected $fillable = [
+        'name',
+        'description',
+        'type'
+    ];
+
     protected $hidden = [
-        'translations',
         'user_id',
         'pivot'
     ];
@@ -40,11 +41,6 @@ class Reward extends Model
     public function image()
     {
         return $this->morphMany(Image::class, 'imageable');
-    }
-
-    public function translation()
-    {
-        return $this->hasOne(RewardTranslation::class);
     }
 
     public function messages(): MorphToMany

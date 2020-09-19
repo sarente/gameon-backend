@@ -33,6 +33,7 @@ class RewardSeeder extends Seeder
         ]);
         $reward->messages()->save($message);
         unset($reward);
+
         /////////////////////////////////
         $reward = \App\Models\Reward::create([
             'name' => Setting::ROSETTE_COMPETENCE,
