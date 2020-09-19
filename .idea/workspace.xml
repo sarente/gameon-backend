@@ -26,12 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/seeds/demo/ActivityResultTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Activity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ActivityResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ActivityResult.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/demo/ActivityTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/ActivityTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/demo/DemoSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/DemoSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/demo/UserPointTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/UserPointTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ActivityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ActivityResultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -291,14 +288,7 @@
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
       <workItem from="1599549605785" duration="117169000" />
-      <workItem from="1600014207227" duration="145559000" />
-    </task>
-    <task id="LOCAL-00112" summary="user not found exception optimized">
-      <created>1600165911360</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1600165911360</updated>
+      <workItem from="1600014207227" duration="146943000" />
     </task>
     <task id="LOCAL-00113" summary="user get in model">
       <created>1600166325817</created>
@@ -636,7 +626,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600544325144</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="Activity result added">
+      <created>1600545653127</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1600545653127</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -681,7 +678,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="level table seeder changed" />
     <MESSAGE value="calculate empty category level points" />
     <MESSAGE value="edit category index" />
     <MESSAGE value="Add category to workflow pages" />
@@ -706,7 +702,8 @@
     <MESSAGE value="Rosettes changed" />
     <MESSAGE value="Rosettes changed added" />
     <MESSAGE value="bilkom rosettes added" />
-    <option name="LAST_COMMIT_MESSAGE" value="bilkom rosettes added" />
+    <MESSAGE value="Activity result added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Activity result added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -748,11 +745,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="779" y="284" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1920.1040@0.0.1920.1040" timestamp="1600517317667" />
-    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600544323001">
+    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600545652347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600544323001" />
+    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600545652347" />
     <state width="610" height="466" key="DebuggerActiveHint" timestamp="1600350479132">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -834,11 +831,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599334931451" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600544326619">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600545654154">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600544326619" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600545654154" />
     <state x="822" y="394" width="316" height="252" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1600338652403">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -893,11 +890,11 @@
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339983001" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600523399230" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600543521523">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600546278416">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598339136996" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600543521523" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600546278416" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
