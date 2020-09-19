@@ -4,7 +4,6 @@ namespace App\Database\Seeds\Demo;
 
 use App\Models\Category;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Log;
 
 class WorkflowTableSeeder extends Seeder
 {
@@ -21,52 +20,67 @@ class WorkflowTableSeeder extends Seeder
 
         //TODO: get workflow configs from files
 
-        $categories = Category::select(['id'])->get();
+        $categories = Category::pluck('id')->toArray();
         $workflowDefinition = include(config_path('workflow.php'));
 
         $workflowKeys = array_keys($workflowDefinition);
+        //dd($workflowKeys,$categories);
+        //dd($workflowDefinition['union_of_forces']);
 
         foreach ($categories as $key => $value) {
-            //$name = stripLowercaseName($value->translations['name']['en']);
             //Log::info($value);
-            if($key == 0){
-                    $workflow = new \App\Models\CustomWorkflow([
-                        'name' => $workflowKeys[0],
-                        'config' => $workflowDefinition['values']
-                    ]);
-                    $workflow->category()->associate($value);
-                    $workflow->save();
-                } elseif($key == 1){
-                    $workflow = new \App\Models\CustomWorkflow([
-                        'name' => $workflowKeys[1],
-                        'config' => $workflowDefinition['base_competence']
-                    ]);
-                    $workflow->category()->associate($value);
-                    $workflow->save();
-                    //
-                    $workflow = new \App\Models\CustomWorkflow([
-                        'name' => $workflowKeys[2],
-                        'config' => $workflowDefinition['management_competence']
-                    ]);
 
-                    $workflow->category()->associate($value);
-                    $workflow->save();
-                    $workflow = new \App\Models\CustomWorkflow([
-                        'name' => $workflowKeys[3],
-                        'config' => $workflowDefinition['high_level_competence']
-                    ]);
+            if ($key == 0) {
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[0],
+                    'config' => $workflowDefinition['union_of_forces']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+                //
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[1],
+                    'config' => $workflowDefinition['bona_fides']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
 
-                    $workflow->category()->associate($value);
-                    $workflow->save();
-                }else{
-                    $workflow = new \App\Models\CustomWorkflow([
-                        'name' => $workflowKeys[4],
-                        'config' => $workflowDefinition['entertainment']
-                    ]);
-                    $workflow->category()->associate($value);
-                    $workflow->save();
-                }
+            } else if ($key == 1) {
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[2],
+                    'config' => $workflowDefinition['having_an_analytical_perspective']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+                //
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[3],
+                    'config' => $workflowDefinition['being_creative_band_innovative']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+                //
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[4],
+                    'config' => $workflowDefinition['taking_initiative']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+                //
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[5],
+                    'config' => $workflowDefinition['agility']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+                //
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[6],
+                    'config' => $workflowDefinition['communication']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
             }
-
         }
+    }
 }
