@@ -25,7 +25,7 @@ class RewardSeeder extends Seeder
             //'description' => 'Gezgin Rozeti.',
         ]);
         $reward->image()->save(new  \App\Models\Image([
-            'image' => Intervention::make(resource_path("images/rosette/planet/planet_1.png")),
+            'image' => Intervention::make(resource_path("images/rosette/values.png")),
         ]));
         $message = \App\Models\Message::create([
             'message' => 'Selam Genç Gezgin, kahramanlığa giden yolculuk başlıyor. Heyecanın yanındaysa yola koyulalım!',
@@ -41,7 +41,7 @@ class RewardSeeder extends Seeder
             //'description' => 'Gezgin Rozeti.',
         ]);
         $reward->image()->save(new  \App\Models\Image([
-            'image' => Intervention::make(resource_path("images/rosette/planet/planet_2.png")),
+            'image' => Intervention::make(resource_path("images/rosette/competence.png")),
         ]));
         $message = \App\Models\Message::create([
             'message' => 'Tebrikler! Artık herkesçe tanınan bir gezginsin.',
