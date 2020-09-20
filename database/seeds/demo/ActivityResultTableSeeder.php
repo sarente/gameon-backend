@@ -4,6 +4,7 @@ namespace App\Database\Seeds\Demo;
 
 use App\Models\Activity;
 use App\Models\ActivityResult;
+use App\Models\Reward;
 use App\Models\Setting;
 use Illuminate\Database\Seeder;
 
@@ -20,11 +21,7 @@ class ActivityResultTableSeeder extends Seeder
         \App\Models\ActivityResult::truncate();
         \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-        $activities = [
-            ['tr' => 'Boşlukları Doldurun', 'en' => 'Fill in Blanks'],
-            ['tr' => 'Video Oynatmak', 'en' => 'Play Video'],
-            ['tr' => 'Eğlence', 'en' => 'Entertainment']
-        ];
+        $activities =[['tr'=>'Değerler','en'=>'Values'],['tr'=>'Yetkinlikler','en'=>'Competence']];
 
         foreach ($activities as $key => $activity) {
             $activity = new ActivityResult([
@@ -33,6 +30,7 @@ class ActivityResultTableSeeder extends Seeder
                 'point' => 100,
             ]);
             $activity->save();
+            $activity->rewards()->sync(Reward::find($key+1));
         }
     }
 }

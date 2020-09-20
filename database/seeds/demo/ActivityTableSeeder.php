@@ -19,10 +19,8 @@ class ActivityTableSeeder extends Seeder
         \App\Models\Activity::truncate();
         \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-        //$activities = ['ACTIVITY_RETURN1','ACTIVITY_ACTION1', 'ACTIVITY_ACTION2' ];
         $activities = [
-            ['tr' => 'Boşlukları Doldurun', 'en' => 'Fill in Blanks'],
-            ['tr' => 'Video Oynatmak', 'en' => 'Play Video'],
+            ['tr' => 'Slaıt Oynatmak', 'en' => 'Play Slide'],
             ['tr' => 'Eğlence', 'en' => 'Entertainment']
         ];
 
@@ -34,5 +32,6 @@ class ActivityTableSeeder extends Seeder
             ]);
             $activity->save();
         }
+
     }
 }

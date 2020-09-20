@@ -7,7 +7,7 @@ use App\Models\Introduction;
 use App\Models\Setting;
 use Illuminate\Database\Seeder;
 
-class   SummerSchoolsUsers extends Seeder
+class   BilkomUsers extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,13 +16,9 @@ class   SummerSchoolsUsers extends Seeder
     public function run()
     {
         //Get the role of admin
-        $role_user = \App\Models\Role::findByName(\App\Models\Setting::ROLE_USER, 'web');
+        $role_user = \App\Models\Role::findByName(\App\Models\Setting::ROLE_USER, config('auth.defaults.guard'));
 
-        //$classroom1 = Classroom::find(1);
-        //$classroom2 = Classroom::find(2);
-        $classroom3 = Classroom::find(3);
-
-        //Burak Sezer: burak.sezer@bilkom.com.tr
+         //Burak Sezer: burak.sezer@bilkom.com.tr
         //Banu Tosun: banu.tosun@bilkom.com.tr
         //Uğur Bilgin: ugur.bilgin@bilkom.com.tr
         //Hazal Sayın: hazal.sayin@bilkom.com.tr
@@ -44,7 +40,6 @@ class   SummerSchoolsUsers extends Seeder
             event(new \App\Events\UserCreated($user));
 
             $user->assignRole($role_user);
-            $user->classroom()->sync($classroom3);
 
             //$user->setArtifactStatus(Setting::ARTIFACT_CLUB, 1);
 
@@ -57,6 +52,7 @@ class   SummerSchoolsUsers extends Seeder
                     'image' => \Intervention::make(resource_path("images/user/avatar/female/female1.png")),
                 ]));
             }
+            //TODO:Add workflow to users
 
         }
     }
