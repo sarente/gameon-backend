@@ -35,14 +35,10 @@ class ActivityResultTableSeeder extends Seeder
             ]);
 
             $activity->save();
-            switch ($key) {
-                case $key = 1:
-                    $activity->rewards()->sync(Reward::find($key + 1));
-                    break;
-                case $key = 2:
-                    $activity->rewards()->sync(Reward::find($key + 2));
-                    break;
-            }
+            if ($key == 1) {
+                $activity->rewards()->syncWithoutDetaching(Reward::find($key));
+            } else if ($key == 2)
+                $activity->rewards()->syncWithoutDetaching(Reward::find($key));
         }
     }
 }

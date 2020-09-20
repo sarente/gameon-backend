@@ -231,7 +231,7 @@ return [
             'the_blanks' => ['metadata' => [
                 'order' => '2',
                 'place_name' => 'Kelimeyi Gir',
-                'model_id' => '2',
+                'model_id' => '3',
                 'model_type' => 'App\Models\ActivityResult',
             ]
             ],

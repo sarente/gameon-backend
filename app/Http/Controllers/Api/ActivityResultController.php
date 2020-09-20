@@ -27,7 +27,7 @@ class ActivityResultController extends Controller
         if(!$activity_result) {
             throw new ActivityResultNotFoundException();
         }
-        if($activity_result->metadata==request()->input()) {
+        if(!$activity_result->metadata==request()->input()) {
             throw new ActivityResultWrongAnswerException();
         }
         //Get workflow
