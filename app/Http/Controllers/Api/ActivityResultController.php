@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Exceptions\Activity\ActivityResultNotFoundException;
 use App\Exceptions\Activity\ActivityResultWrongAnswerException;
 use App\Exceptions\WorkFlow\GainBeforeException;
+use App\Exceptions\WorkFlow\UserWorkFlowNotFoundException;
 use App\Exceptions\WorkFlow\WorkFlowNotFoundException;
 use App\Http\Controllers\Controller;
 use App\Models\ActivityResult;
@@ -45,8 +46,12 @@ class ActivityResultController extends Controller
         //Load workflow
         $flowable = UserWorkflow::with(['customWorkflow', 'user'])
             ->where('user_id', $user->id)
-            ->where('workflow_id', $workflow->id)
-            ->first();
+            ->where('workflow_id', $workflow->id);
+
+        if (!$flowable->exists()) {
+            throw new UserWorkFlowNotFoundException();
+        }
+        $flowable = $flowable->first();
 
         $system_workflow = $flowable->workflow_get($flowable->customWorkflow->name);
 

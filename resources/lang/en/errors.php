@@ -52,6 +52,7 @@ return [
     ],
     'user' => [
         'not-found' => 'User not found',
+        'workflow-not-fount' => 'User Dosen\'t have workflow',
         'friend' => [
             'not-found' => 'Friend not found',
             'exists' => 'Friend already exists.',
