@@ -13,8 +13,10 @@ class UserPoint extends Model
         'point',
     ];
     protected $hidden = [
+        'id',
         'updated_at',
         'created_at',
+        'user',
     ];
 
     public function activityResult()

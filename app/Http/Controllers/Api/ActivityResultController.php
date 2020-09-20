@@ -95,7 +95,7 @@ class ActivityResultController extends Controller
         ////////////////////////////////////////////////////////////////////
         DB::commit();
 
-        return response()->success($user_point->load('activityResult.rewards'));
+        return response()->success($user_point->load('activityResult.rewards.image'));
     }
 
 }

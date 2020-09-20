@@ -29,6 +29,9 @@ class Reward extends Model
     ];
 
     protected $hidden = [
+        'id',
+        'created_at',
+        'updated_at',
         'user_id',
         'pivot'
     ];
