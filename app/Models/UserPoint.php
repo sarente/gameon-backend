@@ -12,6 +12,10 @@ class UserPoint extends Model
     protected $fillable = [
         'point',
     ];
+    protected $hidden = [
+        'updated_at',
+        'created_at',
+    ];
 
     public function activityResult()
     {
