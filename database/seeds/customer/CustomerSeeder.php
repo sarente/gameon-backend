@@ -12,14 +12,7 @@ class CustomerSeeder extends Seeder
     public function run()
     {
         //Customer demo users
+        $this->call(BilkomUsers::class);
 
-        $this->call(SummerSchoolsUsers::class);
-
-        //Yaz okullari--Summer schools
-
-
-        /*if (app()->environment('local')) {
-            $this->call(FakeSeeder::class);
-        }*/
     }
 }

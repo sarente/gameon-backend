@@ -181,17 +181,17 @@ class User extends Authenticatable implements HasLocalePreference
 
     public function workflows()
     {
-        return $this->belongsToMany(CustomWorkflow::class, 'user_workflow','user_id','workflow_id')->withTimestamps()->withPivot('marking');
+        return $this->belongsToMany(CustomWorkflow::class, 'user_workflow', 'user_id', 'workflow_id')->withTimestamps()->withPivot('marking');
     }
 
     public function points()
     {
-        return $this->belongsToMany(Point::class, 'user_point')->withPivot('point','category_id','workflow_id');
+        return $this->belongsToMany(Point::class, 'user_point')->withPivot('point', 'category_id', 'workflow_id');
     }
 
     public function pointsByCategory()
     {
-        return UserPoint::Where('user_id',$this->id)
+        return UserPoint::Where('user_id', $this->id)
             ->selectRaw("category_id,SUM(point) as current_point")
             ->groupBy('category_id')
             ->get();
@@ -206,5 +206,10 @@ class User extends Authenticatable implements HasLocalePreference
             'model_id',
             'reward_id'
         );
+    }
+
+    public function image()
+    {
+        return $this->morphMany(Image::class, 'imageable');
     }
 }
