@@ -213,6 +213,7 @@ return [
             ]
         ]
     ],
+    //
     'having_an_analytical_perspective' => [
         'type' => 'workflow',
         'metadata' => [

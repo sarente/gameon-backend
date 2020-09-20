@@ -2,7 +2,6 @@
 
 namespace App\Database\Seeds\Demo;
 
-use App\Models\Activity;
 use App\Models\ActivityResult;
 use App\Models\Reward;
 use App\Models\Setting;
@@ -21,7 +20,12 @@ class ActivityResultTableSeeder extends Seeder
         \App\Models\ActivityResult::truncate();
         \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-        $activities =[['tr'=>'Değerler','en'=>'Values'],['tr'=>'Yetkinlikler','en'=>'Competence']];
+        $activities = [
+            ['tr' => 'GÜÇ BİRLİĞİ', 'en' => 'union_of_forces'],
+            ['tr' => 'İYİ NİYET', 'en' => 'bona_fides'],
+            ['tr' => 'Analitik Bakış Açısına Sahip Olmak', 'en' => 'having_an_analytical_perspective'],
+
+        ];
 
         foreach ($activities as $key => $activity) {
             $activity = new ActivityResult([
@@ -29,8 +33,16 @@ class ActivityResultTableSeeder extends Seeder
                 'type' => Setting::$activity_types[1],
                 'point' => 100,
             ]);
+
             $activity->save();
-            $activity->rewards()->sync(Reward::find($key+1));
+            switch ($key) {
+                case $key = 1:
+                    $activity->rewards()->sync(Reward::find($key + 1));
+                    break;
+                case $key = 2:
+                    $activity->rewards()->sync(Reward::find($key + 2));
+                    break;
+            }
         }
     }
 }
