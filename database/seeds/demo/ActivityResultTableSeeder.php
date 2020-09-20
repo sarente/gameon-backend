@@ -28,17 +28,22 @@ class ActivityResultTableSeeder extends Seeder
         ];
 
         foreach ($activities as $key => $activity) {
-            $activity = new ActivityResult([
+            $activity = ActivityResult::create([
                 'name' => $activity,
                 'type' => Setting::$activity_types[1],
                 'point' => 100,
             ]);
 
+            if ($key == 0) {
+                $activity->metadata = ['param1'=>'GÜÇ BİRLİĞİ'];
+            } else if ($key == 1) {
+                $activity->metadata = ['param1'=>'İYİ NİYET'];
+                $activity->rewards()->syncWithoutDetaching(Reward::find($key));
+            } else if ($key == 2) {
+                $activity->metadata = ['param1'=>'Analitik Bakış Açısına Sahip Olmak'];
+                $activity->rewards()->syncWithoutDetaching(Reward::find($key));
+            }
             $activity->save();
-            if ($key == 1) {
-                $activity->rewards()->syncWithoutDetaching(Reward::find($key));
-            } else if ($key == 2)
-                $activity->rewards()->syncWithoutDetaching(Reward::find($key));
         }
     }
 }

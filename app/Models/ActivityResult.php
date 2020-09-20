@@ -34,6 +34,11 @@ class ActivityResult extends Model
         'type' => Setting::ACTIVITY_RETURN,
     ];
 
+/*    public function getMetadataAttribute($value)
+    {
+        return json_decode($value, true);
+    }*/
+
     public function image()
     {
         return $this->morphMany(Image::class, 'imageable');

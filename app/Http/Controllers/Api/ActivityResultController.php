@@ -20,36 +20,43 @@ class ActivityResultController extends Controller
     public function checkValidity($workflow_id, $activity_result_id)
     {
         DB::beginTransaction();
-        $user=User::getUser();
+        $user = User::getUser();
 
         //Check activity name if doesnt have return false
-        $activity_result=ActivityResult::find($activity_result_id);
-        if(!$activity_result) {
+        $activity_result = ActivityResult::find($activity_result_id);
+        if (!$activity_result) {
             throw new ActivityResultNotFoundException();
         }
-        if(!$activity_result->metadata==request()->input()) {
+        //FIXME: compare jsons
+        //if(!$activity_result->metadata==request()->input()) {
+        //$it_1 = request()->only('param1');
+        $it_1 = request()->json()->all();
+        $it_2 = $activity_result->metadata;
+        $diff = array_diff($it_1, $it_2);
+
+        if (count($diff) > 0) {
             throw new ActivityResultWrongAnswerException();
         }
         //Get workflow
-        $workflow=CustomWorkflow::with('category')->find($workflow_id);
+        $workflow = CustomWorkflow::with('category')->find($workflow_id);
         if (!$workflow->exists()) {
             throw new WorkFlowNotFoundException();
         }
         //Load workflow
-        $flowable=UserWorkflow::with(['customWorkflow', 'user'])
+        $flowable = UserWorkflow::with(['customWorkflow', 'user'])
             ->where('user_id', $user->id)
-            ->where('workflow_id',$workflow->id)
+            ->where('workflow_id', $workflow->id)
             ->first();
 
-        $system_workflow=$flowable->workflow_get($flowable->customWorkflow->name);
+        $system_workflow = $flowable->workflow_get($flowable->customWorkflow->name);
 
         //load category
         ////////////////////////////////////////////////////////////////////
-        $category_id=$workflow->category_id;
+        $category_id = $workflow->category_id;
 
         //Check user not gain point before from this activity
         ////////////////////////////////////////////////////////////////////
-        $gain_before = UserPoint::where(function ($query) use ($activity_result,$user) {
+        $gain_before = UserPoint::where(function ($query) use ($activity_result, $user) {
             $query->where('activity_result_id', $activity_result->id)->where('user_id', $user->id);
         })->exists();
         if ($gain_before) {
