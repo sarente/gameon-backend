@@ -62,10 +62,12 @@ class WorkFlowSubscriber implements ShouldQueue
         //Check activity type and Set user point that caught from this activity
         if ($activity->type === Setting::ACTIVITY_RETURN && !is_null($activity->metadata['result'])) {
             if ($activity->metadata['result'] === request()->get('result')) {
+
                 //Check user not gain point before from this activity
                 $gain_before = UserPoint::where(function ($query) use ($activity) {
                     $query->where('activity_id', $activity->id)->where('user_id', $this->user->id);
                 })->exists();
+
                 if ($gain_before) {
                     //if user gain before from this activity return error
                     throw new GainBeforeException(request());
@@ -75,10 +77,13 @@ class WorkFlowSubscriber implements ShouldQueue
                     'point' => $activity->point
                 ]);
                 $user_point->user()->associate($this->user);
-                $user_point->activity()->associate($activity_id);
+                $user_point->activityResult()->associate($activity_id);
                 $user_point->workflow()->associate($workflow_id);
                 $user_point->category()->associate($category_id);
                 $user_point->save();
+                //Attach rosette
+                //TODO: attach rosette
+
 
             } else {
                 //return to user result replied is not equal with valid result in workflow

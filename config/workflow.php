@@ -21,15 +21,8 @@ return [
                 'model_type' => 'App\Models\ActivityResult',
             ]
             ],
-            'result' => ['metadata' => [
-                'order' => '3',
-                'place_name' => 'Sonuclari Gor',
-                'model_id' => '1',
-                'model_type' => 'App\Models\Reward',
-            ]
-            ],
             'done' => ['metadata' => [
-                'order' => '4',
+                'order' =>'3',
             ]
             ]
         ],
@@ -40,10 +33,6 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'result'
-            ],
-            'show_result' => [
-                'from' => 'result',
                 'to' => 'done'
             ]
         ]
@@ -77,7 +66,7 @@ return [
             ]
             ],
             'done' => ['metadata' => [
-                'order' => '4',
+                'order' =>'3',
             ]
             ]
         ],
@@ -88,10 +77,6 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'result'
-            ],
-            'show_result' => [
-                'from' => 'result',
                 'to' => 'done'
             ]
         ]
@@ -125,7 +110,7 @@ return [
             ]
             ],
             'done' => ['metadata' => [
-                'order' => '4',
+                'order' =>'3',
             ]
             ]
         ],
@@ -136,10 +121,6 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'result'
-            ],
-            'show_result' => [
-                'from' => 'result',
                 'to' => 'done'
             ]
         ]
@@ -173,7 +154,7 @@ return [
             ]
             ],
             'done' => ['metadata' => [
-                'order' => '4',
+                'order' =>'3',
             ]
             ]
         ],
@@ -184,10 +165,6 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'result'
-            ],
-            'show_result' => [
-                'from' => 'result',
                 'to' => 'done'
             ]
         ]
@@ -221,7 +198,7 @@ return [
             ]
             ],
             'done' => ['metadata' => [
-                'order' => '4',
+                'order' =>'3',
             ]
             ]
         ],
@@ -232,10 +209,6 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'result'
-            ],
-            'show_result' => [
-                'from' => 'result',
                 'to' => 'done'
             ]
         ]
@@ -269,7 +242,7 @@ return [
             ]
             ],
             'done' => ['metadata' => [
-                'order' => '4',
+                'order' =>'3',
             ]
             ]
         ],
@@ -280,10 +253,6 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'result'
-            ],
-            'show_result' => [
-                'from' => 'result',
                 'to' => 'done'
             ]
         ]
@@ -317,7 +286,7 @@ return [
             ]
             ],
             'done' => ['metadata' => [
-                'order' => '4',
+                'order' =>'3',
             ]
             ]
         ],
@@ -328,10 +297,6 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'result'
-            ],
-            'show_result' => [
-                'from' => 'result',
                 'to' => 'done'
             ]
         ]
@@ -365,7 +330,7 @@ return [
             ]
             ],
             'done' => ['metadata' => [
-                'order' => '4',
+                'order' =>'3',
             ]
             ]
         ],
@@ -376,10 +341,6 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'result'
-            ],
-            'show_result' => [
-                'from' => 'result',
                 'to' => 'done'
             ]
         ]
@@ -413,7 +374,7 @@ return [
             ]
             ],
             'done' => ['metadata' => [
-                'order' => '4',
+                'order' =>'3',
             ]
             ]
         ],
@@ -424,10 +385,6 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'result'
-            ],
-            'show_result' => [
-                'from' => 'result',
                 'to' => 'done'
             ]
         ]
@@ -461,7 +418,7 @@ return [
             ]
             ],
             'done' => ['metadata' => [
-                'order' => '4',
+                'order' =>'3',
             ]
             ]
         ],
@@ -472,10 +429,6 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'result'
-            ],
-            'show_result' => [
-                'from' => 'result',
                 'to' => 'done'
             ]
         ]
