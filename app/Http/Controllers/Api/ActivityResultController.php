@@ -47,8 +47,8 @@ class ActivityResultController extends Controller
 
         //Check user not gain point before from this activity
         ////////////////////////////////////////////////////////////////////
-        /*$gain_before = UserPoint::where(function ($query) use ($activity_result,$user) {
-            $query->where('activity_id', $activity_result->id)->where('user_id', $user->id);
+        $gain_before = UserPoint::where(function ($query) use ($activity_result,$user) {
+            $query->where('activity_result_id', $activity_result->id)->where('user_id', $user->id);
         })->exists();
         if ($gain_before) {
             //if user gain before from this activity return error
@@ -62,7 +62,7 @@ class ActivityResultController extends Controller
         $user_point->activityResult()->associate($activity_result_id);
         $user_point->workflow()->associate($workflow_id);
         $user_point->category()->associate($category_id);
-        $user_point->save();*/
+        $user_point->save();
         //Attach rosette
         //TODO: attach rosette
 
@@ -80,7 +80,6 @@ class ActivityResultController extends Controller
             $t[] = $transition->getName();
         }
         $transition = $t[0];
-        //dd($transition);
         ////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////
         /// Save user workflow to next pace
@@ -90,9 +89,12 @@ class ActivityResultController extends Controller
         } catch (LogicException $e) {
             return response()->error('workflow.place-not-allowed');
         }
+        ////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////
+        //$result['reward_url']=$user_point->rewards();
+        $result['point']=$user_point->point;
 
-
-        return response()->success($flowable);
+        return response()->success($user_point);
     }
 
 }
