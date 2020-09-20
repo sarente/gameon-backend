@@ -12,12 +12,14 @@ use App\Models\CustomWorkflow;
 use App\Models\User;
 use App\Models\UserPoint;
 use App\Models\UserWorkflow;
+use Illuminate\Support\Facades\DB;
 use Symfony\Component\Workflow\Exception\LogicException;
 
 class ActivityResultController extends Controller
 {
     public function checkValidity($workflow_id, $activity_result_id)
     {
+        DB::beginTransaction();
         $user=User::getUser();
 
         //Check activity name if doesnt have return false
@@ -51,6 +53,7 @@ class ActivityResultController extends Controller
             $query->where('activity_result_id', $activity_result->id)->where('user_id', $user->id);
         })->exists();
         if ($gain_before) {
+            DB::rollBack();
             //if user gain before from this activity return error
             throw new GainBeforeException(request());
         }
@@ -63,9 +66,6 @@ class ActivityResultController extends Controller
         $user_point->workflow()->associate($workflow_id);
         $user_point->category()->associate($category_id);
         $user_point->save();
-        //Attach rosette
-        //TODO: attach rosette
-
 
         //Apply it
         ////////////////////////////////////////////////////////////////////
@@ -73,6 +73,7 @@ class ActivityResultController extends Controller
         /// Get user transtion on
         $transitions = $system_workflow->getEnabledTransitions($flowable);
         if (count($transitions) == 0) {
+            DB::rollBack();
             //TODO: throw new exception
             return response()->error('workflow.transition-not-allowed');
         }
@@ -87,14 +88,14 @@ class ActivityResultController extends Controller
             $system_workflow->apply($flowable, $transition);
             $flowable->save();
         } catch (LogicException $e) {
+            DB::rollBack();
             return response()->error('workflow.place-not-allowed');
         }
         ////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////
-        //$result['reward_url']=$user_point->rewards();
-        $result['point']=$user_point->point;
+        DB::commit();
 
-        return response()->success($user_point);
+        return response()->success($user_point->load('activityResult.rewards'));
     }
 
 }
