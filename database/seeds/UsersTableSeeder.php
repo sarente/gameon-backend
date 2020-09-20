@@ -1,8 +1,5 @@
 <?php
 
-use App\Models\Classroom;
-use App\Models\Introduction;
-use App\Models\Setting;
 use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
@@ -19,7 +16,7 @@ class UsersTableSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         \App\Models\User::orderBy('id')->delete();
-        $domain_name= "test.com";
+        $domain_name = "test.com";
 
 
         //Get the role of admin
@@ -30,11 +27,11 @@ class UsersTableSeeder extends Seeder
         $role_supervisor = \App\Models\Role::findByName(\App\Models\Setting::ROLE_SUPERVISOR, config('auth.defaults.guard'));
 
         ///////////
-        $name=app()->environment('production')?'Administrator':'Test Admin';
+        $name = app()->environment('production') ? 'Administrator' : 'Test Admin';
         $admin = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'admin@'.$domain_name,
+            'email' => 'admin@' . $domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('g@meon'),
             'name' => $name,
             'surname' => $name,
@@ -43,31 +40,32 @@ class UsersTableSeeder extends Seeder
         $admin->assignRole($role_admin);
 
         ///////////
-        $name=app()->environment('production')?'User':'Test User';
+        $name = app()->environment('production') ? 'User' : 'Test User';
         $user = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'user@'.$domain_name,
+            'email' => 'user@' . $domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => $name,
             'surname' => $name,
 
         ]);
-
         $user->assignRole($role_user);
+        $workflows = \App\Models\CustomWorkflow::pluck('id');
+        $user->workflows()->attach($workflows, ['marking' => '"the_blanks"']);
 
         ///////////
-        $name=app()->environment('production')?'Advisor':'Test Advisor';
+        $name = app()->environment('production') ? 'Advisor' : 'Test Advisor';
         $supervisor = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'advisor@'.$domain_name,
+            'email' => 'advisor@' . $domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => $name,
             'surname' => $name,
 
         ]);
-
         $supervisor->assignRole($role_supervisor);
+
     }
 }

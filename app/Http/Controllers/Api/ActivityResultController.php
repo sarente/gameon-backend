@@ -28,9 +28,7 @@ class ActivityResultController extends Controller
         if (!$activity_result) {
             throw new ActivityResultNotFoundException();
         }
-        //FIXME: compare jsons
-        //if(!$activity_result->metadata==request()->input()) {
-        //$it_1 = request()->only('param1');
+        //Check input data with activity result
         $it_1 = request()->json()->all();
         $it_2 = $activity_result->metadata;
         $diff = array_diff($it_1, $it_2);
