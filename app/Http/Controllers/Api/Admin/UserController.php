@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -8,11 +8,20 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $user = User::getUser();
+        $users = User::query();
+        $search = $request->get('search');
 
-        return response()->success($user->load('image'));
+        if (is_null($search)) {
+            $users = User::query();
+        }
+        else {
+            $users = $users->where('name', 'LIKE', '%' . $search . '%');
+        }
+
+        $users->latest();
+        return response()->success($users->get());
     }
 
     public function show($id)

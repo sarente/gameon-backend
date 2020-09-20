@@ -32,11 +32,12 @@ Route::group(['middleware' => 'auth.jwt'], function ($router) {
     Route::get('refresh', 'Api\AuthController@refresh');
     Route::get('logout', 'Api\AuthController@logout');
 
+    //User Info
+    Route::resource('user', 'Api\UserController');
+
     //Avatar
     Route::get('user/avatar', 'Api\UserController@getAvatar');
     Route::post('user/avatar', 'Api\UserController@saveAvatarConfiguration');
-
-    Route::resource('user', 'Api\UserController');
 
     //Categories
     Route::resource('category', 'Api\CategoryController');
