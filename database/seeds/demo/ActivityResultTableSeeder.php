@@ -35,12 +35,12 @@ class ActivityResultTableSeeder extends Seeder
             ]);
 
             if ($key == 0) {
-                $activity->metadata = ['param1'=>mb_strtoupper ('GÜÇ BİRLİĞİ')];
+                $activity->metadata = ['param1'=>'güç birliği'];
             } else if ($key == 1) {
-                $activity->metadata = ['param1'=>mb_strtoupper ('İYİ NİYET')];
+                $activity->metadata = ['param1'=>'iyi niyet'];
                 $activity->rewards()->syncWithoutDetaching(Reward::find($key));
             } else if ($key == 2) {
-                $activity->metadata = ['param1'=>mb_strtoupper ('Analitik Bakış Açısına Sahip Olmak')];
+                $activity->metadata = ['param1'=>'analitik bakış açısına sahip olmak'];
                 $activity->rewards()->syncWithoutDetaching(Reward::find($key));
             }
             $activity->save();
