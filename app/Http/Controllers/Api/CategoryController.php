@@ -31,15 +31,20 @@ class CategoryController extends Controller
                     $slected_level = $this->getLevelOfUserByPoint($user_category_points[$key]['current_point'], $levels->get()->toArray());
                     //sort data of array
                     $slected_level['current_point'] = (int)$user_category_points[$key]['current_point'];
+                    $slected_level['current_point'] = (int)$user_category_points[$key]['current_point'];
                     //$slected_level['level_id']=$slected_level['id'];
                     $slected_level['category_name'] = $category_name;
                     unset($slected_level['id']);
                     $result->push($slected_level);
                 }
             } else {
+                $next_level_point=Level::whereHas('category',function($cat)use ($value){
+                    $cat->where('id',$value);
+                })->where('level_no',1)->first()->level_point;
                 $null_poin_category = [
                     "level_no" => 0,
                     "level_point" => 0,
+                    "next_level_point" => $next_level_point,
                     "category_id" => $value,
                     "current_point" => 0,
                     "category_name" => $category_name
