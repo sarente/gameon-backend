@@ -40,6 +40,6 @@ class WorkflowController extends Controller
     private function addUsertoWorkflow($id, \Illuminate\Contracts\Auth\Authenticatable $user): void
     {
         $workflow = CustomWorkflow::find($id);
-        $user->workflows()->syncWithoutDetaching($workflow);
+        $user->workflows()->attach($workflow->id, ['marking' => '"the_blanks"']);
     }
 }
