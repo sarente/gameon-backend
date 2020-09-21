@@ -27,20 +27,30 @@ class CategoryController extends Controller
                 //Get max point of each level { "id": 10,"level_no": 4,"level_point": 800,"category_id": 2}},....
                 $levels = Level::where('category_id', $value);
                 if ($levels->exists()) {
+
                     //Check $usr_cat_pnt['current_point'] in
                     $slected_level = $this->getLevelOfUserByPoint($user_category_points[$key]['current_point'], $levels->get()->toArray());
+
+                    //Calculate next level point
+                    $calc_next_level = $slected_level['level_no'] + 1;
+                    $next_level = $calc_next_level > 5 ? 5 : $calc_next_level;
+                    $next_level_point = Level::whereHas('category', function ($cat) use ($value) {
+                        $cat->where('id', $value);
+                    })->where('level_no', $next_level)->first()->level_point;
+
                     //sort data of array
                     $slected_level['current_point'] = (int)$user_category_points[$key]['current_point'];
-                    $slected_level['current_point'] = (int)$user_category_points[$key]['current_point'];
+                    $slected_level['next_level_point'] = $next_level_point;
                     //$slected_level['level_id']=$slected_level['id'];
                     $slected_level['category_name'] = $category_name;
                     unset($slected_level['id']);
+                    unset($next_level_point);
                     $result->push($slected_level);
                 }
             } else {
-                $next_level_point=Level::whereHas('category',function($cat)use ($value){
-                    $cat->where('id',$value);
-                })->where('level_no',1)->first()->level_point;
+                $next_level_point = Level::whereHas('category', function ($cat) use ($value) {
+                    $cat->where('id', $value);
+                })->where('level_no', 1)->first()->level_point;
                 $null_poin_category = [
                     "level_no" => 0,
                     "level_point" => 0,
@@ -57,8 +67,8 @@ class CategoryController extends Controller
 
     public function show($id)
     {
-        $category = CustomWorkflow::whereHas('category',function($q) use ($id){
-                 $q->where('categories.id',$id);
+        $category = CustomWorkflow::whereHas('category', function ($q) use ($id) {
+            $q->where('categories.id', $id);
         })->get();
 
         return response()->success($category->load('category'));

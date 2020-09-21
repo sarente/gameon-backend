@@ -14,7 +14,7 @@ class LevelTableSeeder extends Seeder
      * @return void
      */
     //FIXME: get it from setting
-    private $max_level_count = 5;
+    private $max_level_count = 6;
 
     public function run()
     {
