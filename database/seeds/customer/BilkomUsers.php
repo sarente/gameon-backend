@@ -2,6 +2,7 @@
 
 namespace App\Database\Seeds\Customer;
 
+use App\Models\UserPoint;
 use Illuminate\Database\Seeder;
 
 class BilkomUsers extends Seeder
@@ -18,7 +19,7 @@ class BilkomUsers extends Seeder
         //Males
         //Burak Sezer: burak.sezer@bilkom.com.tr
         $users[] = factory(\App\Models\User::class)->make([
-            'username' => mt_rand(10000000000,99999999999),
+            'username' => mt_rand(10000000000, 99999999999),
             'gender' => 1,
             'email' => 'burak.sezer@bilkom.com.tr',
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
@@ -27,7 +28,7 @@ class BilkomUsers extends Seeder
         ]);
         //Uğur Bilgin: ugur.bilgin@bilkom.com.tr
         $users[] = factory(\App\Models\User::class)->make([
-            'username' => mt_rand(10000000000,99999999999),
+            'username' => mt_rand(10000000000, 99999999999),
             'gender' => 1,
             'email' => 'ugur.bilgin@bilkom.com.tr',
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
@@ -35,7 +36,7 @@ class BilkomUsers extends Seeder
             'surname' => 'Bilgin',
         ]);
 
-        foreach ($users as $key=>$user) {
+        foreach ($users as $key => $user) {
 
             $user->save();
             $user->assignRole($role_user);
@@ -47,6 +48,17 @@ class BilkomUsers extends Seeder
             $workflows = \App\Models\CustomWorkflow::pluck('id');
             $user->workflows()->attach($workflows, ['marking' => '"the_blanks"']);
 
+            UserPoint::create([
+                'user_id' => $user->id,
+                'category_id' => 1,
+                'point' => 15
+            ]);
+            UserPoint::create([
+                'user_id' => $user->id,
+                'category_id' => 2,
+                'point' => 15
+            ]);
+
         }
         unset($users);
 
@@ -54,7 +66,7 @@ class BilkomUsers extends Seeder
         ///////////////////////Females
         //Banu Tosun: banu.tosun@bilkom.com.tr
         $users[] = factory(\App\Models\User::class)->make([
-            'username' => mt_rand(10000000000,99999999999),
+            'username' => mt_rand(10000000000, 99999999999),
             'gender' => 0,
             'email' => 'banu.tosun@bilkom.com.tr',
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
@@ -64,7 +76,7 @@ class BilkomUsers extends Seeder
 
         //Hazal Sayın: hazal.sayin@bilkom.com.tr
         $users[] = factory(\App\Models\User::class)->make([
-            'username' => mt_rand(10000000000,99999999999),
+            'username' => mt_rand(10000000000, 99999999999),
             'gender' => 0,
             'email' => 'hazal.sayin@bilkom.com.tr',
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
@@ -73,7 +85,7 @@ class BilkomUsers extends Seeder
         ]);
         //Çağla Gürel: cagla.gurel@bilkom.com.tr
         $users[] = factory(\App\Models\User::class)->make([
-            'username' => mt_rand(10000000000,99999999999),
+            'username' => mt_rand(10000000000, 99999999999),
             'gender' => 0,
             'email' => 'cagla.gurel@bilkom.com.tr',
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
@@ -82,14 +94,14 @@ class BilkomUsers extends Seeder
         ]);
         //Çağrı Vançin: cagri.vancin@bilkom.com.tr
         $users[] = factory(\App\Models\User::class)->make([
-            'username' => mt_rand(10000000000,99999999999),
+            'username' => mt_rand(10000000000, 99999999999),
             'gender' => 0,
             'email' => 'cagri.vancin@bilkom.com.tr',
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => 'Çağrı',
             'surname' => 'Vançin',
         ]);
-        foreach ($users as $key=>$user) {
+        foreach ($users as $key => $user) {
 
             $user->save();
             $user->assignRole($role_user);
@@ -99,7 +111,19 @@ class BilkomUsers extends Seeder
             ]));
             //Add workflow to users
             $workflows = \App\Models\CustomWorkflow::pluck('id');
+
             $user->workflows()->attach($workflows, ['marking' => '"the_blanks"']);
+
+            UserPoint::create([
+                'user_id' => $user->id,
+                'category_id' => 1,
+                'point' => 15
+            ]);
+            UserPoint::create([
+                'user_id' => $user->id,
+                'category_id' => 2,
+                'point' => 15
+            ]);
 
         }
 
