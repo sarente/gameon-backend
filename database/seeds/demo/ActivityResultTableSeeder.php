@@ -31,7 +31,7 @@ class ActivityResultTableSeeder extends Seeder
             $activity = ActivityResult::create([
                 'name' => $activity,
                 'type' => Setting::$activity_types[1],
-                'point' => 100,
+                'point' => 75,
             ]);
 
             if ($key == 0) {
