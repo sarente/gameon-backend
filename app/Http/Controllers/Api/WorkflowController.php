@@ -24,13 +24,15 @@ class WorkflowController extends Controller
     {
         $user = User::getUser();
 
-        $flowable = UserWorkflow::where('user_id', $user->id)
-            ->where('workflow_id', $id);
+        $flowable = UserWorkflow::where('user_id', $user->id)->where('workflow_id', $id)
+            ->join('workflows', 'user_workflow.workflow_id', '=', 'workflows.id');
 
         if (!$flowable->exists()) {
             $this->addUsertoWorkflow($id, $user);
         }
-        return response()->success($flowable->first());
+        $workflow = $flowable->first();
+        $workflow->config = json_decode($workflow->config);
+        return response()->success($workflow);
     }
 
     /**

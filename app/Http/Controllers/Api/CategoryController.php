@@ -67,11 +67,59 @@ class CategoryController extends Controller
 
     public function show($id)
     {
-        $category = CustomWorkflow::whereHas('category', function ($q) use ($id) {
-            $q->where('categories.id', $id);
-        })->get();
+        $user = User::getUser();
 
-        return response()->success($category->load('category'));
+        $category = Category::find($id);
+
+        $workflows = UserWorkflow::where('user_id', $user->id)->where('category_id', $id)
+            ->join('workflows', 'user_workflow.workflow_id', '=', 'workflows.id')
+            ->get();
+
+        foreach($workflows as $workflow) {
+            $config = json_decode($workflow->config);
+            $workflow->title = $config->metadata->title;
+            unset($workflow->config);
+        }
+
+        $user_category_points = $user->pointsByCategory()->firstWhere('category_id', $id);
+        //dd($user_category_points);
+
+        $levels = Level::where('category_id', $id);
+        if ($levels->exists()) {
+
+            //Check $usr_cat_pnt['current_point'] in
+            $slected_level = $this->getLevelOfUserByPoint($user_category_points->current_point, $levels->get()->toArray());
+
+            //Calculate next level point
+            $calc_next_level = $slected_level['level_no'] + 1;
+            $next_level = $calc_next_level > 5 ? 5 : $calc_next_level;
+            $next_level_point = Level::whereHas('category', function ($cat) use ($id) {
+                $cat->where('id', $id);
+            })->where('level_no', $next_level)->first()->level_point;
+
+            //sort data of array
+            $slected_level['current_point'] = (int)$user_category_points->current_point;
+            $slected_level['next_level_point'] = $next_level_point;
+            unset($slected_level['id']);
+            unset($next_level_point);
+            $level_info = $slected_level;
+        }
+        else {
+            $next_level_point = Level::whereHas('category', function ($cat) use ($id) {
+                $cat->where('id', $id);
+            })->where('level_no', 1)->first()->level_point;
+            $level_info = [
+                "level_no" => 0,
+                "level_point" => 0,
+                "next_level_point" => $next_level_point,
+                "current_point" => 0,
+            ];
+        }
+
+        $category->level_info = $level_info;
+        $category->workflows = $workflows;
+
+        return response()->success($category);
     }
 
     private function getLevelOfUserByPoint($current_point, $levels)
