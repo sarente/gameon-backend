@@ -36,10 +36,6 @@ class RolesTableSeeder extends Seeder
             'name' => \App\Models\Setting::ROLE_USER
         ]);
 
-        $role_user->syncPermissions([
-            \App\Models\Setting::PERMISSION_PROJECT_CREATE,
-        ]);
-
         $role_supervisor = \Spatie\Permission\Models\Role::create([
             'guard_name' => config('auth.defaults.guard'),
             'name' => \App\Models\Setting::ROLE_SUPERVISOR
