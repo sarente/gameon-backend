@@ -22,7 +22,7 @@ class UserPointTableSeeder extends Seeder
             'activity_result_id'=> 1,
             'workflow_id'=> 1,
             'category_id'=> 1,
-            'point' => 450
+            'point' => 15
         ]);
 
         //{"en": "Competence", "tr": "Yetkinlikler"} //wvf: base_competence
@@ -31,7 +31,7 @@ class UserPointTableSeeder extends Seeder
             'activity_result_id'=> 1,
             'workflow_id'=> 2,
             'category_id'=> 2,
-            'point' => 60
+            'point' => 15
         ]);
         //wvf: management_competence
         \App\Models\UserPoint::create([
@@ -39,7 +39,7 @@ class UserPointTableSeeder extends Seeder
             'activity_result_id'=> 1,
             'workflow_id'=> 3,
             'category_id'=> 2,
-            'point' => 60
+            'point' => 15
         ]);
         //wvf: high_level_competence
         \App\Models\UserPoint::create([
@@ -47,7 +47,7 @@ class UserPointTableSeeder extends Seeder
             'activity_result_id'=> 1,
             'workflow_id'=> 4,
             'category_id'=> 2,
-            'point' => 60
+            'point' => 15
         ]);
 
         //{"en": "Entertainment", "tr": "Eğlence"}  //wvf: entertainment
@@ -56,7 +56,7 @@ class UserPointTableSeeder extends Seeder
             'activity_result_id'=> 1,
             'workflow_id'=> 5,
             'category_id'=> 2,
-            'point' => 60
+            'point' => 15
         ]);
 
     }

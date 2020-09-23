@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\UserPoint;
 use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
@@ -34,25 +35,10 @@ class UsersTableSeeder extends Seeder
             'email' => 'admin@' . $domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('g@meon'),
             'name' => $name,
-            'surname' => $name,
+            'surname' => '',
 
         ]);
         $admin->assignRole($role_admin);
-
-        ///////////
-        $name = app()->environment('production') ? 'User' : 'Test User';
-        $user = factory(\App\Models\User::class)->create([
-            'username' => rand(00000000000, 99999999999),
-            'gender' => 1,
-            'email' => 'user@' . $domain_name,
-            'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
-            'name' => $name,
-            'surname' => $name,
-
-        ]);
-        $user->assignRole($role_user);
-        $workflows = \App\Models\CustomWorkflow::pluck('id');
-        $user->workflows()->attach($workflows, ['marking' => '"the_blanks"']);
 
         ///////////
         $name = app()->environment('production') ? 'Advisor' : 'Test Advisor';
@@ -62,10 +48,41 @@ class UsersTableSeeder extends Seeder
             'email' => 'advisor@' . $domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => $name,
-            'surname' => $name,
+            'surname' => '',
 
         ]);
         $supervisor->assignRole($role_supervisor);
+
+        ///////////
+        $name = app()->environment('production') ? 'User' : 'Test User';
+        $user = factory(\App\Models\User::class)->create([
+            'username' => rand(00000000000, 99999999999),
+            'gender' => 1,
+            'email' => 'user@' . $domain_name,
+            'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
+            'name' => $name,
+            'surname' => '',
+
+        ]);
+        $user->assignRole($role_user);
+        $workflows = \App\Models\CustomWorkflow::pluck('id');
+        $user->workflows()->attach($workflows, ['marking' => '"the_blanks"']);
+
+        //Add workflow to users
+        $workflows = \App\Models\CustomWorkflow::pluck('id');
+
+        $user->workflows()->attach($workflows, ['marking' => '"the_blanks"']);
+
+        UserPoint::create([
+            'user_id' => $user->id,
+            'category_id' => 1,
+            'point' => 15
+        ]);
+        UserPoint::create([
+            'user_id' => $user->id,
+            'category_id' => 2,
+            'point' => 15
+        ]);
 
     }
 }

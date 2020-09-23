@@ -25,10 +25,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="next_level_point added">
+    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/WorkflowController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/WorkflowController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/demo/DemoSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/DemoSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/demo/UserPointTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/UserPointTableSeeder.php" afterDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -289,14 +291,7 @@
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
       <workItem from="1599549605785" duration="117169000" />
-      <workItem from="1600014207227" duration="200361000" />
-    </task>
-    <task id="LOCAL-00136" summary="calculate empty category level points">
-      <created>1600352344318</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1600352344318</updated>
+      <workItem from="1600014207227" duration="202347000" />
     </task>
     <task id="LOCAL-00137" summary="edit category index">
       <created>1600352890321</created>
@@ -634,7 +629,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600691454389</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="some changes by Yusuf">
+      <created>1600842740317</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1600842740317</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +681,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="bilkom rosettes added" />
     <MESSAGE value="Activity result added" />
     <MESSAGE value="Activity result api added" />
     <MESSAGE value="Activity exception added" />
@@ -704,7 +705,8 @@
     <MESSAGE value="activity result point changed" />
     <MESSAGE value="max_level_point for level_no 0 added" />
     <MESSAGE value="next_level_point added" />
-    <option name="LAST_COMMIT_MESSAGE" value="next_level_point added" />
+    <MESSAGE value="some changes by Yusuf" />
+    <option name="LAST_COMMIT_MESSAGE" value="some changes by Yusuf" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -737,11 +739,11 @@
     </state>
     <state x="714" y="31" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598877492468" />
     <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599728944339" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600616725169">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600844337238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597051037214" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600616725169" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600844337238" />
     <state x="779" y="284" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1600517317667">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -750,11 +752,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="364" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1600592230340" />
-    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600695619550">
+    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600842739490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600695619550" />
+    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600842739490" />
     <state width="610" height="466" key="DebuggerActiveHint" timestamp="1600618004350">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -836,11 +838,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599334931451" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600691457140">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600842741613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600691457140" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600842741613" />
     <state x="822" y="394" width="316" height="252" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1600600409264">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -857,10 +859,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599039973999" />
-    <state x="92" y="92" width="1736" height="856" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600842611420">
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600843103549">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600842611420" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600843103549" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1598861458837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
