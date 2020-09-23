@@ -14,10 +14,7 @@ class PermissionsTableSeeder extends Seeder
         // Reset cached roles and permissions
         app()['cache']->forget('spatie.permission.cache');
 
-        \App\Models\Permission::create([
-            'guard_name' => config('auth.defaults.guard'),
-            'name' => \App\Models\Setting::PERMISSION_PROJECT_CREATE
-        ]);
+
 
         \App\Models\Permission::create([
             'guard_name' => config('auth.defaults.guard'),
@@ -50,10 +47,6 @@ class PermissionsTableSeeder extends Seeder
             'name' => \App\Models\Setting::PERMISSION_ROSETTE_UPDATE
         ]);
 
-        \App\Models\Permission::create([
-            'guard_name' => config('auth.defaults.guard'),
-            'name' => \App\Models\Setting::PERMISSION_CLUB_CREATE
-        ]);
 
         \App\Models\Permission::create([
             'guard_name' => config('auth.defaults.guard'),
@@ -65,9 +58,5 @@ class PermissionsTableSeeder extends Seeder
             'name' => \App\Models\Setting::PERMISSION_QUESTION_DELETE
         ]);
 
-        \App\Models\Permission::create([
-            'guard_name' => config('auth.defaults.guard'),
-            'name' => \App\Models\Setting::PERMISSION_TASK_CREATE
-        ]);
     }
 }
