@@ -12,10 +12,11 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         //First of all add permission to db then create roles thus connect the permission to related role
+        //\Illuminate\Support\Facades\DB::statement('SET GLOBAL FOREIGN_KEY_CHECKS=0;');
         \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         App\Models\User::truncate();
-        App\Models\UserPoint::truncate();
-        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        //\Illuminate\Support\Facades\DB::statement('SET GLOBAL FOREIGN_KEY_CHECKS=1;');
 
         \App\Models\User::orderBy('id')->delete();
         $domain_name = "test.com";
@@ -74,16 +75,7 @@ class UsersTableSeeder extends Seeder
 
         $user->workflows()->attach($workflows, ['marking' => '"the_blanks"']);
 
-        UserPoint::create([
-            'user_id' => $user->id,
-            'category_id' => 1,
-            'point' => 15
-        ]);
-        UserPoint::create([
-            'user_id' => $user->id,
-            'category_id' => 2,
-            'point' => 15
-        ]);
+
 
     }
 }

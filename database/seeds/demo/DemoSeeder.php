@@ -18,7 +18,7 @@ class DemoSeeder extends Seeder
         $this->call(ActivityResultTableSeeder::class);
         $this->call(LevelTableSeeder::class);
         //$this->call(ProfileTableSeeder::class);
-        //$this->call(UserPointTableSeeder::class);
+        $this->call(UserPointTableSeeder::class);
 
         /*if (app()->environment('local')) {
             $this->call(FakeSeeder::class);
