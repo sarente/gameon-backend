@@ -85,7 +85,7 @@ class CategoryController extends Controller
         //dd($user_category_points);
 
         $levels = Level::where('category_id', $id);
-        if ($levels->exists()) {
+        if ($levels->exists() && $user_category_points) {
 
             //Check $usr_cat_pnt['current_point'] in
             $slected_level = $this->getLevelOfUserByPoint($user_category_points->current_point, $levels->get()->toArray());
