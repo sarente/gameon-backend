@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Level;
+use App\Models\Setting;
 use App\Models\User;
 use App\Models\UserWorkflow;
 
@@ -91,8 +92,9 @@ class CategoryController extends Controller
             $slected_level = $this->getLevelOfUserByPoint($user_category_points->current_point, $levels->get()->toArray());
 
             //Calculate next level point
+            $last_level=getByKey(Setting::LAST_LEVEL);
             $calc_next_level = $slected_level['level_no'] + 1;
-            $next_level = $calc_next_level > 5 ? 5 : $calc_next_level;
+            $next_level = $calc_next_level > $last_level ? $last_level : $calc_next_level;
             $next_level_point = Level::whereHas('category', function ($cat) use ($id) {
                 $cat->where('id', $id);
             })->where('level_no', $next_level)->first()->level_point;

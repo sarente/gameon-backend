@@ -30,3 +30,7 @@ function multi_implode($array, $glue) {
 
     return $ret;
 }
+function getByKey($key)
+{
+    return \App\Models\Setting::where('key', $key)->first()->value ?? null;
+}

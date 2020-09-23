@@ -25,10 +25,7 @@ class RolesTableSeeder extends Seeder
         ]);
 
         $role_admin->syncPermissions([
-            \App\Models\Setting::PERMISSION_PROJECT_CREATE,
-            \App\Models\Setting::PERMISSION_CLUB_CREATE,
             \App\Models\Setting::PERMISSION_QUESTION_CREATE,
-            \App\Models\Setting::PERMISSION_TASK_CREATE,
             \App\Models\Setting::PERMISSION_ROSETTE_CREATE,
             \App\Models\Setting::PERMISSION_ROSETTE_DELETE,
             \App\Models\Setting::PERMISSION_ROSETTE_UPDATE
@@ -49,10 +46,7 @@ class RolesTableSeeder extends Seeder
         ]);
 
         $role_supervisor->syncPermissions([
-            \App\Models\Setting::PERMISSION_PROJECT_CREATE,
-            \App\Models\Setting::PERMISSION_CLUB_CREATE,
             \App\Models\Setting::PERMISSION_QUESTION_CREATE,
-            \App\Models\Setting::PERMISSION_TASK_CREATE,
             \App\Models\Setting::PERMISSION_ROSETTE_CREATE,
             \App\Models\Setting::PERMISSION_ROSETTE_DELETE,
             \App\Models\Setting::PERMISSION_ROSETTE_UPDATE

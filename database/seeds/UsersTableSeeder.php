@@ -41,7 +41,7 @@ class UsersTableSeeder extends Seeder
         $admin->assignRole($role_admin);
 
         ///////////
-        $name = app()->environment('production') ? 'Advisor' : 'Test Advisor';
+        $name = app()->environment('production') ? 'Supervisor' : 'Test Supervisor';
         $supervisor = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,

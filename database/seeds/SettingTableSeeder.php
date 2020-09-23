@@ -36,7 +36,7 @@ class SettingTableSeeder extends Seeder
 
         \App\Models\Setting::create([
             'key' => Setting::URL_TEACHER,
-            'value' => Config::get('urls.supervisor_url'),
+            'value' => Config::get('urls.Role_url'),
             //'value'    => env('TEACHER_URL'),
         ]);
 

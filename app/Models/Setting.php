@@ -102,18 +102,6 @@ class Setting extends Model
         5 => Setting::WRONG_MESSAGE,
         6 => Setting::ROSSETTE_MESSAGE,
     ];
-    //Used in task
-
-    public static $level_artifacts = [
-        0 => Setting::ARTIFACT_PROJECT,
-        1 => Setting::ARTIFACT_CLUB,
-        2 => Setting::ARTIFACT_TASK,
-        3 => Setting::ARTIFACT_QUESTION_ANSWER,
-        4 => Setting::ARTIFACT_SQUARE,
-        5 => Setting::ARTIFACT_GENERAL,
-        7 => Setting::ARTIFACT_POST,
-    ];
-
 
     //Default rewards
     const REWARD_ROSETTE = 'rosette';
@@ -121,15 +109,6 @@ class Setting extends Model
     const REWARD_BADGE = 'badge';
 
     //Default Permissions of project
-    const PERMISSION_PROJECT_CREATE = 'project-create'; // project creator
-    const PERMISSION_PROJECT_DONE = 'project-done';
-    const PERMISSION_PROJECT_UPDATE = 'project-update';
-    const PERMISSION_PROJECT_DELETE = 'project-delete';
-    const PERMISSION_PROJECT_CLAIM_ACCEPT = 'project-claim-accept';
-    const PERMISSION_PROJECT_CLAIM_REJECT = 'project-claim-reject';
-    const PERMISSION_PROJECT_POST_ADD = 'project-post-add';
-    const PERMISSION_PROJECT_DOCUMENT_ADD = 'project-document-add';
-
     const PERMISSION_ROSETTE_CREATE = 'rosette-create';
     const PERMISSION_ROSETTE_DELETE = 'rosette-delete';
     const PERMISSION_ROSETTE_UPDATE = 'rosette-update';
@@ -142,39 +121,13 @@ class Setting extends Model
     const PERMISSION_STEP_UPDATE = 'step-update';
     const PERMISSION_STEP_DONE = 'step-done';
 
-    const PERMISSION_CLUB_CREATE = 'club-create';
-    const PERMISSION_CLUB_DELETE = 'club-delete';
-    const PERMISSION_CLUB_UPDATE = 'club-update';
-    const PERMISSION_CLUB_CLAIM_ACCEPT = 'club-claim-accept';
-    const PERMISSION_CLUB_CLAIM_REJECT = 'club-claim-reject';
-    const PERMISSION_CLUB_POST_ADD = 'club-post-add';
-    const PERMISSION_CLUB_DOCUMENT_ADD = 'club-document-add';
 
     const PERMISSION_QUESTION_CREATE = 'question-create';
     const PERMISSION_QUESTION_DELETE = 'question-delete';
     const PERMISSION_QUESTION_UPDATE = 'question-update';
 
-    const PERMISSION_TASK_CREATE = 'task-create';
-    const PERMISSION_TASK_DELETE = 'task-delete';
-    const PERMISSION_TASK_UPDATE = 'task-update';
-
-    const PERMISSION_PROFILE_CLAIM_ACCEPT = 'profile-claim-accept';
-    const PERMISSION_PROFILE_CLAIM_REJECT = 'profile-claim-reject';
-    const PERMISSION_PROFILE_POST_ADD = 'profile-post-add';
     const PERMISSION_POST_UPDATE = 'post-update';
     const PERMISSION_POST_DELETE = 'post-delete';
-
-    //Default Roles of project
-    const ROLE_PROJECT_OWNER = 'project-owner';
-    const ROLE_PROJECT_ADVISER = 'project-adviser';
-    const ROLE_PROJECT_LEADER = 'project-leader';
-    const ROLE_PROJECT_MEMBER = 'project-member';
-
-    //Default Roles of club
-    const ROLE_CLUB_OWNER = 'club-owner';
-    const ROLE_CLUB_ADVISER = 'club-adviser';
-    const ROLE_CLUB_LEADER = 'club-leader';
-    const ROLE_CLUB_MEMBER = 'club-member';
 
     //Default Roles of system
     const ROLE_USER = 'user';
@@ -220,9 +173,6 @@ class Setting extends Model
     const ITEM_SHOE = 'shoe';
 
     const NO_ARTIFACT = 'no-artifact';
-    const ARTIFACT_PROJECT = 'project';
-    const ARTIFACT_CLUB = 'club';
-    const ARTIFACT_TASK = 'task';
     const ARTIFACT_USER = 'user';
     const ARTIFACT_QUESTION_ANSWER = 'question-answer';
     const ARTIFACT_QUESTION = 'question';
@@ -242,31 +192,9 @@ class Setting extends Model
 
     //LEVELS
     const LEVEL_COUNT = 'level-count';
-    const EDUCATION_TERM = 'education-term';
-    const ARTIFACT_MONTHLY = 'artifact-monthly';
-    const ARTIFACT_TOTAL_XP = 'total-xp';
+    const LAST_LEVEL='last_level';
 
-    const ARTIFACT_PROJECT_MONTHLY = 'artifact-project-monthly';
-    const ARTIFACT_PROJECT_XP = 'artifact-task-xp';
-    const PROJECT_PER_MONTH = 'project-per-month';
-    const PROJECT_PERCENT = 'project-percent';
-
-    const ARTIFACT_CLUB_MONTHLY = 'artifac-club-monthly';
-    const ARTIFACT_CLUB_XP = 'artifact-task-xp';
-    const CLUB_PER_MONTH = 'club-per-month';
-    const CLUB_PERCENT = 'club-percent';
-
-    const ARTIFACT_QA_MONTHLY = 'artifact-question-answer-monthly';
-    const ARTIFACT_QA_XP = 'artifact-task-xp';
-    const QA_PER_MONTH = 'question-answer-per-month';
-    const QA_PERCENT = 'question-answer-percent';
-
-    const ARTIFACT_TASK_MONTHLY = 'artifact-task-monthly';
-    const ARTIFACT_TASK_XP = 'artifact-task-xp';
-    const TASK_PER_MONTH = 'task-per-month';
-    const TASK_PERCENT = 'task-percent';
     ///////////////
-    const ARTIFACT_ROSETTE = 'rosette';
 
     const ROSETTE_VALUES = ['tr'=>'Değerler','en'=>'Values'];
     const ROSETTE_COMPETENCE = ['tr'=>'Yetkinlikler','en'=>'Competence'];
@@ -295,25 +223,9 @@ class Setting extends Model
     const INSTITUTOIN_CLASSROOM = 'classroom';
     const INSTITUTOIN_BRANCH = 'branch';
 
-    //Club names
-    const CLUB_LITERATURE = 'Edebiyat';
-    const CLUB_MUSIC = 'Müzik';
-    const CLUB_CHESS = 'Satranç';
-    const CLUB_THEATER = 'Tiyatro';
-    const CLUB_BASKETBALL = 'Basketbol';
 
-    const LAST_LEVEL='last_level';
 
-    public static function getByKey($key)
-    {
-        return self::where('key', $key)->first()->value ?? null;
-        /*   $model = self::where('key', $key)->first();
-             if (!$model) {
-               return null;
-           }
-           return $model->value;
-       */
-    }
+
 
     public static function setByKey($key, $value)
     {
