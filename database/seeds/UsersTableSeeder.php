@@ -14,6 +14,7 @@ class UsersTableSeeder extends Seeder
         //First of all add permission to db then create roles thus connect the permission to related role
         \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         App\Models\User::truncate();
+        App\Models\UserPoint::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         \App\Models\User::orderBy('id')->delete();
