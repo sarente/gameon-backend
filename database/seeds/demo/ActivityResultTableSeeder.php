@@ -41,6 +41,7 @@ class ActivityResultTableSeeder extends Seeder
                 $activity->rewards()->syncWithoutDetaching(Reward::find($key));
             } else if ($key == 2) {
                 $activity->metadata = ['param1'=>'analitik bakış açısına sahip olmak'];
+                $activity->point=100;
                 $activity->rewards()->syncWithoutDetaching(Reward::find($key));
             }
             $activity->save();

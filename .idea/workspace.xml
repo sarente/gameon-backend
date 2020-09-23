@@ -25,14 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="Check user point in category">
+    <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Setting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/SettingTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SettingTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/demo/ActivityResultTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/demo/ActivityResultTableSeeder.php" afterDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -293,14 +289,7 @@
       <workItem from="1599404310658" duration="25268000" />
       <workItem from="1599549388332" duration="131000" />
       <workItem from="1599549605785" duration="117169000" />
-      <workItem from="1600014207227" duration="210842000" />
-    </task>
-    <task id="LOCAL-00139" summary="Add category to workflow pages">
-      <created>1600416182469</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1600416182469</updated>
+      <workItem from="1600014207227" duration="212028000" />
     </task>
     <task id="LOCAL-00140" summary="workflow edited (edited order to paces)">
       <created>1600420134826</created>
@@ -638,7 +627,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600847306984</updated>
     </task>
-    <option name="localTasksCounter" value="188" />
+    <task id="LOCAL-00188" summary="setting get improved">
+      <created>1600862272171</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1600862272171</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,7 +679,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Activity exception added" />
     <MESSAGE value="user point changed" />
     <MESSAGE value="work flow is working without Activity result" />
     <MESSAGE value="work flow is working with Activity result Rosette no attached" />
@@ -708,7 +703,8 @@
     <MESSAGE value="some changes by Yusuf" />
     <MESSAGE value="Some changes on test user" />
     <MESSAGE value="Check user point in category" />
-    <option name="LAST_COMMIT_MESSAGE" value="Check user point in category" />
+    <MESSAGE value="setting get improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting get improved" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1599117414370">
@@ -754,11 +750,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="364" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1600592230340" />
-    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600847631238">
+    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2" timestamp="1600862271125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939623348" />
-    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600847631238" />
+    <state x="467" y="34" width="794" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600862271125" />
     <state width="610" height="466" key="DebuggerActiveHint" timestamp="1600618004350">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -840,11 +836,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="448" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599334931451" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600847308422">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600862274645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598939649084" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600847308422" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600862274645" />
     <state x="822" y="394" width="316" height="252" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1600600409264">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
