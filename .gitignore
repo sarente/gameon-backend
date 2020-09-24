@@ -19,5 +19,5 @@ yarn-error.log
 .phpstorm.meta.php
 _ide_helper.php
 !/laravel-echo-server.json
-/.idea/workspace.xml
+.idea/workspace.xml
 /.idea/
