@@ -50,9 +50,11 @@ class Setting extends Model
 
     const WF_TYPE_WF = 'workflow';
     const WF_TYPE_SM = 'state_machine';
+    const WF_RESULT ='workflow-result';
 
     const ACTIVITY_ACTION ='do-action';
     const ACTIVITY_RETURN ='return-value';
+
 
     const APP_NAME = 'Sarente Gameon';
     const DEFAULT_PASS = 'Gameon';

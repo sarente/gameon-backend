@@ -19,8 +19,8 @@ class UsersTableSeeder extends Seeder
         //\Illuminate\Support\Facades\DB::statement('SET GLOBAL FOREIGN_KEY_CHECKS=1;');
 
         \App\Models\User::orderBy('id')->delete();
-        $domain_name = "test.com";
 
+        $domain_name = "test.com";
 
         //Get the role of admin
         //$role = app(\Spatie\Permission\PermissionRegistrar::class)->getRoleClass()::findByName('admin');
@@ -74,8 +74,6 @@ class UsersTableSeeder extends Seeder
         $workflows = \App\Models\CustomWorkflow::pluck('id');
 
         $user->workflows()->attach($workflows, ['marking' => '"the_blanks"']);
-
-
 
     }
 }
