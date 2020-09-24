@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use ZeroDaHero\LaravelWorkflow\Exceptions\DuplicateWorkflowException;
 use ZeroDaHero\LaravelWorkflow\Traits\WorkflowTrait;
 
 class UserWorkflow extends Model

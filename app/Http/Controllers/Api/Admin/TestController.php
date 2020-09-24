@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\Admin;
 
 use App\Exceptions\WorkFlow\WorkFlowNotFoundException;
 use App\Http\Controllers\Controller;
+use App\Models\CustomWorkflow;
 use App\Models\User;
 use App\Models\UserWorkflow;
 use Illuminate\Http\Request;
@@ -11,7 +12,7 @@ use Symfony\Component\Workflow\Exception\LogicException;
 
 class TestController extends Controller
 {
-    public function test1(Request $request)
+    public function returnValue(Request $request)
     {
         //Get user
         $user = User::find(2);
@@ -83,12 +84,23 @@ class TestController extends Controller
 
     }
 
-    public function getWorkflow(Request $request)
+    public function doAction(Request $request)
     {
-        //$wf=CustomWorkflow::first();
+        $user = User::find(2);
 
-        $flowable = UserWorkflow::find(2);
-        $workflow = $flowable->workflow_get('values');
+        //Look for user workflows
+        $flowable = UserWorkflow::with(['customWorkflow', 'user'])
+            ->where('user_id', $user->id);
+
+        if (!$flowable->exists()) {
+            throw new WorkFlowNotFoundException();
+        }
+        //Get work flow definition
+        //dd($flowable->customWorkflow->name);
+
+        $wf_name = $flowable->customWorkflow->name;
+
+        $workflow = $flowable->workflow_get($wf_name);
 
         //$workflow->getMetadataStore();
         //dump($workflow->can($flowable, 'play_slide_show'));

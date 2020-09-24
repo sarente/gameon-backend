@@ -16,7 +16,7 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $subscribe = [
         'App\Listeners\UserEventSubscriber',
-        //'App\Listeners\WorkFlowSubscriber',
+        'App\Listeners\WorkFlowSubscriber',
     ];
     /**
      * The event listener mappings for the application.
@@ -39,7 +39,7 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\Question\UpdateImage',
         ],
         'App\Events\ActivitySaved' => [
-            //'App\Listeners\Project\UpdateImage',
+            //'App\Listeners\Project\UpdateImage',                                                              api
             //'App\Listeners\Project\AddRoles',
             'App\Listeners\Activity\AddRewards',
             'App\Listeners\Activity\AddTag',
