@@ -2,36 +2,36 @@
 
 return [
     'common' => [
-        'error' => 'Error',
-        'save-error' => 'Kaydedilemeyen bir hata oluştu',
-        'input-error' => 'Veri girişi, bir hata oluştu',
-        'not-found' => 'nesne bulunamadı',
+        'error' => 'Hata',
+        'save-error' => 'Kaydetme başarısız. Bir hata oluştu.',
+        'input-error' => 'Input verisinde bir hata oluştu.',
+        'not-found' => 'Nesne bulunamadı',
         'filter-found' => 'Filtre bulunamadı',
-        'bad-request' => '400 Kötü İstek hatası',
-        'file-size' => 'Dosya boyutu maksimum sınırı aşıyor',
-        'none-valid' => 'Bazı değerler beklenmedik',
+        'bad-request' => 'The 400 Bad Request error',
+        'file-size' => 'File size exceeds max limit',
+        'none-valid' => 'Bazı değerler yanlıştır',
     ],
     'auth' => [
-        'unauthorised' => 'Yetkiniz yok.',
-        'unauthenticated' => 'Yetkilendirilmemişsiniz.',
-        'invalid' => 'Geçersiz e-posta adresi veya şifre.',
+        'unauthorised' => 'Erişim hakkınız bulunmamaktadır.',
+        'unauthenticated' => 'Giriş yapmanız gerekmektedir.',
+        'invalid' => 'Geçersiz şifre veya email adresi.',
         'register' => [
-            'email-exists' => 'E-posta adresi zaten var.'
+            'email-exists' => 'Bu email adresi ile bir kullanıcı bulunuyor.'
         ],
         'social' => [
-            'unsupported' => 'Desteklenmeyen sosyal sağlayıcı.',
-            'invalid' => 'Desteklenmeyen sosyal sağlayıcı.',
-            'missing' => 'Bazı bilgiler eksik',
+            'unsupported' => 'Unsupported social provider.',
+            'invalid' => 'Invalid oath token',
+            'missing' => 'Some information missing',
         ],
         'password' => [
             'invalid' => 'Geçersiz şifre',
         ],
         'forgot' => [
-            'invalid' => 'Geçersiz e-posta adresi.',
-            'recent' => 'Yakın zamanda bir sıfırlama postası istediniz. Lütfen bekle',
+            'invalid' => 'Geçersiz e-mail adresi.',
+            'recent' => 'You recently requested a reset mail. Please wait',
         ],
         'reset' => [
-            'invalid' => 'Sıfırlama kodu geçersiz veya süresi doldu.',
+            'invalid' => 'Reset code invalid or expired.',
         ],
     ],
     'question' => [
@@ -44,56 +44,66 @@ return [
         'not-found' => 'Kategori bulunamadı.',
     ],
     'post' => [
-        'not-found' => 'Post not found.',
+        'not-found' => 'Post bulunamadı.',
+    ],
+    'project' => [
+        'not-found' => 'Proje bulunamadı.',
+        'name-valid' => 'Bu isme sahip bir proje mevcut!',
+        'end' => 'Proje zaten tamamlanmış durumda',
+        'classroom-not-valid' => 'Sınıf bulunmamaktadır',
+        'member' => [
+            'exists' => 'Üye zaten mevcut.',
+            'not-found' => 'Üye bulunamadı.'
+        ]
+    ],
+    'club' => [
+        'not-found' => 'Kulüp bulunamadı.',
+        'name-valid' => 'Bu isme sahip bir kulüp mevcut!',
+        'classroom-not-valid' => 'Sınıf bulunmamaktadır',
+        'member' => [
+            'exists' => 'Üye zaten mevcut.',
+            'not-found' => 'Üye bulunamadı.'
+        ]
     ],
     'rosette' => [
         'not-found' => 'Rozet bulunamadı.',
-        'name-valid' => 'İsim geçerli'
+        'name-valid' => 'Bu isme sahip bir rozet mevcut!'
+    ],
+    'step' => [
+        'not-found' => 'Adım bulunamadı.',
+        'name-valid' => 'Bu isme sahip bir adım mevcut'
     ],
     'user' => [
-        'not-found' => 'User not found',
-        'workflow-not-fount' => 'User Dosen\'t have workflow',
+        'not-found' => 'Kullanıcı bulunamadı.',
         'friend' => [
-            'not-found' => 'Friend not found',
-            'exists' => 'Friend already exists.',
+            'not-found' => 'Arkadaş bulunamadı.',
+            'exists' => 'Kullanıcı zaten arkadaşınız.',
         ],
     ],
     'claim' => [
-        'exists' => 'Claim already exists.',
-        'not-found' => 'Claim not found'
+        'exists' => 'İstek mevcut.',
+        'not-found' => 'İstek bulunamadı'
+    ],
+    'advice' => [
+        'type-notfound' => 'Tip bulunamadı'
     ],
     'tag' => [
-        'label-notfound' => 'label is null'
+        'label-notfound' => 'Etiket boş geldi'
     ],
     'level' => [
-        'notfound' => 'level notfound in :artifact_name'
+        'notfound' => ':artifact_name level bulunmadı'
     ],
-    'workflow' => [
-        'not-found' => 'WorkFlow not found.',
-        'place-not-allowed' => 'Workflow place not found',
-        'transition-not-allowed' => 'Workflow transition not found',
-        'wrong-answer' => 'Wrong Answer is detected, Try in again',
-        'gain-before' => 'Gain before from this activity',
-        'name-valid' => 'Name is valid'
+    'task' => [
+        'not-found' => 'Görev bulunmadı.',
+        'name-valid' => 'Bu isme sahip bir görev mevcut!'
     ],
     'classroom' => [
-        'not-found' => 'Classroom not found.'
+        'not-found' => 'sınıf bulunmadı.'
     ],
     'medal' => [
-        'not-found' => 'Medal not found.'
-    ],
-    'email' => [
-        'not-sent' => 'Email not sent yet.'
-    ],
-    'activity' => [
-        'result' => [
-             'wrong-answer'=>'Returned result is wrong'
-        ],
-        'not-found'=>'Activity not found',
+        'not-found' => 'Madalyon bulunmadı.'
     ],
     'document' => [
-        'not-found' => 'Document not found.',
-        'name-valid' => 'Name is valid'
+        'not-found' => 'Doküman bulunmadı.',
     ]
-
 ];

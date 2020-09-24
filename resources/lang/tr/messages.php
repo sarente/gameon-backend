@@ -2,41 +2,44 @@
 
 return [
     'common'  => [
-        'success' => 'Success',
+        'success' => 'Başarılı',
     ],
     'version' => [
-        '1'  => 'App is up to date',
-        '0'  => 'There is a new app version. We suggest you to update it.',
-        '-1' => 'There is a new app version. You need to update it to use app.',
+        '1'  => 'Uygulama güncel.',
+        '0'  => 'Uygulamanın yeni bir sürümü mevcut. Güncellemenizi öneririz.',
+        '-1' => 'Uygulamanın yeni bir sürümü mevcut. Uygulamayı kullanabilmeniz için güncelllemeniz gerekiyor.',
     ],
     'auth'    => [
-        'forgot'       => 'Password reset instructions has been sent.',
-        'password'     => 'Password changed successfully.',
-        'success'      => 'Logged in successfully.',
-        'logout'       => 'Logout successful.',
-        'reset'        => 'Password changed successfully.',
-        'notification' => 'Notification choices updated.',
+        'forgot'       => 'Şifre yenileme bilgileri gönderildi..',
+        'password'     => 'Şifre başarılı bir şekilde değiştirildi.',
+        'success'      => 'Giriş yapıldı.',
+        'logout'       => 'Çıkış yapıldı.',
+        'reset'        => 'Şifre başarılı bir şekilde değiştirildi.',
+        'notification' => 'Bildirim seçenekleri güncellendi.',
     ],
     'crud'    => [
-        'store'   => ':title created successfully.',
-        'update'  => ':title updated successfully.',
-        'destroy' => ':title deleted successfully.',
+        'store'   => ':title başarıyla oluşturuldu.',
+        'update'  => ':title başarıyla güncellendi.',
+        'destroy' => ':title başarıyla silindi.',
 
-        'detach' => ':title2 removed from :title',
-        'order'  => ':title order updated.',
+        'detach' => ':title2 :title den kaldırıldı ',
+        'order'  => ':title sırası güncellendi.',
     ],
     'feed'=>[
-        'valid'=>'Feed created for today',
+        'valid'=>'Bugünlük akış oluşturuldu.',
     ],
     'usermoyra'=>[
         'success'=>'Moyra information updated',
     ],
+    'astropep'=>[
+        'success'=>'Astropep information updated',
+    ],
     'task'=>[
-        'not-found'=>'Task not found',
+        'not-found'=>'Görev bulunamadı',
     ],
     'email'=>[
         'new-user'=>[
-            'subject'=>'New User',
+            'subject'=>'Yeni Kullanıcı',
         ]
     ],
     'survey'=>[
