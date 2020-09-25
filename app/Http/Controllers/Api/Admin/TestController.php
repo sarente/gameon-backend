@@ -8,6 +8,7 @@ use App\Models\CustomWorkflow;
 use App\Models\User;
 use App\Models\UserWorkflow;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Symfony\Component\Workflow\Exception\LogicException;
 
 class TestController extends Controller
@@ -86,11 +87,12 @@ class TestController extends Controller
 
     public function doAction(Request $request)
     {
-        $user = User::find(2);
+        $user = User::find(3);
 
         //Look for user workflows
         $flowable = UserWorkflow::with(['customWorkflow', 'user'])
-            ->where('user_id', $user->id);
+            ->where('user_id', $user->id)
+            ->where('workflow_id', 1);
 
         if (!$flowable->exists()) {
             throw new WorkFlowNotFoundException();
@@ -98,10 +100,29 @@ class TestController extends Controller
         //Get work flow definition
         //dd($flowable->customWorkflow->name);
 
-        $wf_name = $flowable->customWorkflow->name;
+        $flowable = $flowable->first();
+        $name=$flowable->customWorkflow->name;
+        $system_workflow = $flowable->workflow_get($name);
+        $system_workflow = $flowable->workflow_get('wf_04');
 
-        $workflow = $flowable->workflow_get($wf_name);
-
+        $transitions = $system_workflow->getEnabledTransitions($flowable);
+        if (count($transitions) == 0) {
+            //TODO: throw new exception
+            return response()->error('workflow.transition-not-allowed');
+        }
+        foreach ($transitions as $transition) {
+            $t[] = $transition->getName();
+        }
+        $transition = $t[0];
+        ////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////
+        /// Save user workflow to next pace
+        try {
+            $system_workflow->apply($flowable, $transition);
+            $flowable->save();
+        } catch (LogicException $e) {
+            return response()->error('workflow.place-not-allowed');
+        }
         //$workflow->getMetadataStore();
         //dump($workflow->can($flowable, 'play_slide_show'));
         //dd($workflow->can($flowable, 'fill_in_the_blanks'));
@@ -118,7 +139,7 @@ class TestController extends Controller
         //dump($definition);
 
         // Get the metadata
-        $metadata = $workflow->getMetadataStore();
+        //$metadata = $workflow->getMetadataStore();
         // or get a specific piece of metadata
         //$workflowMetadata = $workflow->getMetadataStore()->getWorkflowMetadata();
         //$placeMetadata = $workflow->getMetadataStore()->getPlaceMetadata($place); // string place name
@@ -127,7 +148,7 @@ class TestController extends Controller
         //$otherPlaceMetadata = $workflow->getMetadataStore()->getMetadata('max_num_of_words', 'draft');
 
 
-        $placeMetadata = $workflow->getMetadataStore()->getPlaceMetadata('slide_show'); // string place name
+        //$placeMetadata = $workflow->getMetadataStore()->getPlaceMetadata('slide_show'); // string place name
         //$activity_id=$workflow->getMetadataStore()->getMetadata('activity_id', 'slide_show');
         //dump($activity_id);
 

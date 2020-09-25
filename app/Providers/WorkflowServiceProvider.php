@@ -14,11 +14,11 @@ class WorkflowServiceProvider extends \ZeroDaHero\LaravelWorkflow\WorkflowServic
      */
     public function register()
     {
-        $this->app->singleton('workflow', function ($app) {
-            $workflowConfigs = $app->make('config')->get('workflow');
+        /*$this->app->singleton('workflow', function ($app) {
+            $workflowConfigs = $app->make('config')->get('workflow0');
             $registryConfig = $app->make('config')->get('workflow_registry');
             return new WorkflowRegistry($workflowConfigs, $registryConfig);
-        });
+        });*/
     }
        /* $this->app->bind(UserStatsCsvExporter::class, function() {
             return new UserStatsCsvExporter(new Translator(config('app.locale')));

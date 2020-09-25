@@ -1,6 +1,6 @@
 <?php
 return [
-    'wf_02' => [
+    'wf_04' => [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'GÜÇ BİRLİĞİ',

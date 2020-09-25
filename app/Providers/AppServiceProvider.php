@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\CustomWorkflow;
+use App\Observers\CustomWorkflowObserver;
 use Illuminate\Queue\Events\JobFailed;
 use Illuminate\Queue\Queue;
 use Illuminate\Support\Facades\Schema;
@@ -27,6 +29,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        CustomWorkflow::observe(CustomWorkflowObserver::class);
         //TODO: email failing job
         /*Queue::failing(function (JobFailed $event) {
             // $event->connectionName
