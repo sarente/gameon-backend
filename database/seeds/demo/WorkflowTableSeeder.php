@@ -24,14 +24,13 @@ class WorkflowTableSeeder extends Seeder
         $workflowDefinition = include(config_path('workflow00.php'));
 
         $workflowKeys = array_keys($workflowDefinition);
-        //dd($workflowKeys,$categories);
-        //dd($workflowDefinition['union_of_forces']);
+        //dd($categories,$workflowKeys[0],$workflowDefinition);
 
         foreach ($categories as $key => $value) {
             //Log::info($value);
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[0],
-                    'config' => $workflowDefinition['wf_02']
+                    'config' => $workflowDefinition
                 ]);
                 $workflow->category()->associate($value);
                 $workflow->save();

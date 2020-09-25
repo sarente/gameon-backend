@@ -36,7 +36,6 @@ class TestController extends Controller
         //dd($workflow->getMetadataStore()->getPlaceMetadata('slide_show'));
         /*@var */
 
-
         //Get current place
         $place = $workflow->getMarking($flowable)->getPlaces();
         //dd($place);
@@ -57,6 +56,7 @@ class TestController extends Controller
         }
         $transition = $t[0];
         //dd($transition);
+
         ////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////
         /// Save user workflow to next pace

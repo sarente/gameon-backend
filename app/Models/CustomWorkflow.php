@@ -7,7 +7,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use \App\Exceptions\WorkFlow\DuplicateWorkFlowException;
 use ZeroDaHero\LaravelWorkflow\WorkflowRegistry;
-use function Composer\Autoload\includeFile;
+
 
 /*
  * @author Javad Fathi <k1fathi33@gmail.com>
@@ -47,31 +47,26 @@ class CustomWorkflow extends Model
 
     protected static function boot()
     {
+        parent::boot();
 
+        static::created(function ($model) {
 
-        static::saving(function (self $model) {
-
-            //$registry = app()->make('workflow');
-            $config =include(config_path('workflow00.php'));
-            //dd($config['wf_02']);
-
-            $registryConfig = [
+           $registryConfig = [
                 'track_loaded' => true,
                 'ignore_duplicates' => true
             ];
 
-            $registry = new WorkflowRegistry($config, $registryConfig);
+            $registry = new WorkflowRegistry($model->config, $registryConfig);
             $subject = new UserWorkflow();
             $workflow = $registry->get($subject);
-
+            //dd($model->name,$model->config['wf_02'],$workflow);
             //$this->expectException(DuplicateWorkFlowException::class);
             try {
-                $registry->addFromArray('wf_02',$config['wf_02']);
+                $registry->addFromArray($model->name,$model->config['wf_02']);
                 //$registry->addFromArray($model->name, $model->config);
             } catch (DuplicateWorkFlowException $e) {
                 throw new DuplicateWorkFlowException();
             }
         });
-        parent::boot();
     }
 }
