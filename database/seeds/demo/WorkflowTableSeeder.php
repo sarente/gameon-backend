@@ -13,19 +13,38 @@ class WorkflowTableSeeder extends Seeder
      */
     public function run()
     {
-        //TODO: change workflow configs from files
+        //First of all add permission to db then create roles thus connect the permission to related role
+        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        \App\Models\CustomWorkflow::truncate();
+        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-        $category = Category::find(1);
+        //TODO: get workflow configs from files
+
+        $categories = Category::pluck('id')->toArray();
         $workflowDefinition = include(config_path('workflow.php'));
 
-            $name = $category->translations['name']['tr'];
+        $workflowKeys = array_keys($workflowDefinition);
 
-            $workflow = new \App\Models\CustomWorkflow([
-                'name' => 'straight',
-                'config' => $workflowDefinition['straight']
-            ]);
+        foreach ($categories as $key => $value) {
+            //Log::info($value);
 
-            $workflow->category()->associate($workflow);
-            $workflow->save();
+            if ($key == 0) {
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[$key],
+                    'config' => $workflowDefinition['wf_01']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+
+            } else if ($key == 1) {
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[$key],
+                    'config' => $workflowDefinition['wf_02']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+                //
+            }
         }
+    }
 }

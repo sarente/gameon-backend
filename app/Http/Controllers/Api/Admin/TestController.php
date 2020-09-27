@@ -15,21 +15,19 @@ class TestController extends Controller
     {
         //Get user
         $user = User::find(3);
-        $workflow = CustomWorkflow::find(1);
+        $workflow = CustomWorkflow::find(2);
 
         //Look for user workflows
-        //$flowable = UserWorkflow::with(['customWorkflow', 'user'])
-        $flowable = UserWorkflow::with(['user'])
-            ->where('user_id', $user->id);
+        $flowable = UserWorkflow::with(['customWorkflow', 'user'])->where(function ($q) use ($user, $workflow) {
+            $q->where('user_id', $user->id)->where('workflow_id', $workflow->id);
+        })->first();
 
-        if (!$flowable->exists()) {
+        if (is_null($flowable)) {
             $flowable = new UserWorkflow();
             $flowable->user()->associate($user);
             $flowable->customWorkflow()->associate($workflow);
             $flowable->save();
         }
-        //Get work flow definition
-        $flowable = $flowable->first();
 
         $wf_name = $flowable->customWorkflow->name;
 

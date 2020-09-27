@@ -22,13 +22,13 @@ return [
                 'model_kind' => \App\Models\Setting::ACTIVITY_RETURN,
                 'model_type' => \App\Models\Activity::class,
             ],
-                'show_result' => ['metadata' => [
-                    'order' => '3',
-                    'place_name' => 'Neticeyi Gör',
-                    'model_id' => '1',
-                    'model_type' => \App\Models\ActivityResult::class,
-                ]
-                ]
+            ],
+            'show_result' => ['metadata' => [
+                'order' => '3',
+                'place_name' => 'Neticeyi Gör',
+                'model_id' => '1',
+                'model_type' => \App\Models\ActivityResult::class,
+            ]
             ]
         ],
         'transitions' => [
@@ -40,6 +40,6 @@ return [
                 'from' => 'the_blanks',
                 'to' => 'show_result',
             ]
-        ]
+        ],
     ]
 ];
