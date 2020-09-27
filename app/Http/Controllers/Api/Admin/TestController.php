@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Admin;
 
+use App\Exceptions\WorkFlow\TransitionNotFoundException;
 use App\Http\Controllers\Controller;
 use App\Models\CustomWorkflow;
 use App\Models\User;
@@ -54,8 +55,7 @@ class TestController extends Controller
         /// Get user transtion on
         $transition = $workflow->getEnabledTransitions($flowable);
         if (count($transition) == 0) {
-            //TODO: throw new exception
-            return response()->error('workflow.transition-not-allowed');
+            throw new TransitionNotFoundException();
         }
         foreach ($transition as $transition) {
             $t[] = $transition->getName();
