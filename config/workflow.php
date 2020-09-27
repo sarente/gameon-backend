@@ -7,7 +7,7 @@ return [
         ],
         'marking_store' => [
             'type' => 'multiple_state', // or 'single_state'
-            'property' => 'currentPlace' // this is the property on the model
+            'property' => 'current_place' // this is the property on the model
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [

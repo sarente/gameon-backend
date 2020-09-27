@@ -17,21 +17,24 @@ class TestController extends Controller
         $user = User::find(3);
 
         //Look for user workflows
-        $flowable = UserWorkflow::with(['customWorkflow', 'user'])
+        //$flowable = UserWorkflow::with(['customWorkflow', 'user'])
+        $flowable = UserWorkflow::with(['user'])
             ->where('user_id', $user->id);
 
         if (!$flowable->exists()) {
             throw new WorkFlowNotFoundException();
         }
         //Get work flow definition
-        //dd($flowable->customWorkflow->name);
+        $flowable=$flowable->first();
 
-        $wf_name = $flowable->customWorkflow->name;
+        /////////////$wf_name = $flowable->customWorkflow->name;
+
         //$data=$flowable->customWorkflow->config;
         //CustomWorkflow::loadWorkflow($wf_name,$data);
 
         //$workflow = Workflow::get($flowable, $wf_name);
-        $workflow = $flowable->workflow_get($wf_name);
+        //$workflow = $flowable->workflow_get($wf_name);
+        $workflow = $flowable->workflow_get('straight');
         //dd($workflow->getMetadataStore()->getPlaceMetadata('slide_show'));
         /*@var */
 
@@ -88,7 +91,7 @@ class TestController extends Controller
         //$wf=CustomWorkflow::first();
 
         $flowable = UserWorkflow::find(3);
-        $workflow = $flowable->workflow_get('wf_01');
+        $workflow = $flowable->workflow_get('straight');
 
         //$workflow->getMetadataStore();
         //dump($workflow->can($flowable, 'play_slide_show'));
@@ -115,7 +118,7 @@ class TestController extends Controller
         //$otherPlaceMetadata = $workflow->getMetadataStore()->getMetadata('max_num_of_words', 'draft');
 
 
-        $placeMetadata = $workflow->getMetadataStore()->getPlaceMetadata('slide_show'); // string place name
+        //$placeMetadata = $workflow->getMetadataStore()->getPlaceMetadata('slide_show'); // string place name
         //$activity_id=$workflow->getMetadataStore()->getMetadata('activity_id', 'slide_show');
         //dump($activity_id);
 
