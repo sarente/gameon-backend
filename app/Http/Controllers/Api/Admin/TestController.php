@@ -11,10 +11,10 @@ use Symfony\Component\Workflow\Exception\LogicException;
 
 class TestController extends Controller
 {
-    public function test1(Request $request)
+    public function returnValue(Request $request)
     {
         //Get user
-        $user = User::find(2);
+        $user = User::find(3);
 
         //Look for user workflows
         $flowable = UserWorkflow::with(['customWorkflow', 'user'])
@@ -83,12 +83,12 @@ class TestController extends Controller
 
     }
 
-    public function getWorkflow(Request $request)
+    public function doAction(Request $request)
     {
         //$wf=CustomWorkflow::first();
 
-        $flowable = UserWorkflow::find(2);
-        $workflow = $flowable->workflow_get('values');
+        $flowable = UserWorkflow::find(3);
+        $workflow = $flowable->workflow_get('union_of_forces');
 
         //$workflow->getMetadataStore();
         //dump($workflow->can($flowable, 'play_slide_show'));
