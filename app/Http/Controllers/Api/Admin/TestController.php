@@ -88,7 +88,7 @@ class TestController extends Controller
         //$wf=CustomWorkflow::first();
 
         $flowable = UserWorkflow::find(3);
-        $workflow = $flowable->workflow_get('union_of_forces');
+        $workflow = $flowable->workflow_get('wf_01');
 
         //$workflow->getMetadataStore();
         //dump($workflow->can($flowable, 'play_slide_show'));

@@ -28,8 +28,7 @@
     <list default="true" id="68a5e3da-9008-4db1-bea8-f5fe70938b15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/TestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/TestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/workflow.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/workflow.php" afterDir="false" />
     </list>
     <list id="7b6c8bb0-27e1-4607-8630-5847dc8383c1" name="don't upload" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,19 +206,19 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\resources\images\user\female" />
-      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\resources\images\user\male" />
-      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Http\Controllers\Api\Admin" />
-      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Exceptions\WorkFlow" />
-      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Exceptions\ActivityResult" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Exceptions\ActivityResult" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Models" />
       <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\database\seeds\demo" />
       <recent name="C:\Users\yusuf\Desktop\Laravel Projects\gameon-backend\app\Models\Workflow" />
       <recent name="C:\Users\yusuf\Desktop\Projects\gameon-workflow\app\Http\Controllers\Api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\resources\images\user\female" />
+      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\resources\images\user\male" />
+      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Http\Controllers\Api\Admin" />
+      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Exceptions\WorkFlow" />
+      <recent name="C:\k1\Work\Sarente\gameon-dynamic-backend\app\Exceptions\ActivityResult" />
     </key>
   </component>
   <component name="RunAnythingCache">

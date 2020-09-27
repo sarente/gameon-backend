@@ -16,7 +16,7 @@ class WorkflowTableSeederTest1 extends Seeder
         //TODO: change workflow configs from files
 
         $category = Category::find(11);
-        $workflowDefinition = include(config_path('workflow1.php'));
+        $workflowDefinition = include(config_path('workflow.php'));
 
             $name = $category->translations['name']['tr'];
 
