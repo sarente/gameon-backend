@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api\Admin;
 
-use App\Exceptions\WorkFlow\WorkFlowNotFoundException;
 use App\Http\Controllers\Controller;
+use App\Models\CustomWorkflow;
 use App\Models\User;
 use App\Models\UserWorkflow;
 use Illuminate\Http\Request;
@@ -15,6 +15,7 @@ class TestController extends Controller
     {
         //Get user
         $user = User::find(3);
+        $workflow = CustomWorkflow::find(1);
 
         //Look for user workflows
         //$flowable = UserWorkflow::with(['customWorkflow', 'user'])
@@ -22,10 +23,13 @@ class TestController extends Controller
             ->where('user_id', $user->id);
 
         if (!$flowable->exists()) {
-            throw new WorkFlowNotFoundException();
+            $flowable = new UserWorkflow();
+            $flowable->user()->associate($user);
+            $flowable->customWorkflow()->associate($workflow);
+            $flowable->save();
         }
         //Get work flow definition
-        $flowable=$flowable->first();
+        $flowable = $flowable->first();
 
         $wf_name = $flowable->customWorkflow->name;
 
@@ -34,7 +38,8 @@ class TestController extends Controller
 
         //$workflow = Workflow::get($flowable, $wf_name);
         $workflow = $flowable->workflow_get($wf_name);
-        //$workflow = $flowable->workflow_get('straight1');
+
+        //$workflow = $flowable->workflow_get($wf_name);
         //dd($workflow->getMetadataStore()->getPlaceMetadata('slide_show'));
         /*@var */
 

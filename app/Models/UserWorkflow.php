@@ -11,6 +11,11 @@ class UserWorkflow extends Model
 
     protected $table = "user_workflow";
 
+    protected $fillable = [
+        'user_id',
+        'workflow_id',
+    ];
+
     protected $casts = [
         'marking' => 'array',
         'current_place' => 'array'
