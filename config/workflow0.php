@@ -1,23 +1,28 @@
 <?php
-
 return [
-    'competence'   => [
-        'type' => 'state_machine',
-        'marking_store' => [
-            'type' => 'method',
-            'property'=> 'state'
+    'straight' => [
+        'type' => 'workflow', // or 'state_machine'
+        'metadata' => [
+            'title' => 'Blog Publishing Workflow',
         ],
-        'supports' => [\App\Models\Activity::class],
+        'marking_store' => [
+            'type' => 'multiple_state', // or 'single_state'
+            'property' => 'current_place' // this is the property on the model
+        ],
+        'supports' => ['App\Models\UserWorkflow'],
         'places' => [
             'draft',
             'review',
             'rejected',
             'published'
         ],
-        'transitions'   => [
+        'transitions' => [
             'to_review' => [
                 'from' => 'draft',
-                'to' => 'review'
+                'to' => 'review',
+                'metadata' => [
+                    'priority' => 0.5,
+                ]
             ],
             'publish' => [
                 'from' => 'review',
