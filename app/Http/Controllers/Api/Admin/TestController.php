@@ -27,14 +27,14 @@ class TestController extends Controller
         //Get work flow definition
         $flowable=$flowable->first();
 
-        /////////////$wf_name = $flowable->customWorkflow->name;
+        $wf_name = $flowable->customWorkflow->name;
 
         //$data=$flowable->customWorkflow->config;
         //CustomWorkflow::loadWorkflow($wf_name,$data);
 
         //$workflow = Workflow::get($flowable, $wf_name);
-        //$workflow = $flowable->workflow_get($wf_name);
-        $workflow = $flowable->workflow_get('straight');
+        $workflow = $flowable->workflow_get($wf_name);
+        //$workflow = $flowable->workflow_get('straight1');
         //dd($workflow->getMetadataStore()->getPlaceMetadata('slide_show'));
         /*@var */
 
