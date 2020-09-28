@@ -120,6 +120,8 @@ class AuthController extends Controller
     public function logout(Guard $auth)
     {
         $auth->logout();
+
+        //Get log of user activity
         if(app()->environment('production')) {
             activity()->causedBy(auth()->user())->log('logged_out');
         }
