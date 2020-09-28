@@ -25,6 +25,7 @@ Route::group(['prefix'=> 'admin','middleware' => ['auth.jwt','role:admin']],func
 
     //Activity
     Route::get('activity-kinds', 'Api\Admin\ActivityController@getActivityKinds');
+    Route::resource('activity', 'Api\Admin\ActivityController');
 
 });
 
