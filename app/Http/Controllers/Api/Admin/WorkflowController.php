@@ -17,9 +17,7 @@ class WorkflowController extends Controller
 {
     public function index()
     {
-        $act = \App\Models\UserWorkflow::inRandomOrder()->first();
-
-        dump($act->workflow_transitions());
+        return response()->success(CustomWorkflow::get());
     }
 
     public function store(Request $request)

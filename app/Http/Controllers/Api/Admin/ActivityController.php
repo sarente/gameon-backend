@@ -19,7 +19,6 @@ class ActivityController extends Controller
         return response()->success($activities);
     }
 
-
     public function getActivityKinds()
     {
         return response()->success(Setting::$activity_types);
