@@ -21,6 +21,8 @@ Route::resource('version', 'VersionController', ['only' => ['index']]);
 
 //Admin
 Route::group(['prefix'=> 'admin','middleware' => ['auth.jwt','role:admin']],function ($router) {
+
+    //Categories
     Route::resource('category', 'Api\Admin\CategoryController');
 
     //WorkFlow
