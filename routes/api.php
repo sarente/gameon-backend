@@ -22,6 +22,10 @@ Route::resource('version', 'VersionController', ['only' => ['index']]);
 //Admin
 Route::group(['prefix'=> 'admin','middleware' => ['auth.jwt','role:admin']],function ($router) {
     Route::resource('category', 'Api\Admin\CategoryController');
+
+    //Activity
+    Route::get('activity-kinds', 'Api\Admin\ActivityController@getActivityKinds');
+
 });
 
 //Other users
