@@ -11,9 +11,16 @@ class CategoryRequest extends Request
      * @return array
      */
     public function rules()
+    {   //FIXME: check unique
+        return [
+            'name.tr' => ['required'],
+        ];
+    }
+
+    public function messages()
     {
         return [
-            'name'=> 'required|json',
+            'name.required' =>  trans('errors.category.not-found'),
         ];
     }
 }

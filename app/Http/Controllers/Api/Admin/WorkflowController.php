@@ -7,8 +7,6 @@ use App\Models\Activity;
 use App\Models\Category;
 use App\Models\CustomWorkflow;
 use App\Models\User;
-use App\Models\Workflow\UserWorkflow;
-use App\Models\Workflow\Workflow;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use App\Http\Controllers\Controller;

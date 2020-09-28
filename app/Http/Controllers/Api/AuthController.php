@@ -105,6 +105,10 @@ class AuthController extends Controller
         }
         $user = $auth->user();
 
+        //Get log of user activity
+        if(app()->environment('production')){
+            activity()->causedBy($user)->log('logged_in');
+        }
         return $this->respondWithToken($user);
     }
 
@@ -116,6 +120,9 @@ class AuthController extends Controller
     public function logout(Guard $auth)
     {
         $auth->logout();
+        if(app()->environment('production')) {
+            activity()->causedBy(auth()->user())->log('logged_out');
+        }
         return response()->message('auth.logout');
     }
 

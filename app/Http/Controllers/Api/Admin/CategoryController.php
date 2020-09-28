@@ -20,9 +20,9 @@ class CategoryController extends Controller
         return response()->success($categories);
     }
 
-    public function store()
+    public function store(CategoryRequest $request)
     {
-        $data=request()->json()->all();
+        $data=$request->json()->all();
         $model = new Category($data);
         $model->save();
 
