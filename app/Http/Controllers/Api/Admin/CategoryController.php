@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers\Api\Admin;
 
+use App\Http\Requests\Api\Admin\CategoryRequest;
 use App\Models\Category;
-use App\Models\Pane;
 use App\Models\User;
-use App\Models\Workflow\UserWorkflow;
-use App\Models\Workflow\Workflow;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Response;
 
 class CategoryController extends Controller
 {
@@ -23,12 +20,13 @@ class CategoryController extends Controller
         return response()->success($categories);
     }
 
-    public function store(Request $request)
+    public function store()
     {
-        $model = new Category($request->input());
+        $data=request()->json()->all();
+        $model = new Category($data);
         $model->save();
 
-        return response()->success('common.success');
+        return response()->success($model);
     }
 
     public function show($id){

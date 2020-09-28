@@ -30,22 +30,10 @@ class WorkflowController extends Controller
         return response()->success($workflow);
     }
 
-    public function store(Request $request)
+    public function store()
     {
-        $workflow_name = $request->only('name');
-        $workflow = CustomWorkflow::where('name', $workflow_name)->exists();
-
-        if ($workflow) {
-            return response()->error('workflow.name-valid');
-        }
-
-        $category = Category::find($request->category_id);
-
-        $workflow = new CustomWorkflow($request->input());
-        $workflow->category()->associate($category);
-        $workflow->save();
-
-        return response()->success($workflow);
+        //FIXME: $workflow
+        return response()->success();
     }
 
 }
