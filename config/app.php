@@ -216,7 +216,6 @@ return [
         'Hash' => Illuminate\Support\Facades\Hash::class,
         'Http' => Illuminate\Support\Facades\Http::class,
         'Image' => Intervention\Image\Facades\Image::class,
-        'Intervention' => Intervention\Image\Facades\Image::class,
         'Lang' => Illuminate\Support\Facades\Lang::class,
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
@@ -236,6 +235,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Workflow' => ZeroDaHero\LaravelWorkflow\Facades\WorkflowFacade::class,
+        'Intervention' => Intervention\Image\Facades\Image::class,
     ],
 
 ];
