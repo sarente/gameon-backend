@@ -20,14 +20,12 @@ class ActivityTableSeeder extends Seeder
         \App\Models\Activity::truncate();
         \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-        $activities_names = [
-
-        ];
-
+        //////////////////////////////////////////////////////////
+        //Category Degerler Adası
         $activity = new Activity([
-            'name' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
-            'type' => Setting::$activity_types[0],
-        ]);
+        'name' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
+        'type' => Setting::$activity_types[0],
+    ]);
         $activity->save();
         for ($i = 0; $i < 5; $i++) {
             $activity->image()->save(new  \App\Models\Image([
@@ -35,7 +33,14 @@ class ActivityTableSeeder extends Seeder
                 'image' => Intervention::make(resource_path("images/activity/innovation/{$i}.jpg")),
             ]));
         }
-        //
+        $activity = new Activity([
+            'name' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
+            'type' => Setting::$activity_types[1],
+            'metadata' => ['param1' => 'Yenilikçilik']
+        ]);
+        $activity->save();
+
+        //////////////////////////////////////////////////////////
         $activity = new Activity([
             'name' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
             'type' => Setting::$activity_types[0],
@@ -47,7 +52,17 @@ class ActivityTableSeeder extends Seeder
                 'image' => Intervention::make(resource_path("images/activity/team_work/{$i}.jpg")),
             ]));
         }
-        //
+        $activity = new Activity([
+            'name' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
+            'type' => Setting::$activity_types[1],
+            'metadata' => ['param1' => 'Ekip Çalışması']
+        ]);
+        $activity->save();
+
+
+
+        //Category Eğitim Adası
+        ///////////////////////////////////////////////////////
         $activity = new Activity([
             'name' => ['tr' => 'Covid19', 'en' => 'Covid19'],
             'type' => Setting::$activity_types[0],
