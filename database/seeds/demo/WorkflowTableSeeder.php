@@ -24,7 +24,7 @@ class WorkflowTableSeeder extends Seeder
         $workflowDefinition = include(config_path('workflow.php'));
 
         $workflowKeys = array_keys($workflowDefinition);
-
+        //dd($workflowKeys);
         foreach ($categories as $key => $value) {
 
             if ($key == 0) {
@@ -36,16 +36,37 @@ class WorkflowTableSeeder extends Seeder
                 $workflow->save();
 
                 $workflow = new \App\Models\CustomWorkflow([
-                    'name' => $workflowKeys[$key],
+                    'name' => $workflowKeys[$key+1],
                     'config' => $workflowDefinition['wf_02']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[$key+2],
+                    'config' => $workflowDefinition['wf_03']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[$key+3],
+                    'config' => $workflowDefinition['wf_04']
                 ]);
                 $workflow->category()->associate($value);
                 $workflow->save();
 
             } else if ($key == 1) {
                 $workflow = new \App\Models\CustomWorkflow([
-                    'name' => $workflowKeys[$key],
-                    'config' => $workflowDefinition['wf_03']
+                    'name' => $workflowKeys[$key+3],
+                    'config' => $workflowDefinition['wf_05']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+                //
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[$key+4],
+                    'config' => $workflowDefinition['wf_06']
                 ]);
                 $workflow->category()->associate($value);
                 $workflow->save();
