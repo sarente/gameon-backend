@@ -30,6 +30,7 @@ class WorkflowTableSeeder extends Seeder
             if ($key == 0) {
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[$key],
+                    'enable' => true,
                     'config' => $workflowDefinition['wf_01']
                 ]);
                 $workflow->category()->associate($value);
@@ -37,6 +38,7 @@ class WorkflowTableSeeder extends Seeder
 
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[$key+1],
+                    'enable' => true,
                     'config' => $workflowDefinition['wf_02']
                 ]);
                 $workflow->category()->associate($value);
@@ -44,6 +46,7 @@ class WorkflowTableSeeder extends Seeder
 
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[$key+2],
+                    'enable' => false,
                     'config' => $workflowDefinition['wf_03']
                 ]);
                 $workflow->category()->associate($value);
@@ -51,6 +54,7 @@ class WorkflowTableSeeder extends Seeder
 
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[$key+3],
+                    'enable' => false,
                     'config' => $workflowDefinition['wf_04']
                 ]);
                 $workflow->category()->associate($value);
@@ -59,6 +63,7 @@ class WorkflowTableSeeder extends Seeder
             } else if ($key == 1) {
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[$key+3],
+                    'enable' => true,
                     'config' => $workflowDefinition['wf_05']
                 ]);
                 $workflow->category()->associate($value);
@@ -66,6 +71,7 @@ class WorkflowTableSeeder extends Seeder
                 //
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[$key+4],
+                    'enable' => false,
                     'config' => $workflowDefinition['wf_06']
                 ]);
                 $workflow->category()->associate($value);

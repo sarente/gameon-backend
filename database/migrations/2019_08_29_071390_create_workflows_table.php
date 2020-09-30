@@ -16,6 +16,7 @@ class CreateWorkflowsTable extends Migration
         Schema::create('workflows', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->boolean('enable');
             $table->json('config')->nullable();// config > workflow.php store here
             $table->timestamp('start_date')->nullable();
             $table->timestamp('end_date')->nullable();

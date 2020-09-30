@@ -5,7 +5,6 @@ return [
         'type' => 'workflow', // or 'state_machine'
         'metadata' => [
             'title' => 'Ekip Çalışması',
-            'active' => 'true',
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
@@ -48,7 +47,6 @@ return [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'Yenilikçilik',
-            'active' => 'true',
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
@@ -91,7 +89,6 @@ return [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'Müşteri Memnuniyeti',
-            'active' => 'false',
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
@@ -134,7 +131,6 @@ return [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'Güven',
-            'active' => 'false'
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
@@ -178,7 +174,6 @@ return [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'Covid-19 Eğitimi',
-            'active' => 'true'
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
@@ -209,7 +204,7 @@ return [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'İş Sağlığı ve Güvenliği Eğitim',
-            'active' => 'false'
+           
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
