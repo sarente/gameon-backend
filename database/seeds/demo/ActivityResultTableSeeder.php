@@ -21,9 +21,6 @@ class ActivityResultTableSeeder extends Seeder
         \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         $activities = [
-            ['tr' => 'GÜÇ BİRLİĞİ', 'en' => 'union_of_forces'],
-            ['tr' => 'İYİ NİYET', 'en' => 'bona_fides'],
-            ['tr' => 'Analitik Bakış Açısına Sahip Olmak', 'en' => 'having_an_analytical_perspective'],
 
         ];
 

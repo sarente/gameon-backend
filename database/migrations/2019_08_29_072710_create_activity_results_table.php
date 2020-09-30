@@ -17,7 +17,7 @@ class CreateActivityResultsTable extends Migration
             $table->bigIncrements('id');
             $table->json('name');
             $table->integer('point')->nullable();
-            $table->string('type');
+            $table->string('type')->nullable();
             $table->json('metadata')->nullable();
             $table->timestamps();
         });
