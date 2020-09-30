@@ -21,8 +21,7 @@ class ActivityTableSeeder extends Seeder
         \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         $activities_names = [
-            ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
-            ['tr' => 'Covid19', 'en' => 'Covid19']
+
         ];
 
         $activity = new Activity([
@@ -34,6 +33,30 @@ class ActivityTableSeeder extends Seeder
             $activity->image()->save(new  \App\Models\Image([
                 'order'=>$i,
                 'image' => Intervention::make(resource_path("images/activity/innovation/{$i}.jpg")),
+            ]));
+        }
+        //
+        $activity = new Activity([
+            'name' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
+            'type' => Setting::$activity_types[0],
+        ]);
+        $activity->save();
+        for ($i = 0; $i < 5; $i++) {
+            $activity->image()->save(new  \App\Models\Image([
+                'order'=>$i,
+                'image' => Intervention::make(resource_path("images/activity/team_work/{$i}.jpg")),
+            ]));
+        }
+        //
+        $activity = new Activity([
+            'name' => ['tr' => 'Covid19', 'en' => 'Covid19'],
+            'type' => Setting::$activity_types[0],
+        ]);
+        $activity->save();
+        for ($i = 0; $i < 5; $i++) {
+            $activity->image()->save(new  \App\Models\Image([
+                'order'=>$i,
+                'image' => Intervention::make(resource_path("images/activity/covid19/{$i}.jpg")),
             ]));
         }
 
