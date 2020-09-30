@@ -26,7 +26,6 @@ class WorkflowTableSeeder extends Seeder
         $workflowKeys = array_keys($workflowDefinition);
 
         foreach ($categories as $key => $value) {
-            //Log::info($value);
 
             if ($key == 0) {
                 $workflow = new \App\Models\CustomWorkflow([
@@ -36,10 +35,17 @@ class WorkflowTableSeeder extends Seeder
                 $workflow->category()->associate($value);
                 $workflow->save();
 
-            } else if ($key == 1) {
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[$key],
                     'config' => $workflowDefinition['wf_02']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+
+            } else if ($key == 1) {
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[$key],
+                    'config' => $workflowDefinition['wf_03']
                 ]);
                 $workflow->category()->associate($value);
                 $workflow->save();

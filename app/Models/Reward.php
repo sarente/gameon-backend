@@ -14,6 +14,7 @@ class Reward extends Model
 
     public $translatable = [
         'name',
+        'type',
         'description'
     ];
 
