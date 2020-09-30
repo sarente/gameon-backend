@@ -32,6 +32,8 @@ Route::group(['prefix'=> 'admin','middleware' => ['auth.jwt','role:admin']],func
     Route::get('activity-kinds', 'Api\Admin\ActivityController@getActivityKinds');
     Route::resource('activity', 'Api\Admin\ActivityController');
 
+	//Reward
+    Route::resource('reward', 'Api\Admin\RewardController');
 });
 
 //Other users
@@ -62,7 +64,3 @@ Route::group(['middleware' => 'auth.jwt'], function ($router) {
 
 Route::get('do-action', 'Api\Admin\TestController@doAction');
 Route::post('return-value', 'Api\Admin\TestController@returnValue');
-
-
-
-
