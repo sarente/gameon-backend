@@ -11,6 +11,8 @@ class UserPoint extends Model
 
     protected $fillable = [
         'point',
+        'user_id',
+        'category_id',
     ];
     protected $hidden = [
         'id',
