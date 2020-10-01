@@ -14,12 +14,15 @@ class Activity extends Model
 
     public $translatable = [
         'name',
+        'metadata',
     ];
     protected $fillable = [
         'name',
+        'return_value',
         'type'
     ];
     protected $casts=[
+        'return_value'=>'array',
         'metadata'=>'array',
         'name'=>'array',
     ];

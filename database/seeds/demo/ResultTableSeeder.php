@@ -7,7 +7,7 @@ use App\Models\Reward;
 use App\Models\Setting;
 use Illuminate\Database\Seeder;
 
-class ActivityResultTableSeeder extends Seeder
+class ResultTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

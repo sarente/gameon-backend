@@ -18,13 +18,13 @@ use Symfony\Component\Workflow\Exception\LogicException;
 
 class ResultController extends Controller
 {
-    public function checkValidity($workflow_id, $activity_result_id)
+    public function checkValidity($workflow_id, $result_id)
     {
         DB::beginTransaction();
         $user = User::getUser();
 
         //Check activity name if doesnt have return false
-        $activity_result = Result::find($activity_result_id);
+        $activity_result = Result::find($result_id);
         if (!$activity_result) {
             throw new ResultNotFoundException();
         }
@@ -60,7 +60,7 @@ class ResultController extends Controller
         //Check user not gain point before from this activity
         ////////////////////////////////////////////////////////////////////
         $gain_before = UserPoint::where(function ($query) use ($activity_result, $user) {
-            $query->where('activity_result_id', $activity_result->id)->where('user_id', $user->id);
+            $query->where('result_id', $activity_result->id)->where('user_id', $user->id);
         })->exists();
         if ($gain_before) {
             DB::rollBack();
@@ -72,7 +72,7 @@ class ResultController extends Controller
             'point' => $activity_result->point
         ]);
         $user_point->user()->associate($user);
-        $user_point->activityResult()->associate($activity_result_id);
+        $user_point->activityResult()->associate($result_id);
         $user_point->workflow()->associate($workflow_id);
         $user_point->category()->associate($category_id);
         $user_point->save();

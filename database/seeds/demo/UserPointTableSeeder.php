@@ -19,7 +19,7 @@ class UserPointTableSeeder extends Seeder
         // {"en": "Values", "tr": "Değeler"} //wvf: values
         \App\Models\UserPoint::create([
             'user_id'=> 2,
-            //'activity_result_id'=> 1,
+            //'result_id'=> 1,
             //'workflow_id'=> 1,
             'category_id'=> 1,
             'point' => 15
@@ -28,7 +28,7 @@ class UserPointTableSeeder extends Seeder
         //{"en": "Competence", "tr": "Yetkinlikler"} //wvf: base_competence
         \App\Models\UserPoint::create([
             'user_id'=> 2,
-            //'activity_result_id'=> 1,
+            //'result_id'=> 1,
             //'workflow_id'=> 2,
             'category_id'=> 2,
             'point' => 15
@@ -36,7 +36,7 @@ class UserPointTableSeeder extends Seeder
         //wvf: management_competence
 /*        \App\Models\UserPoint::create([
             'user_id'=> 2,
-            //'activity_result_id'=> 1,
+            //'result_id'=> 1,
             //'workflow_id'=> 3,
             'category_id'=> 2,
             'point' => 15
@@ -44,7 +44,7 @@ class UserPointTableSeeder extends Seeder
         //wvf: high_level_competence
         \App\Models\UserPoint::create([
             'user_id'=> 2,
-            //'activity_result_id'=> 1,
+            //'result_id'=> 1,
             //'workflow_id'=> 4,
             'category_id'=> 2,
             'point' => 15
@@ -53,7 +53,7 @@ class UserPointTableSeeder extends Seeder
         //{"en": "Entertainment", "tr": "Eğlence"}  //wvf: entertainment
         \App\Models\UserPoint::create([
             'user_id'=> 2,
-            //'activity_result_id'=> 1,
+            //'result_id'=> 1,
             //'workflow_id'=> 5,
             'category_id'=> 3,
             'point' => 15

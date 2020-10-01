@@ -25,7 +25,8 @@ class ActivityTableSeeder extends Seeder
         // do action
 
         $activity = new Activity([
-        'name' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
+        'name' => ['tr' => 'Slaytları Oynat', 'en' => 'Play Slide Show'],
+        'metadata' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
         'type' => Setting::$activity_types[0],
     ]);
         $activity->save();
@@ -37,16 +38,18 @@ class ActivityTableSeeder extends Seeder
         }
         // return value
         $activity = new Activity([
-            'name' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
+            'name' => ['tr' => 'Değerleri Döndür', 'en' => 'Return Values'],
+            'metadata' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
             'type' => Setting::$activity_types[1],
-            'metadata' => ['param1' => 'Yenilikçilik']
+            'return_value' => ['param1' => 'Yenilikçilik']
         ]);
         $activity->save();
 
         //////////////////////////////////////////////////////////
         // do action
         $activity = new Activity([
-            'name' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
+            'name' => ['tr' => 'Slaytları Oynat', 'en' => 'Play Slide Show'],
+            'metadata' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
             'type' => Setting::$activity_types[0],
         ]);
         $activity->save();
@@ -58,9 +61,10 @@ class ActivityTableSeeder extends Seeder
         }
         // return value
         $activity = new Activity([
-            'name' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
+            'name' => ['tr' => 'Değerleri Döndür', 'en' => 'Return Values'],
+            'metadata' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
             'type' => Setting::$activity_types[1],
-            'metadata' => ['param1' => 'Ekip Çalışması']
+            'return_value' => ['param1' => 'Ekip Çalışması']
         ]);
         $activity->save();
 
@@ -69,7 +73,8 @@ class ActivityTableSeeder extends Seeder
         ///////////////////////////////////////////////////////
         ///// do action
         $activity = new Activity([
-            'name' => ['tr' => 'Covid19', 'en' => 'Covid19'],
+            'name' => ['tr' => 'Slaytları Oynat', 'en' => 'Play Slide Show'],
+            'metadata' => ['tr' => 'Covid19', 'en' => 'Covid19'],
             'type' => Setting::$activity_types[0],
         ]);
         $activity->save();
