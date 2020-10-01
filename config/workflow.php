@@ -28,7 +28,7 @@ return [
                 'order' => '3',
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '1',
-                'model_type' => \App\Models\ActivityResult::class,
+                'model_type' => \App\Models\Result::class,
             ]
             ]
         ],
@@ -70,7 +70,7 @@ return [
                 'order' => '3',
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '5',
-                'model_type' => \App\Models\ActivityResult::class,
+                'model_type' => \App\Models\Result::class,
             ]
             ]
         ],
@@ -112,7 +112,7 @@ return [
                 'order' => '3',
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '5',
-                'model_type' => \App\Models\ActivityResult::class,
+                'model_type' => \App\Models\Result::class,
             ]
             ]
         ],
@@ -154,7 +154,7 @@ return [
                 'order' => '3',
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '5',
-                'model_type' => \App\Models\ActivityResult::class,
+                'model_type' => \App\Models\Result::class,
             ]
             ]
         ],
@@ -189,7 +189,7 @@ return [
                 'order' => '2',
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '10',
-                'model_type' => \App\Models\ActivityResult::class,
+                'model_type' => \App\Models\Result::class,
             ]
             ]
         ],
@@ -220,7 +220,7 @@ return [
                 'order' => '2',
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '12',
-                'model_type' => \App\Models\ActivityResult::class,
+                'model_type' => \App\Models\Result::class,
             ]
             ]
         ],

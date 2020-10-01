@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Translatable\HasTranslations;
 use ZeroDaHero\LaravelWorkflow\Traits\WorkflowTrait;
-//We get result of workflow from this object
-class ActivityResult extends Model
+//We get result of workflow from this object (Point-Reward)
+class Result extends Model
 {
     use LogsActivity;
 
@@ -29,7 +29,6 @@ class ActivityResult extends Model
         'created_at',
         'updated_at'
     ];
-
 
     public function image()
     {

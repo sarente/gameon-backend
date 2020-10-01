@@ -1,6 +1,6 @@
 <?php
 namespace App\Database\Seeds\Demo;
-use App\Models\ActivityResult;
+use App\Models\Result;
 use Illuminate\Database\Seeder;
 
 class DemoSeeder extends Seeder

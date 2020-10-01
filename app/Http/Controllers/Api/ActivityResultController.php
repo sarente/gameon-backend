@@ -8,7 +8,7 @@ use App\Exceptions\WorkFlow\GainBeforeException;
 use App\Exceptions\WorkFlow\UserWorkFlowNotFoundException;
 use App\Exceptions\WorkFlow\WorkFlowNotFoundException;
 use App\Http\Controllers\Controller;
-use App\Models\ActivityResult;
+use App\Models\Result;
 use App\Models\CustomWorkflow;
 use App\Models\User;
 use App\Models\UserPoint;
@@ -24,7 +24,7 @@ class ActivityResultController extends Controller
         $user = User::getUser();
 
         //Check activity name if doesnt have return false
-        $activity_result = ActivityResult::find($activity_result_id);
+        $activity_result = Result::find($activity_result_id);
         if (!$activity_result) {
             throw new ActivityResultNotFoundException();
         }

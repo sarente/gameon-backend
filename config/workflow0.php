@@ -27,7 +27,7 @@ return [
                 'order' => '3',
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '1',
-                'model_type' => \App\Models\ActivityResult::class,
+                'model_type' => \App\Models\Result::class,
             ]
             ]
         ],

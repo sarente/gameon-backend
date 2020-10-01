@@ -13,7 +13,7 @@ class CreateActivityResultsTable extends Migration
      */
     public function up()
     {
-        Schema::create('activity_results', function (Blueprint $table) {
+        Schema::create('results', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->json('name');
             $table->integer('point')->nullable();
@@ -30,6 +30,6 @@ class CreateActivityResultsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('activity_results');
+        Schema::dropIfExists('results');
     }
 }
