@@ -36,15 +36,4 @@ class Activity extends Model
     {
         return $this->morphMany(Image::class, 'imageable');
     }
-
-    public function rewards(): MorphToMany
-    {
-        return $this->morphToMany(
-            Reward::class,
-            'model',
-            'model_has_rewards',
-            'model_id',
-            'reward_id'
-        );
-    }
 }

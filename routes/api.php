@@ -57,7 +57,8 @@ Route::group(['middleware' => 'auth.jwt'], function ($router) {
     //WorkFlow
     Route::resource('workflow', 'Api\WorkflowController');
 
-    //Activity Result
+    //Activity
+    Route::resource('activity', 'Api\ActivityController');
     Route::post('workflow/{workflow}/activity-result/{activity_result}', 'Api\ActivityResultController@checkValidity');
 });
 

@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Log;
 
-class ActivityResultNotFoundException extends ModelNotFoundException
+class ResultWrongAnswerException extends ModelNotFoundException
 {
     protected $model = User::class;
     /**
@@ -27,6 +27,6 @@ class ActivityResultNotFoundException extends ModelNotFoundException
     public function render($request)
     {
         $this->report();
-        return response()->error('activity.not-found', [], $request->toArray(), 404);
+        return response()->error('activity.result.wrong-answer', [], $request->toArray(), 404);
     }
 }

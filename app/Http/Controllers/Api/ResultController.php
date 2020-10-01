@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Exceptions\Activity\ActivityResultNotFoundException;
-use App\Exceptions\Activity\ActivityResultWrongAnswerException;
+use App\Exceptions\Activity\ResultNotFoundException;
+use App\Exceptions\Activity\ResultWrongAnswerException;
 use App\Exceptions\WorkFlow\GainBeforeException;
 use App\Exceptions\WorkFlow\UserWorkFlowNotFoundException;
 use App\Exceptions\WorkFlow\WorkFlowNotFoundException;
@@ -16,7 +16,7 @@ use App\Models\UserWorkflow;
 use Illuminate\Support\Facades\DB;
 use Symfony\Component\Workflow\Exception\LogicException;
 
-class ActivityResultController extends Controller
+class ResultController extends Controller
 {
     public function checkValidity($workflow_id, $activity_result_id)
     {
@@ -26,7 +26,7 @@ class ActivityResultController extends Controller
         //Check activity name if doesnt have return false
         $activity_result = Result::find($activity_result_id);
         if (!$activity_result) {
-            throw new ActivityResultNotFoundException();
+            throw new ResultNotFoundException();
         }
         //Check input data with activity result
         $it_1 = request()->json()->all();
@@ -34,7 +34,7 @@ class ActivityResultController extends Controller
         $diff = array_diff($it_1, $it_2);
 
         if (count($diff) > 0) {
-            throw new ActivityResultWrongAnswerException();
+            throw new ResultWrongAnswerException();
         }
         //Get workflow
         $workflow = CustomWorkflow::with('category')->find($workflow_id);

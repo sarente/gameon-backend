@@ -4,7 +4,7 @@ return [
     'wf_01' => [
         'type' => 'workflow', // or 'state_machine'
         'metadata' => [
-            'title' => 'Ekip Çalışması',
+            'title' => 'Yenilikçilik',
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
@@ -46,7 +46,7 @@ return [
     'wf_02' => [
         'type' => 'workflow',
         'metadata' => [
-            'title' => 'Yenilikçilik',
+            'title' => 'Ekip Çalışması',
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [

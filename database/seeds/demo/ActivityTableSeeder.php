@@ -22,6 +22,8 @@ class ActivityTableSeeder extends Seeder
 
         //////////////////////////////////////////////////////////
         //Category Degerler Adası
+        // do action
+
         $activity = new Activity([
         'name' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
         'type' => Setting::$activity_types[0],
@@ -33,6 +35,7 @@ class ActivityTableSeeder extends Seeder
                 'image' => Intervention::make(resource_path("images/activity/innovation/{$i}.jpg")),
             ]));
         }
+        // return value
         $activity = new Activity([
             'name' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
             'type' => Setting::$activity_types[1],
@@ -41,6 +44,7 @@ class ActivityTableSeeder extends Seeder
         $activity->save();
 
         //////////////////////////////////////////////////////////
+        // do action
         $activity = new Activity([
             'name' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
             'type' => Setting::$activity_types[0],
@@ -52,6 +56,7 @@ class ActivityTableSeeder extends Seeder
                 'image' => Intervention::make(resource_path("images/activity/team_work/{$i}.jpg")),
             ]));
         }
+        // return value
         $activity = new Activity([
             'name' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
             'type' => Setting::$activity_types[1],
@@ -59,10 +64,10 @@ class ActivityTableSeeder extends Seeder
         ]);
         $activity->save();
 
-
-
+        ///////////////////////////////////////////////////////
         //Category Eğitim Adası
         ///////////////////////////////////////////////////////
+        ///// do action
         $activity = new Activity([
             'name' => ['tr' => 'Covid19', 'en' => 'Covid19'],
             'type' => Setting::$activity_types[0],
