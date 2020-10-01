@@ -51,14 +51,5 @@ class SettingTableSeeder extends Seeder
             'value' => 5,
         ]);
 
-        \App\Models\Setting::create([
-            'key' => Setting::EDUCATION_TERM,
-            'value' => 8,
-        ]);
-        \App\Models\Setting::create([
-            'key' => Setting::ARTIFACT_MONTHLY,
-            'value' => 3,
-        ]);
-
     }
 }
