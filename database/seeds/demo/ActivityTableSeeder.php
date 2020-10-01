@@ -27,7 +27,7 @@ class ActivityTableSeeder extends Seeder
         $activity = new Activity([
         'name' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
         'type' => Setting::$activity_types[0],
-        'model' => Setting::$activity_models[0],
+        'kind' => Setting::$activity_kinds[0],
     ]);
         $activity->save();
         for ($i = 0; $i < 5; $i++) {
@@ -39,7 +39,7 @@ class ActivityTableSeeder extends Seeder
         // return value
         $activity = new Activity([
             'name' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
-            'model' => Setting::$activity_models[1],
+            'kind' => Setting::$activity_kinds[1],
             'return_value' => ['param1' => 'Yenilikçilik']
         ]);
         $activity->save();
@@ -49,7 +49,7 @@ class ActivityTableSeeder extends Seeder
         $activity = new Activity([
             'name' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
             'type' => Setting::$activity_types[0],
-            'model' => Setting::$activity_models[0],
+            'kind' => Setting::$activity_kinds[0],
         ]);
         $activity->save();
         for ($i = 0; $i < 5; $i++) {
@@ -61,7 +61,7 @@ class ActivityTableSeeder extends Seeder
         // return value
         $activity = new Activity([
             'name' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
-            'type' => Setting::$activity_models[1],
+            'kind' => Setting::$activity_kinds[1],
             'return_value' => ['param1' => 'Ekip Çalışması']
         ]);
         $activity->save();
@@ -72,7 +72,7 @@ class ActivityTableSeeder extends Seeder
         ///// do action
         $activity = new Activity([
             'name' => ['tr' => 'Covid19', 'en' => 'Covid19'],
-            'type' => Setting::$activity_models[0],
+            'kind' => Setting::$activity_kinds[0],
         ]);
         $activity->save();
         for ($i = 0; $i < 5; $i++) {

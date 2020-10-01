@@ -85,7 +85,7 @@ class Setting extends Model
         1 => Setting::WF_TYPE_SM,
     ];
 
-    public static $activity_models = [
+    public static $activity_kinds = [
         0 => Setting::ACTIVITY_ACTION,
         1 => Setting::ACTIVITY_RETURN,
     ];
