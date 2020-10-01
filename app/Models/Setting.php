@@ -52,8 +52,14 @@ class Setting extends Model
     const WF_TYPE_SM = 'state_machine';
     const WF_RESULT ='workflow-result';
 
+    //Activity model
     const ACTIVITY_ACTION ='do-action';
     const ACTIVITY_RETURN ='return-value';
+
+    //Activity types
+    const ACTIVITY_SLIDE_SHOW ='slide-show';
+    const ACTIVITY_PLAY_VIDEO ='play-video';
+    const ACTIVITY_READ_PDF ='read-pdf';
 
 
     const APP_NAME = 'Sarente Gameon';
@@ -79,9 +85,15 @@ class Setting extends Model
         1 => Setting::WF_TYPE_SM,
     ];
 
-    public static $activity_types = [
+    public static $activity_models = [
         0 => Setting::ACTIVITY_ACTION,
         1 => Setting::ACTIVITY_RETURN,
+    ];
+
+    public static $activity_types = [
+        0 => Setting::ACTIVITY_SLIDE_SHOW,
+        1 => Setting::ACTIVITY_PLAY_VIDEO,
+        2 => Setting::ACTIVITY_READ_PDF,
     ];
 
     public static $status_types = [

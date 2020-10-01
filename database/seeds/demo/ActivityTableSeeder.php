@@ -25,9 +25,9 @@ class ActivityTableSeeder extends Seeder
         // do action
 
         $activity = new Activity([
-        'name' => ['tr' => 'Slaytları Oynat', 'en' => 'Play Slide Show'],
-        'metadata' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
+        'name' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
         'type' => Setting::$activity_types[0],
+        'model' => Setting::$activity_models[0],
     ]);
         $activity->save();
         for ($i = 0; $i < 5; $i++) {
@@ -38,9 +38,8 @@ class ActivityTableSeeder extends Seeder
         }
         // return value
         $activity = new Activity([
-            'name' => ['tr' => 'Değerleri Döndür', 'en' => 'Return Values'],
-            'metadata' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
-            'type' => Setting::$activity_types[1],
+            'name' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
+            'model' => Setting::$activity_models[1],
             'return_value' => ['param1' => 'Yenilikçilik']
         ]);
         $activity->save();
@@ -48,9 +47,9 @@ class ActivityTableSeeder extends Seeder
         //////////////////////////////////////////////////////////
         // do action
         $activity = new Activity([
-            'name' => ['tr' => 'Slaytları Oynat', 'en' => 'Play Slide Show'],
-            'metadata' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
+            'name' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
             'type' => Setting::$activity_types[0],
+            'model' => Setting::$activity_models[0],
         ]);
         $activity->save();
         for ($i = 0; $i < 5; $i++) {
@@ -61,9 +60,8 @@ class ActivityTableSeeder extends Seeder
         }
         // return value
         $activity = new Activity([
-            'name' => ['tr' => 'Değerleri Döndür', 'en' => 'Return Values'],
-            'metadata' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
-            'type' => Setting::$activity_types[1],
+            'name' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
+            'type' => Setting::$activity_models[1],
             'return_value' => ['param1' => 'Ekip Çalışması']
         ]);
         $activity->save();
@@ -73,9 +71,8 @@ class ActivityTableSeeder extends Seeder
         ///////////////////////////////////////////////////////
         ///// do action
         $activity = new Activity([
-            'name' => ['tr' => 'Slaytları Oynat', 'en' => 'Play Slide Show'],
-            'metadata' => ['tr' => 'Covid19', 'en' => 'Covid19'],
-            'type' => Setting::$activity_types[0],
+            'name' => ['tr' => 'Covid19', 'en' => 'Covid19'],
+            'type' => Setting::$activity_models[0],
         ]);
         $activity->save();
         for ($i = 0; $i < 5; $i++) {
