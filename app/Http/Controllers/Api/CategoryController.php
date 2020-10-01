@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Exceptions\Category\CategoryNotFoundException;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Level;
@@ -71,7 +72,9 @@ class CategoryController extends Controller
         $user = User::getUser();
 
         $category = Category::find($id);
-
+        if(!$category){
+          throw new CategoryNotFoundException();
+        }
         $workflows = UserWorkflow::where('user_id', $user->id)
             ->where('category_id', $id)
             ->join('workflows', 'user_workflow.workflow_id', '=', 'workflows.id')
