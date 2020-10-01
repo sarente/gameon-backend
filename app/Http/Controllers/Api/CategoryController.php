@@ -72,7 +72,8 @@ class CategoryController extends Controller
 
         $category = Category::find($id);
 
-        $workflows = UserWorkflow::where('user_id', $user->id)->where('category_id', $id)
+        $workflows = UserWorkflow::where('user_id', $user->id)
+            ->where('category_id', $id)
             ->join('workflows', 'user_workflow.workflow_id', '=', 'workflows.id')
             ->get();
 

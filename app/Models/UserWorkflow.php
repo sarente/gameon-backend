@@ -12,6 +12,7 @@ class UserWorkflow extends Model
     protected $table = "user_workflow";
 
     protected $fillable = [
+        'marking',
         'user_id',
         'workflow_id',
     ];
