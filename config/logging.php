@@ -87,7 +87,7 @@ return [
         ],
 
         'errorlog' => [
-            'driver' => 'errorlog',
+            'driver' => 'daily',
             'level' => 'debug',
         ],
 
