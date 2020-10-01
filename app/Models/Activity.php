@@ -31,10 +31,6 @@ class Activity extends Model
         'created_at',
         'updated_at'
     ];
-    protected $attributes = [
-        'type' => Setting::ACTIVITY_ACTION,
-    ];
-
     public function image()
     {
         return $this->morphMany(Image::class, 'imageable');

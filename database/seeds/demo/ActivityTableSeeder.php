@@ -40,6 +40,7 @@ class ActivityTableSeeder extends Seeder
         $activity = new Activity([
             'name' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
             'kind' => Setting::$activity_kinds[1],
+            'type' => Setting::$activity_types[3],
             'return_value' => ['param1' => 'Yenilikçilik']
         ]);
         $activity->save();
@@ -62,6 +63,7 @@ class ActivityTableSeeder extends Seeder
         $activity = new Activity([
             'name' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
             'kind' => Setting::$activity_kinds[1],
+            'type' => Setting::$activity_types[3],
             'return_value' => ['param1' => 'Ekip Çalışması']
         ]);
         $activity->save();
@@ -72,6 +74,7 @@ class ActivityTableSeeder extends Seeder
         ///// do action
         $activity = new Activity([
             'name' => ['tr' => 'Covid19', 'en' => 'Covid19'],
+            'type' => Setting::$activity_types[0],
             'kind' => Setting::$activity_kinds[0],
         ]);
         $activity->save();

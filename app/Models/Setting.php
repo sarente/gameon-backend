@@ -60,6 +60,7 @@ class Setting extends Model
     const ACTIVITY_SLIDE_SHOW ='slide-show';
     const ACTIVITY_PLAY_VIDEO ='play-video';
     const ACTIVITY_READ_PDF ='read-pdf';
+    const FILL_IN_THE_BLANKS ='fill_in_the_blanks';
 
 
     const APP_NAME = 'Sarente Gameon';
@@ -94,6 +95,7 @@ class Setting extends Model
         0 => Setting::ACTIVITY_SLIDE_SHOW,
         1 => Setting::ACTIVITY_PLAY_VIDEO,
         2 => Setting::ACTIVITY_READ_PDF,
+        3 => Setting::FILL_IN_THE_BLANKS,
     ];
 
     public static $status_types = [
