@@ -60,8 +60,8 @@ Route::group(['middleware' => 'auth.jwt'], function ($router) {
     //Activity
     Route::resource('activity', 'Api\ActivityController');
 
-    Route::get('workflow/{workflow}/activity/{activity}', 'Api\ActivityResultController@proceed');
-    Route::post('workflow/{workflow}/activity/{activity}', 'Api\ActivityResultController@verify');
+    Route::get('workflow/{workflow}', 'Api\ActivityController@proceed');
+    Route::post('workflow/{workflow}/activity/{activity}', 'Api\ActivityController@verify');
 });
 
 

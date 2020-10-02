@@ -47,7 +47,7 @@ class UsersTableSeeder extends Seeder
         $supervisor = factory(\App\Models\User::class)->create([
             'username' => rand(00000000000, 99999999999),
             'gender' => 1,
-            'email' => 'advisor@' . $domain_name,
+            'email' => 'supervisor@' . $domain_name,
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
             'name' => $name,
             'surname' => '',

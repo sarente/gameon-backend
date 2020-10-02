@@ -43,7 +43,7 @@ class WorkflowAssignment implements ShouldQueue
                 'user_id' => $this->user->id,
                 'workflow_id' => $workflow,
                 //'marking' => "" . Setting::$activity_types[0] . "",
-                'marking' => "slide-show",
+                'marking' => "slide_show",
             ]);
         }
     }
