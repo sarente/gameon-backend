@@ -16,4 +16,16 @@ class ActivityController extends Controller
         }
         return response()->success($activity);
     }
+
+    //do-action
+    public function proceed($workflow,$activity)
+    {
+        
+    }
+
+    //return-value
+    public function verify($workflow,$activity)
+    {
+
+    }
 }
