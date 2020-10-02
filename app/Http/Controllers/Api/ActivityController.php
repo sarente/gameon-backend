@@ -85,13 +85,13 @@ class ActivityController extends Controller
         $user = User::getUser();
 
         //Check activity name if doesnt have return false
-        $activity_result = Activity::find($activity_id);
-        if (!$activity_result) {
+        $activity = Activity::find($activity_id);
+        if (!$activity) {
             throw new ActivityNotFoundException();
         }
         //Check input data with activity result
         $it_1 = request()->json()->all();
-        $it_2 = $activity_result->metadata;
+        $it_2 = $activity->return_value;
         $diff = array_diff($it_1, $it_2);
 
         if (count($diff) > 0) {
@@ -120,8 +120,8 @@ class ActivityController extends Controller
 
         //Check user not gain point before from this activity
         ////////////////////////////////////////////////////////////////////
-        $gain_before = UserPoint::where(function ($query) use ($activity_result, $user) {
-            $query->where('activity_result_id', $activity_result->id)->where('user_id', $user->id);
+        $gain_before = UserPoint::where(function ($query) use ($activity, $user) {
+            $query->where('activity_id', $activity->id)->where('user_id', $user->id);
         })->exists();
         if ($gain_before) {
             DB::rollBack();
@@ -130,10 +130,10 @@ class ActivityController extends Controller
         }
         //Add point of activity to user point
         $user_point = new UserPoint([
-            'point' => $activity_result->point
+            'point' => $activity->point
         ]);
         $user_point->user()->associate($user);
-        $user_point->activityResult()->associate($activity_id);
+        $user_point->activity()->associate($activity_id);
         $user_point->workflow()->associate($workflow_id);
         $user_point->category()->associate($category_id);
         $user_point->save();
