@@ -118,26 +118,6 @@ class ActivityController extends Controller
         ////////////////////////////////////////////////////////////////////
         $category_id = $workflow->category_id;
 
-        //Check user not gain point before from this activity
-        ////////////////////////////////////////////////////////////////////
-        $gain_before = UserPoint::where(function ($query) use ($activity, $user) {
-            $query->where('activity_id', $activity->id)->where('user_id', $user->id);
-        })->exists();
-        if ($gain_before) {
-            DB::rollBack();
-            //if user gain before from this activity return error
-            throw new GainBeforeException(request());
-        }
-        //Add point of activity to user point
-        $user_point = new UserPoint([
-            'point' => $activity->point
-        ]);
-        $user_point->user()->associate($user);
-        $user_point->activity()->associate($activity_id);
-        $user_point->workflow()->associate($workflow_id);
-        $user_point->category()->associate($category_id);
-        $user_point->save();
-
         //Apply it
         ////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////
@@ -166,6 +146,6 @@ class ActivityController extends Controller
         ////////////////////////////////////////////////////////////////////
         DB::commit();
 
-        return response()->success($user_point->load('activityResult.rewards.image'));
+        return response()->success('common.success');
     }
 }

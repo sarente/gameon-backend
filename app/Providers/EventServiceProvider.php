@@ -16,7 +16,7 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $subscribe = [
         'App\Listeners\UserEventSubscriber',
-        //'App\Listeners\WorkFlowSubscriber',
+        'App\Listeners\WorkFlowSubscriber',
     ];
     /**
      * The event listener mappings for the application.

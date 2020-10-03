@@ -4,7 +4,7 @@ namespace App\Listeners;
 
 use App\Exceptions\WorkFlow\GainBeforeException;
 use App\Exceptions\WorkFlow\WrongAnswerException;
-use App\Models\Activity;
+use App\Models\Result;
 use App\Models\CustomWorkflow;
 use App\Models\Setting;
 use App\Models\User;
@@ -31,8 +31,7 @@ class WorkFlowSubscriber implements ShouldQueue
         $originalEvent = $event->getOriginalEvent();
         /** @var \App\Models\UserWorkflow $user_workflow */
         $this->flowable = $event->getOriginalEvent()->getSubject();
-
-        //Log::info($this->user->id.' onGuard ');
+        
         //Check activity return type
         if (empty($this->flowable->id)) {
             $originalEvent->setBlocked(true);
@@ -44,28 +43,31 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onLeave($event)
     {
-        Log::info('onLeave');
-        $this->user = auth()->user() ?? User::find(1);
+        //Log::info('onLeave');
+        $this->user = auth()->user();
 
         //Get key of place
         $key = key($event->getOriginalEvent()->getMarking()->getPlaces());
+
+        if($key=='show_result')
         //Check the activity type
-        $activity_id = (int)$event->getOriginalEvent()->getMetadata('model_id', $key);
+        $model_id = (int)$event->getOriginalEvent()->getMetadata('model_id', $key);
 
         //Grab this data to fill user point
-        $activity = Activity::findOrFail($activity_id);
+        $result = Result::findOrFail($model_id);
+        
         $workflow_id=$event->getOriginalEvent()->getSubject()->workflow_id;
         $category_id=CustomWorkflow::with('category')->findOrFail($workflow_id)->category_id;
 
         $this->flowable = $event->getOriginalEvent()->getSubject();
 
         //Check activity type and Set user point that caught from this activity
-        if ($activity->type === Setting::ACTIVITY_RETURN && !is_null($activity->metadata['result'])) {
-            if ($activity->metadata['result'] === request()->get('result')) {
+        if ($result->type === Setting::ACTIVITY_RETURN && !is_null($result->metadata['result'])) {
+            if ($result->metadata['result'] === request()->get('result')) {
 
                 //Check user not gain point before from this activity
-                $gain_before = UserPoint::where(function ($query) use ($activity) {
-                    $query->where('activity_id', $activity->id)->where('user_id', $this->user->id);
+                $gain_before = UserPoint::where(function ($query) use ($result) {
+                    $query->where('activity_id', $result->id)->where('user_id', $this->user->id);
                 })->exists();
 
                 if ($gain_before) {
@@ -74,10 +76,10 @@ class WorkFlowSubscriber implements ShouldQueue
                 }
                 //Add point of activity to user point
                 $user_point = new UserPoint([
-                    'point' => $activity->point
+                    'point' => $result->point
                 ]);
                 $user_point->user()->associate($this->user);
-                $user_point->activityResult()->associate($activity_id);
+                $user_point->activityResult()->associate($model_id);
                 $user_point->workflow()->associate($workflow_id);
                 $user_point->category()->associate($category_id);
                 $user_point->save();
