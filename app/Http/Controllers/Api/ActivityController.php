@@ -138,7 +138,7 @@ class ActivityController extends Controller
         try {
             $system_workflow->apply($flowable, $transition);
             $flowable->save();
-        } catch (LogicException $e) {
+        } catch (LogicException $e) {  
             DB::rollBack();
             return response()->error('workflow.place-not-allowed');
         }

@@ -57,10 +57,10 @@ class Setting extends Model
     const ACTIVITY_RETURN ='return-value';
 
     //Activity types
-    const ACTIVITY_SLIDE_SHOW ='slide-show';
-    const ACTIVITY_PLAY_VIDEO ='play-video';
-    const ACTIVITY_READ_PDF ='read-pdf';
-    const FILL_IN_THE_BLANKS ='fill-in-the-blanks';
+    const ACTIVITY_SLIDE_SHOW ='slide_show';
+    const ACTIVITY_PLAY_VIDEO ='play_video';
+    const ACTIVITY_READ_PDF ='read_pdf';
+    const FILL_IN_THE_BLANKS ='fill_in_the_blanks';
 
 
     const APP_NAME = 'Sarente Gameon';

@@ -24,12 +24,13 @@ return [
                 'model_type' => \App\Models\Activity::class,
             ],
             ],
-            'show_result' => ['metadata' => [
+            'result' => ['metadata' => [
                 'order' => '3',
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '1',
                 'model_type' => \App\Models\Result::class,
-            ]
+            ],
+            'done'
             ]
         ],
         'transitions' => [
@@ -39,7 +40,11 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'show_result',
+                'to' => 'result',
+            ],
+            'show_result' => [
+                'from' => 'result',
+                'to' => 'done',
             ]
         ],
     ],
@@ -66,12 +71,13 @@ return [
                 'model_type' => \App\Models\Activity::class,
             ],
             ],
-            'show_result' => ['metadata' => [
+            'result' => ['metadata' => [
                 'order' => '3',
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '5',
                 'model_type' => \App\Models\Result::class,
-            ]
+            ],
+            'done'
             ]
         ],
         'transitions' => [
@@ -81,7 +87,11 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'show_result',
+                'to' => 'result',
+            ],
+            'show_result' => [
+                'from' => 'result',
+                'to' => 'done',
             ]
         ],
     ],
@@ -108,12 +118,13 @@ return [
                 'model_type' => \App\Models\Activity::class,
             ],
             ],
-            'show_result' => ['metadata' => [
+            'result' => ['metadata' => [
                 'order' => '3',
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '5',
                 'model_type' => \App\Models\Result::class,
-            ]
+            ],
+            'done'
             ]
         ],
         'transitions' => [
@@ -123,8 +134,12 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'show_result',
-            ]
+                'to' => 'result',
+            ],
+            'show_result' => [
+                'from' => 'result',
+                'to' => 'done',
+            ],
         ],
     ],
     'wf_04' => [
@@ -150,12 +165,13 @@ return [
                 'model_type' => \App\Models\Activity::class,
             ],
             ],
-            'show_result' => ['metadata' => [
+            'result' => ['metadata' => [
                 'order' => '3',
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '5',
                 'model_type' => \App\Models\Result::class,
-            ]
+            ],
+             'done'
             ]
         ],
         'transitions' => [
@@ -165,7 +181,11 @@ return [
             ],
             'fill_in_the_blanks' => [
                 'from' => 'the_blanks',
-                'to' => 'show_result',
+                'to' => 'result',
+            ],
+            'show_result' => [
+                'from' => 'result',
+                'to' => 'done',
             ]
         ],
     ],
