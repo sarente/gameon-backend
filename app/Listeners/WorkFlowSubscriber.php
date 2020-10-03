@@ -47,7 +47,7 @@ class WorkFlowSubscriber implements ShouldQueue
         //Get key of place
         $key = key($event->getOriginalEvent()->getMarking()->getPlaces());
 
-        if ($key == 'show_result') {
+        if ($key == 'result') {
 
             //Check the activity type
             $model_id = (int)$event->getOriginalEvent()->getMetadata('model_id', $key);
