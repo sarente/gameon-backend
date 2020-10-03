@@ -205,18 +205,23 @@ return [
                 'model_type' => \App\Models\Activity::class,
             ]
             ],
-            'show_result' => ['metadata' => [
+            'result' => ['metadata' => [
                 'order' => '2',
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '10',
                 'model_type' => \App\Models\Result::class,
-            ]
+            ],
+            'done'
             ]
         ],
         'transitions' => [
             'play_slide_show' => [
                 'from' => 'slide_show',
-                'to' => 'show_result',
+                'to' => 'result',
+            ],
+            'show_result' => [
+                'from' => 'result',
+                'to' => 'done',
             ]
         ],
     ],
@@ -241,13 +246,18 @@ return [
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '12',
                 'model_type' => \App\Models\Result::class,
-            ]
+            ],
+            'done'
             ]
         ],
         'transitions' => [
             'play_slide_show' => [
                 'from' => 'slide_show',
-                'to' => 'show_result',
+                'to' => 'result',
+            ],
+            'show_result' => [
+                'from' => 'result',
+                'to' => 'done',
             ]
         ],
     ],
