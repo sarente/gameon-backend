@@ -2,11 +2,9 @@
 
 namespace App\Listeners;
 
-use App\Exceptions\Activity\ActivityWrongAnswerException;
 use App\Exceptions\WorkFlow\GainBeforeException;
 use App\Models\CustomWorkflow;
 use App\Models\Result;
-use App\Models\Setting;
 use App\Models\User;
 use App\Models\UserPoint;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -54,16 +52,12 @@ class WorkFlowSubscriber implements ShouldQueue
 
             //Grab this data to fill user point
             $result = Result::find($model_id);
-            if (!$result) {
-                throw new ActivityWrongAnswerException();
-            }
-            $workflow_id = $event->getOriginalEvent()->getSubject()->workflow_id;
-            $category_id = CustomWorkflow::with('category')->findOrFail($workflow_id)->category_id;
+            if ($result) {
 
-            $this->flowable = $event->getOriginalEvent()->getSubject();
+                $workflow_id = $event->getOriginalEvent()->getSubject()->workflow_id;
+                $category_id = CustomWorkflow::with('category')->findOrFail($workflow_id)->category_id;
 
-            //Check activity type and Set user point that caught from this activity
-            if ($result->type === Setting::ACTIVITY_RETURN && !is_null($result->metadata['result'])) {
+                $this->flowable = $event->getOriginalEvent()->getSubject();
 
                 //Check user not gain point before from this activity
                 $gain_before = UserPoint::where(function ($query) use ($result) {
@@ -74,6 +68,7 @@ class WorkFlowSubscriber implements ShouldQueue
                     //if user gain before from this activity return error
                     throw new GainBeforeException(request());
                 }
+
                 //Add point of activity to user point
                 $user_point = new UserPoint([
                     'point' => $result->point
@@ -83,8 +78,9 @@ class WorkFlowSubscriber implements ShouldQueue
                 $user_point->workflow()->associate($workflow_id);
                 $user_point->category()->associate($category_id);
                 $user_point->save();
+
                 //Attach rosette
-                //TODO: attach rosette
+                $reward = $result->reward();
 
             }
         }

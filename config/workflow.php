@@ -30,8 +30,8 @@ return [
                 'model_id' => '1',
                 'model_type' => \App\Models\Result::class,
             ],
-            'done'
-            ]
+            ],
+            'done' => ['metadata' => ['place_name' => 'Tamamlandı']]
         ],
         'transitions' => [
             'play_slide_show' => [
@@ -77,8 +77,8 @@ return [
                 'model_id' => '5',
                 'model_type' => \App\Models\Result::class,
             ],
-            'done'
-            ]
+            ],
+            'done' => ['metadata' => ['place_name' => 'Tamamlandı']]
         ],
         'transitions' => [
             'play_slide_show' => [
@@ -124,8 +124,8 @@ return [
                 'model_id' => '5',
                 'model_type' => \App\Models\Result::class,
             ],
-            'done'
-            ]
+            ],
+            'done' => ['metadata' => ['place_name' => 'Tamamlandı']]
         ],
         'transitions' => [
             'play_slide_show' => [
@@ -171,8 +171,8 @@ return [
                 'model_id' => '5',
                 'model_type' => \App\Models\Result::class,
             ],
-             'done'
-            ]
+            ],
+            'done' => ['metadata' => ['place_name' => 'Tamamlandı']]
         ],
         'transitions' => [
             'play_slide_show' => [
@@ -211,8 +211,8 @@ return [
                 'model_id' => '10',
                 'model_type' => \App\Models\Result::class,
             ],
-            'done'
-            ]
+            ],
+            'done' => ['metadata' => ['place_name' => 'Tamamlandı']]
         ],
         'transitions' => [
             'play_slide_show' => [
@@ -229,7 +229,7 @@ return [
         'type' => 'workflow',
         'metadata' => [
             'title' => 'İş Sağlığı ve Güvenliği Eğitim',
-           
+
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
@@ -247,8 +247,8 @@ return [
                 'model_id' => '12',
                 'model_type' => \App\Models\Result::class,
             ],
-            'done'
-            ]
+            ],
+            'done' => ['metadata' => ['place_name' => 'Tamamlandı']]
         ],
         'transitions' => [
             'play_slide_show' => [
