@@ -241,7 +241,7 @@ return [
                 'model_type' => \App\Models\Activity::class,
             ]
             ],
-            'show_result' => ['metadata' => [
+            'result' => ['metadata' => [
                 'order' => '2',
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '12',

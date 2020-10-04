@@ -21,9 +21,9 @@ class UserPoint extends Model
         'user',
     ];
 
-    public function activity()
+    public function result()
     {
-        return $this->belongsTo(Activity::class, 'activity_id');
+        return $this->belongsTo(Result::class, 'result_id');
     }
     public function workflow()
     {

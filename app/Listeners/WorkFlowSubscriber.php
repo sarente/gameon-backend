@@ -61,7 +61,7 @@ class WorkFlowSubscriber implements ShouldQueue
 
                 //Check user not gain point before from this activity
                 $gain_before = UserPoint::where(function ($query) use ($result) {
-                    $query->where('activity_id', $result->id)->where('user_id', $this->user->id);
+                    $query->where('result_id', $result->id)->where('user_id', $this->user->id);
                 })->exists();
 
                 if ($gain_before) {
@@ -74,7 +74,7 @@ class WorkFlowSubscriber implements ShouldQueue
                     'point' => $result->point
                 ]);
                 $user_point->user()->associate($this->user);
-                $user_point->activity()->associate($model_id);
+                $user_point->result()->associate($model_id);
                 $user_point->workflow()->associate($workflow_id);
                 $user_point->category()->associate($category_id);
                 $user_point->save();
