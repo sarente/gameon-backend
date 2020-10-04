@@ -31,7 +31,7 @@ return [
                 'model_type' => \App\Models\Result::class,
             ],
             ],
-            'done' => ['metadata' => ['place_name' => 'Tamamlandı']]
+            'done' => ['metadata' => ['order' => '4','place_name' => 'Tamamlandı']]
         ],
         'transitions' => [
             'play_slide_show' => [
@@ -78,7 +78,7 @@ return [
                 'model_type' => \App\Models\Result::class,
             ],
             ],
-            'done' => ['metadata' => ['place_name' => 'Tamamlandı']]
+            'done' => ['metadata' => ['order' => '4','place_name' => 'Tamamlandı']]
         ],
         'transitions' => [
             'play_slide_show' => [
@@ -125,7 +125,7 @@ return [
                 'model_type' => \App\Models\Result::class,
             ],
             ],
-            'done' => ['metadata' => ['place_name' => 'Tamamlandı']]
+            'done' => ['metadata' => ['order' => '4','place_name' => 'Tamamlandı']]
         ],
         'transitions' => [
             'play_slide_show' => [
@@ -172,7 +172,7 @@ return [
                 'model_type' => \App\Models\Result::class,
             ],
             ],
-            'done' => ['metadata' => ['place_name' => 'Tamamlandı']]
+            'done' => ['metadata' => ['order' => '4','place_name' => 'Tamamlandı']]
         ],
         'transitions' => [
             'play_slide_show' => [
@@ -212,7 +212,7 @@ return [
                 'model_type' => \App\Models\Result::class,
             ],
             ],
-            'done' => ['metadata' => ['place_name' => 'Tamamlandı']]
+            'done' => ['metadata' => ['order' => '3','place_name' => 'Tamamlandı']]
         ],
         'transitions' => [
             'play_slide_show' => [
@@ -248,7 +248,7 @@ return [
                 'model_type' => \App\Models\Result::class,
             ],
             ],
-            'done' => ['metadata' => ['place_name' => 'Tamamlandı']]
+            'done' => ['metadata' => ['order' => '3','place_name' => 'Tamamlandı']]
         ],
         'transitions' => [
             'play_slide_show' => [

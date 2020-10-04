@@ -74,14 +74,14 @@ class WorkFlowSubscriber implements ShouldQueue
                     'point' => $result->point
                 ]);
                 $user_point->user()->associate($this->user);
-                $user_point->activityResult()->associate($model_id);
+                $user_point->activity()->associate($model_id);
                 $user_point->workflow()->associate($workflow_id);
                 $user_point->category()->associate($category_id);
                 $user_point->save();
 
-                //Attach rosette
-                $reward = $result->reward();
-
+                //Attach reward to user
+                $reward = $result->rewards()->first();
+                $this->user->rewards()->syncWithoutDetaching($reward);
             }
         }
     }
