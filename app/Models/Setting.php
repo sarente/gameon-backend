@@ -214,6 +214,7 @@ class Setting extends Model
 
     const ROSETTE_VALUES = ['tr'=>'Değerler','en'=>'Values'];
     const ROSETTE_COMPETENCE = ['tr'=>'Yetkinlikler','en'=>'Competence'];
+    const ROSETTE_EDUCATION = ['en'=>'Education','tr'=>'Eğitim'];
 
     const MEDAL_CHARLIE = 'Charlie Chaplin';
     const MEDAL_FRIDA = 'Frida Kahlo';

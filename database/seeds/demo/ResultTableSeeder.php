@@ -20,28 +20,9 @@ class ResultTableSeeder extends Seeder
         \App\Models\Result::truncate();
         \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-        $activities = [
+         Result::create([
 
-        ];
+         ]);
 
-        foreach ($activities as $key => $activity) {
-            $activity = Result::create([
-                'name' => $activity,
-                'type' => Setting::$activity_types[1],
-                'point' => 75,
-            ]);
-
-            if ($key == 0) {
-                $activity->metadata = ['param1'=>'güç birliği'];
-            } else if ($key == 1) {
-                $activity->metadata = ['param1'=>'iyi niyet'];
-                $activity->rewards()->syncWithoutDetaching(Reward::find($key));
-            } else if ($key == 2) {
-                $activity->metadata = ['param1'=>'analitik bakış açısına sahip olmak'];
-                $activity->point=100;
-                $activity->rewards()->syncWithoutDetaching(Reward::find($key));
-            }
-            $activity->save();
-        }
     }
 }
