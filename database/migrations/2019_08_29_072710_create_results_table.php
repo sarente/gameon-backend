@@ -15,7 +15,7 @@ class CreateResultsTable extends Migration
     {
         Schema::create('results', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->json('name');
+            $table->string('name');
             $table->integer('point')->nullable();
             $table->string('type')->nullable();
             $table->json('metadata')->nullable();

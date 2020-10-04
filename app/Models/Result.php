@@ -12,17 +12,14 @@ class Result extends Model
 {
     use LogsActivity;
 
-    public $translatable = [
-        'name',
-    ];
     protected $fillable = [
         'name',
         'type',
         'point'
     ];
+    
     protected $casts=[
-        'metadata'=>'array',
-        'name'=>'array',
+        'metadata'=>'array'
     ];
 
     public $hidden=[
