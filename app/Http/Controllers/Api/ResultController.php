@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Exceptions\Activity\ResultNotFoundException;
-use App\Exceptions\Activity\ResultWrongAnswerException;
+use App\Exceptions\Activity\ActivityWrongAnswerException;
 use App\Exceptions\WorkFlow\GainBeforeException;
 use App\Exceptions\WorkFlow\UserWorkFlowNotFoundException;
 use App\Exceptions\WorkFlow\WorkFlowNotFoundException;
@@ -34,7 +34,7 @@ class ResultController extends Controller
         $diff = array_diff($it_1, $it_2);
 
         if (count($diff) > 0) {
-            throw new ResultWrongAnswerException();
+            throw new ActivityWrongAnswerException();
         }
         //Get workflow
         $workflow = CustomWorkflow::with('category')->find($workflow_id);

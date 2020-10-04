@@ -86,10 +86,8 @@ return [
         'not-sent' => 'Email not sent yet.'
     ],
     'activity' => [
-        'result' => [
-             'wrong-answer'=>'Returned result is wrong'
-        ],
-        'not-found'=>'Activity not found',
+        'wrong-answer' => 'Returned result is wrong',
+        'not-found' => 'Activity not found',
     ],
     'document' => [
         'not-found' => 'Document not found.',

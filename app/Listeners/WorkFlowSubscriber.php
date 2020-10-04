@@ -2,8 +2,8 @@
 
 namespace App\Listeners;
 
+use App\Exceptions\Activity\ActivityWrongAnswerException;
 use App\Exceptions\WorkFlow\GainBeforeException;
-use App\Exceptions\WorkFlow\WrongAnswerException;
 use App\Models\CustomWorkflow;
 use App\Models\Result;
 use App\Models\Setting;
@@ -53,8 +53,10 @@ class WorkFlowSubscriber implements ShouldQueue
             $model_id = (int)$event->getOriginalEvent()->getMetadata('model_id', $key);
 
             //Grab this data to fill user point
-            $result = Result::findOrFail($model_id);
-
+            $result = Result::find($model_id);
+            if (!$result) {
+                throw new ActivityWrongAnswerException();
+            }
             $workflow_id = $event->getOriginalEvent()->getSubject()->workflow_id;
             $category_id = CustomWorkflow::with('category')->findOrFail($workflow_id)->category_id;
 
@@ -62,34 +64,28 @@ class WorkFlowSubscriber implements ShouldQueue
 
             //Check activity type and Set user point that caught from this activity
             if ($result->type === Setting::ACTIVITY_RETURN && !is_null($result->metadata['result'])) {
-                if ($result->metadata['result'] === request()->get('result')) {
 
-                    //Check user not gain point before from this activity
-                    $gain_before = UserPoint::where(function ($query) use ($result) {
-                        $query->where('activity_id', $result->id)->where('user_id', $this->user->id);
-                    })->exists();
+                //Check user not gain point before from this activity
+                $gain_before = UserPoint::where(function ($query) use ($result) {
+                    $query->where('activity_id', $result->id)->where('user_id', $this->user->id);
+                })->exists();
 
-                    if ($gain_before) {
-                        //if user gain before from this activity return error
-                        throw new GainBeforeException(request());
-                    }
-                    //Add point of activity to user point
-                    $user_point = new UserPoint([
-                        'point' => $result->point
-                    ]);
-                    $user_point->user()->associate($this->user);
-                    $user_point->activityResult()->associate($model_id);
-                    $user_point->workflow()->associate($workflow_id);
-                    $user_point->category()->associate($category_id);
-                    $user_point->save();
-                    //Attach rosette
-                    //TODO: attach rosette
-
-
-                } else {
-                    //return to user result replied is not equal with valid result in workflow
-                    throw new WrongAnswerException(request());
+                if ($gain_before) {
+                    //if user gain before from this activity return error
+                    throw new GainBeforeException(request());
                 }
+                //Add point of activity to user point
+                $user_point = new UserPoint([
+                    'point' => $result->point
+                ]);
+                $user_point->user()->associate($this->user);
+                $user_point->activityResult()->associate($model_id);
+                $user_point->workflow()->associate($workflow_id);
+                $user_point->category()->associate($category_id);
+                $user_point->save();
+                //Attach rosette
+                //TODO: attach rosette
+
             }
         }
     }
