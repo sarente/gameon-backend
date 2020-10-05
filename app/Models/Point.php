@@ -38,7 +38,6 @@ class Point extends Model
     protected $fillable = [
         'user_id',
         'point',
-        'artifact_name',
     ];
 
     public function user()

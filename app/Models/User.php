@@ -186,7 +186,7 @@ class User extends Authenticatable implements HasLocalePreference
 
     public function points()
     {
-        return $this->belongsToMany(Point::class, 'user_point')->withPivot('point', 'category_id', 'workflow_id');
+        return $this->belongsToMany(UserPoint::class, 'user_point')->withPivot('point', 'category_id', 'workflow_id','result_id');
     }
 
     public function pointsByCategory()
