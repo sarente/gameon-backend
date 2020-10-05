@@ -44,8 +44,11 @@ class UserController extends Controller
     public function result()
     {
         $user = User::getUser();
-        $point=(int)UserPoint::where('user_id', $user->id)->sum('point');
-        $user->points = $point < 0 ?0 : $point;
+        $point = (int)UserPoint::where('user_id', $user->id)->sum('point');
+        if (!$point || $point <= 0) {
+            $point = 0;
+        }
+        $user->points = $point;
         $user->load('rewards.image');
         return response()->success($user);
     }
