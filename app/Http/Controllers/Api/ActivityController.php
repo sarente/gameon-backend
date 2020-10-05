@@ -27,8 +27,9 @@ class ActivityController extends Controller
         return response()->success($activity);
     }
 
+    //TODO: move these two functions to workflow Controller
     //do-action
-    public function proceed($workflow_id)
+    public function preceed($workflow_id)
     {
         DB::beginTransaction();
         $user = User::getUser();
