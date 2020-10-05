@@ -17,6 +17,7 @@ class DemoSeeder extends Seeder
         $this->call(ActivityTableSeeder::class);
         $this->call(ResultTableSeeder::class);
         $this->call(LevelTableSeeder::class);
+        $this->call(RewardSeeder::class);
         //$this->call(ProfileTableSeeder::class);
         //$this->call(UserPointTableSeeder::class);
 
