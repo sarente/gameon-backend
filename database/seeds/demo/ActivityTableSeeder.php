@@ -25,7 +25,7 @@ class ActivityTableSeeder extends Seeder
         // do action
 
         $activity = new Activity([
-        'name' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
+        'name' => ['tr' => 'Slaytları İzle', 'en' => 'ُPLay Slide Shows'],
         'type' => Setting::$activity_types[0],
         'kind' => Setting::$activity_kinds[0],
     ]);
@@ -38,7 +38,7 @@ class ActivityTableSeeder extends Seeder
         }
         // return value
         $activity = new Activity([
-            'name' => ['tr' => 'Yenilikçilik', 'en' => 'Innovation'],
+            'name' => ['tr' => 'Kelimeyi Gir', 'en' => 'Fill in the Blanks'],
             'kind' => Setting::$activity_kinds[1],
             'type' => Setting::$activity_types[3],
             'return_value' => ['param1' => 'Yenilikçilik']
@@ -48,7 +48,7 @@ class ActivityTableSeeder extends Seeder
         //////////////////////////////////////////////////////////
         // do action
         $activity = new Activity([
-            'name' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
+            'name' => ['tr' => 'Slaytları İzle', 'en' => 'ُPLay Slide Shows'],
             'type' => Setting::$activity_types[0],
             'kind' => Setting::$activity_kinds[0],
         ]);
@@ -61,7 +61,7 @@ class ActivityTableSeeder extends Seeder
         }
         // return value
         $activity = new Activity([
-            'name' => ['tr' => 'Ekip Çalışması', 'en' => 'Team Work'],
+            'name' => ['tr' => 'Kelimeyi Gir', 'en' => 'Fill in the Blanks'],
             'kind' => Setting::$activity_kinds[1],
             'type' => Setting::$activity_types[3],
             'return_value' => ['param1' => 'Ekip Çalışması']
@@ -73,7 +73,7 @@ class ActivityTableSeeder extends Seeder
         ///////////////////////////////////////////////////////
         ///// do action
         $activity = new Activity([
-            'name' => ['tr' => 'Covid19', 'en' => 'Covid19'],
+            'name' => ['tr' => 'Slaytları İzle', 'en' => 'ُPLay Slide Shows'],
             'type' => Setting::$activity_types[0],
             'kind' => Setting::$activity_kinds[0],
         ]);
