@@ -24,10 +24,10 @@ class CreateUserPoint extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->bigInteger('activity_id')->unsigned()->nullable();
-            $table->foreign('activity_id')
+            $table->bigInteger('result_id')->unsigned()->nullable();
+            $table->foreign('result_id')
                 ->references('id')
-                ->on('activities')
+                ->on('results')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
