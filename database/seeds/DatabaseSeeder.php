@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(RolesTableSeeder::class);
         $this->call(LanguageTableSeeder::class);
         $this->call(UsersTableSeeder::class);
-        //$this->call(RewardSeeder::class);    base reward of system
+        $this->call(RewardSeeder::class);    //base reward of system
         $this->call(SettingTableSeeder::class);
     }
 }
