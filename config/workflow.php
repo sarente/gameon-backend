@@ -200,7 +200,7 @@ return [
             'slide_show' => ['metadata' => [
                 'order' => '1',
                 'place_name' => 'Slaytları İzle',
-                'model_id' => '9',
+                'model_id' => '5',
                 'model_kind' => \App\Models\Setting::ACTIVITY_ACTION,
                 'model_type' => \App\Models\Activity::class,
             ]
