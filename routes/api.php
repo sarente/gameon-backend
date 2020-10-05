@@ -45,6 +45,7 @@ Route::group(['middleware' => 'auth.jwt'], function ($router) {
     Route::get('logout', 'Api\AuthController@logout');
 
     //User Info
+    Route::get('user/result', 'Api\UserController@result');
     Route::resource('user', 'Api\UserController');
 
     //Avatar
@@ -60,7 +61,7 @@ Route::group(['middleware' => 'auth.jwt'], function ($router) {
     //Activity
     Route::resource('activity', 'Api\ActivityController');
 
-    Route::get('workflow/{workflow}/activity/{activity}', 'Api\ActivityController@proceed');
+    Route::get('workflow/{workflow}/activity/{activity}', 'Api\ActivityController@preceed');
     Route::post('workflow/{workflow}/activity/{activity}', 'Api\ActivityController@verify');
 });
 

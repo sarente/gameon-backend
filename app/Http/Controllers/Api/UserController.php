@@ -19,7 +19,7 @@ class UserController extends Controller
     {
        $user=USer::getUser();
 
-        return response()->success($user->load('image', 'roles', 'permissions'));
+        return response()->success($user->load('rewards','image', 'roles', 'permissions'));
     }
 
     public function destroy($id)
@@ -38,6 +38,12 @@ class UserController extends Controller
 
 
         return response()->success($avatar);
+    }
+
+    public function result(){
+        $user=User::getUser();
+        $rewards=$user->load('rewards.image');
+        return response()->success($rewards);
     }
 
     public function saveAvatarConfiguration(Request $request)
