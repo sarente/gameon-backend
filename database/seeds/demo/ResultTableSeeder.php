@@ -21,7 +21,7 @@ class ResultTableSeeder extends Seeder
 
         /////////////////////////////////////
         $result = Result::create([
-            'name' => 'Değerler',
+            'name' => 'YENİLİKÇİLİK',
             'point' => 75,
         ]);
         unset($result);
@@ -29,7 +29,7 @@ class ResultTableSeeder extends Seeder
         /////////////////////////////////////
         $reward=Reward::find(1);
         $result = Result::create([
-            'name' => 'Değerler',
+            'name' => 'EKİP ÇALIŞMASI',
             'point' => 75,
         ]);
         $result->rewards()->sync($reward);
@@ -38,7 +38,7 @@ class ResultTableSeeder extends Seeder
         /////////////////////////////////////
         $reward=Reward::find(2);
         $result = Result::create([
-            'name' => 'Eğitim',
+            'name' => 'Covid-19 Eğitimi',
             'point' => 100,
         ]);
         $result->rewards()->sync($reward);
