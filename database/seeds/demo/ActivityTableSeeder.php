@@ -25,8 +25,8 @@ class ActivityTableSeeder extends Seeder
         // do action
 
         $activity = new Activity([
-            'name' => ['tr' => 'Slaytları İzle', 'en' => 'ُPLay Slide Shows'],
-            'metadata' => ['description' => 'Sayfalardaki harflerin sırasını not et, bulmacayı çöz ve Vakıf Katılım\'ın değerlerinden birini keşfet!'],
+            'name' => ['tr' => 'Sayfalardaki harflerin sırasını not et, bulmacayı çöz ve Vakıf Katılım\'ın değerlerinden birini keşfet!', 'en' => 'ُPLay Slide Shows'],
+            'metadata' => ['description' => ''],
             'type' => Setting::$activity_types[0],
             'kind' => Setting::$activity_kinds[0],
         ]);
@@ -49,8 +49,8 @@ class ActivityTableSeeder extends Seeder
         //////////////////////////////////////////////////////////
         // do action
         $activity = new Activity([
-            'name' => ['tr' => 'Slaytları İzle', 'en' => 'ُPLay Slide Shows'],
-            'metadata' => ['description' => 'Sayfalardaki harflerin sırasını not et, bulmacayı çöz ve Vakıf Katılım\'ın değerlerinden birini keşfet!'],
+            'name' => ['tr' => 'Sayfalardaki harflerin sırasını not et, bulmacayı çöz ve Vakıf Katılım\'ın değerlerinden birini keşfet!', 'en' => 'ُPLay Slide Shows'],
+            'metadata' => [''],
             'type' => Setting::$activity_types[0],
             'kind' => Setting::$activity_kinds[0],
         ]);
@@ -76,8 +76,8 @@ class ActivityTableSeeder extends Seeder
         ///////////////////////////////////////////////////////
         ///// do action
         $activity = new Activity([
-            'name' => ['tr' => 'Slaytları İzle', 'en' => 'ُPLay Slide Shows'],
-            'metadata' => ['description' => 'Covid-19 eğitimini tamamla, hastalığın önüne geç!'],
+            'name' => ['tr' => 'Covid-19 eğitimini tamamla, hastalığın önüne geç!', 'en' => 'ُPLay Slide Shows'],
+            'metadata' => ['description' => ''],
             'type' => Setting::$activity_types[0],
             'kind' => Setting::$activity_kinds[0],
         ]);
