@@ -22,7 +22,7 @@ class ResultTableSeeder extends Seeder
         /////////////////////////////////////
         $result = Result::create([
             'name' => 'YENİLİKÇİLİK',
-            'point' => 75,
+            'point' => 85,
         ]);
         unset($result);
 
@@ -30,7 +30,7 @@ class ResultTableSeeder extends Seeder
         $reward=Reward::find(1);
         $result = Result::create([
             'name' => 'EKİP ÇALIŞMASI',
-            'point' => 75,
+            'point' => 85,
         ]);
         $result->rewards()->sync($reward);
         unset($result);
