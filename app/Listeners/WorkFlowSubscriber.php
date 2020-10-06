@@ -4,6 +4,7 @@ namespace App\Listeners;
 
 use App\Models\CustomWorkflow;
 use App\Models\Result;
+use App\Models\User;
 use App\Models\UserPoint;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Log;
@@ -11,22 +12,20 @@ use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
 
 class WorkFlowSubscriber implements ShouldQueue
 {
-    private $flowable, $user;
+    private $flowable, $user_id;
 
     /**
      * Handle workflow guard events.
      */
     public function onGuard(GuardEvent $event)
     {
-
-        $this->user = auth()->user();
         /** Symfony\Component\CustomWorkflow\Event\GuardEvent */
         $originalEvent = $event->getOriginalEvent();
         /** @var \App\Models\UserWorkflow $user_workflow */
         $this->flowable = $event->getOriginalEvent()->getSubject();
 
         //Check activity return type
-        if (empty($this->flowable->id)) {
+        if (empty($this->flowable->user_id)) {
             $originalEvent->setBlocked(true);
         }
     }
@@ -41,9 +40,6 @@ class WorkFlowSubscriber implements ShouldQueue
         $key = key($event->getOriginalEvent()->getMarking()->getPlaces());
 
         if ($key == 'result') {
-            //Log::info(Auth::id());
-
-            $user =auth()->user();
 
             //Check the activity type
             $model_id = (int)$event->getOriginalEvent()->getMetadata('model_id', $key);
@@ -54,7 +50,7 @@ class WorkFlowSubscriber implements ShouldQueue
 
                 $workflow_id = $event->getOriginalEvent()->getSubject()->workflow_id;
                 $category_id = CustomWorkflow::with('category')->findOrFail($workflow_id)->category_id;
-
+                /** @var \App\Models\UserWorkflow $user_workflow */
                 $this->flowable = $event->getOriginalEvent()->getSubject();
 
                 //Check user not gain point before from this activity
@@ -71,7 +67,7 @@ class WorkFlowSubscriber implements ShouldQueue
                 $user_point = new UserPoint([
                     'point' => $result->point
                 ]);
-                $user_point->user()->associate($user->id);
+                $user_point->user()->associate( $this->flowable->user);
                 $user_point->result()->associate($model_id);
                 $user_point->workflow()->associate($workflow_id);
                 $user_point->category()->associate($category_id);
@@ -79,10 +75,7 @@ class WorkFlowSubscriber implements ShouldQueue
 
                 //Attach reward to user
                 $reward = $result->rewards()->first();
-                $user->rewards()->syncWithoutDetaching($reward);
-
-                //Remove user
-                unset($user);
+                $this->flowable->user->rewards()->syncWithoutDetaching($reward);
             }
         }
     }
@@ -120,7 +113,7 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function subscribe($events)
     {
-        /* $events->listen(
+         /*$events->listen(
              'ZeroDaHero\LaravelWorkflow\Events\GuardEvent',
              'App\Listeners\WorkFlowSubscriber@onGuard'
          );*/
