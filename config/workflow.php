@@ -4,7 +4,7 @@ return [
     'wf_01' => [
         'type' => 'workflow', // or 'state_machine'
         'metadata' => [
-            'title' => 'Yenilikçilik',
+            'title' => 'YENİLİKÇİLİK',
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
@@ -51,7 +51,7 @@ return [
     'wf_02' => [
         'type' => 'workflow',
         'metadata' => [
-            'title' => 'Ekip Çalışması',
+            'title' => 'EKİP ÇALIŞMASI',
         ],
         'supports' => ['App\Models\UserWorkflow'],
         'places' => [
@@ -74,7 +74,7 @@ return [
             'result' => ['metadata' => [
                 'order' => '3',
                 'place_name' => 'Neticeyi Gör',
-                'model_id' => '5',
+                'model_id' => '2',
                 'model_type' => \App\Models\Result::class,
             ],
             ],

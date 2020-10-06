@@ -2,13 +2,10 @@
 
 namespace App\Listeners;
 
-use App\Exceptions\WorkFlow\GainBeforeException;
 use App\Models\CustomWorkflow;
 use App\Models\Result;
-use App\Models\User;
 use App\Models\UserPoint;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
 
@@ -22,7 +19,7 @@ class WorkFlowSubscriber implements ShouldQueue
     public function onGuard(GuardEvent $event)
     {
 
-        $this->user = $event->user;
+        $this->user = auth()->user();
         /** Symfony\Component\CustomWorkflow\Event\GuardEvent */
         $originalEvent = $event->getOriginalEvent();
         /** @var \App\Models\UserWorkflow $user_workflow */
@@ -39,14 +36,14 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onLeave($event)
     {
-        //Log::info(Auth::id());
-        /* @var GuardEvent $event*/
-        $user =auth()->user();
 
         //Get key of place
         $key = key($event->getOriginalEvent()->getMarking()->getPlaces());
 
         if ($key == 'result') {
+            //Log::info(Auth::id());
+
+            $user =auth()->user();
 
             //Check the activity type
             $model_id = (int)$event->getOriginalEvent()->getMetadata('model_id', $key);
@@ -83,6 +80,9 @@ class WorkFlowSubscriber implements ShouldQueue
                 //Attach reward to user
                 $reward = $result->rewards()->first();
                 $user->rewards()->syncWithoutDetaching($reward);
+
+                //Remove user
+                unset($user);
             }
         }
     }
@@ -120,29 +120,29 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function subscribe($events)
     {
-       /* $events->listen(
-            'ZeroDaHero\LaravelWorkflow\Events\GuardEvent',
-            'App\Listeners\WorkFlowSubscriber@onGuard'
-        );*/
+        /* $events->listen(
+             'ZeroDaHero\LaravelWorkflow\Events\GuardEvent',
+             'App\Listeners\WorkFlowSubscriber@onGuard'
+         );*/
 
         $events->listen(
             'ZeroDaHero\LaravelWorkflow\Events\LeaveEvent',
             'App\Listeners\WorkFlowSubscriber@onLeave'
         );
 
-       /* $events->listen(
-            'ZeroDaHero\LaravelWorkflow\Events\TransitionEvent',
-            'App\Listeners\WorkFlowSubscriber@onTransition'
-        );
+        /* $events->listen(
+             'ZeroDaHero\LaravelWorkflow\Events\TransitionEvent',
+             'App\Listeners\WorkFlowSubscriber@onTransition'
+         );
 
-        $events->listen(
-            'ZeroDaHero\LaravelWorkflow\Events\EnterEvent',
-            'App\Listeners\WorkFlowSubscriber@onEnter'
-        );
+         $events->listen(
+             'ZeroDaHero\LaravelWorkflow\Events\EnterEvent',
+             'App\Listeners\WorkFlowSubscriber@onEnter'
+         );
 
-        $events->listen(
-            'ZeroDaHero\LaravelWorkflow\Events\EnteredEvent',
-            'App\Listeners\WorkFlowSubscriber@onEntered'
-        );*/
+         $events->listen(
+             'ZeroDaHero\LaravelWorkflow\Events\EnteredEvent',
+             'App\Listeners\WorkFlowSubscriber@onEntered'
+         );*/
     }
 }
