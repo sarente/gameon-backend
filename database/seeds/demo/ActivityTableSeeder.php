@@ -25,14 +25,15 @@ class ActivityTableSeeder extends Seeder
         // do action
 
         $activity = new Activity([
-        'name' => ['tr' => 'Slaytları İzle', 'en' => 'ُPLay Slide Shows'],
-        'type' => Setting::$activity_types[0],
-        'kind' => Setting::$activity_kinds[0],
-    ]);
+            'name' => ['tr' => 'Slaytları İzle', 'en' => 'ُPLay Slide Shows'],
+            'metadata' => ['description' => 'Sayfalardaki harflerin sırasını not et, bulmacayı çöz ve Vakıf Katılım\'ın değerlerinden birini keşfet!'],
+            'type' => Setting::$activity_types[0],
+            'kind' => Setting::$activity_kinds[0],
+        ]);
         $activity->save();
         for ($i = 0; $i < 5; $i++) {
             $activity->image()->save(new  \App\Models\Image([
-                'order'=>$i,
+                'order' => $i,
                 'image' => Intervention::make(resource_path("images/activity/innovation/{$i}.jpg")),
             ]));
         }
@@ -49,19 +50,21 @@ class ActivityTableSeeder extends Seeder
         // do action
         $activity = new Activity([
             'name' => ['tr' => 'Slaytları İzle', 'en' => 'ُPLay Slide Shows'],
+            'metadata' => ['description' => 'Sayfalardaki harflerin sırasını not et, bulmacayı çöz ve Vakıf Katılım\'ın değerlerinden birini keşfet!'],
             'type' => Setting::$activity_types[0],
             'kind' => Setting::$activity_kinds[0],
         ]);
         $activity->save();
         for ($i = 0; $i < 5; $i++) {
             $activity->image()->save(new  \App\Models\Image([
-                'order'=>$i,
+                'order' => $i,
                 'image' => Intervention::make(resource_path("images/activity/team_work/{$i}.jpg")),
             ]));
         }
         // return value
         $activity = new Activity([
             'name' => ['tr' => 'Kelimeyi Gir', 'en' => 'Fill in the Blanks'],
+            'metadata' => ['description' => ''],
             'kind' => Setting::$activity_kinds[1],
             'type' => Setting::$activity_types[3],
             'return_value' => ['param1' => 'EKİP ÇALIŞMASI']
@@ -74,13 +77,14 @@ class ActivityTableSeeder extends Seeder
         ///// do action
         $activity = new Activity([
             'name' => ['tr' => 'Slaytları İzle', 'en' => 'ُPLay Slide Shows'],
+            'metadata' => ['description' => 'Covid-19 eğitimini tamamla, hastalığın önüne geç!'],
             'type' => Setting::$activity_types[0],
             'kind' => Setting::$activity_kinds[0],
         ]);
         $activity->save();
         for ($i = 0; $i < 5; $i++) {
             $activity->image()->save(new  \App\Models\Image([
-                'order'=>$i,
+                'order' => $i,
                 'image' => Intervention::make(resource_path("images/activity/covid19/{$i}.jpg")),
             ]));
         }
