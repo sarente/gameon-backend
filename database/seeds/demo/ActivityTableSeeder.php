@@ -41,7 +41,7 @@ class ActivityTableSeeder extends Seeder
             'name' => ['tr' => 'Kelimeyi Gir', 'en' => 'Fill in the Blanks'],
             'kind' => Setting::$activity_kinds[1],
             'type' => Setting::$activity_types[3],
-            'return_value' => ['param1' => 'Yenilikçilik']
+            'return_value' => ['param1' => 'YENİLİKÇİLİK']
         ]);
         $activity->save();
 
@@ -64,7 +64,7 @@ class ActivityTableSeeder extends Seeder
             'name' => ['tr' => 'Kelimeyi Gir', 'en' => 'Fill in the Blanks'],
             'kind' => Setting::$activity_kinds[1],
             'type' => Setting::$activity_types[3],
-            'return_value' => ['param1' => 'Ekip Çalışması']
+            'return_value' => ['param1' => 'EKİP ÇALIŞMASI']
         ]);
         $activity->save();
 
