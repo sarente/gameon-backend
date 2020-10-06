@@ -20,20 +20,26 @@ class ResultTableSeeder extends Seeder
         \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         /////////////////////////////////////
+        $result = Result::create([
+            'name' => 'Değerler',
+            'point' => 75,
+        ]);
+        unset($result);
+
+        /////////////////////////////////////
         $reward=Reward::find(1);
         $result = Result::create([
             'name' => 'Değerler',
             'point' => 75,
         ]);
         $result->rewards()->sync($reward);
-        unset($reward);
         unset($result);
 
         /////////////////////////////////////
         $reward=Reward::find(2);
         $result = Result::create([
             'name' => 'Eğitim',
-            'point' => 75,
+            'point' => 100,
         ]);
         $result->rewards()->sync($reward);
 
