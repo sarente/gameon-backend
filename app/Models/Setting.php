@@ -50,7 +50,7 @@ class Setting extends Model
 
     const WF_TYPE_WF = 'workflow';
     const WF_TYPE_SM = 'state_machine';
-    const WF_RESULT ='workflow-result';
+    const WF_RESULT ='result';
 
     //Activity model
     const ACTIVITY_ACTION ='do-action';

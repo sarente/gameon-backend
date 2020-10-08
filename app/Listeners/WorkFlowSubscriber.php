@@ -2,8 +2,10 @@
 
 namespace App\Listeners;
 
+use App\Exceptions\WorkFlow\GainBeforeException;
 use App\Models\CustomWorkflow;
 use App\Models\Result;
+use App\Models\Setting;
 use App\Models\User;
 use App\Models\UserPoint;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -12,7 +14,7 @@ use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
 
 class WorkFlowSubscriber implements ShouldQueue
 {
-    private $flowable, $user_id;
+    private $flowable, $user;
 
     /**
      * Handle workflow guard events.
@@ -25,8 +27,10 @@ class WorkFlowSubscriber implements ShouldQueue
         $this->flowable = $event->getOriginalEvent()->getSubject();
 
         //Check activity return type
-        if (empty($this->flowable->user_id)) {
+        if (!$this->flowable) {
             $originalEvent->setBlocked(true);
+        }else{
+            $this->user=User::getUser($this->flowable->user_id);   
         }
     }
 
@@ -35,14 +39,13 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onLeave($event)
     {
-
         //Get key of place
-        $key = key($event->getOriginalEvent()->getMarking()->getPlaces());
+        $marking_place = key($event->getOriginalEvent()->getMarking()->getPlaces());
 
-        if ($key == 'result') {
+        if ($marking_place == Setting::WF_RESULT) {
 
             //Check the activity type
-            $model_id = (int)$event->getOriginalEvent()->getMetadata('model_id', $key);
+            $model_id = (int)$event->getOriginalEvent()->getMetadata('model_id', $marking_place);
 
             //Grab this data to fill user point
             $result = Result::find($model_id);
@@ -53,15 +56,17 @@ class WorkFlowSubscriber implements ShouldQueue
                 /** @var \App\Models\UserWorkflow $user_workflow */
                 $this->flowable = $event->getOriginalEvent()->getSubject();
 
+                $this->user=$this->flowable->user;
+
                 //Check user not gain point before from this activity
-                /*$gain_before = UserPoint::where(function ($query) use ($result) {
+                $gain_before = UserPoint::where(function ($query) use ($result) {
                     $query->where('result_id', $result->id)->where('user_id', $this->user->id);
                 })->exists();
 
                 if ($gain_before) {
                     //if user gain before from this activity return error
                     throw new GainBeforeException(request());
-                }*/
+                }
 
                 //Add point of activity to user point
                 $user_point = new UserPoint([

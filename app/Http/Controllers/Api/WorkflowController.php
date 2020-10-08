@@ -35,6 +35,7 @@ class WorkflowController extends Controller
         return response()->success($workflow);
     }
 
+
     /**
      * @param $id
      * @param \Illuminate\Contracts\Auth\Authenticatable $user

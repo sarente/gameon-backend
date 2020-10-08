@@ -14,7 +14,6 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 
 /**
  * App\Models\User
- *
  * @property int $id
  * @property int $username
  * @property string $name
@@ -160,9 +159,12 @@ class User extends Authenticatable implements HasLocalePreference
         });
     }
 
-    public static function getUser()
+    public static function getUser($id = null)
     {
         $user = auth()->user();
+        if ($id) {
+            $user = User::find($id);
+        }
         if (!$user) {
             throw new UserModelNotFoundException();
         }
@@ -197,7 +199,7 @@ class User extends Authenticatable implements HasLocalePreference
 
     public function points()
     {
-        return $this->belongsToMany(UserPoint::class, 'user_point')->withPivot('point', 'category_id', 'workflow_id','result_id');
+        return $this->belongsToMany(UserPoint::class, 'user_point')->withPivot('point', 'category_id', 'workflow_id', 'result_id');
     }
 
     public function pointsByCategory()
