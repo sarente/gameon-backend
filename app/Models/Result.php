@@ -8,6 +8,34 @@ use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Translatable\HasTranslations;
 use ZeroDaHero\LaravelWorkflow\Traits\WorkflowTrait;
 //We get result of workflow from this object (Point-Reward)
+/**
+ * App\Models\Result
+ *
+ * @property int $id
+ * @property string $name
+ * @property int|null $point
+ * @property string|null $type
+ * @property array|null $metadata
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Activitylog\Models\Activity[] $activities
+ * @property-read int|null $activities_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Image[] $image
+ * @property-read int|null $image_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Reward[] $rewards
+ * @property-read int|null $rewards_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Result newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Result newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Result query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Result whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Result whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Result whereMetadata($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Result whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Result wherePoint($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Result whereType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Result whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
 class Result extends Model
 {
     use LogsActivity;

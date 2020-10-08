@@ -28,6 +28,12 @@ use Spatie\Activitylog\Traits\LogsActivity;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Point whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Point whereUserId($value)
  * @mixin \Eloquent
+ * @property int|null $result_id
+ * @property int|null $workflow_id
+ * @property int $category_id
+ * @method static \Illuminate\Database\Eloquent\Builder|Point whereCategoryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Point whereResultId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Point whereWorkflowId($value)
  */
 class Point extends Model
 {

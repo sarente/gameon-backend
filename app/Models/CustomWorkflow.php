@@ -11,6 +11,35 @@ use ZeroDaHero\LaravelWorkflow\Exceptions\DuplicateWorkflowException;
  * @author Javad Fathi <k1fathi33@gmail.com>
  * */
 
+/**
+ * App\Models\CustomWorkflow
+ *
+ * @property int $id
+ * @property string $name
+ * @property int $enable
+ * @property array|null $config
+ * @property string|null $start_date
+ * @property string|null $end_date
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property int|null $category_id
+ * @property-read \App\Models\Category|null $category
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $users
+ * @property-read int|null $users_count
+ * @method static \Illuminate\Database\Eloquent\Builder|CustomWorkflow newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|CustomWorkflow newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|CustomWorkflow query()
+ * @method static \Illuminate\Database\Eloquent\Builder|CustomWorkflow whereCategoryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CustomWorkflow whereConfig($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CustomWorkflow whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CustomWorkflow whereEnable($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CustomWorkflow whereEndDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CustomWorkflow whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CustomWorkflow whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CustomWorkflow whereStartDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CustomWorkflow whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
 class CustomWorkflow extends Model
 {
     protected $table = 'workflows';

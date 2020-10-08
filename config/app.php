@@ -165,6 +165,8 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         App\Providers\ResponseServiceProvider::class,
         ZeroDaHero\LaravelWorkflow\WorkflowServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
 
         /*
          * Package Service Providers...

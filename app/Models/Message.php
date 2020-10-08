@@ -36,6 +36,8 @@ use Spatie\Activitylog\Traits\LogsActivity;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Message whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Message withTranslation()
  * @mixin \Eloquent
+ * @property string $message
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereMessage($value)
  */
 class Message extends Model
 {

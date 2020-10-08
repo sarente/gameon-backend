@@ -14,6 +14,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 
 /**
  * App\Models\User
+ *
  * @property int $id
  * @property int $username
  * @property string $name
@@ -71,6 +72,16 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUsername($value)
  * @mixin \Eloquent
+ * @property string|null $surname
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Category[] $categories
+ * @property-read int|null $categories_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\UserPoint[] $points
+ * @property-read int|null $points_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Reward[] $rewards
+ * @property-read int|null $rewards_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\CustomWorkflow[] $workflows
+ * @property-read int|null $workflows_count
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereSurname($value)
  */
 class User extends Authenticatable implements HasLocalePreference
 {
