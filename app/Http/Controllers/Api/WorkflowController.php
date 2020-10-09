@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Exceptions\WorkFlow\TransitionNotFoundException;
 use App\Exceptions\WorkFlow\UserWorkFlowNotFoundException;
 use App\Exceptions\WorkFlow\WorkFlowNotFoundException;
 use App\Http\Controllers\Controller;
@@ -83,7 +84,7 @@ class WorkflowController extends Controller
             $flowable->save();
         } catch (LogicException $e) {
             DB::rollBack();
-            return response()->error('workflow.place-not-allowed');
+            throw new TransitionNotFoundException();
         }
         ////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////
