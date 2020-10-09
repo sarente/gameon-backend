@@ -2,19 +2,22 @@
 
 namespace App\Listeners;
 
+use App\Exceptions\Activity\ActivityNotFoundException;
+use App\Exceptions\Activity\ActivityWrongAnswerException;
 use App\Exceptions\WorkFlow\GainBeforeException;
+use App\Models\Activity;
 use App\Models\CustomWorkflow;
 use App\Models\Result;
-use App\Models\Setting;
 use App\Models\User;
 use App\Models\UserPoint;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Filesystem\Cache;
 use Illuminate\Support\Facades\Log;
 use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
 
 class WorkFlowSubscriber implements ShouldQueue
 {
-    private $flowable, $user, $marking_place, $model_id, $model_type;
+    private $flowable, $user, $marking_place, $model_id, $model_type, $model_kind;
 
     /**
      * Handle workflow guard events.
@@ -29,15 +32,25 @@ class WorkFlowSubscriber implements ShouldQueue
 
         //Check activity return type
         if (!$this->flowable) {
-
             $originalEvent->setBlocked(true);
         } else {
-            $this->user = User::getUser($this->flowable->user_id);
+            $this->user = Cache::get('user', function () {
+                return User::getUser($this->flowable->user_id);
+            });
 
             //Get key of metadata info
-            $this->marking_place = key($event->getOriginalEvent()->getMarking()->getPlaces());
-            $this->model_id = (int)$event->getOriginalEvent()->getMetadata('model_id', $this->marking_place);
-            $this->model_type = $event->getOriginalEvent()->getMetadata('model_type', $this->marking_place);
+            $this->marking_place = Cache::tags(['workflow_subscriber'])->get('marking_place', function ($event) {
+                return key($event->getOriginalEvent()->getMarking()->getPlaces());
+            });
+            $this->model_id = Cache::tags(['workflow_subscriber'])->get('model_id', function ($event) {
+                return (int)$event->getOriginalEvent()->getMetadata('model_id', $this->marking_place);
+            });
+            $this->model_type = Cache::tags(['workflow_subscriber'])->get('model_type', function ($event) {
+                return $event->getOriginalEvent()->getMetadata('model_type', $this->marking_place);
+            });
+            $this->model_kind = Cache::tags(['workflow_subscriber'])->get('model_kind', function ($event) {
+                return $event->getOriginalEvent()->getMetadata('model_kind', $this->marking_place);
+            });
         }
     }
 
@@ -54,7 +67,21 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onTransition($event)
     {
+        if ($this->model_type == \App\Models\Activity::class && !is_null($this->model_kind) && $this->model_kind == \App\Models\Setting::ACTIVITY_RETURN) {
+            //Check activity name if doesnt have return false
+            $activity = Activity::find($this->model_id);
+            if (!$activity) {
+                throw new ActivityNotFoundException();
+            }
+            //Check input data with activity result
+            $it_1 = request()->json()->all();
+            $it_2 = $activity->return_value;
+            $diff = array_diff($it_1, $it_2);
 
+            if (count($diff) > 0) {
+                throw new ActivityWrongAnswerException();
+            }
+        }
     }
 
     /**
@@ -103,7 +130,7 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onEntered($event)
     {
-        Log::info('onEntered');
+        Cache::tags('workflow_subscriber')->flush();
     }
 
     /**
@@ -134,10 +161,10 @@ class WorkFlowSubscriber implements ShouldQueue
             'ZeroDaHero\LaravelWorkflow\Events\EnterEvent',
             'App\Listeners\WorkFlowSubscriber@onEnter'
         );
-        /*
-                $events->listen(
-                    'ZeroDaHero\LaravelWorkflow\Events\EnteredEvent',
-                    'App\Listeners\WorkFlowSubscriber@onEntered'
-                );*/
+
+        $events->listen(
+            'ZeroDaHero\LaravelWorkflow\Events\EnteredEvent',
+            'App\Listeners\WorkFlowSubscriber@onEntered'
+        );
     }
 }

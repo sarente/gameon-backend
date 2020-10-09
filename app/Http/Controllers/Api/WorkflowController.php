@@ -39,7 +39,6 @@ class WorkflowController extends Controller
         return response()->success($workflow);
     }
 
-
     public function preceed($workflow_id)
     {
         DB::beginTransaction();
