@@ -69,7 +69,7 @@ class WorkflowController extends Controller
         $transitions = $system_workflow->getEnabledTransitions($flowable);
         if (count($transitions) == 0) {
             DB::rollBack();
-            return response()->error('workflow.transition-not-allowed');
+            throw new TransitionNotFoundException();
         }
         foreach ($transitions as $transition) {
             $t[] = $transition->getName();

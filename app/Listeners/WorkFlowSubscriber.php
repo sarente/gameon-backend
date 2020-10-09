@@ -79,7 +79,7 @@ class WorkFlowSubscriber implements ShouldQueue
             $result = Result::find($this->model_id);
             if ($result) {
 
-                $workflow_id = $event->getOriginalEvent()->getSubject()->workflow_id;
+                $workflow_id = $this->flowable->workflow_id;
                 $category_id = CustomWorkflow::with('category')->findOrFail($workflow_id)->category_id;
 
                 //Check user not gain point before from this activity
