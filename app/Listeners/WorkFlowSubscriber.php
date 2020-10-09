@@ -10,6 +10,7 @@ use App\Models\CustomWorkflow;
 use App\Models\Result;
 use App\Models\User;
 use App\Models\UserPoint;
+use Carbon\Carbon;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Cache;
 use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
@@ -26,13 +27,11 @@ class WorkFlowSubscriber implements ShouldQueue
         /** Symfony\Component\CustomWorkflow\Event\GuardEvent */
         $originalEvent = $event->getOriginalEvent();
 
-        /** @var \App\Models\UserWorkflow $user_workflow */
-        $this->flowable = $event->getOriginalEvent()->getSubject();
-
         //Check activity return type
         if (!$this->flowable) {
             $originalEvent->setBlocked(true);
         }
+        $this->getValues($event);
     }
 
     /**
@@ -161,21 +160,23 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     private function getValues($event): void
     {
-        $this->user = Cache::get('user', function () {
+        $this->flowable = Cache::remember('flowable', Carbon::now()->addMinute(), function () use ($event) {
+            return $event->getOriginalEvent()->getSubject();
+        });
+        $this->user = Cache::remember('user', Carbon::now()->addMinute(), function () {
             return User::getUser($this->flowable->user_id);
         });
-
         //Get key of metadata info
-        $this->marking_place = Cache::get('marking_place', function () use ($event) {
+        $this->marking_place = Cache::remember('marking_place', Carbon::now()->addMinute(), function () use ($event) {
             return key($event->getOriginalEvent()->getMarking()->getPlaces());
         });
-        $this->model_id = Cache::get('model_id', function () use ($event) {
+        $this->model_id = Cache::remember('model_id', Carbon::now()->addMinute(), function () use ($event) {
             return (int)$event->getOriginalEvent()->getMetadata('model_id', $this->marking_place);
         });
-        $this->model_type = Cache::get('model_type', function () use ($event) {
+        $this->model_type = Cache::remember('model_type', Carbon::now()->addMinute(), function () use ($event) {
             return $event->getOriginalEvent()->getMetadata('model_type', $this->marking_place);
         });
-        $this->model_kind = Cache::get('model_kind', function () use ($event) {
+        $this->model_kind = Cache::remember('model_kind', Carbon::now()->addMinute(), function () use ($event) {
             return $event->getOriginalEvent()->getMetadata('model_kind', $this->marking_place);
         });
     }

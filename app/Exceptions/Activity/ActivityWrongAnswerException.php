@@ -16,7 +16,7 @@ class ActivityWrongAnswerException extends ModelNotFoundException
      */
     public function report()
     {
-        Log::channel('errorlog')->error($this->getModel() . PHP_EOL . multi_implode ($this->getTrace()[0],','));
+        Log::channel('errorlog')->error($this->getModel());
     }
 
     /**
