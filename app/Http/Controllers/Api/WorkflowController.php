@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Exceptions\WorkFlow\UserWorkFlowNotFoundException;
 use App\Exceptions\WorkFlow\WorkFlowNotFoundException;
 use App\Http\Controllers\Controller;
 use App\Models\CustomWorkflow;
 use App\Models\User;
 use App\Models\UserWorkflow;
+use Illuminate\Support\Facades\DB;
+use Symfony\Component\Workflow\Exception\LogicException;
 
 class WorkflowController extends Controller
 {
@@ -35,6 +38,58 @@ class WorkflowController extends Controller
         return response()->success($workflow);
     }
 
+
+    public function preceed($workflow_id)
+    {
+        DB::beginTransaction();
+        $user = User::getUser();
+
+        //Get workflow
+        $workflow = CustomWorkflow::with('category')->find($workflow_id);
+        if (!$workflow->exists()) {
+            throw new WorkFlowNotFoundException();
+        }
+
+        //Load workflow
+        $flowable = UserWorkflow::with(['customWorkflow', 'user'])
+            ->where('user_id', $user->id)
+            ->where('workflow_id', $workflow->id);
+
+        if (!$flowable->exists()) {
+            throw new UserWorkFlowNotFoundException();
+        }
+        $flowable = $flowable->first();
+
+        $system_workflow = $flowable->workflow_get($flowable->customWorkflow->name);
+
+        //Apply it
+        ////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////
+        /// Get user transtion on
+        $transitions = $system_workflow->getEnabledTransitions($flowable);
+        if (count($transitions) == 0) {
+            DB::rollBack();
+            return response()->error('workflow.transition-not-allowed');
+        }
+        foreach ($transitions as $transition) {
+            $t[] = $transition->getName();
+        }
+        $transition = $t[0];
+        ////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////
+        /// Save user workflow to next pace
+        try {
+            $system_workflow->apply($flowable, $transition);
+            $flowable->save();
+        } catch (LogicException $e) {
+            DB::rollBack();
+            return response()->error('workflow.place-not-allowed');
+        }
+        ////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////
+        DB::commit();
+        return response()->success('common.success');
+    }
 
     /**
      * @param $id

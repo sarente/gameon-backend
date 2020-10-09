@@ -15,7 +15,7 @@ class TransitionNotFoundException extends Exception
      */
     public function report()
     {
-        Log::channel('errorlog')->error(trans('workflow.transition-not-allowed') . PHP_EOL .substr($this->getTraceAsString(),1,118));
+        Log::channel('errorlog')->error(trans('workflow.transition.not-found') . PHP_EOL .substr($this->getTraceAsString(),1,118));
     }
 
     /**
@@ -27,6 +27,6 @@ class TransitionNotFoundException extends Exception
     public function render($request)
     {
         $this->report();
-        return response()->error('workflow.transition-not-allowed', [], $request->toArray(), 404);
+        return response()->error('workflow.transition.not-found', [], $request->toArray(), 404);
     }
 }

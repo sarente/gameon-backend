@@ -69,6 +69,9 @@ return [
         'notfound' => 'level notfound in :artifact_name'
     ],
     'workflow' => [
+        'transition' => [
+            'not-found' => 'WorkFlow not found.'
+        ],
         'not-found' => 'WorkFlow not found.',
         'place-not-allowed' => 'Workflow place not found',
         'transition-not-allowed' => 'Workflow transition not found',

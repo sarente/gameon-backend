@@ -85,8 +85,8 @@ class WorkFlowSubscriber implements ShouldQueue
                 $user_point = new UserPoint([
                     'point' => $result->point
                 ]);
-                $user_point->user()->associate($this->flowable->user);
-                $user_point->result()->associate($model_id);
+                $user_point->user()->associate($this->user);
+                $user_point->result()->associate($this->model_id);
                 $user_point->workflow()->associate($workflow_id);
                 $user_point->category()->associate($category_id);
                 $user_point->save();
