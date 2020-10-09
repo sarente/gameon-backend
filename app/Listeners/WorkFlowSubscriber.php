@@ -11,8 +11,7 @@ use App\Models\Result;
 use App\Models\User;
 use App\Models\UserPoint;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Filesystem\Cache;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Cache;
 use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
 
 class WorkFlowSubscriber implements ShouldQueue
@@ -33,24 +32,6 @@ class WorkFlowSubscriber implements ShouldQueue
         //Check activity return type
         if (!$this->flowable) {
             $originalEvent->setBlocked(true);
-        } else {
-            $this->user = Cache::get('user', function () {
-                return User::getUser($this->flowable->user_id);
-            });
-
-            //Get key of metadata info
-            $this->marking_place = Cache::tags(['workflow_subscriber'])->get('marking_place', function ($event) {
-                return key($event->getOriginalEvent()->getMarking()->getPlaces());
-            });
-            $this->model_id = Cache::tags(['workflow_subscriber'])->get('model_id', function ($event) {
-                return (int)$event->getOriginalEvent()->getMetadata('model_id', $this->marking_place);
-            });
-            $this->model_type = Cache::tags(['workflow_subscriber'])->get('model_type', function ($event) {
-                return $event->getOriginalEvent()->getMetadata('model_type', $this->marking_place);
-            });
-            $this->model_kind = Cache::tags(['workflow_subscriber'])->get('model_kind', function ($event) {
-                return $event->getOriginalEvent()->getMetadata('model_kind', $this->marking_place);
-            });
         }
     }
 
@@ -59,7 +40,7 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onLeave($event)
     {
-
+        $this->getValues($event);
     }
 
     /**
@@ -67,6 +48,8 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onTransition($event)
     {
+        $this->getValues($event);
+
         if ($this->model_type == \App\Models\Activity::class && !is_null($this->model_kind) && $this->model_kind == \App\Models\Setting::ACTIVITY_RETURN) {
             //Check activity name if doesnt have return false
             $activity = Activity::find($this->model_id);
@@ -89,6 +72,8 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onEnter($event)
     {
+        $this->getValues($event);
+
         if ($this->model_type == \App\Models\Result::class) {
 
             //Grab this data to fill user point
@@ -130,7 +115,10 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onEntered($event)
     {
-        Cache::tags('workflow_subscriber')->flush();
+        Cache::forget('marking_place');
+        Cache::forget('model_id');
+        Cache::forget('model_type');
+        Cache::forget('model_kind');
     }
 
     /**
@@ -145,10 +133,10 @@ class WorkFlowSubscriber implements ShouldQueue
             'App\Listeners\WorkFlowSubscriber@onGuard'
         );
 
-        /*$events->listen(
+        $events->listen(
             'ZeroDaHero\LaravelWorkflow\Events\LeaveEvent',
             'App\Listeners\WorkFlowSubscriber@onLeave'
-        );*/
+        );
 
         //Check activity is return value
         $events->listen(
@@ -166,5 +154,29 @@ class WorkFlowSubscriber implements ShouldQueue
             'ZeroDaHero\LaravelWorkflow\Events\EnteredEvent',
             'App\Listeners\WorkFlowSubscriber@onEntered'
         );
+    }
+
+    /**
+     * @param $event
+     */
+    private function getValues($event): void
+    {
+        $this->user = Cache::get('user', function () {
+            return User::getUser($this->flowable->user_id);
+        });
+
+        //Get key of metadata info
+        $this->marking_place = Cache::get('marking_place', function () use ($event) {
+            return key($event->getOriginalEvent()->getMarking()->getPlaces());
+        });
+        $this->model_id = Cache::get('model_id', function () use ($event) {
+            return (int)$event->getOriginalEvent()->getMetadata('model_id', $this->marking_place);
+        });
+        $this->model_type = Cache::get('model_type', function () use ($event) {
+            return $event->getOriginalEvent()->getMetadata('model_type', $this->marking_place);
+        });
+        $this->model_kind = Cache::get('model_kind', function () use ($event) {
+            return $event->getOriginalEvent()->getMetadata('model_kind', $this->marking_place);
+        });
     }
 }
