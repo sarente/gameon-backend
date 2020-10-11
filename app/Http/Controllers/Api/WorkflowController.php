@@ -39,7 +39,7 @@ class WorkflowController extends Controller
         return response()->success($workflow);
     }
 
-    public function preceed($workflow_id)
+    public function proceed($workflow_id)
     {
         DB::beginTransaction();
         $user = User::getUser();
@@ -70,6 +70,7 @@ class WorkflowController extends Controller
         if (count($transitions) == 0) {
             DB::rollBack();
             throw new TransitionNotFoundException();
+            return;
         }
         foreach ($transitions as $transition) {
             $t[] = $transition->getName();
@@ -84,6 +85,7 @@ class WorkflowController extends Controller
         } catch (LogicException $e) {
             DB::rollBack();
             throw new TransitionNotFoundException();
+            return;
         }
         ////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////
