@@ -26,6 +26,7 @@ class WorkFlowSubscriber implements ShouldQueue
     {
         /** Symfony\Component\CustomWorkflow\Event\GuardEvent */
         $originalEvent = $event->getOriginalEvent();
+        //Set cache of user
         $this->getValues($originalEvent);
 
         //Check activity return type
@@ -46,11 +47,9 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onTransition($event)
     {
-        Log::channel('daily')->info('onTransition');
+        Log::channel('daily')->info($this->model_kind);
 
-        if ($this->model_type == \App\Models\Activity::class &&
-            !is_null($this->model_kind) &&
-            $this->model_kind == \App\Models\Setting::ACTIVITY_RETURN) {
+        if ($this->model_kind == \App\Models\Setting::ACTIVITY_RETURN) {
 
             //Check activity name if doesnt have return false
             $activity = Activity::find($this->model_id);
