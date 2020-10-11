@@ -11,7 +11,7 @@ use App\Models\Result;
 use App\Models\User;
 use App\Models\UserPoint;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Cache;
+use Illuminate\Filesystem\Cache;
 use Illuminate\Support\Facades\Log;
 use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
 
@@ -26,12 +26,24 @@ class WorkFlowSubscriber implements ShouldQueue
     {
         /** Symfony\Component\CustomWorkflow\Event\GuardEvent */
         $originalEvent = $event->getOriginalEvent();
-        //Set cache of user
-        $this->getValues($originalEvent);
+
+        /** @var \App\Models\UserWorkflow $user_workflow */
+        $this->flowable = $originalEvent->getSubject();
 
         //Check activity return type
         if (!$this->flowable) {
+
             $originalEvent->setBlocked(true);
+        } else {
+            $this->user = Cache::get('user', function () {
+                return User::getUser($this->flowable->user_id);
+            });
+
+            //Get key of metadata info
+            $this->marking_place = key($originalEvent->getMarking()->getPlaces());
+            $this->model_id = (int)$originalEvent->getMetadata('model_id', $this->marking_place);
+            $this->model_type = $originalEvent->getMetadata('model_type', $this->marking_place);
+            $this->model_kind = $originalEvent->getMetadata('model_kind', $this->marking_place);
         }
     }
 
@@ -40,6 +52,7 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onLeave($event)
     {
+
     }
 
     /**
@@ -47,14 +60,7 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onTransition($event)
     {
-        $this->model_kind = $event->getOriginalEvent()->getMetadata('model_kind', $this->marking_place);
-
-        Log::channel('daily')->info($this->model_kind);
-
-        if ($this->model_type == \App\Models\Activity::class &&
-            !is_null($this->model_kind) &&
-            $this->model_kind == \App\Models\Setting::ACTIVITY_RETURN) {
-
+        if ($this->model_type == \App\Models\Activity::class && !is_null($this->model_kind) && $this->model_kind == \App\Models\Setting::ACTIVITY_RETURN) {
             //Check activity name if doesnt have return false
             $activity = Activity::find($this->model_id);
             if (!$activity) {
@@ -65,7 +71,6 @@ class WorkFlowSubscriber implements ShouldQueue
             $it_2 = $activity->return_value;
             $diff = array_diff($it_1, $it_2);
 
-            Log::channel('daily')->info(strval($diff));
             if (count($diff) > 0) {
                 throw new ActivityWrongAnswerException();
             }
@@ -83,7 +88,7 @@ class WorkFlowSubscriber implements ShouldQueue
             $result = Result::find($this->model_id);
             if ($result) {
 
-                $workflow_id = $this->flowable->workflow_id;
+                $workflow_id = $event->getOriginalEvent()->getSubject()->workflow_id;
                 $category_id = CustomWorkflow::with('category')->findOrFail($workflow_id)->category_id;
 
                 //Check user not gain point before from this activity
@@ -118,7 +123,6 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onEntered($event)
     {
-        Cache::tags('workflow')->flush();
     }
 
     /**
@@ -133,10 +137,10 @@ class WorkFlowSubscriber implements ShouldQueue
             'App\Listeners\WorkFlowSubscriber@onGuard'
         );
 
-        $events->listen(
+        /*$events->listen(
             'ZeroDaHero\LaravelWorkflow\Events\LeaveEvent',
             'App\Listeners\WorkFlowSubscriber@onLeave'
-        );
+        );*/
 
         //Check activity is return value
         $events->listen(
@@ -150,33 +154,9 @@ class WorkFlowSubscriber implements ShouldQueue
             'App\Listeners\WorkFlowSubscriber@onEnter'
         );
 
-        $events->listen(
+        /*$events->listen(
             'ZeroDaHero\LaravelWorkflow\Events\EnteredEvent',
             'App\Listeners\WorkFlowSubscriber@onEntered'
-        );
-    }
-
-    /**
-     * @param $event
-     */
-    private function getValues($original_event): void
-    {
-        $this->flowable = $original_event->getSubject();
-
-        $this->user = Cache::tags('workflow')->get('user' . $this->flowable->user_id, function () {
-            return User::getUser($this->flowable->user_id);
-        });
-
-        //Get key of metadata info
-        $this->marking_place = Cache::tags('workflow')->get('marking_place' . $this->flowable->user_id, function () use ($original_event) {
-            return key($original_event->getMarking()->getPlaces());
-        });
-        $this->model_id = Cache::tags('workflow')->get('model_id' . $this->flowable->user_id, function () use ($original_event) {
-            return (int)$original_event->getMetadata('model_id', $this->marking_place);
-        });
-        $this->model_type = Cache::tags('workflow')->get('model_type' . $this->flowable->user_id, function () use ($original_event) {
-            return $original_event->getMetadata('model_type', $this->marking_place);
-        });
-
+        );*/
     }
 }
