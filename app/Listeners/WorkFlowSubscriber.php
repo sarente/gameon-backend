@@ -15,7 +15,7 @@ use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
 
 class WorkFlowSubscriber implements ShouldQueue
 {
-    private $flowable, $user, $marking_place, $model_id, $model_type, $model_kind, $original_event;
+    private $flowable, $user, $marking_place, $model_id, $model_type, $model_kind;
 
     /**
      * Handle workflow guard events.
@@ -23,17 +23,16 @@ class WorkFlowSubscriber implements ShouldQueue
     public function onGuard(GuardEvent $event)
     {
         /** Symfony\Component\CustomWorkflow\Event\GuardEvent */
-        $this->original_event = $event->getOriginalEvent();
+        $originalEvent = $event->getOriginalEvent();
 
         /** @var \App\Models\UserWorkflow $user_workflow */
-        $this->flowable = $this->original_event->getSubject();
+        $this->flowable = $originalEvent->getSubject();
 
         //Check activity return type
         if (!$this->flowable) {
-            $this->original_event->setBlocked(true);
+            $originalEvent->setBlocked(true);
         }
         $this->user = User::getUser($this->flowable->user_id);
-
     }
 
     /**
@@ -41,10 +40,34 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onLeave($event)
     {
-        $this->marking_place = key($event->getOriginalEvent()->getMarking()->getPlaces());
-        $this->model_type = $event->getOriginalEvent()->getMetadata('model_type', $this->marking_place);
-        $this->model_kind = $event->getOriginalEvent()->getMetadata('model_kind', $this->marking_place);
-        $this->model_id = (int)$event->getOriginalEvent()->getMetadata('model_id', $this->marking_place);
+        $this->flowable=$event->getSubject();
+    }
+
+    /**
+     * Handle workflow transition event.
+     */
+    public function onTransition($event)
+    {
+
+    }
+
+    /**
+     * Handle workflow enter event.
+     */
+    public function onEnter($event)
+    {
+
+    }
+
+    /**
+     * Handle workflow entered event.
+     */
+    public function onEntered($event)
+    {
+        $this->marking_place = key($event->getMarking()->getPlaces());
+        $this->model_type = $event->getMetadata('model_type', $this->marking_place);
+        $this->model_kind = $event->getMetadata('model_kind', $this->marking_place);
+        $this->model_id = (int)$event->getMetadata('model_id', $this->marking_place);
 
         if ($this->model_type == \App\Models\Activity::class &&
             !is_null($this->model_kind) &&
@@ -64,27 +87,9 @@ class WorkFlowSubscriber implements ShouldQueue
                 throw new ActivityWrongAnswerException();
             }
         }
-    }
 
-    /**
-     * Handle workflow transition event.
-     */
-    public function onTransition($event)
-    {
-
-    }
-
-    /**
-     * Handle workflow enter event.
-     */
-    public function onEnter($event)
-    {
-        $this->marking_place = key($event->getOriginalEvent()->getMarking()->getPlaces());
-        $this->model_type = $event->getOriginalEvent()->getMetadata('model_type', $this->marking_place);
-        $this->model_id = (int)$event->getOriginalEvent()->getMetadata('model_id', $this->marking_place);
 
         if ($this->model_type == \App\Models\Result::class) {
-
             //Grab this data to fill user point
             $result = Result::find($this->model_id);
             if ($result) {
@@ -120,13 +125,6 @@ class WorkFlowSubscriber implements ShouldQueue
     }
 
     /**
-     * Handle workflow entered event.
-     */
-    public function onEntered($event)
-    {
-    }
-
-    /**
      * Register the listeners for the subscriber.
      * @param Illuminate\Events\Dispatcher $events
      */
@@ -135,29 +133,29 @@ class WorkFlowSubscriber implements ShouldQueue
         //Get user and workflow
         $events->listen(
             'ZeroDaHero\LaravelWorkflow\Events\GuardEvent',
-            'App\Listeners\WorkFlowSubscriber@onGuard'
+           'App\Listeners\WorkFlowSubscriber@onGuard'
         );
 
         $events->listen(
-            'ZeroDaHero\LaravelWorkflow\Events\LeaveEvent',
-            'App\Listeners\WorkFlowSubscriber@onLeave'
-        );
+           'ZeroDaHero\LaravelWorkflow\Events\LeaveEvent',
+           'App\Listeners\WorkFlowSubscriber@onLeave'
+       );
 
-        //Check activity is return value
-        /*$events->listen(
-            'ZeroDaHero\LaravelWorkflow\Events\TransitionEvent',
-            'App\Listeners\WorkFlowSubscriber@onTransition'
-        );*/
-
-        //check result and
+       //Check activity is return value
         $events->listen(
-            'ZeroDaHero\LaravelWorkflow\Events\EnterEvent',
-            'App\Listeners\WorkFlowSubscriber@onEnter'
-        );
+           'ZeroDaHero\LaravelWorkflow\Events\TransitionEvent',
+           'App\Listeners\WorkFlowSubscriber@onTransition'
+       );
 
-        /*$events->listen(
+       //check result and
+       $events->listen(
+           'ZeroDaHero\LaravelWorkflow\Events\EnterEvent',
+           'App\Listeners\WorkFlowSubscriber@onEnter'
+       );
+
+        $events->listen(
             'ZeroDaHero\LaravelWorkflow\Events\EnteredEvent',
             'App\Listeners\WorkFlowSubscriber@onEntered'
-        );*/
+        );
     }
 }
