@@ -10,9 +10,9 @@ use App\Models\CustomWorkflow;
 use App\Models\Result;
 use App\Models\User;
 use App\Models\UserPoint;
-use Carbon\Carbon;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
 
 class WorkFlowSubscriber implements ShouldQueue
@@ -26,12 +26,12 @@ class WorkFlowSubscriber implements ShouldQueue
     {
         /** Symfony\Component\CustomWorkflow\Event\GuardEvent */
         $originalEvent = $event->getOriginalEvent();
+        $this->getValues($originalEvent);
 
         //Check activity return type
         if (!$this->flowable) {
             $originalEvent->setBlocked(true);
         }
-        $this->getValues($event);
     }
 
     /**
@@ -39,7 +39,6 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onLeave($event)
     {
-        $this->getValues($event);
     }
 
     /**
@@ -47,9 +46,12 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onTransition($event)
     {
-        $this->getValues($event);
+        Log::channel('daily')->info('onTransition');
 
-        if ($this->model_type == \App\Models\Activity::class && !is_null($this->model_kind) && $this->model_kind == \App\Models\Setting::ACTIVITY_RETURN) {
+        if ($this->model_type == \App\Models\Activity::class &&
+            !is_null($this->model_kind) &&
+            $this->model_kind == \App\Models\Setting::ACTIVITY_RETURN) {
+
             //Check activity name if doesnt have return false
             $activity = Activity::find($this->model_id);
             if (!$activity) {
@@ -60,6 +62,7 @@ class WorkFlowSubscriber implements ShouldQueue
             $it_2 = $activity->return_value;
             $diff = array_diff($it_1, $it_2);
 
+            Log::channel('daily')->info(strval($diff));
             if (count($diff) > 0) {
                 throw new ActivityWrongAnswerException();
             }
@@ -71,8 +74,6 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onEnter($event)
     {
-        $this->getValues($event);
-
         if ($this->model_type == \App\Models\Result::class) {
 
             //Grab this data to fill user point
@@ -114,10 +115,7 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onEntered($event)
     {
-        Cache::forget('marking_place');
-        Cache::forget('model_id');
-        Cache::forget('model_type');
-        Cache::forget('model_kind');
+        Cache::tags('workflow')->flush();
     }
 
     /**
@@ -158,26 +156,26 @@ class WorkFlowSubscriber implements ShouldQueue
     /**
      * @param $event
      */
-    private function getValues($event): void
+    private function getValues($original_event): void
     {
-        $this->flowable = Cache::remember('flowable', Carbon::now()->addMinute(), function () use ($event) {
-            return $event->getOriginalEvent()->getSubject();
-        });
-        $this->user = Cache::remember('user', Carbon::now()->addMinute(), function () {
+        $this->flowable = $original_event->getSubject();
+
+        $this->user = Cache::tags('workflow')->get('user' . $this->flowable->user_id, function () {
             return User::getUser($this->flowable->user_id);
         });
+
         //Get key of metadata info
-        $this->marking_place = Cache::remember('marking_place', Carbon::now()->addMinute(), function () use ($event) {
-            return key($event->getOriginalEvent()->getMarking()->getPlaces());
+        $this->marking_place = Cache::tags('workflow')->get('marking_place' . $this->flowable->user_id, function () use ($original_event) {
+            return key($original_event->getMarking()->getPlaces());
         });
-        $this->model_id = Cache::remember('model_id', Carbon::now()->addMinute(), function () use ($event) {
-            return (int)$event->getOriginalEvent()->getMetadata('model_id', $this->marking_place);
+        $this->model_id = Cache::tags('workflow')->get('model_id' . $this->flowable->user_id, function () use ($original_event) {
+            return (int)$original_event->getMetadata('model_id', $this->marking_place);
         });
-        $this->model_type = Cache::remember('model_type', Carbon::now()->addMinute(), function () use ($event) {
-            return $event->getOriginalEvent()->getMetadata('model_type', $this->marking_place);
+        $this->model_type = Cache::tags('workflow')->get('model_type' . $this->flowable->user_id, function () use ($original_event) {
+            return $original_event->getMetadata('model_type', $this->marking_place);
         });
-        $this->model_kind = Cache::remember('model_kind', Carbon::now()->addMinute(), function () use ($event) {
-            return $event->getOriginalEvent()->getMetadata('model_kind', $this->marking_place);
+        $this->model_kind = Cache::tags('workflow')->get('model_kind' . $this->flowable->user_id, function () use ($original_event) {
+            return $original_event->getMetadata('model_kind', $this->marking_place);
         });
     }
 }
