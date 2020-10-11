@@ -47,9 +47,13 @@ class WorkFlowSubscriber implements ShouldQueue
      */
     public function onTransition($event)
     {
+        $this->model_kind = $event->getOriginalEvent()->getMetadata('model_kind', $this->marking_place);
+
         Log::channel('daily')->info($this->model_kind);
 
-        if ($this->model_kind == \App\Models\Setting::ACTIVITY_RETURN) {
+        if ($this->model_type == \App\Models\Activity::class &&
+            !is_null($this->model_kind) &&
+            $this->model_kind == \App\Models\Setting::ACTIVITY_RETURN) {
 
             //Check activity name if doesnt have return false
             $activity = Activity::find($this->model_id);
@@ -173,8 +177,6 @@ class WorkFlowSubscriber implements ShouldQueue
         $this->model_type = Cache::tags('workflow')->get('model_type' . $this->flowable->user_id, function () use ($original_event) {
             return $original_event->getMetadata('model_type', $this->marking_place);
         });
-        $this->model_kind = Cache::tags('workflow')->get('model_kind' . $this->flowable->user_id, function () use ($original_event) {
-            return $original_event->getMetadata('model_kind', $this->marking_place);
-        });
+
     }
 }
