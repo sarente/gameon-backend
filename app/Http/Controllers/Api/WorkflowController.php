@@ -65,12 +65,12 @@ class WorkflowController extends Controller
         //Apply it
         ////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////
-        /// Get user transtion on
+        /// Get user transtion ontry {
+        try{
         $transitions = $system_workflow->getEnabledTransitions($flowable);
         if (count($transitions) == 0) {
             DB::rollBack();
             throw new TransitionNotFoundException();
-            return;
         }
         foreach ($transitions as $transition) {
             $t[] = $transition->getName();
@@ -79,13 +79,12 @@ class WorkflowController extends Controller
         ////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////
         /// Save user workflow to next pace
-        try {
+
             $system_workflow->apply($flowable, $transition);
             $flowable->save();
         } catch (LogicException $e) {
             DB::rollBack();
             throw new TransitionNotFoundException();
-            return;
         }
         ////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////
