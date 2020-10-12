@@ -45,7 +45,6 @@ class BilkomUsers extends Seeder
         }
         unset($users);
 
-
         ///////////////////////Females
         //Banu Tosun: banu.tosun@bilkom.com.tr
         $users[] = factory(\App\Models\User::class)->make([
@@ -83,6 +82,7 @@ class BilkomUsers extends Seeder
             'name' => 'Çağrı',
             'surname' => 'Vançin',
         ]);
+
         foreach ($users as $key => $user) {
             $user->save();
             $user->assignRole($role_user);

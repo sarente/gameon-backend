@@ -39,6 +39,9 @@ Route::group(['prefix'=> 'admin','middleware' => ['auth.jwt','role:admin']],func
 //Other users
 Route::group(['middleware' => 'auth.jwt'], function ($router) {
 
+    //Auth
+    Route::get('logout', 'Api\AuthController@logout');
+
     //User Management
     Route::get('me', 'Api\AuthController@me');
     Route::get('refresh', 'Api\AuthController@refresh');

@@ -3,8 +3,9 @@
 
 namespace App\Guard;
 
-use App\Exceptions\UserModelNotFoundException;
 use App\Exceptions\Token\TokenInvalidException;
+use App\Exceptions\UserModelNotFoundException;
+use App\Models\ExpiredTokens;
 use App\Models\User;
 use Illuminate\Auth\GuardHelpers;
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -87,20 +88,8 @@ class JwtGuard implements Guard
      */
     public function getTokenForRequest()
     {
-        $token = $this->request->query($this->key);
-
-        if (empty($token)) {
-            $token = $this->request->input($this->key);
-        }
-
-        if (empty($token)) {
-            $token = $this->request->bearerToken();
-        }
-
-        if (empty($token)) {
-            $token = $this->request->getPassword();
-        }
-
+        //$token = $this->request->query($this->key);
+        $token = $this->request->bearerToken();
         return $token;
     }
 
@@ -152,6 +141,14 @@ class JwtGuard implements Guard
                 throw new TokenInvalidException();
             }
         }
+    }
+
+    public function logout()
+    {
+        $bearerToken=$this->request->bearerToken();
+        ExpiredTokens::create([
+            'jwt_token' => $bearerToken
+        ]);
     }
 }
 
