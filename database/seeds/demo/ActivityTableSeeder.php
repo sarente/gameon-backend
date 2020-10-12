@@ -34,7 +34,7 @@ class ActivityTableSeeder extends Seeder
         for ($i = 0; $i < 5; $i++) {
             $activity->image()->save(new  \App\Models\Image([
                 'order' => $i,
-                'image' => Intervention::make(resource_path("images/activity/innovation/{$i}.jpg")),
+                'image' => Intervention::make(resource_path("images/activity/01/{$i}.jpg")),
             ]));
         }
 
@@ -57,10 +57,10 @@ class ActivityTableSeeder extends Seeder
             'kind' => Setting::$activity_kinds[0],
         ]);
         $activity->save();
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 3; $i++) {
             $activity->image()->save(new  \App\Models\Image([
                 'order' => $i,
-                'image' => Intervention::make(resource_path("images/activity/team_work/{$i}.jpg")),
+                'image' => Intervention::make(resource_path("images/activity/02/{$i}.jpg")),
             ]));
         }
 
@@ -75,7 +75,7 @@ class ActivityTableSeeder extends Seeder
         $activity->save();
 
         ///////////////////////////////////////////////////////
-        //Category Eğitim Adası
+        //Category Yetkinlikler Adası
         ///////////////////////////////////////////////////////
 
         // do action
@@ -86,10 +86,10 @@ class ActivityTableSeeder extends Seeder
             'kind' => Setting::$activity_kinds[0],
         ]);
         $activity->save();
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 2; $i++) {
             $activity->image()->save(new  \App\Models\Image([
                 'order' => $i,
-                'image' => Intervention::make(resource_path("images/activity/covid19/{$i}.jpg")),
+                'image' => Intervention::make(resource_path("images/activity/03/{$i}.jpg")),
             ]));
         }
 
@@ -99,9 +99,8 @@ class ActivityTableSeeder extends Seeder
             'metadata' => ['description' => ''],
             'kind' => Setting::$activity_kinds[1],
             'type' => Setting::$activity_types[3],
-            'return_value' => ['param1' => 'EKİP ÇALIŞMASI']
+            'return_value' => ['param1' => 'ANALİTİK BAKIŞ AÇISINA SAHİP OLMAK']
         ]);
         $activity->save();
-
     }
 }
