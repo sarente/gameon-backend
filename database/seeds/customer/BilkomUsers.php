@@ -37,10 +37,8 @@ class BilkomUsers extends Seeder
         ]);
 
         foreach ($users as $key => $user) {
-
             $user->save();
             $user->assignRole($role_user);
-
             $user->image()->save(new  \App\Models\Image([
                 'image' => \Intervention::make(resource_path("images/user/male/{$key}.png")),
             ]));
@@ -58,7 +56,6 @@ class BilkomUsers extends Seeder
             'name' => 'Banu',
             'surname' => 'Tosun',
         ]);
-
         //Hazal Sayın: hazal.sayin@bilkom.com.tr
         $users[] = factory(\App\Models\User::class)->make([
             'username' => mt_rand(10000000000, 99999999999),
@@ -87,10 +84,8 @@ class BilkomUsers extends Seeder
             'surname' => 'Vançin',
         ]);
         foreach ($users as $key => $user) {
-
             $user->save();
             $user->assignRole($role_user);
-
             $user->image()->save(new  \App\Models\Image([
                 'image' => \Intervention::make(resource_path("images/user/female/{$key}.png")),
             ]));
