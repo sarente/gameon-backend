@@ -126,8 +126,6 @@ class BilkomUsers extends Seeder
             ]);
 
         }
-
-
     }
 }
 

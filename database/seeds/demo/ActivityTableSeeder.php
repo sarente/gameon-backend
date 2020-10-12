@@ -22,8 +22,8 @@ class ActivityTableSeeder extends Seeder
 
         //////////////////////////////////////////////////////////
         //Category Degerler Adası
-        // do action
 
+        // do action
         $activity = new Activity([
             'name' => ['tr' => 'Sayfalardaki harflerin sırasını not et, bulmacayı çöz ve Vakıf Katılım\'ın değerlerinden birini keşfet!', 'en' => 'ُPLay Slide Shows'],
             'metadata' => ['description' => ''],
@@ -37,6 +37,7 @@ class ActivityTableSeeder extends Seeder
                 'image' => Intervention::make(resource_path("images/activity/innovation/{$i}.jpg")),
             ]));
         }
+
         // return value
         $activity = new Activity([
             'name' => ['tr' => 'Kelimeyi Gir', 'en' => 'Fill in the Blanks'],
@@ -61,20 +62,22 @@ class ActivityTableSeeder extends Seeder
                 'image' => Intervention::make(resource_path("images/activity/team_work/{$i}.jpg")),
             ]));
         }
+
         // return value
         $activity = new Activity([
             'name' => ['tr' => 'Kelimeyi Gir', 'en' => 'Fill in the Blanks'],
             'metadata' => ['description' => ''],
             'kind' => Setting::$activity_kinds[1],
             'type' => Setting::$activity_types[3],
-            'return_value' => ['param1' => 'EKİP ÇALIŞMASI']
+            'return_value' => ['param1' => 'İYİ NİYET']
         ]);
         $activity->save();
 
         ///////////////////////////////////////////////////////
         //Category Eğitim Adası
         ///////////////////////////////////////////////////////
-        ///// do action
+
+        // do action
         $activity = new Activity([
             'name' => ['tr' => 'Covid-19 eğitimini tamamla, hastalığın önüne geç!', 'en' => 'ُPLay Slide Shows'],
             'metadata' => ['description' => ''],
@@ -88,6 +91,16 @@ class ActivityTableSeeder extends Seeder
                 'image' => Intervention::make(resource_path("images/activity/covid19/{$i}.jpg")),
             ]));
         }
+
+        // return value
+        $activity = new Activity([
+            'name' => ['tr' => 'Kelimeyi Gir', 'en' => 'Fill in the Blanks'],
+            'metadata' => ['description' => ''],
+            'kind' => Setting::$activity_kinds[1],
+            'type' => Setting::$activity_types[3],
+            'return_value' => ['param1' => 'EKİP ÇALIŞMASI']
+        ]);
+        $activity->save();
 
     }
 }

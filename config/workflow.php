@@ -252,18 +252,30 @@ return [
                 'model_type' => \App\Models\Activity::class,
             ]
             ],
-            'result' => ['metadata' => [
+            'the_blanks' => ['metadata' => [
                 'order' => '2',
+                'place_name' => 'Kelimeyi Gir',
+                'model_id' => '6',
+                'model_kind' => \App\Models\Setting::ACTIVITY_RETURN,
+                'model_type' => \App\Models\Activity::class,
+            ],
+            ],
+            'result' => ['metadata' => [
+                'order' => '3',
                 'place_name' => 'Neticeyi Gör',
                 'model_id' => '3',
                 'model_type' => \App\Models\Result::class,
             ],
             ],
-            'done' => ['metadata' => ['order' => '3','place_name' => 'Tamamlandı']]
+            'done' => ['metadata' => ['order' => '4','place_name' => 'Tamamlandı']]
         ],
         'transitions' => [
             'play_slide_show' => [
                 'from' => 'slide_show',
+                'to' => 'the_blanks',
+            ],
+            'fill_in_the_blanks' => [
+                'from' => 'the_blanks',
                 'to' => 'result',
             ],
             'show_result' => [
