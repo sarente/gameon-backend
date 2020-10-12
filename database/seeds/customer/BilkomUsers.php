@@ -44,21 +44,6 @@ class BilkomUsers extends Seeder
             $user->image()->save(new  \App\Models\Image([
                 'image' => \Intervention::make(resource_path("images/user/male/{$key}.png")),
             ]));
-            //Add workflow to users
-            $workflows = \App\Models\CustomWorkflow::pluck('id');
-            $user->workflows()->attach($workflows, ['marking' => '"the_blanks"']);
-
-            UserPoint::create([
-                'user_id' => $user->id,
-                'category_id' => 1,
-                'point' => 15
-            ]);
-            UserPoint::create([
-                'user_id' => $user->id,
-                'category_id' => 2,
-                'point' => 15
-            ]);
-
         }
         unset($users);
 
@@ -109,22 +94,6 @@ class BilkomUsers extends Seeder
             $user->image()->save(new  \App\Models\Image([
                 'image' => \Intervention::make(resource_path("images/user/female/{$key}.png")),
             ]));
-            //Add workflow to users
-            $workflows = \App\Models\CustomWorkflow::pluck('id');
-
-            $user->workflows()->attach($workflows, ['marking' => '"the_blanks"']);
-
-            UserPoint::create([
-                'user_id' => $user->id,
-                'category_id' => 1,
-                'point' => 15
-            ]);
-            UserPoint::create([
-                'user_id' => $user->id,
-                'category_id' => 2,
-                'point' => 15
-            ]);
-
         }
     }
 }

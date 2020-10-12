@@ -60,23 +60,55 @@ class WorkflowTableSeeder extends Seeder
                 $workflow->category()->associate($value);
                 $workflow->save();
 
-            } else if ($key == 1) {
                 $workflow = new \App\Models\CustomWorkflow([
-                    'name' => $workflowKeys[$key+3],
-                    'enable' => true,
+                    'name' => $workflowKeys[$key+4],
+                    'enable' => false,
                     'config' => $workflowDefinition['wf_05']
                 ]);
                 $workflow->category()->associate($value);
                 $workflow->save();
-                //
+
+            } else if ($key == 1) {
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[$key+4],
-                    'enable' => false,
+                    'enable' => true,
                     'config' => $workflowDefinition['wf_06']
                 ]);
                 $workflow->category()->associate($value);
                 $workflow->save();
                 //
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[$key+5],
+                    'enable' => false,
+                    'config' => $workflowDefinition['wf_07']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+                //
+                //
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[$key+6],
+                    'enable' => false,
+                    'config' => $workflowDefinition['wf_08']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+                //
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[$key+7],
+                    'enable' => false,
+                    'config' => $workflowDefinition['wf_09']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
+                //
+                $workflow = new \App\Models\CustomWorkflow([
+                    'name' => $workflowKeys[$key+8],
+                    'enable' => false,
+                    'config' => $workflowDefinition['wf_10']
+                ]);
+                $workflow->category()->associate($value);
+                $workflow->save();
             }
         }
     }

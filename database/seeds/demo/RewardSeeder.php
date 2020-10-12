@@ -39,7 +39,7 @@ class RewardSeeder extends Seeder
             //'description' => 'Gezgin Rozeti.',
         ]);
         $reward->image()->save(new  \App\Models\Image([
-            'image' => Intervention::make(resource_path("images/rosette/wise.png")),
+            'image' => Intervention::make(resource_path("images/rosette/competence.png")),
         ]));
         $message = \App\Models\Message::create([
             'message' => 'Bilge insan, tüm koşulları hesaba katarak bağlantılar kurmaya ve sonuçlar çıkarmaya çalışır\n Arthur Schopenhauer.',
