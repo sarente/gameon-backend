@@ -12,7 +12,8 @@ class CustomerSeeder extends Seeder
     public function run()
     {
         //Customer demo users
-        $this->call(VakifUsers::class);
+        //$this->call(VakifUsers::class);
+        $this->call(BilkomUsers::class);
 
     }
 }

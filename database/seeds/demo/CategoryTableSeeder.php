@@ -21,7 +21,7 @@ class CategoryTableSeeder extends Seeder
 
         $users=User::pluck('id')->toArray();
 
-        $category_names=[['tr'=>'Değerler','en'=>'Values'],['tr'=>'Eğitim','en'=>'Education']];
+        $category_names=[['tr'=>'Değerler','en'=>'Values'],['tr'=>'Yetkinlikler','en'=>'Competencies']];
 
         foreach($category_names as $category_name){
             $category = new \App\Models\Category([

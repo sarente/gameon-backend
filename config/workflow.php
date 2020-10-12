@@ -311,7 +311,7 @@ return [
     'wf_08' => [
         'type' => 'workflow',
         'metadata' => [
-            'title' => 'Çeviklik',
+            'title' => 'İnisiyatif Almak',
 
         ],
         'supports' => ['App\Models\UserWorkflow'],
