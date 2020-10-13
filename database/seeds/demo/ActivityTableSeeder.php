@@ -31,7 +31,7 @@ class ActivityTableSeeder extends Seeder
             'kind' => Setting::$activity_kinds[0],
         ]);
         $activity->save();
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 6; $i++) {
             $activity->image()->save(new  \App\Models\Image([
                 'order' => $i,
                 'image' => Intervention::make(resource_path("images/activity/01/{$i}.jpg")),
@@ -57,7 +57,7 @@ class ActivityTableSeeder extends Seeder
             'kind' => Setting::$activity_kinds[0],
         ]);
         $activity->save();
-        for ($i = 0; $i < 3; $i++) {
+        for ($i = 0; $i < 4; $i++) {
             $activity->image()->save(new  \App\Models\Image([
                 'order' => $i,
                 'image' => Intervention::make(resource_path("images/activity/02/{$i}.jpg")),
