@@ -2,7 +2,8 @@
 
 namespace App\Http\Middleware;
 
-use App\Exceptions\Token\TokenNotfoundException;
+use App\Exceptions\UserModelNotFoundException;
+use App\Models\ExpiredTokens;
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
@@ -38,4 +39,9 @@ class JwtAuth
         }
         return $next($request);
     }
+    //TODO: add any kind of data to response
+   /* public function terminate($request, $response)
+    {
+        throw new UserModelNotFoundException();
+    }*/
 }

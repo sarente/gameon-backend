@@ -12,6 +12,10 @@ return [
         'none-valid' => 'Some values is unexpected',
     ],
     'auth' => [
+        'token'=>[
+            'not-found' => 'Token not found',
+            'token-expired' => 'Token is expired',
+        ],
         'unauthorised' => 'You are unauthorised.',
         'unauthenticated' => 'You are unauthenticated.',
         'invalid' => 'Invalid e-mail address or password.',

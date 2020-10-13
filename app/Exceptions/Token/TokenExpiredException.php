@@ -13,12 +13,9 @@ class TokenExpiredException extends Exception
      *
      * @return void
      */
-    public function report($request,\Throwable $exception)
+    public function report()
     {
-        $this->message=$exception->getMessage();
-        Log::error($exception->getMessage(),$request->toArray());
-
-        parent::report($exception);
+        Log::channel('errorlog')->error(multi_implode($this->getTrace()[0], ','));
     }
 
     /**
@@ -29,6 +26,7 @@ class TokenExpiredException extends Exception
      */
     public function render($request)
     {
-        return response()->error('auth.token_expired', [], [], 401);
+        $this->report();
+        return response()->error('auth.token.token-expired', [],  $request->toArray(), 401);
     }
 }

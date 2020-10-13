@@ -2,33 +2,31 @@
 
 
 namespace App\Exceptions\Token;
-Use  Exception;
+
+use Exception;
 use Illuminate\Support\Facades\Log;
 
 class TokenInvalidException extends Exception
 {
     protected $message = 'An error occurred';
+
     /**
      * Report the exception.
-     *
      * @return void
      */
-    public function report($request,\Throwable $exception)
+    public function report()
     {
-        $this->message=$exception->getMessage();
-        Log::error($exception->getMessage(),$request->toArray());
-
-        parent::report($exception);
+        Log::channel('errorlog')->error(multi_implode($this->getTrace()[0], ','));
     }
 
     /**
      * Render the exception into an HTTP response.
-     *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function render($request)
     {
-        return response()->error('auth.token_invalid', [], [], 401);
+        $this->report();
+        return response()->error('auth.token_invalid', [], $request->toArray(), 401);
     }
 }

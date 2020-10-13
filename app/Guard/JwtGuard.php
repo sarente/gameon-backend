@@ -3,6 +3,7 @@
 
 namespace App\Guard;
 
+use App\Exceptions\Token\TokenExpiredException;
 use App\Exceptions\Token\TokenInvalidException;
 use App\Exceptions\UserModelNotFoundException;
 use App\Models\ExpiredTokens;
@@ -141,11 +142,17 @@ class JwtGuard implements Guard
                 throw new TokenInvalidException();
             }
         }
+
+        //Check old token
+        $expired_token = ExpiredTokens::where('jwt_token', $bearerToken)->exists();
+        if ($expired_token) {
+            throw new TokenExpiredException();
+        }
     }
 
     public function logout()
     {
-        $bearerToken=$this->request->bearerToken();
+        $bearerToken = $this->request->bearerToken();
         ExpiredTokens::create([
             'jwt_token' => $bearerToken
         ]);
