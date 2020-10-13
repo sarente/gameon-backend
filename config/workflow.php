@@ -10,7 +10,7 @@ return [
         'places' => [
             'slide_show' => ['metadata' => [
                 'order' => '1',
-                'place_name' => 'Slaytları İzle',
+                'place_name' => 'Değeri Keşfet',
                 'model_id' => '1',
                 'model_kind' => \App\Models\Setting::ACTIVITY_ACTION,
                 'model_type' => \App\Models\Activity::class,
@@ -18,7 +18,7 @@ return [
             ],
             'the_blanks' => ['metadata' => [
                 'order' => '2',
-                'place_name' => 'Kelimeyi Gir',
+                'place_name' => 'Bulmacayı Çöz',
                 'model_id' => '2',
                 'model_kind' => \App\Models\Setting::ACTIVITY_RETURN,
                 'model_type' => \App\Models\Activity::class,
@@ -57,7 +57,7 @@ return [
         'places' => [
             'slide_show' => ['metadata' => [
                 'order' => '1',
-                'place_name' => 'Slaytları İzle',
+                'place_name' => 'Değeri Keşfet',
                 'model_id' => '3',
                 'model_kind' => \App\Models\Setting::ACTIVITY_ACTION,
                 'model_type' => \App\Models\Activity::class,
@@ -65,7 +65,7 @@ return [
             ],
             'the_blanks' => ['metadata' => [
                 'order' => '2',
-                'place_name' => 'Kelimeyi Gir',
+                'place_name' => 'Bulmacayı Çöz',
                 'model_id' => '4',
                 'model_kind' => \App\Models\Setting::ACTIVITY_RETURN,
                 'model_type' => \App\Models\Activity::class,
@@ -246,7 +246,7 @@ return [
         'places' => [
             'slide_show' => ['metadata' => [
                 'order' => '1',
-                'place_name' => 'Slaytları İzle',
+                'place_name' => 'Yetkinliği  Keşfet',
                 'model_id' => '5',
                 'model_kind' => \App\Models\Setting::ACTIVITY_ACTION,
                 'model_type' => \App\Models\Activity::class,
@@ -254,7 +254,7 @@ return [
             ],
             'the_blanks' => ['metadata' => [
                 'order' => '2',
-                'place_name' => 'Kelimeyi Gir',
+                'place_name' => 'Bulmacayı Çöz',
                 'model_id' => '6',
                 'model_kind' => \App\Models\Setting::ACTIVITY_RETURN,
                 'model_type' => \App\Models\Activity::class,
