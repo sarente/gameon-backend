@@ -27,6 +27,6 @@ class TokenNotfoundException extends Exception
     public function render($request)
     {
         $this->report();
-        return response()->error('auth.token.not-found', [], $request->toArray(), 401);
+        return response()->error('auth..token.not-found', [], $request->toArray(), 401);
     }
 }

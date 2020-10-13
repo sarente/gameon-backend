@@ -27,6 +27,6 @@ class TokenInvalidException extends Exception
     public function render($request)
     {
         $this->report();
-        return response()->error('auth.token_invalid', [], $request->toArray(), 401);
+        return response()->error('auth.token.token-invalid', [], $request->toArray(), 401);
     }
 }

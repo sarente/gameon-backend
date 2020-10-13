@@ -13,7 +13,8 @@ return [
     ],
     'auth' => [
         'token'=>[
-            'not-found' => 'Token not found',
+            'not-found' => 'Token is not valid',
+            'token-invalid' => 'Token is not valid',
             'token-expired' => 'Token is expired',
         ],
         'unauthorised' => 'You are unauthorised.',
