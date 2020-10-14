@@ -20,14 +20,16 @@ class ResultTableSeeder extends Seeder
         \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         /////////////////////////////////////
+        $reward=Reward::find(1);
         $result = Result::create([
             'name' => 'GÜÇ BİRLİĞİ',
             'point' => 85,
         ]);
+        $result->rewards()->sync($reward);
         unset($result);
 
         /////////////////////////////////////
-        $reward=Reward::find(1);
+        $reward=Reward::find(2);
         $result = Result::create([
             'name' => 'İYİ NİYET',
             'point' => 85,
@@ -36,7 +38,7 @@ class ResultTableSeeder extends Seeder
         unset($result);
 
         /////////////////////////////////////
-        $reward=Reward::find(2);
+        $reward=Reward::find(3);
         $result = Result::create([
             'name' => 'Analitik Bakış Açısına Sahip Olmak',
             'point' => 100,

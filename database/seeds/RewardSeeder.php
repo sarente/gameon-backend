@@ -24,10 +24,25 @@ class RewardSeeder extends Seeder
             //'description' => 'Gezgin Rozeti.',
         ]);
         $reward->image()->save(new  \App\Models\Image([
-            'image' => Intervention::make(resource_path("images/rosette/values.png")),
+            'image' => Intervention::make(resource_path("images/reward/values.png")),
         ]));
         $message = \App\Models\Message::create([
             'message' => 'Selam Genç Gezgin, kahramanlığa giden yolculuk başlıyor. Heyecanın yanındaysa yola koyulalım!',
+            'message_type' => Setting::DONE_MESSAGE,
+        ]);
+        $reward->messages()->save($message);
+        unset($reward);
+
+        /////////////////////////////////
+        $reward = \App\Models\Reward::create([
+            'name' => Setting::ROSETTE_VALUES,
+            'type' => Setting::REWARD_MEDAL,
+        ]);
+        $reward->image()->save(new  \App\Models\Image([
+            'image' => Intervention::make(resource_path("images/reward/jobs.png")),
+        ]));
+        $message = \App\Models\Message::create([
+            'message' => 'Bilge insan, tüm koşulları hesaba katarak bağlantılar kurmaya ve sonuçlar çıkarmaya çalışır\n Arthur Schopenhauer.',
             'message_type' => Setting::DONE_MESSAGE,
         ]);
         $reward->messages()->save($message);
@@ -40,7 +55,7 @@ class RewardSeeder extends Seeder
             //'description' => 'Gezgin Rozeti.',
         ]);
         $reward->image()->save(new  \App\Models\Image([
-            'image' => Intervention::make(resource_path("images/rosette/wise.png")),
+            'image' => Intervention::make(resource_path("images/reward/wise.png")),
         ]));
         $message = \App\Models\Message::create([
             'message' => 'Bilge insan, tüm koşulları hesaba katarak bağlantılar kurmaya ve sonuçlar çıkarmaya çalışır\n Arthur Schopenhauer.',
@@ -48,7 +63,5 @@ class RewardSeeder extends Seeder
         ]);
         $reward->messages()->save($message);
         unset($reward);
-
-
     }
 }
