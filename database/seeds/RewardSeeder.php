@@ -50,7 +50,7 @@ class RewardSeeder extends Seeder
 
         /////////////////////////////////
         $reward = \App\Models\Reward::create([
-            'name' => Setting::ROSETTE_EDUCATION,
+            'name' => Setting::ROSETTE_COMPETENCE,
             'type' => Setting::REWARD_ROSETTE,
             //'description' => 'Gezgin Rozeti.',
         ]);
