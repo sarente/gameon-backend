@@ -40,7 +40,7 @@ class ResultTableSeeder extends Seeder
         /////////////////////////////////////
         $reward=Reward::find(3);
         $result = Result::create([
-            'name' => 'Analitik Bakış Açısına Sahip Olmak',
+            'name' => 'ANALİTİK BAKIŞ AÇISINA SAHİP OLMAK',
             'point' => 100,
         ]);
         $result->rewards()->sync($reward);
