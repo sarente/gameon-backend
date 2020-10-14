@@ -54,7 +54,7 @@ class RewardSeeder extends Seeder
             //'description' => 'Gezgin Rozeti.',
         ]);
         $reward->image()->save(new  \App\Models\Image([
-            'image' => Intervention::make(resource_path("images/reward/wise.png")),
+            'image' => Intervention::make(resource_path("images/reward/competence.png")),
         ]));
         $message = \App\Models\Message::create([
             'message' => 'Yetkinliklerde de yetkin rozeti alacak',
