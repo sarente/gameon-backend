@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Api\Admin;
 
+use App\Exceptions\Category\CategoryNotFoundException;
 use App\Http\Requests\Api\Admin\CategoryRequest;
 use App\Models\Category;
 use App\Models\User;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class CategoryController extends Controller
@@ -40,12 +40,16 @@ class CategoryController extends Controller
         return response()->success($category);
     }
 
-    public function syncUsers(Request $request, $id) {
-        $category = Category::find($id);
+    public function destroy($id){
+        $category=Category::find($id);
+        if(!$category){
+            throw new CategoryNotFoundException();
+        }
+        Category::destroy($id);
+        return response()->success('common.success');
+    }
 
-        $users = User::find($request->user_ids);
-        $category->users()->sync($users);
+    public function update(CategoryRequest $request){
 
-        return response()->success($category);
     }
 }
