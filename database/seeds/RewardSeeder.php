@@ -40,7 +40,7 @@ class RewardSeeder extends Seeder
             'image' => Intervention::make(resource_path("images/reward/jobs.png")),
         ]));
         $message = \App\Models\Message::create([
-            'message' => '2. değeri bilince de bu madalyonu kazansın',
+            'message' => 'MADALYA KAZANARAK DEHA ZİNCİRİNİN İLK HALKASINI OLUŞTURDUN! TEBRİKLER!',
             'message_type' => Setting::DONE_MESSAGE,
         ]);
         $reward->messages()->save($message);
