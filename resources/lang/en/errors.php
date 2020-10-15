@@ -94,7 +94,7 @@ return [
         'not-sent' => 'Email not sent yet.'
     ],
     'activity' => [
-        'wrong-answer' => 'Returned result is wrong',
+        'wrong-answer' => 'Wrong result',
         'not-found' => 'Activity not found',
     ],
     'document' => [

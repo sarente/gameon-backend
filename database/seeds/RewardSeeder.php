@@ -15,19 +15,17 @@ class RewardSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         App\Models\Reward::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
-
-        $rewards = [];
-
+        //Degerler
         $reward = \App\Models\Reward::create([
             'name' => Setting::ROSETTE_VALUES,
             'type' => Setting::REWARD_ROSETTE,
             //'description' => 'Gezgin Rozeti.',
         ]);
         $reward->image()->save(new  \App\Models\Image([
-            'image' => Intervention::make(resource_path("images/rosette/values.png")),
+            'image' => Intervention::make(resource_path("images/reward/values.png")),
         ]));
         $message = \App\Models\Message::create([
-            'message' => 'Selam Genç Gezgin, kahramanlığa giden yolculuk başlıyor. Heyecanın yanındaysa yola koyulalım!',
+            'message' => 'ilk değeri bilince Değerli rozeti',
             'message_type' => Setting::DONE_MESSAGE,
         ]);
         $reward->messages()->save($message);
@@ -35,20 +33,34 @@ class RewardSeeder extends Seeder
 
         /////////////////////////////////
         $reward = \App\Models\Reward::create([
-            'name' => Setting::ROSETTE_EDUCATION,
-            'type' => Setting::REWARD_ROSETTE,
-            //'description' => 'Gezgin Rozeti.',
+            'name' => Setting::ROSETTE_VALUES,
+            'type' => Setting::REWARD_MEDAL,
         ]);
         $reward->image()->save(new  \App\Models\Image([
-            'image' => Intervention::make(resource_path("images/rosette/wise.png")),
+            'image' => Intervention::make(resource_path("images/reward/jobs.png")),
         ]));
         $message = \App\Models\Message::create([
-            'message' => 'Bilge insan, tüm koşulları hesaba katarak bağlantılar kurmaya ve sonuçlar çıkarmaya çalışır\n Arthur Schopenhauer.',
+            'message' => 'MADALYA KAZANARAK DEHA ZİNCİRİNİN İLK HALKASINI OLUŞTURDUN! TEBRİKLER!',
             'message_type' => Setting::DONE_MESSAGE,
         ]);
         $reward->messages()->save($message);
         unset($reward);
 
-
+        //Yetkinlikler
+        /////////////////////////////////
+        $reward = \App\Models\Reward::create([
+            'name' => Setting::ROSETTE_COMPETENCE,
+            'type' => Setting::REWARD_ROSETTE,
+            //'description' => 'Gezgin Rozeti.',
+        ]);
+        $reward->image()->save(new  \App\Models\Image([
+            'image' => Intervention::make(resource_path("images/reward/competence.png")),
+        ]));
+        $message = \App\Models\Message::create([
+            'message' => 'Yetkinliklerde de yetkin rozeti alacak',
+            'message_type' => Setting::DONE_MESSAGE,
+        ]);
+        $reward->messages()->save($message);
+        unset($reward);
     }
 }
