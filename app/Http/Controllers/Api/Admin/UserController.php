@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -33,8 +34,12 @@ class UserController extends Controller
 
     public function destroy($id)
     {
-        User::findOrFail($id);
-        User::destroy($id);
+        //Todo: check if its admin
+        $user=User::getUser($id);
+        if($user->hasRole(Setting::ROLE_ADMIN)) {
+            return response()->erorr('admin.couldnt-remove');
+        }
+        $user->destroy($id);
         return response()->success('common.success');
     }
 
