@@ -26,7 +26,7 @@ class UserController extends Controller
 
     public function show($id)
     {
-       $user=USer::getUser();
+       $user=User::getUser($id);
 
         return response()->success($user->load('image', 'roles', 'permissions'));
     }
