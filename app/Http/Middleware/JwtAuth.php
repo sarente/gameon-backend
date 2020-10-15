@@ -2,8 +2,6 @@
 
 namespace App\Http\Middleware;
 
-use App\Exceptions\UserModelNotFoundException;
-use App\Models\ExpiredTokens;
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 

@@ -5,12 +5,12 @@ namespace App\Listeners\Model;
 use App\Events\ClubSaved;
 use App\Events\ModelUpdated;
 use App\Models\Badge;
-use App\Models\Image;
 use App\Models\Club;
+use App\Models\Image;
 use App\Models\Medal;
 use App\Models\Rosette;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Storage;
 
 class UpdateImage implements ShouldQueue

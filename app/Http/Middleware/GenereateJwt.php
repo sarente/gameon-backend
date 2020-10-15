@@ -4,10 +4,10 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Str;
-use Lcobucci\JWT\Parser;
 use Lcobucci\JWT\Builder;
-use Lcobucci\JWT\ValidationData;
+use Lcobucci\JWT\Parser;
 use Lcobucci\JWT\Signer\Hmac\Sha256;
+use Lcobucci\JWT\ValidationData;
 
 class GenereateJwt
 {/**

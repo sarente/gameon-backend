@@ -2,15 +2,14 @@
 
 namespace App\Listeners\Reward;
 
-use App\Events\ArtifactIsCompleted;
 use App\Events\ActivitySaved;
+use App\Events\ArtifactIsCompleted;
 use App\Models\Pane;
 use App\Models\Point;
 use App\Models\Setting;
 use App\Models\User;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Queue\InteractsWithQueue;
 
 class ComputePoint implements ShouldQueue
 {

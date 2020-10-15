@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use App\Models\CustomWorkflow;
-use Illuminate\Support\ServiceProvider;
 use ZeroDaHero\LaravelWorkflow\WorkflowRegistry;
 
 class WorkflowServiceProvider extends \ZeroDaHero\LaravelWorkflow\WorkflowServiceProvider

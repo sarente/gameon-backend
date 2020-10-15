@@ -5,8 +5,8 @@ namespace App\Listeners\Profile;
 use App\Events\ActivitySaved;
 use App\Events\ProfileUpdate;
 use App\Models\Tag;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
 
 class AddTag implements ShouldQueue
 {

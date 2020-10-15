@@ -2,8 +2,7 @@
 
 
 namespace App\Exceptions\WorkFlow;
-use App\Models\User;
-Use  Exception;
+use Exception;
 use Illuminate\Support\Facades\Log;
 
 class GainBeforeException extends Exception

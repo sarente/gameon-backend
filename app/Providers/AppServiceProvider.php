@@ -2,8 +2,6 @@
 
 namespace App\Providers;
 
-use Illuminate\Queue\Events\JobFailed;
-use Illuminate\Queue\Queue;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 

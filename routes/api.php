@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +20,8 @@ Route::resource('version', 'VersionController', ['only' => ['index']]);
 
 //Admin
 Route::group(['prefix'=> 'admin','middleware' => ['auth.jwt','role:admin']],function ($router) {
+    //Users
+    Route::resource('user', 'Api\Admin\UserController');
 
     //Categories
     Route::resource('category', 'Api\Admin\CategoryController');

@@ -2,7 +2,6 @@
 
 namespace App\Database\Seeds\Customer;
 
-use App\Models\UserPoint;
 use Illuminate\Database\Seeder;
 
 class BilkomUsers extends Seeder

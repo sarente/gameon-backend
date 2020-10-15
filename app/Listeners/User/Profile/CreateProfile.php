@@ -5,8 +5,6 @@ namespace App\Listeners\User\Profile;
 use App\Events\UserCreated;
 use App\Models\Pane;
 use App\Models\Profile;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
 class CreateProfile
 {

@@ -4,8 +4,6 @@ namespace App\Listeners\Task;
 
 use App\Events\TaskSaved;
 use App\Models\Rosette;
-use App\Models\Setting;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class AddRosettes implements ShouldQueue

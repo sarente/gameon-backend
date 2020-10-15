@@ -4,8 +4,8 @@ namespace App\Listeners\OnBoarding;
 
 use App\Events\OnBoardingLevelUp;
 use App\Events\ProfileUpdate;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
 
 class AttachRosettes implements ShouldQueue
 {

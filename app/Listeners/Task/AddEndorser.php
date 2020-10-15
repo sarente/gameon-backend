@@ -3,9 +3,7 @@
 namespace App\Listeners\Task;
 
 use App\Events\TaskSaved;
-use App\Models\Setting;
 use App\Models\User;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class AddEndorser implements ShouldQueue

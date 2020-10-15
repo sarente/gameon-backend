@@ -9,8 +9,8 @@
 namespace App\Listeners\Activity;
 
 use App\Events\ActivitySaved;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Log;
 
 class AddRoles implements ShouldQueue

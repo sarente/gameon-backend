@@ -4,8 +4,8 @@ namespace App\Listeners\Activity;
 
 use App\Events\ActivitySaved;
 use App\Models\Reward;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
 
 class AddRewards implements ShouldQueue
 {

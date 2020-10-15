@@ -3,10 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Translatable\HasTranslations;
-use ZeroDaHero\LaravelWorkflow\Traits\WorkflowTrait;
 
 /**
  * App\Models\Activity

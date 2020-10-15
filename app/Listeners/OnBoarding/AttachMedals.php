@@ -2,8 +2,8 @@
 
 namespace App\Listeners\OnBoarding;
 
-use App\Events\OnBoardingLevelUp;
 use App\Events\ActivitySaved;
+use App\Events\OnBoardingLevelUp;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 

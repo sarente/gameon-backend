@@ -4,9 +4,8 @@ namespace App\Listeners\Activity;
 
 use App\Events\ActivitySaved;
 use App\Models\Tag;
-use Illuminate\Validation\ValidationException;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
 
 class AddTag implements ShouldQueue
 {

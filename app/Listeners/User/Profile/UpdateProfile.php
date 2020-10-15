@@ -4,9 +4,8 @@ namespace App\Listeners\User\Profile;
 
 use App\Events\ProfileUpdate;
 use App\Models\Tag;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Validation\ValidationException;
+use Illuminate\Queue\InteractsWithQueue;
 
 class UpdateProfile implements ShouldQueue
 {

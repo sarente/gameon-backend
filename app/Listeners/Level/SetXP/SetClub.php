@@ -5,9 +5,7 @@ namespace App\Listeners\Level\SetXP;
 use App\Events\LevelConfigured;
 use App\Models\Pane;
 use App\Models\Setting;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Log;
 
 class SetClub implements ShouldQueue
 {

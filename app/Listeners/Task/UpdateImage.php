@@ -5,8 +5,8 @@ namespace App\Listeners\Task;
 use App\Events\TaskSaved;
 use App\Models\Image;
 use App\Models\Task;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Storage;
 
 class UpdateImage implements ShouldQueue

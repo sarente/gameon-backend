@@ -10,7 +10,6 @@
 | used to check if an authenticated user can listen to the channel.
 |
 */
-use \App\Events\LevelUp;
 
 Broadcast::channel('App.User.{id}', function ($user, $id) {
     return (int) $user->id === (int) $id;

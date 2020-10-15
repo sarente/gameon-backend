@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Api\Admin;
 
 use App\Exceptions\Category\CategoryNotFoundException;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\Admin\CategoryRequest;
 use App\Models\Category;
 use App\Models\User;
-use App\Http\Controllers\Controller;
 
 class CategoryController extends Controller
 {

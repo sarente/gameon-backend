@@ -96,7 +96,7 @@ class CategoryController extends Controller
             $slected_level = $this->getLevelOfUserByPoint($user_category_points->current_point, $levels->get()->toArray());
 
             //Calculate next level point
-            $last_level=getByKey(Setting::LAST_LEVEL);
+            $last_level=getByKey(Setting::LAST_LEVEL) ?? 5;
             $calc_next_level = $slected_level['level_no'] + 1;
             $next_level = $calc_next_level > $last_level ? $last_level : $calc_next_level;
             $next_level_point = Level::whereHas('category', function ($cat) use ($id) {

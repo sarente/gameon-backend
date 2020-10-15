@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Support\Facades\DB;
 use Spatie\Activitylog\Traits\LogsActivity;
-use Spatie\Permission\Guard;
 
 /**
  * App\Models\Profile

@@ -3,7 +3,6 @@
 namespace App\Listeners;
 
 use App\Events\PostViewed;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class AddViewer implements ShouldQueue

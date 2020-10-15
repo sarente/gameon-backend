@@ -2,18 +2,14 @@
 
 namespace App\Listeners\Reward;
 
-use App\Events\ArtifactIsCompleted;
-use App\Events\ComputeGenral;
 use App\Events\ActivitySaved;
+use App\Events\ArtifactIsCompleted;
 use App\Models\Pane;
-use App\Models\Point;
 use App\Models\Setting;
 use App\Models\User;
-use Dotenv\Exception\ValidationException;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Log;
 
 class ComputeXP implements ShouldQueue
 {

@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use http\Env\Response;
-use Illuminate\Http\Request;
-
 class HomeController extends Controller
 {
 

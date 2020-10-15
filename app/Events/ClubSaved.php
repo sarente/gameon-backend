@@ -3,11 +3,8 @@
 namespace App\Events;
 
 use App\Http\Requests\Api\ClubRequest;
-use App\Http\Requests\Request;
 use App\Models\Club;
-use App\Events\Event;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
 class ClubSaved extends Event
 {

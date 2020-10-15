@@ -8,7 +8,6 @@ use Spatie\Translatable\HasTranslations;
 
 /**
  * App\Models\Category
- *
  * @property int $id
  * @property array $name
  * @property array|null $description
@@ -53,10 +52,15 @@ class Category extends Model
         'category_id',
     ];
     protected $hidden = [
-         'pivot',
+        'pivot',
         'created_at',
         'updated_at'
     ];
+
+    /*public function SetWorkflowsAttribute($value)
+    {
+        $this->attributes['workflows'] = $value;
+    }*/
 
     public function levels()
     {

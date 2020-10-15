@@ -7,8 +7,6 @@ use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
-use Spatie\Permission\Guard;
-use Spatie\Permission\Models\Permission;
 
 class AddMembers implements ShouldQueue
 {

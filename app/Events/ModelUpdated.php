@@ -3,9 +3,9 @@
 namespace App\Events;
 
 use App\Http\Requests\Request;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class ModelUpdated
 {

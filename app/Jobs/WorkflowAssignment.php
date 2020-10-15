@@ -3,7 +3,6 @@
 namespace App\Jobs;
 
 use App\Models\CustomWorkflow;
-use App\Models\Setting;
 use App\Models\User;
 use App\Models\UserWorkflow;
 use Carbon\Carbon;

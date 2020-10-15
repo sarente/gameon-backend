@@ -9,11 +9,8 @@
 namespace App\Events;
 
 use App\Http\Requests\Api\ActivityRequest;
-use App\Http\Requests\Request;
-use App\Events\Event;
 use App\Models\Activity;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
 class ActivitySaved extends Event
 {

@@ -5,10 +5,7 @@ namespace App\Listeners\Task;
 use App\Events\TaskSaved;
 use App\Models\Classroom;
 use App\Models\Pane;
-use App\Models\Setting;
 use App\Models\User;
-use http\Env\Response;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Validation\ValidationException;
 

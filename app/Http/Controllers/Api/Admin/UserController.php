@@ -38,17 +38,6 @@ class UserController extends Controller
         return response()->success('common.success');
     }
 
-    public function getAvatar()
-    {
-        //FIXME: change here to auth()->user()
-        $user = User::find(1);
-        $avatar = $user->avatar;
-        $avatar->gender = $user->gender;
-
-
-        return response()->success($avatar);
-    }
-
     public function saveAvatarConfiguration(Request $request)
     {
         $user = User::find(1);

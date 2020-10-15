@@ -2,8 +2,6 @@
 
 
 use App\Models\Accessory;
-use App\Models\User;
-use App\Models\Image;
 use Illuminate\Database\Seeder;
 
 class FakeSeeder extends Seeder

@@ -5,8 +5,6 @@ namespace App\Listeners\Task;
 use App\Events\TaskSaved;
 use App\Models\Accessory;
 use App\Models\Precondition;
-use App\Models\Setting;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class AddPrecondition implements ShouldQueue

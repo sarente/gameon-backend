@@ -4,16 +4,13 @@ namespace App\Listeners\Model;
 
 use App\Events\ModelCreated;
 use App\Models\Club;
-use Spatie\Permission\Models\Permission;
 use App\Models\Post;
-use App\Models\Profile;
 use App\Models\Project;
 use App\Models\Question;
 use App\Models\Setting;
 use App\Models\Task;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Spatie\Permission\Guard;
+use Spatie\Permission\Models\Permission;
 
 class AddPermission
 {

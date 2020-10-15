@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Api\Admin;
 
-use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
+use App\Models\Image;
 use App\Models\Reward;
 use Illuminate\Http\Request;
-use App\Models\Image;
 use Intervention;
 
 class RewardController extends Controller

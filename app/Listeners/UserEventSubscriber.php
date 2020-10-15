@@ -2,11 +2,6 @@
 
 namespace App\Listeners;
 
-use App\Events\ActivitySaved;
-use App\Models\Setting;
-
-use App\Models\User;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class UserEventSubscriber implements ShouldQueue

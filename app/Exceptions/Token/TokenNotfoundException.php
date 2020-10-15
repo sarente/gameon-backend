@@ -2,7 +2,7 @@
 
 
 namespace App\Exceptions\Token;
-Use  Exception;
+use Exception;
 use Illuminate\Support\Facades\Log;
 
 class TokenNotfoundException extends Exception

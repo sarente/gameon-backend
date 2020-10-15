@@ -3,14 +3,12 @@
 
 namespace App\Providers;
 
-use App\Exceptions\UserModelNotFoundException;
 use App\Exceptions\Token\TokenInvalidException;
+use App\Exceptions\UserModelNotFoundException;
 use App\Models\User;
-use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\ValidationException;
 use Lcobucci\JWT\Parser;
 use Lcobucci\JWT\Signer\Keychain;
 use Lcobucci\JWT\Signer\Rsa\Sha256;

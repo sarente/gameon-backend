@@ -9,12 +9,8 @@
 namespace App\Events;
 
 use App\Http\Requests\Api\ProjectRequest;
-use App\Http\Requests\Request;
 use App\Models\Project;
-use App\Events\Event;
-use App\Models\User;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
 class ArtifactIsCompleted extends Event
 {

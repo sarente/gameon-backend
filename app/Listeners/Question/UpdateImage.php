@@ -5,8 +5,8 @@ namespace App\Listeners\Question;
 use App\Events\QuestionSaved;
 use App\Models\Image;
 use App\Models\Question;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Storage;
 
 class UpdateImage implements ShouldQueue

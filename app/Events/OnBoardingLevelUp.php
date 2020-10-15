@@ -9,8 +9,8 @@
 namespace App\Events;
 
 use App\Models\User;
-use \Illuminate\Support\Collection;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Collection;
 
 class OnBoardingLevelUp
 {
