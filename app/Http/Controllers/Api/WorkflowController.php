@@ -10,6 +10,7 @@ use App\Exceptions\WorkFlow\UserWorkFlowNotFoundException;
 use App\Exceptions\WorkFlow\WorkFlowNotFoundException;
 use App\Http\Controllers\Controller;
 use App\Models\Activity;
+use App\Models\Category;
 use App\Models\CustomWorkflow;
 use App\Models\Result;
 use App\Models\User;
@@ -141,6 +142,13 @@ class WorkflowController extends Controller
                     //Attach reward to user
                     $reward = $result->rewards()->first();
                     $user->rewards()->syncWithoutDetaching($reward);
+
+                    //Enable next category
+                    if ($workflow_id == 2) {
+                        $category = Category::find($workflow_id);
+                        $category->enable = true;
+                        $category->save();
+                    }
                 }
             }
 
