@@ -9,7 +9,6 @@ class CategoryTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
      * @return void
      */
     public function run()
@@ -19,14 +18,17 @@ class CategoryTableSeeder extends Seeder
         \App\Models\Category::truncate();
         \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-        $users=User::pluck('id')->toArray();
+        $users = User::pluck('id')->toArray();
 
-        $category_names=[['tr'=>'Değerler','en'=>'Values'],['tr'=>'Yetkinlikler','en'=>'Competencies']];
+        $category_names = [['tr' => 'Değerler', 'en' => 'Values'], ['tr' => 'Yetkinlikler', 'en' => 'Competencies']];
 
-        foreach($category_names as $category_name){
+        foreach ($category_names as $key => $category_name) {
             $category = new \App\Models\Category([
-                'name'=> $category_name,
+                'name' => $category_name,
             ]);
+            if ($key == 0) {
+                $category->enable = true;
+            }
             $category->save();
         }
     }
