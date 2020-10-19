@@ -34,6 +34,7 @@ class RewardSeeder extends Seeder
         /////////////////////////////////
         $reward = \App\Models\Reward::create([
             'name' => Setting::ROSETTE_VALUES,
+            'description' => 'MADALYA KAZANARAK DEHA ZİNCİRİNİN İLK HALKASINI OLUŞTURDUN! TEBRİKLER!',
             'type' => Setting::REWARD_MEDAL,
         ]);
         $reward->image()->save(new  \App\Models\Image([

@@ -131,7 +131,7 @@ class WorkflowController extends Controller
 
                     //Add point of activity to user point
                     $user_point = new UserPoint([
-                        'point' => $result->point
+                        'point' => $result->point                                     rewar
                     ]);
                     $user_point->user()->associate($user);
                     $user_point->result()->associate($model_id);
