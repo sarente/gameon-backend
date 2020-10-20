@@ -43,7 +43,7 @@ class UserWorkflow extends Model
         'marking',
         'user_id',
         'enable',
-        'workflow_id',
+        'workflow_id'
     ];
 
     protected $casts = [

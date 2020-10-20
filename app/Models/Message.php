@@ -42,7 +42,7 @@ use Spatie\Translatable\HasTranslations;
  */
 class Message extends Model
 {
-    use LogsActivity,,HasTranslations;;
+    use LogsActivity,HasTranslations;
 
     protected $fillable = [
         'message_type',
