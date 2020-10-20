@@ -30,6 +30,7 @@ class CreateUserWorkflow extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
+            $table->boolean('enable')->default(false);
             $table->json('current_place')->nullable();
             $table->string('marking')->nullable();
             $table->softDeletes();

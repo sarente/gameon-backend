@@ -44,23 +44,31 @@ class WorkflowAssignment implements ShouldQueue
                 $this->user->categories()->attach($value);
             }
         }
+
         //Add workflow to user////////////////////////////////////////
         $workflows = CustomWorkflow::pluck('id')->toArray();
-        foreach ($workflows as $workflow) {
+        foreach ($workflows as $key => $value) {
+            ///enable for some selected workflows
+            switch ($value) {
+                case 1:
+                case 2:
+                case 6:
+                    $enabled = true;
+                    break;
+                default:
+                    $enabled = false;
+                    break;
+            }
             UserWorkflow::create([
                 'user_id' => $this->user->id,
-                'workflow_id' => $workflow,
+                'workflow_id' => $value,
+                'enable' => $enabled ?? false,
                 //'marking' => "" . Setting::$activity_types[0] . "",
                 'marking' => "slide_show",
             ]);
+            unset($enabled);
         }
     }
-
-    public function failed(\Exception $exception)
-    {
-        //Log::channel('errorlog')->error($exception->getMessage());
-    }
-
 
     public function ShouldQueue()
     {

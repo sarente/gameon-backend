@@ -142,10 +142,7 @@ class WorkflowController extends Controller
                     $reward = $result->rewards()->first();
                     $user->rewards()->syncWithoutDetaching($reward);
 
-                    //Enable next category
-                    if ($workflow_id == 2) {
-                        $user->categories()->syncWithoutDetaching([2 => ['enable' => 1]]);
-                    }
+
                 }
             }
 
@@ -155,6 +152,15 @@ class WorkflowController extends Controller
 
             $system_workflow->apply($flowable, $transition);
             $flowable->save();
+
+
+            //Enable next category
+            if(!UserWorkflow->where('user_id',$user->id)->where('marking','!=','"done"')->exist()){
+                $nextcatid = $system_workflow->category->id + 1;
+                $user->categories()->syncWithoutDetaching([$nextcatid => ['enable' => 1]]);
+            }
+
+
         } catch (LogicException $e) {
             DB::rollBack();
             throw new TransitionNotFoundException();

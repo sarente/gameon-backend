@@ -30,11 +30,7 @@ class CategoryController extends Controller
         foreach ($categories_arr as $key => $value) {
             $category = $categories->find($value);
             $category_name = $category->name;
-            $category_enableity = (int)$user->join('user_category', 'user_category.user_id', '=', 'users.id')
-                ->where('user_category.category_id', $value)
-                ->where('user_category.user_id', $user->id)
-                ->select('user_category.enable')
-                ->first()->enable;
+            $category_user = $user->categories->where('id');
 
             if (array_key_exists($key, $user_category_points)
                 && $user_category_points[$key]['category_id'] == $value) {
