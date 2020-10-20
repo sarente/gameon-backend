@@ -32,6 +32,7 @@ class CategoryController extends Controller
             $category_name = $category->name;
             $category_enableity = (int)$user->join('user_category', 'user_category.user_id', '=', 'users.id')
                 ->where('user_category.category_id', $value)
+                ->where('user_category.user_id', $user->id)
                 ->select('user_category.enable')
                 ->first()->enable;
 
@@ -76,6 +77,7 @@ class CategoryController extends Controller
                 ];
                 $result->push($null_poin_category);
             }
+            unset($category_enableity);
         }
         return response()->success($result);
     }

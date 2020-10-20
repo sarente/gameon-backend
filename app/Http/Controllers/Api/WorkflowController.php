@@ -10,7 +10,6 @@ use App\Exceptions\WorkFlow\UserWorkFlowNotFoundException;
 use App\Exceptions\WorkFlow\WorkFlowNotFoundException;
 use App\Http\Controllers\Controller;
 use App\Models\Activity;
-use App\Models\Category;
 use App\Models\CustomWorkflow;
 use App\Models\Result;
 use App\Models\User;
@@ -131,7 +130,7 @@ class WorkflowController extends Controller
 
                     //Add point of activity to user point
                     $user_point = new UserPoint([
-                        'point' => $result->point                                
+                        'point' => $result->point
                     ]);
                     $user_point->user()->associate($user);
                     $user_point->result()->associate($model_id);
@@ -145,9 +144,7 @@ class WorkflowController extends Controller
 
                     //Enable next category
                     if ($workflow_id == 2) {
-                        $category = Category::find($workflow_id);
-                        $category->enable = true;
-                        $category->save();
+                        $user->categories()->syncWithoutDetaching([2 => ['enable' => 1]]);
                     }
                 }
             }
