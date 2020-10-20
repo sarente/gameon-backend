@@ -2,8 +2,8 @@
 
 namespace App\Jobs;
 
+use App\Models\Category;
 use App\Models\CustomWorkflow;
-use App\Models\Setting;
 use App\Models\User;
 use App\Models\UserWorkflow;
 use Carbon\Carbon;
@@ -12,7 +12,6 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Log;
 
 class WorkflowAssignment implements ShouldQueue
 {
@@ -36,6 +35,16 @@ class WorkflowAssignment implements ShouldQueue
      */
     public function handle()
     {
+        //Add category to user////////////////////////////////////////
+        $categories = Category::pluck('id')->toArray();
+        //dd($categories);
+        foreach ($categories as $key => $value) {
+            if ($value == 1) {
+                $this->user->categories()->attach($value, ['enable' => true]);
+            } else {
+                $this->user->categories()->attach($value);
+            }
+        }
         //Add workflow to user////////////////////////////////////////
         $workflows = CustomWorkflow::pluck('id')->toArray();
         foreach ($workflows as $workflow) {
@@ -50,7 +59,7 @@ class WorkflowAssignment implements ShouldQueue
 
     public function failed(\Exception $exception)
     {
-        Log::channel('errorlog')->error($exception->getMessage());
+        //Log::channel('errorlog')->error($exception->getMessage());
     }
 
 

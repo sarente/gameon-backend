@@ -71,7 +71,7 @@ class WorkflowTableSeeder extends Seeder
             } else if ($key == 1) {
                 $workflow = new \App\Models\CustomWorkflow([
                     'name' => $workflowKeys[$key+4],
-                    'enable' => true,
+                    'enable' => false,
                     'config' => $workflowDefinition['wf_06']
                 ]);
                 $workflow->category()->associate($value);
