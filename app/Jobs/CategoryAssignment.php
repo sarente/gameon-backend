@@ -13,7 +13,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-class WorkflowAssignment implements ShouldQueue
+class CategoryAssignment implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -35,29 +35,15 @@ class WorkflowAssignment implements ShouldQueue
      */
     public function handle()
     {
-        //Add workflow to user////////////////////////////////////////
-        $workflows = CustomWorkflow::pluck('id')->toArray();
-        foreach ($workflows as $key => $value) {
+        //Add category to user////////////////////////////////////////
+        $categories = Category::pluck('id')->toArray();
+        foreach ($categories as $key => $value) {
             echo ($value);
-            ///enable for some selected workflows
-            switch ($value) {
-                case 1:
-                case 2:
-                case 6:
-                    $enabled = true;
-                    break;
-                default:
-                    $enabled = false;
-                    break;
+            if ($value == 1) {
+                $this->user->categories()->attach($value, ['enable' => true]);
+            } else {
+                $this->user->categories()->attach($value);
             }
-            UserWorkflow::create([
-                'user_id' => $this->user->id,
-                'workflow_id' => $value,
-                'enable' => $enabled ?? false,
-                //'marking' => "" . Setting::$activity_types[0] . "",
-                'marking' => "slide_show",
-            ]);
-            unset($enabled);
         }
     }
 
