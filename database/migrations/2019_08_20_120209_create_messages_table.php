@@ -15,7 +15,7 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('message');
+            $table->json('message');
             $table->integer('message_type');
 
             //$table->string('status')->nullable();
@@ -26,22 +26,6 @@ class CreateMessagesTable extends Migration
 
             //event_id foreign key
             $table->timestamps();
-        });
-        Schema::create('message_translations', function(Blueprint $table)
-        {
-            $table->increments('id');
-            $table->text('message');
-            $table->string('locale')->index();
-            $table->timestamps();
-
-            $table->bigInteger('message_id')->unsigned();
-            $table->foreign('message_id')
-                ->references('id')
-                ->on('messages')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
-            $table->unique(['message_id','locale']);
         });
     }
 
