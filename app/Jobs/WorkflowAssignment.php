@@ -37,7 +37,6 @@ class WorkflowAssignment implements ShouldQueue
     {
         //Add category to user////////////////////////////////////////
         $categories = Category::pluck('id')->toArray();
-        //dd($categories);
         foreach ($categories as $key => $value) {
             if ($value == 1) {
                 $this->user->categories()->attach($value, ['enable' => true]);

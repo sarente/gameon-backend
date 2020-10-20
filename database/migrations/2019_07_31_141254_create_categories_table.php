@@ -17,7 +17,6 @@ class CreateCategoriesTable extends Migration
             $table->bigIncrements('id');
             $table->json('name');
             $table->json('description')->nullable();
-            $table->boolean('enable')->default(false);
             $table->timestamps();
 
             $table->bigInteger('category_id')->unsigned()->nullable();

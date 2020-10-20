@@ -25,12 +25,15 @@ class CategoryController extends Controller
         // ["category_id": 1,"current_point": "50"],...
         $user_category_points = $user->pointsByCategory()->toArray();
         $categories_arr = $categories->pluck('id')->toArray();
-        
+
         //Get level by point of category
         foreach ($categories_arr as $key => $value) {
             $category = $categories->find($value);
             $category_name = $category->name;
-            $category_enableity = $category->enable;
+            $category_enableity = (int)$user->join('user_category', 'user_category.user_id', '=', 'users.id')
+                ->where('user_category.category_id', $value)
+                ->select('user_category.enable')
+                ->first()->enable;
 
             if (array_key_exists($key, $user_category_points)
                 && $user_category_points[$key]['category_id'] == $value) {

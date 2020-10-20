@@ -8,7 +8,6 @@ use Spatie\Translatable\HasTranslations;
 
 /**
  * App\Models\Category
- *
  * @property int $id
  * @property array $name
  * @property array|null $description
@@ -49,12 +48,11 @@ class Category extends Model
     ];
     protected $fillable = [
         'name',
-        'enable',
         'description',
         'category_id',
     ];
     protected $hidden = [
-         'pivot',
+        'pivot',
         'created_at',
         'updated_at'
     ];
