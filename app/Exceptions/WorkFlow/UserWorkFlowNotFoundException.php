@@ -15,7 +15,7 @@ class UserWorkFlowNotFoundException extends Exception
      */
     public function report()
     {
-        Log::channel('errorlog')->error(trans('workflow.not-found') );
+        Log::channel('errorlog')->error(trans('workflow.not-found') . PHP_EOL .substr($this->getTraceAsString(),1,118));
     }
 
     /**

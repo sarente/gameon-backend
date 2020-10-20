@@ -35,7 +35,7 @@ class CategoryController extends Controller
                 ->where('user_category.user_id', $user->id)
                 ->select('user_category.enable');
 
-            $category_enabled = $category_user->exists() ? $category_user->first()->enable : 0;
+            $category_enabled = $category_user->exists() ? (int)$category_user->first()->enable : 0;
 
             if (array_key_exists($key, $user_category_points)
                 && $user_category_points[$key]['category_id'] == $value) {

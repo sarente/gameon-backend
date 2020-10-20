@@ -33,6 +33,9 @@ class EventServiceProvider extends ServiceProvider
         'Illuminate\Mail\Events\MessageSent' => [
             'App\Listeners\LogSentMessage',
         ],*/
+        'App\Events\WorkflowDone' => [
+            'App\Listeners\Workflow\NextCategoryEnabled',
+        ],
         'App\Events\ModelCreated' => [
         ],
         'App\Events\QuestionSaved' => [
