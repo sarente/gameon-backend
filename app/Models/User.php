@@ -188,8 +188,8 @@ class User extends Authenticatable implements HasLocalePreference
 
     public function categories()
     {
-        //TODO: get user level and point in each category
-        return $this->belongsToMany(Category::class, 'user_category');
+        //TODO: get user is enale and point in each category
+        return $this->belongsToMany(Category::class, 'user_category', 'user_id', 'category_id')->withTimestamps()->withPivot('enable');
     }
 
     public function workflows()

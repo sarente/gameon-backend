@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-class CreateUserWorkflow extends Migration
+class CreateUserCategory extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateUserWorkflow extends Migration
      */
     public function up()
     {
-        Schema::create('user_workflow', function (Blueprint $table) {
+        Schema::create('user_category', function (Blueprint $table) {
             $table->bigIncrements('id');
 
             $table->bigInteger('user_id')->unsigned();
@@ -23,20 +23,17 @@ class CreateUserWorkflow extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->bigInteger('workflow_id')->unsigned();
-            $table->foreign('workflow_id')
+            $table->bigInteger('category_id')->unsigned();
+            $table->foreign('category_id')
                 ->references('id')
-                ->on('workflows')
+                ->on('categories')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->boolean('enable')->default(false);
-            $table->json('current_place')->nullable();
-            $table->string('marking')->nullable();
-            $table->softDeletes();
+            $table->string('enable')->default(false);
             $table->timestamps();
 
-            $table->unique(['workflow_id', 'user_id']);
+            $table->unique(['category_id', 'user_id']);
         });
     }
 
@@ -47,6 +44,6 @@ class CreateUserWorkflow extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_workflow');
+        Schema::dropIfExists('user_category');
     }
 }

@@ -46,7 +46,6 @@ class CustomWorkflow extends Model
 
     protected $fillable = [
         'name',
-        'enable',
         'config',
     ];
 

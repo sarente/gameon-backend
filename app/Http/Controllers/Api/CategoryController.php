@@ -18,12 +18,24 @@ class CategoryController extends Controller
         $lang = app()->getLocale();
         $result = collect();
         $user = User::getUser();
-        $categories = Category::query();
+        $categories = Cache::get('categories', function () {
+            return Category::get();
+        });
         // ["category_id": 1,"current_point": "50"],...
         $user_category_points = $user->pointsByCategory()->toArray();
+        $categories_arr = $categories->pluck('id')->toArray();
+
         //Get level by point of category
-        foreach ($categories->pluck('id')->toArray() as $key => $value) {
-            $category_name = Category::find($value)->translations['name'][$lang];
+        foreach ($categories_arr as $key => $value) {
+            $category = $categories->find($value);
+            $category_name = $category->name;
+            $category_user = $user->join('user_category', 'user_category.user_id', '=', 'users.id')
+                ->where('user_category.category_id', $value)
+                ->where('user_category.user_id', $user->id)
+                ->select('user_category.enable');
+
+            $category_enabled = $category_user->exists() ? (int)$category_user->first()->enable : 0;
+
             if (array_key_exists($key, $user_category_points)
                 && $user_category_points[$key]['category_id'] == $value) {
                 //Get max point of each level { "id": 10,"level_no": 4,"level_point": 800,"category_id": 2}},....
@@ -45,6 +57,7 @@ class CategoryController extends Controller
                     $slected_level['next_level_point'] = $next_level_point;
                     //$slected_level['level_id']=$slected_level['id'];
                     $slected_level['category_name'] = $category_name;
+                    $slected_level['category_enable'] = $category_enabled;
                     unset($slected_level['id']);
                     unset($next_level_point);
                     $result->push($slected_level);
@@ -59,10 +72,12 @@ class CategoryController extends Controller
                     "next_level_point" => $next_level_point,
                     "category_id" => $value,
                     "current_point" => 0,
-                    "category_name" => $category_name
+                    "category_name" => $category_name,
+                    "category_enable" => $category_enabled
                 ];
                 $result->push($null_poin_category);
             }
+            unset($category_enabled);
         }
         return response()->success($result);
     }
@@ -72,15 +87,15 @@ class CategoryController extends Controller
         $user = User::getUser();
 
         $category = Category::find($id);
-        if(!$category){
-          throw new CategoryNotFoundException();
+        if (!$category) {
+            throw new CategoryNotFoundException();
         }
         $workflows = UserWorkflow::where('user_id', $user->id)
             ->where('category_id', $id)
             ->join('workflows', 'user_workflow.workflow_id', '=', 'workflows.id')
             ->get();
 
-        foreach($workflows as $workflow) {
+        foreach ($workflows as $workflow) {
             $config = json_decode($workflow->config);
             $workflow->title = $config->metadata->title;
             unset($workflow->config);
@@ -96,7 +111,7 @@ class CategoryController extends Controller
             $slected_level = $this->getLevelOfUserByPoint($user_category_points->current_point, $levels->get()->toArray());
 
             //Calculate next level point
-            $last_level=getByKey(Setting::LAST_LEVEL) ?? 5;
+            $last_level=getByKey(Setting::LAST_LEVEL);
             $calc_next_level = $slected_level['level_no'] + 1;
             $next_level = $calc_next_level > $last_level ? $last_level : $calc_next_level;
             $next_level_point = Level::whereHas('category', function ($cat) use ($id) {
@@ -109,8 +124,7 @@ class CategoryController extends Controller
             unset($slected_level['id']);
             unset($next_level_point);
             $level_info = $slected_level;
-        }
-        else {
+        } else {
             $next_level_point = Level::whereHas('category', function ($cat) use ($id) {
                 $cat->where('id', $id);
             })->where('level_no', 1)->first()->level_point;

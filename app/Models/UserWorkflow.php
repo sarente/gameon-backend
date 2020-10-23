@@ -42,7 +42,8 @@ class UserWorkflow extends Model
     protected $fillable = [
         'marking',
         'user_id',
-        'workflow_id',
+        'enable',
+        'workflow_id'
     ];
 
     protected $casts = [

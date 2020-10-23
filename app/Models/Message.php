@@ -5,6 +5,7 @@ namespace App\Models;
 use Dimsav\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Translatable\HasTranslations;
 
 /**
  * App\Models\Message
@@ -41,20 +42,17 @@ use Spatie\Activitylog\Traits\LogsActivity;
  */
 class Message extends Model
 {
-    use LogsActivity;
+    use LogsActivity,HasTranslations;
 
     protected $fillable = [
         'message_type',
         'message'
     ];
-    public $translatedAttributes = [
+    public $translatable = [
         'message',
     ];
-    protected $hidden = [
-        'pivot',
-        'translations',
-        'created_at',
-        'updated_at'
+    protected $casts=[
+        'message'=>'array',
     ];
 
     public function messageable()

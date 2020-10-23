@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Events\WorkflowDone;
 use App\Exceptions\Activity\ActivityNotFoundException;
 use App\Exceptions\Activity\ActivityWrongAnswerException;
 use App\Exceptions\WorkFlow\GainBeforeException;
@@ -141,6 +142,8 @@ class WorkflowController extends Controller
                     //Attach reward to user
                     $reward = $result->rewards()->first();
                     $user->rewards()->syncWithoutDetaching($reward);
+
+
                 }
             }
 
@@ -150,6 +153,7 @@ class WorkflowController extends Controller
 
             $system_workflow->apply($flowable, $transition);
             $flowable->save();
+
         } catch (LogicException $e) {
             DB::rollBack();
             throw new TransitionNotFoundException();
@@ -157,6 +161,10 @@ class WorkflowController extends Controller
         ////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////
         DB::commit();
+
+        //Enable next category
+        event(new WorkflowDone($user, $workflow));
+
         return response()->success('common.success');
     }
 
