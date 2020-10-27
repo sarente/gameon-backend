@@ -143,7 +143,8 @@ class WorkflowController extends Controller
                     $reward = $result->rewards()->first();
                     $user->rewards()->syncWithoutDetaching($reward);
 
-
+                    //Enable next category
+                    event(new WorkflowDone($user, $workflow));
                 }
             }
 
@@ -162,8 +163,7 @@ class WorkflowController extends Controller
         ////////////////////////////////////////////////////////////////////
         DB::commit();
 
-        //Enable next category
-        event(new WorkflowDone($user, $workflow));
+
 
         return response()->success('common.success');
     }
