@@ -83,6 +83,7 @@ class BilkomUsers extends Seeder
             'surname' => 'Vançin',
         ]);
 
+
         foreach ($users as $key => $user) {
             $user->save();
             $user->assignRole($role_user);

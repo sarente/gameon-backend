@@ -2,7 +2,6 @@
 
 namespace App\Database\Seeds\Customer;
 
-use App\Models\UserPoint;
 use Illuminate\Database\Seeder;
 
 class Bilkom2Users extends Seeder
@@ -35,26 +34,6 @@ class Bilkom2Users extends Seeder
             'name' => 'Ozan',
             'surname' => 'Alişar',
         ]);
-
-        foreach ($users as $key => $user) {
-            $user->save();
-            $user->assignRole($role_user);
-            $user->image()->save(new  \App\Models\Image([
-                'image' => \Intervention::make(resource_path("images/user/male/{$key}.png")),
-            ]));
-        }
-        unset($users);
-
-        ///////////////////////Females
-        //
-        $users[] = factory(\App\Models\User::class)->make([
-            'username' => mt_rand(10000000000, 99999999999),
-            'gender' => 0,
-            'email' => 'seda.ozeren@bilkom.com.tr',
-            'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
-            'name' => 'Seda',
-            'surname' => 'Özeren',
-        ]);
         //
         $users[] = factory(\App\Models\User::class)->make([
             'username' => mt_rand(10000000000, 99999999999),
@@ -83,6 +62,26 @@ class Bilkom2Users extends Seeder
             'surname' => 'Arslan',
         ]);
 
+        foreach ($users as $key => $user) {
+            if ($key > 1) $key %= 2;
+            $user->save();
+            $user->assignRole($role_user);
+            $user->image()->save(new  \App\Models\Image([
+                'image' => \Intervention::make(resource_path("images/user/male/{$key}.png")),
+            ]));
+        }
+        unset($users);
+
+        ///////////////////////Females
+        //
+        $users[] = factory(\App\Models\User::class)->make([
+            'username' => mt_rand(10000000000, 99999999999),
+            'gender' => 0,
+            'email' => 'seda.ozeren@bilkom.com.tr',
+            'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
+            'name' => 'Seda',
+            'surname' => 'Özeren',
+        ]);
         foreach ($users as $key => $user) {
             $user->save();
             $user->assignRole($role_user);

@@ -14,6 +14,6 @@ class CustomerSeeder extends Seeder
         //Customer demo users
         //$this->call(VakifUsers::class);
         $this->call(Bilkom2Users::class);
-        //$this->call(BilkomUsers::class);
+        $this->call(BilkomUsers::class);
     }
 }

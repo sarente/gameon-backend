@@ -4,4 +4,8 @@ docker exec -it app php artisan db:seed --class=App\\Database\\Seeds\\Customer\\
 docker exec -it app php artisan user:assign:category &&
 docker exec -it app php artisan user:assign:workflow &&
 docker exec -it app php artisan user:point:maker &&
-docker exec -it app php artisan queue:work database --daemon --sleep=3 --tries=3 
+docker exec -it app php artisan queue:work database --daemon --sleep=3 --tries=3
+
+
+
+php artisan migrate:fresh --seed && php artisan db:seed --class=App\Database\Seeds\Demo\DemoSeeder && php artisan db:seed --class=App\Database\Seeds\Customer\CustomerSeeder &&php artisan user:assign:category && php artisan user:assign:workflow && php artisan user:point:maker
