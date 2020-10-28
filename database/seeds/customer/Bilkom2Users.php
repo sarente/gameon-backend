@@ -4,7 +4,7 @@ namespace App\Database\Seeds\Customer;
 
 use Illuminate\Database\Seeder;
 
-class BilkomUsers extends Seeder
+class Bilkom2Users extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,26 +16,54 @@ class BilkomUsers extends Seeder
         $role_user = \App\Models\Role::findByName(\App\Models\Setting::ROLE_USER, config('auth.defaults.guard'));
 
         //Males
-        //Burak Sezer: burak.sezer@bilkom.com.tr
+
         $users[] = factory(\App\Models\User::class)->make([
             'username' => mt_rand(10000000000, 99999999999),
             'gender' => 1,
-            'email' => 'burak.sezer@bilkom.com.tr',
+            'email' => 'hakan.yildiz@bilkom.com.tr',
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
-            'name' => 'Burak',
-            'surname' => 'Sezer',
+            'name' => 'Hakan',
+            'surname' => 'Yildiz',
         ]);
-        //Uğur Bilgin: ugur.bilgin@bilkom.com.tr
+        //
         $users[] = factory(\App\Models\User::class)->make([
             'username' => mt_rand(10000000000, 99999999999),
             'gender' => 1,
-            'email' => 'ugur.bilgin@bilkom.com.tr',
+            'email' => 'ozan.alisar@bilkom.com.tr',
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
-            'name' => 'Uğur',
-            'surname' => 'Bilgin',
+            'name' => 'Ozan',
+            'surname' => 'Alişar',
+        ]);
+        //
+        $users[] = factory(\App\Models\User::class)->make([
+            'username' => mt_rand(10000000000, 99999999999),
+            'gender' => 1,
+            'email' => 'gokhan.ozdemir@bilkom.com.tr',
+            'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
+            'name' => 'Gökhan',
+            'surname' => 'Özdemir',
+        ]);
+        //
+        $users[] = factory(\App\Models\User::class)->make([
+            'username' => mt_rand(10000000000, 99999999999),
+            'gender' => 1,
+            'email' => 'tayfun.toygar@bilkom.com.tr',
+            'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
+            'name' => 'Tayfun',
+            'surname' => 'Toygar',
+        ]);
+        //Çağrı Vançin: cagri.vancin@bilkom.com.tr
+        $users[] = factory(\App\Models\User::class)->make([
+            'username' => mt_rand(10000000000, 99999999999),
+            'gender' => 1,
+            'email' => 'inan.arslan@bilkom.com.tr',
+            'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
+            'name' => 'İnan',
+            'surname' => 'Arslan',
         ]);
 
         foreach ($users as $key => $user) {
+            if ($key > 1) $key %= 2;
             $user->save();
             $user->assignRole($role_user);
             $user->image()->save(new  \App\Models\Image([
@@ -45,44 +73,15 @@ class BilkomUsers extends Seeder
         unset($users);
 
         ///////////////////////Females
-        //Banu Tosun: banu.tosun@bilkom.com.tr
+        //
         $users[] = factory(\App\Models\User::class)->make([
             'username' => mt_rand(10000000000, 99999999999),
             'gender' => 0,
-            'email' => 'banu.tosun@bilkom.com.tr',
+            'email' => 'seda.ozeren@bilkom.com.tr',
             'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
-            'name' => 'Banu',
-            'surname' => 'Tosun',
+            'name' => 'Seda',
+            'surname' => 'Özeren',
         ]);
-        //Hazal Sayın: hazal.sayin@bilkom.com.tr
-        $users[] = factory(\App\Models\User::class)->make([
-            'username' => mt_rand(10000000000, 99999999999),
-            'gender' => 0,
-            'email' => 'hazal.sayin@bilkom.com.tr',
-            'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
-            'name' => 'Hazal',
-            'surname' => 'Sayın',
-        ]);
-        //Çağla Gürel: cagla.gurel@bilkom.com.tr
-        $users[] = factory(\App\Models\User::class)->make([
-            'username' => mt_rand(10000000000, 99999999999),
-            'gender' => 0,
-            'email' => 'cagla.gurel@bilkom.com.tr',
-            'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
-            'name' => 'Çağla',
-            'surname' => 'Gürel',
-        ]);
-        //Çağrı Vançin: cagri.vancin@bilkom.com.tr
-        $users[] = factory(\App\Models\User::class)->make([
-            'username' => mt_rand(10000000000, 99999999999),
-            'gender' => 0,
-            'email' => 'cagri.vancin@bilkom.com.tr',
-            'password' => \Illuminate\Support\Facades\Hash::make('gameon'),
-            'name' => 'Çağrı',
-            'surname' => 'Vançin',
-        ]);
-
-
         foreach ($users as $key => $user) {
             $user->save();
             $user->assignRole($role_user);
@@ -92,4 +91,3 @@ class BilkomUsers extends Seeder
         }
     }
 }
-
