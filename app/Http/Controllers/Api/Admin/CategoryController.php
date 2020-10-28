@@ -49,7 +49,12 @@ class CategoryController extends Controller
         return response()->success('common.success');
     }
 
-    public function update(CategoryRequest $request){
-
+    public function update(CategoryRequest $request, $id){
+        $category=Category::find($id);
+        if(!$category){
+            throw new CategoryNotFoundException();
+        }
+        $category->update($request->json()->all());
+        return response()->success('common.success');
     }
 }
