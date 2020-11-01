@@ -45,6 +45,8 @@ class CustomWorkflow extends Model
     protected $table = 'workflows';
 
     protected $fillable = [
+        'start_date',
+        'end_date',
         'name',
         'config',
     ];

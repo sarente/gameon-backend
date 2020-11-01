@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\Admin;
 
 use App\Exceptions\WorkFlow\WorkFlowNotFoundException;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Request;
 use App\Models\CustomWorkflow;
 
 class WorkflowController extends Controller
@@ -22,10 +23,10 @@ class WorkflowController extends Controller
         return response()->success($workflow);
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        //FIXME: $workflow
-        return response()->success();
+        CustomWorkflow::create($request->json()->all());
+        return response()->success('common.success');
     }
 
 }
