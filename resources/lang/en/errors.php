@@ -56,6 +56,7 @@ return [
         'name-valid' => 'Name is valid'
     ],
     'user' => [
+        'valid' => 'User is valid',
         'not-found' => 'User not found',
         'workflow-not-fount' => 'User Dosen\'t have workflow',
         'friend' => [

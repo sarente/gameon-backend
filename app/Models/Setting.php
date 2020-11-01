@@ -241,9 +241,6 @@ class Setting extends Model
     const INSTITUTOIN_BRANCH = 'branch';
 
 
-
-
-
     public static function setByKey($key, $value)
     {
         $setting = Setting::firstOrNew([
