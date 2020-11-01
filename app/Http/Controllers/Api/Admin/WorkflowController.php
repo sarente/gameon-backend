@@ -31,9 +31,22 @@ class WorkflowController extends Controller
 
     public function update(Request $request, $id)
     {
-        $model = CustomWorkflow::findOrFail($id);
-        $model->update($request->json()->all());
+        $workflow = CustomWorkflow::find($id);
+        if (!$workflow) {
+            throw new WorkFlowNotFoundException();
+        }
+        $workflow->update($request->json()->all());
         return response()->success('common.success');
     }
 
+    public function destroy($id)
+    {
+        $workflow = CustomWorkflow::find($id);
+        if (!$workflow) {
+            throw new WorkFlowNotFoundException();
+        }
+        //TODO:Check workflow in user_workflow
+        $workflow->destroy($id);
+        return response()->success('common.success');
+    }
 }
