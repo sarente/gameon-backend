@@ -9,6 +9,7 @@ use App\Models\Level;
 use App\Models\Setting;
 use App\Models\User;
 use App\Models\UserWorkflow;
+use Illuminate\Support\Facades\Cache;
 
 
 class CategoryController extends Controller
